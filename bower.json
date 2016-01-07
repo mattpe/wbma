@@ -1,0 +1,8 @@
+{
+  "name": "wbma-course",
+  "version": "0.1.0",
+  "dependencies": {
+    "remark": "~0.12.0"
+  },
+  "devDependencies": {}
+}
