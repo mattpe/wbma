@@ -291,6 +291,7 @@ In the bottom left corner of the editor are located functionalities to switch be
 3. Use npm to install [grunt-cli](http://gruntjs.com/getting-started) & [bower](http://bower.io/) **globally** `npm install -g <application>` 
    - Windows: use Git Bash command line
    - Mac/Linux: use console/terminal
+   - [npm no sudo fix for Mac/Linux](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
 5. Create a folder for your project
 6. Create app skeleton folders & files:
     - _src_ folder for dev html/css/js files
