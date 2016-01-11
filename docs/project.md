@@ -2,10 +2,10 @@
 
 ## Application requirements
 
-1. uploading an image
-2. downloading an image
-3. browsing, searching and selecting images
-4. commenting/liking image
+1. uploading media
+2. downloading media
+3. browsing, searching and selecting media
+4. commenting/liking media
 5. service statistics (incl. math)
 6. implemented using JS/HTML/CSS (angular & bootstrap)
 7. applying UI guidelines
