@@ -9,7 +9,7 @@ class: center, middle
 
 # Contents
 
-- Editor/IDE: Free of Choice, couple recommendations
+- Editor/IDE: Brackets (or any)
 - Run, test & debug: Chrome browser      
 - Version Control System: Git
 - Package managers: NPM & Bower
@@ -21,7 +21,7 @@ class: center, middle
 
 # Code editor or IDE
 
-Ultimately, it's your choice. Brackets is used as reference.
+Ultimately, it's your choice. Brackets is recommended.
 
 ## Brackets
 
@@ -296,8 +296,8 @@ In the bottom left corner of the editor are located functionalities to switch be
     - _src_ folder for dev html/css/js files
     - _build_ folder for deployment ready application
     - _.gitignore_ file including appropriate contents 
-    - _[package.json](https://docs.npmjs.com/files/package.json)_: install dev-dependencies: bower, grunt & grunt plugins 
-    - _[bower.json](http://bower.io/docs/creating-packages/#bowerjson)_: install angular, bootsrap & jquery  
+    - _[package.json](https://docs.npmjs.com/files/package.json)_: install dev-dependencies: bower, grunt & grunt plugins, use `--save-dev` option with `npm`
+    - _[bower.json](http://bower.io/docs/creating-packages/#bowerjson)_: install angular, bootsrap & jquery, use `--save` option with `bower`   
     - _[Gruntfile.js](http://gruntjs.com/getting-started)_: Tasks: copy & minify _src/app.js_ file to _build/app.min.js_, check code with jshint
     - add a simple html template and js file into _src/_ folder
 7. Test that libraries installed by bower are accessible in your html
