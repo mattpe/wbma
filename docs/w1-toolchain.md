@@ -53,7 +53,7 @@ Ultimately, it's your choice. Brackets is recommended.
 
 ## [NPM](https://www.npmjs.com/) - node.js package manager
 
-- Install node.js to get the package manager npm
+- Install node.js to get the package manager (npm)
 - npm packages needed in a project (dependencies) are stored in the `package.json` file
 - locally installed (=project specific) packages are downloaded to `node_modules/` folder
 
@@ -167,7 +167,7 @@ TBD: App arch img
 
 ---
 
-# Source Code Management
+# Source Code Management - Git
 
 Check [Git stuff](https://github.com/mattpe/git-intro/blob/master/git-basics.md) from previous course.
 
@@ -182,7 +182,7 @@ Exclude:
 
 - IDE specific project files & folders
 - build targets
-- packages managed by npm or bower 
+- packages managed by npm or bower (= _node_modules/_ & _bower_components/_ folders) 
 - any temp & OS specific files, like Apple's `.DS_Store` 
 
 
@@ -296,7 +296,7 @@ In the bottom left corner of the editor are located functionalities to switch be
 6. Create app skeleton folders & files:
     - _src_ folder for dev html/css/js files
     - _build_ folder for deployment ready application
-    - _.gitignore_ file including appropriate contents 
+    - _.gitignore_ file including appropriate contents (exclude _node_modules/_ & _bower_components/_ at least)
     - _[package.json](https://docs.npmjs.com/files/package.json)_: install dev-dependencies: bower, grunt & grunt plugins, use `--save-dev` option with `npm`
     - _[bower.json](http://bower.io/docs/creating-packages/#bowerjson)_: install angular, bootsrap & jquery, use `--save` option with `bower`   
     - _[Gruntfile.js](http://gruntjs.com/getting-started)_: Tasks: copy & minify _src/app.js_ file to _build/app.min.js_, check code with jshint
