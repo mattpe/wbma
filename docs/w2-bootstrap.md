@@ -5,7 +5,7 @@
     * load linked apps: npm install
     * load dependencies: bower install
     * start automation: grunt serve. 
-      * For this you'll need (Ruby)[http://rubyinstaller.org] (OS X users should have it already) and (Compass)[http://compass-style.org/install/])
+      * For this you'll need [Ruby](http://rubyinstaller.org) (OS X users should have it already) and [Compass](http://compass-style.org/install/).
 2. There is layout2.jpg in app/images.Your task is to implement that layout with [Bootstrap](http://www.w3schools.com/bootstrap/)
 3. First do the basic layout by using Bootstrap's grid system.
 4. Then add Navbars, buttons etc.
