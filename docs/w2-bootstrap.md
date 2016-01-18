@@ -11,5 +11,6 @@
 4. Then add Navbars, buttons etc.
 5. Customize the colors, sizes etc to finalize the layout
   * Check chapter Customize from [Sitepoint](http://www.sitepoint.com/bootstrap-sass-installation-and-customisation/)
+  * See the files in app/styles
 6. Commit the finished task to your own GitHub account
 7. Return a link pointing to your repo (needs to be public or shared to teachers)
