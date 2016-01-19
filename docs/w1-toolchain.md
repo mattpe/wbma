@@ -322,6 +322,7 @@ Ask help if you got lost!
 - https://www.codecademy.com/learn/learn-angularjs
 - https://docs.angularjs.org/tutorial
 - https://docs.angularjs.org/guide
+- http://www.angularjsbook.com/angular-basics/chapters/introduction/
 
 ### Bootstrap
 
