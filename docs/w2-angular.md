@@ -11,6 +11,21 @@ Clone repo from: https://github.com/ilkkamtk/imageEditor-start/
 
 Example solution: https://github.com/ilkkamtk/imageEditor-start/tree/1st-step
 
+It's a new branch in the same repo. You can fethch the new branch to your local branch using git:
+
+```sh
+# cd to project directory
+# first save your own local changes
+git add .
+git commit -m "my changes"
+
+# pull new stuff from server:
+git pull
+# activate the fetched branch
+git checkout 1st-step 
+
+```
+ 
 
 ### Step 2 (Thursday)
 
