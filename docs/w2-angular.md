@@ -50,5 +50,16 @@ Example solution: https://github.com/ilkkamtk/imageEditor-start/tree/2nd-step
 
 ### Step 3 (Friday)
 
-**TODO**: Finalize it! 
+**TODO**: Finalize it!
+
+- Add a color box for viewing the filter color
+  - use angular attribute directive `ng-angular-style` and expressions to apply css styles to span element in html
+  - use slider values to control css color
+- Create tint method and bind it to the strength slider
+  - use values of color sliders and strength slider to modify pixel values of the image (like brightness & contrast filters)
+- Create a vignette method and bind it to the correct checkbox in html
+  - read and use pixel values of vignette image (in _images_ folder) to modify pixel values of the editable image
+- Add a save image link url (html) and functionality (to controller)
+
+- EXTRA: Autocontrast functionality
 
