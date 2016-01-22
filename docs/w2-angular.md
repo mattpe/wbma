@@ -1,6 +1,6 @@
 # Angular image editor exercise
 
-![Image editor screenshot](../image-editor-screenshot.png)
+![Image editor screenshot](../images/image-editor-screenshot.png)
 
 ### Starting point
 
