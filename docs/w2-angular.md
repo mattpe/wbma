@@ -6,7 +6,7 @@
 
 Clone repo from: https://github.com/ilkkamtk/imageEditor-start/
 
-Install dependencies list in _package.json & bower.json_: `npm install && bower install`
+Install dependencies listed in _package.json & bower.json_: `npm install && bower install`
 
 [Ruby](https://www.ruby-lang.org/en/) is needed to install compass: `[sudo] gem install compass`
 
@@ -44,7 +44,9 @@ git checkout 1st-step
    - read the pixels of an image and change the values one by one
    - update canvas
 
-**tip**: http://code.tutsplus.com/tutorials/canvas-from-scratch-pixel-manipulation--net-20573 
+**tip**: http://code.tutsplus.com/tutorials/canvas-from-scratch-pixel-manipulation--net-20573
+
+Example solution: https://github.com/ilkkamtk/imageEditor-start/tree/2nd-step
 
 ### Step 3 (Friday)
 
