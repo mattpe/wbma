@@ -53,7 +53,7 @@ Example solution: https://github.com/ilkkamtk/imageEditor-start/tree/2nd-step
 **TODO**: Finalize it!
 
 - Add a color box for viewing the filter color
-  - use angular attribute directive `ng-angular-style` and expressions to apply css styles to span element in html
+  - use angular attribute directive `ng-attr-style="<css-stuff>"` and expressions to apply css styles to span element in html
   - use slider values to control css color
 - Create tint method and bind it to the strength slider
   - use values of color sliders and strength slider to modify pixel values of the image (like brightness & contrast filters)
