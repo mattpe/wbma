@@ -6,7 +6,7 @@
 
 Clone repo from: https://github.com/ilkkamtk/imageEditor-start/
 
-Install dependicies list in _package.json & bower.json_: `npm install && bower install`
+Install dependencies list in _package.json & bower.json_: `npm install && bower install`
 
 [Ruby](https://www.ruby-lang.org/en/) is needed to install compass: `[sudo] gem install compass`
 
