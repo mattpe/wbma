@@ -12,12 +12,26 @@ function readJSONSync(filename) {
 }
 ```
 
-### Synchronous function
+### Synchronous function ([source](https://www.promisejs.org))
 ```
 function readJSON(filename, callback){
   fs.readFile(filename, 'utf8', function (err, res){
     if (err) return callback(err);
     callback(null, JSON.parse(res));
+  });
+}
+```
+### Getting error messages gets a bit complicated
+```
+function readJSON(filename, callback){
+  fs.readFile(filename, 'utf8', function (err, res){
+    if (err) return callback(err);
+    try {
+      res = JSON.parse(res);
+    } catch (ex) {
+      return callback(ex);
+    }
+    callback(null, res);
   });
 }
 ```
