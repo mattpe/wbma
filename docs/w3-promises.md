@@ -44,7 +44,7 @@ function readJSON(filename, callback){
  3. Rejected: promise unfulfilled
    * Promise has a reason (why it failed)
 
-!(http://i.stack.imgur.com/JzrAY.png)
+![alt text](http://i.stack.imgur.com/JzrAY.png "Promise")
 
 ### Creating a promise:
 ```
