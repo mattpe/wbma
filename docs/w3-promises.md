@@ -59,7 +59,41 @@ function readJSON(filename, callback){
 
 ### Creating a promise:
 ```
-var p = new Promise(function(resolve, reject) {
-  // call resolve or reject
-});
+function readFile(filename, enc){
+  return new Promise(function (fulfill, reject){
+    fs.readFile(filename, enc, function (err, res){
+      if (err) reject(err);
+      else fulfill(res);
+    });
+  });
+}
+```
+
+---
+
+## Promise.then
+* Promise object has a method 'then' which can be used to chain promises
+* then gets two parameters as functions
+  *  onFulfilled
+    * when the promise has been fulfilled
+  * onRejected
+    * when the promise has not been fulfilled
+* then returns a new promise
+  * return value depends on the original promise object and onFulfilled or onRejected functions
+  
+---
+### Examples
+## readJson using promise
+```
+function readJSON(filename){
+  return readFile(filename, 'utf8').then(function (res){
+    return JSON.parse(res)
+  })
+}
+```
+## Same function, shorter version
+```
+function readJSON(filename){
+  return readFile(filename, 'utf8').then(JSON.parse);
+}
 ```
