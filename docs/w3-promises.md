@@ -43,7 +43,8 @@ function readJSON(filename, callback){
    * Promise has a value
  3. Rejected: promise unfulfilled
    * Promise has a reason (why it failed)
-* Creating a promise:
+
+### Creating a promise:
 ```
 var p = new Promise(function(resolve, reject) {
   // call resolve or reject
