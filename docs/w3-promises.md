@@ -1,9 +1,14 @@
 # JavaScript Promise
+
+---
+
 ## Asynchronous JavaScript
 * JavaScript is single threaded
    * Synchronous function puts the whole process on wait until it's completed
    * This is why AJAX-calls, database queries, file handling etc. are done asynchronously
      * Instead returning a something from a function we get the response as a parameter of a callback function
+
+---
 
 ### Synchronous function ([source](https://www.promisejs.org))
 ```
@@ -12,7 +17,7 @@ function readJSONSync(filename) {
 }
 ```
 
-### Synchronous function ([source](https://www.promisejs.org))
+### Asynchronous function ([source](https://www.promisejs.org))
 ```
 function readJSON(filename, callback){
   fs.readFile(filename, 'utf8', function (err, res){
@@ -21,6 +26,9 @@ function readJSON(filename, callback){
   });
 }
 ```
+
+---
+
 ### Getting error messages gets a bit complicated
 ```
 function readJSON(filename, callback){
@@ -35,6 +43,9 @@ function readJSON(filename, callback){
   });
 }
 ```
+
+---
+
 ##Promise
 * Promise is an object that promises to return a value
 * Promise has three states
