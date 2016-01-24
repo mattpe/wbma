@@ -5,13 +5,13 @@
     * This is why AJAX-calls, database queries, file handling etc. are done asynchronously
       * Instead returning a something from a function we get the response as a parameter of a callback function
       
-
-### Synchronous
+### Asynchronous function
 ```
-var example = function(param){
- for(var i = 0; i < 999999999; i++){
-  param = param + 1;
- )
- return param;
-}
+Something.save(function(err) {  
+  if (err)  {
+    //error handling
+    return;
+  }
+  console.log('success');
+});
 ```
