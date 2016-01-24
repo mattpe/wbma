@@ -40,7 +40,7 @@ function readJSON(filename, callback){
  * Promise has three states
   1. Pending: initial state
   2. Resolved: promise fulfilled
-   * Promise has a value
+    * Promise has a value
   3. Rejected: promise unfulfilled
-   * Promise has a reason (why it failed)
+    * Promise has a reason (why it failed)
 
