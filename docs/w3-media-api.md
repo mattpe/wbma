@@ -2,6 +2,8 @@
 
 Based on ImageRekt api by: Juhani Lavonen, Matti Mäki-Kihniä & Mikael Gousetis
 
+**NOTE**: API and the associated database is active for this course only. It's not a permanent storage for any files and will be cleaned/cleared on regular basis. 
+
 ### Base URLs
 
 Api: http://util.mw.metropolia.fi/ImageRekt/api/v2/
