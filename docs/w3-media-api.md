@@ -20,6 +20,12 @@ All passwords are sent in clear text. **Use dummy passwords only!**
 
 ## Usage
 
+Use base url + path
+
+Example request: GET http://util.mw.metropolia.fi/ImageRekt/api/v2/file/3
+
+File paths are relative to media folder: e.g: http://util.mw.metropolia.fi/uploads/ring5.jpg
+
 Documentation (and api itself) is still work on progress. Use Postman (http://www.getpostman.com/) to test features and report bugs to matti. 
 
 All input values must be validated on client side.
