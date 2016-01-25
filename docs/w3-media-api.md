@@ -34,7 +34,7 @@ All input values must be validated on client side.
 
 #### Registration
 
-POST `register`
+POST `register` (combine with base url -> http://util.mw.metropolia.fi/ImageRekt/api/v2/register)
 
 request content-type: application/x-www-form-urlencoded
 
