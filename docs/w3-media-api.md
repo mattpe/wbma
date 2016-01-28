@@ -52,6 +52,7 @@ Required form parameters:
 
 - username
 - password
+- email
 
 **Response**: status or error, examples:
 
