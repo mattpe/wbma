@@ -4,14 +4,23 @@ Based on ImageRekt api by: Juhani Lavonen, Matti Mäki-Kihniä & Mikael Gousetis
 
 **NOTE**: API and the associated database is active for this course only. It's not a permanent storage for any files and will be cleaned/cleared on regular basis. 
 
-### Base URLs
+## Changelog
+
+#### 28.1.2016
+
+- Property names in responses fixed to follow generic json naming conventions
+  - `user` -> `username` or `userId`  depending on context
+  - `iid` -> `fileId`
+- Added `userId` to file requests 
+
+## Base URLs
 
 Api: http://util.mw.metropolia.fi/ImageRekt/api/v2/
 
 Media folder: http://util.mw.metropolia.fi/uploads/
 
 
-### Authentication 
+## Authentication 
 
 There is **NO** real world authentication available. 
 
@@ -58,6 +67,25 @@ Required form parameters:
 
 ```
 
+#### Check if username already exists
+
+POST `user/exists`
+
+request content-type: application/x-www-form-urlencoded
+
+Required form parameters:
+
+- username
+
+**Response**: json object, example:
+
+```js
+{
+  "userFound": true
+}
+
+```
+
 #### Login
 
 POST `login`
@@ -73,7 +101,7 @@ Required form parameters:
 
 ```js
 {
-  "user-id": 11,
+  "userId": 11,
   "status": "login ok"
 }
 
@@ -88,14 +116,14 @@ GET `users`
 ```js
 [
   {
-    "user": "Nnnnn Mmmmm",
+    "username": "Nnnnn Mmmmm",
     "email": "nn.mm@example.com",
-    "uid": 20
+    "Id": 20
   },
   {
-    "user": "Another One",
+    "username": "Another One",
     "email": "another.user@example.com",
-    "uid": 21
+    "userId": 21
   }
 ]
 ```
@@ -111,9 +139,9 @@ Parameters:
 
 ```js
 {
-  "user": "Another One",
+  "username": "Another One",
   "email": "another.user@example.com",
-  "uid": 21
+  "userId": 21
 }
 ```
 
@@ -123,6 +151,8 @@ coming
 
 
 ### Files
+
+_path_ property in responses refers to _filename_ in media folder: `http://util.mw.metropolia.fi/uploads/<filename>`
 
 #### Upload a file
 
@@ -155,14 +185,16 @@ GET `files`
   {
     "path": "image.png",
     "title": "Name",
-    "iid": 33,
-    "type": "image"
+    "fileId": 33,
+    "type": "image",
+    "userId": 12
   },
   {
     "path": "picture.jpg",
     "title": "Art",
-    "iid": 32,
-    "type": "image"
+    "fileId": 32,
+    "type": "image",
+    "userId": 12
   }
 ]
 ```
@@ -181,7 +213,8 @@ Parameters:
   "path": "filename.jpg",
   "title": "Title of this image",
   "description": "This is the description of the image",
-  "type": "image"
+  "type": "image",
+  "userId": 12
 }
 ```
 
@@ -200,7 +233,8 @@ Parameters:
   "title": "Title of this image",
   "description": "This is the description of the image",
   "type": "image",
-  "iid": 44
+  "fileId": 44,
+  "userId": 12
 }
 ```
 
@@ -218,13 +252,13 @@ Parameters:
   {
     "path": "Koala.jpg",
     "title": "koala",
-    "iid": 66,
+    "fileId": 66,
     "type": "image"
   },
   {
     "path": "noidea.jpg",
     "title": "No idea",
-    "iid": 65,
+    "fileId": 65,
     "type": "image"
   }
 ]
@@ -244,12 +278,14 @@ Parameters:
   {
     "path": "Koala.jpg",
     "title": "koala",
-    "iid": 66,
+    "fileId": 66,
+    "userId": 12
   },
   {
     "path": "noidea.jpg",
     "title": "No idea",
-    "iid": 65,
+    "fileId": 65,
+    "userId": 12
   }
 ]
 ```
@@ -308,13 +344,13 @@ Parameters:
   {
     "path": "Koala.jpg",
     "title": "koala",
-    "iid": 66,
+    "fileId": 66,
     "type": "image"
   },
   {
     "path": "noidea.jpg",
     "title": "No idea",
-    "iid": 65,
+    "fileId": 65,
     "type": "image"
   }
 ]
@@ -323,5 +359,7 @@ Parameters:
 ### Comments
 
 coming
+
+
 
 
