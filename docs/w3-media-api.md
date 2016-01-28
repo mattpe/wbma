@@ -68,7 +68,7 @@ Required form parameters:
 
 ```
 
-Check [Tips] section to see an example
+Check [tips](#Post data) section to see an example
 
 #### Check if username already exists
 
@@ -368,7 +368,11 @@ coming
 
 ## Tips
 
-#### Simplified angular example of sending post with data in _form-urlencoded_ format 
+#### Post data 
+
+Simplified angular example of sending  data in _application/x-www-form-urlencoded_ format.
+
+[$httpParamSerializer](https://docs.angularjs.org/api/ng/service/$httpParamSerializer) converts data from json object to form data fields. 
 
 Register a new user:
 
