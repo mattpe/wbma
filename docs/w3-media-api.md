@@ -68,7 +68,7 @@ Required form parameters:
 
 ```
 
-Check [tips](#Post data) section to see an example
+Check [tips](#post-data) section to see an example
 
 #### Check if username already exists
 
