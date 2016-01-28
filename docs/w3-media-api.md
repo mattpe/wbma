@@ -43,6 +43,7 @@ All input values must be validated on client side.
 
 #### Registration
 
+
 POST `register` (combine with base url -> http://util.mw.metropolia.fi/ImageRekt/api/v2/register)
 
 request content-type: application/x-www-form-urlencoded
@@ -66,6 +67,8 @@ Required form parameters:
 }
 
 ```
+
+Check [Tips] section to see an example
 
 #### Check if username already exists
 
@@ -118,7 +121,7 @@ GET `users`
   {
     "username": "Nnnnn Mmmmm",
     "email": "nn.mm@example.com",
-    "Id": 20
+    "userId": 20
   },
   {
     "username": "Another One",
@@ -171,7 +174,9 @@ Required parameters:
 **Response**: file id if success, example:
 
 ```js
-{"file_id": "69"}
+{
+  "fileId": "69"
+}
 ```
 
 #### List all files in service
@@ -361,5 +366,26 @@ Parameters:
 coming
 
 
+## Tips
 
+#### Simplified angular example of sending post with data in _form-urlencoded_ format 
 
+Register a new user:
+
+```js
+$http({
+  method: 'POST',
+  url: restApiBaseUrl + 'register',
+  headers: {'Content-Type' : 'application/x-www-form-urlencoded'},
+  data: $httpParamSerializer({
+          username: "batman",
+          email: "batman@example.com",
+          password: "stupidpassword"
+        })
+}).then(function (response) {
+  console.log(response.data);
+
+}, function (error) {
+  console.log(error);
+});
+```
