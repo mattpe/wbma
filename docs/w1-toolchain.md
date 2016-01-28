@@ -316,18 +316,4 @@ Ask help if you got lost!
 
 ## Useful online material
 
-### Angular
-
-- Start from here: http://campus.codeschool.com/courses/shaping-up-with-angular-js/
-- https://www.codecademy.com/learn/learn-angularjs
-- https://docs.angularjs.org/tutorial
-- https://docs.angularjs.org/guide
-- http://www.angularjsbook.com/angular-basics/chapters/introduction/
-
-### Bootstrap
-
-- http://www.w3schools.com/bootstrap/
-- https://www.codecademy.com/en/skills/make-a-website/topics/bootstrap-components/bootstrap-intro
-
-
-
+Check [Readme file](https://github.com/mattpe/wbma) of this repo.
