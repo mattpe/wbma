@@ -12,7 +12,7 @@ All content is inside `docs/` folder.
 - [Basic shell commands. Read chapters 3 and 5](http://vic.gedris.org/Manual-ShellIntro/1.2/ShellIntro.pdf)
 - Grunt basics: https://www.youtube.com/watch?v=TMKj0BxzVgw
 - Free book: [Pro Git](http://git-scm.com/book/en/v2)
-- Free (and short) Codeschool course: [Try Git](https://www.codeschool.com/courses/try-git
+- Free (and short) Codeschool course: [Try Git](https://www.codeschool.com/courses/try-git)
 
 ### Angular
 
