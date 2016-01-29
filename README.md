@@ -16,7 +16,8 @@ All content is inside `docs/` folder.
 
 ### Angular
 
-- Start from here: http://campus.codeschool.com/courses/shaping-up-with-angular-js/
+- Start from here: http://campus.codeschool.com/courses/shaping-up-with-angular-js/ (free course)
+- http://campus.codeschool.com/courses/staying-sharp-with-angular-js/contents (1st level free)
 - https://www.codecademy.com/learn/learn-angularjs
 - https://docs.angularjs.org/tutorial
 - https://docs.angularjs.org/guide
