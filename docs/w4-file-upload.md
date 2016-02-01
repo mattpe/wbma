@@ -7,6 +7,7 @@
     * title
     * description
     * type (values: image/video/audio)
+    * mime-type (values: image/jpg, video/mp4, audio/mp3)
 3. Study the request parameters in Developer Tools / Network
 
 # Back to the future
