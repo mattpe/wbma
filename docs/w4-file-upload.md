@@ -18,13 +18,13 @@
   ```
   $scope.fd = new FormData(SELECT FORM ELEMENT WITH JAVASCRIPT);
   var sendImage = function(){
-   var request = $http.post('http://util.mw.metropolia.fi/ImageRekt/api/v2/upload', $scope.fd, {
-       transformRequest: angular.identity,
-       headers: {
-           'Content-Type': undefined
-       }
-   });
-   return request;
+    var request = $http.post('http://util.mw.metropolia.fi/ImageRekt/api/v2/upload', $scope.fd, {
+        transformRequest: angular.identity,
+        headers: {
+            'Content-Type': undefined
+        }
+    });
+    return request;
   }
   ```
   * [FormData API](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects)
