@@ -1,6 +1,6 @@
 # It's 90's again
 1. Make an empty HTML page (or use [HTML5 Boilerplate](https://html5boilerplate.com))
-2. Make a for which uploads a file to the [Media API](https://github.com/mattpe/wbma/blob/master/docs/w3-media-api.md)
+2. Make a form which uploads a file to the [Media API](https://github.com/mattpe/wbma/blob/master/docs/w3-media-api.md)
   * Form should have these fields:
     * file
     * user
