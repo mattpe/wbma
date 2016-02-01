@@ -28,3 +28,4 @@
   }
   ```
   * [FormData API](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+  * [Teacher's example](https://github.com/ilkkamtk/w4-ex1)
