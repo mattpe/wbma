@@ -43,7 +43,6 @@ All input values must be validated on client side.
 
 #### Registration
 
-
 POST `register` (combine with base url -> http://util.mw.metropolia.fi/ImageRekt/api/v2/register)
 
 request content-type: application/x-www-form-urlencoded
@@ -164,6 +163,8 @@ POST `api/v2/upload`
 
 request content-type: multipart/form-data
 
+maximum file size: ~100 megabytes
+
 Required parameters:
 
 - file: the file itself
@@ -193,13 +194,15 @@ GET `files`
     "title": "Name",
     "fileId": 33,
     "type": "image",
+    "mimeType": "image/png",
     "userId": 12
   },
   {
     "path": "picture.jpg",
     "title": "Art",
-    "fileId": 32,
+    "fileId": 32,,
     "type": "image",
+    "mimeType": "image/jpeg",
     "userId": 12
   }
 ]
@@ -220,6 +223,7 @@ Parameters:
   "title": "Title of this image",
   "description": "This is the description of the image",
   "type": "image",
+  "mimeType": "image/jpeg",
   "userId": 12
 }
 ```
@@ -239,6 +243,7 @@ Parameters:
   "title": "Title of this image",
   "description": "This is the description of the image",
   "type": "image",
+  "mimeType": "image/jpeg",
   "fileId": 44,
   "userId": 12
 }
@@ -259,13 +264,15 @@ Parameters:
     "path": "Koala.jpg",
     "title": "koala",
     "fileId": 66,
-    "type": "image"
+    "type": "image",
+    "mimeType": "image/jpeg"
   },
   {
     "path": "noidea.jpg",
     "title": "No idea",
     "fileId": 65,
-    "type": "image"
+    "type": "image",
+    "mimeType": "image/jpeg"
   }
 ]
 ```
@@ -284,12 +291,14 @@ Parameters:
   {
     "path": "Koala.jpg",
     "title": "koala",
+    "mimeType": "image/jpeg",
     "fileId": 66,
     "userId": 12
   },
   {
     "path": "noidea.jpg",
     "title": "No idea",
+    "mimeType": "image/jpeg",
     "fileId": 65,
     "userId": 12
   }
