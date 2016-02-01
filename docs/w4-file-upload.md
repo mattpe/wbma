@@ -17,7 +17,7 @@
   * Example:
   ```
   $scope.fd = new FormData(SELECT FORM ELEMENT WITH JAVASCRIPT);
-  var sendImage = function(){
+  $scope.sendImage = function(){
     var request = $http.post('http://util.mw.metropolia.fi/ImageRekt/api/v2/upload', $scope.fd, {
         transformRequest: angular.identity,
         headers: {
