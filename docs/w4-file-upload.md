@@ -14,7 +14,7 @@
   * seed project: https://github.com/mattpe/wbma-seed can be used as template
 2. Use AngulrJS's $http.post shortcut method to upload the file
   * Example:
-  '''
+  ```
   $scope.fd = new FormData(SELECT FORM ELEMENT WITH JAVASCRIPT);
   
   var request = $http.post('http://util.mw.metropolia.fi/ImageRekt/api/v2/upload', $scope.fd, {
@@ -23,5 +23,5 @@
           'Content-Type': undefined
       }
   });
-  '''
+  ```
   * [FormData API](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects)
