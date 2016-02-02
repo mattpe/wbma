@@ -6,7 +6,14 @@ Based on ImageRekt api by: Juhani Lavonen, Matti Mäki-Kihniä & Mikael Gousetis
 
 ## Changelog
 
-#### 28.1.2016
+#### 2016-02-02
+
+- mime type property added to files. 
+  - api solves mime type automatically after upload
+- commenting of files added
+- some minor fixes
+  
+#### 2016-01-28
 
 - Property names in responses fixed to follow generic json naming conventions
   - `user` -> `username` or `userId`  depending on context
@@ -222,6 +229,7 @@ Parameters:
   "path": "filename.jpg",
   "title": "Title of this image",
   "description": "This is the description of the image",
+  "uploadTime": "Mon Feb 01 16:24:59 EET 2016",
   "type": "image",
   "mimeType": "image/jpeg",
   "userId": 12
@@ -373,7 +381,50 @@ Parameters:
 
 ### Comments
 
-coming
+#### Add a comment to a file 
+
+POST `comment/file/{id}`
+
+Parameters: 
+- id: file id
+
+Required post parameters:
+- user: user id
+- comment: comment content 
+
+**Response**: json object, example:
+
+```js
+{
+  "status": "comment added"
+}
+```
+
+#### List all file's comments  
+
+GET `comments/file/{id}`
+
+Parameters: 
+- id: file id
+
+**Response**: json array, example:
+
+```js
+[
+  {
+    "comment": "nice file",
+    "username": "SomeUser",
+    "userId": 13,
+    "time": "Tue Feb 02 15:56:16 EET 2016"
+  },
+  {
+    "comment": "funny cats",
+    "username": "CatLover99",
+    "userId": 23,
+    "time": "Tue Feb 02 15:56:34 EET 2016"
+  }
+]
+```
 
 
 ## Tips
