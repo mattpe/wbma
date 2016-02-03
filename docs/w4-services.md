@@ -7,11 +7,11 @@
 
 1. Create a method for each route in [Media API](https://github.com/mattpe/wbma/blob/master/docs/w3-media-api.md) to src/scripts/services/ajaxFactory.js
     * example: uploadFile function in ajaxFactory.js
-2. Create templates to 'views' folder for each form that are needed to send data to Chat API
+2. Create templates to 'views' folder for each form that are needed to send data to Media API
     * example: src/views/fileForm.html
 3. Create directives to add these forms to the app.
     * example: src/scripts/directives/fileForm.js
-4. Create controllers for each route to add or recieve data from the Chat API
+4. Create controllers for each route to add or recieve data from the Media API
     * example: src/scripts/controllers/uploadController.js
 
 ## Build & development
@@ -22,5 +22,5 @@
     * git add .
     * git commit -m "Message"
     * git remote set-url origin your-repo-address
-    * git push
+    * git push -u origin folder-structure
 
