@@ -6,6 +6,13 @@ Based on ImageRekt api by: Juhani Lavonen, Matti Mäki-Kihniä & Mikael Gousetis
 
 ## Changelog
 
+#### 2016-02-08
+
+- add thumbnail images for files 
+  - thumbnails are generated automatically when image file is uploaded
+  - full size screen capture and thumbnails are generated automatically when video file is uploaded
+- fix bug: file upload doesn't accept empty parameter values any more 
+
 #### 2016-02-02
 
 - mime type property added to files. 
@@ -38,9 +45,11 @@ All passwords are sent in clear text. **Use dummy passwords only!**
 
 Use base url + path
 
-Example request: GET http://util.mw.metropolia.fi/ImageRekt/api/v2/file/3
+Example request: GET http://util.mw.metropolia.fi/ImageRekt/api/v2/file/511
 
 File paths are relative to media folder: e.g: http://util.mw.metropolia.fi/uploads/ring5.jpg
+
+Image/video thumbnails are in `thumbs/` sub folder and prefixed with `tn<size>_` where size options are 160, 320 and 640. Videos have also suffix `.png` and a full size screen capture image with prefix `sc_`. E.g. http://util.mw.metropolia.fi/uploads/thumbs/tn160_r1gpm6-dog.mp4.png
 
 Documentation (and api itself) is still work on progress. Use Postman (http://www.getpostman.com/) to test features and report bugs to matti. 
 
@@ -232,6 +241,11 @@ Parameters:
   "uploadTime": "Mon Feb 01 16:24:59 EET 2016",
   "type": "image",
   "mimeType": "image/jpeg",
+    "thumbNails": {
+    "small": "thumbs/tn160_filename.jpg",
+    "medium": "thumbs/tn320_filename.jpg",
+    "large": "thumbs/tn640_filename.jpg"
+  },
   "userId": 12
 }
 ```
@@ -400,7 +414,7 @@ Required post parameters:
 }
 ```
 
-#### List all file's comments  
+#### List all comments of a file 
 
 GET `comments/file/{id}`
 
