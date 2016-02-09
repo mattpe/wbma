@@ -396,7 +396,7 @@ Required parameters:
 ]
 ```
 
-#### File title search 
+#### File description search 
 
 POST `files/search/desc`
 
@@ -513,6 +513,8 @@ Parameters:
 #### Add a comment to a file 
 
 POST `comment/file/{id}`
+
+request content-type: application/x-www-form-urlencoded
 
 Parameters: 
 - id: file id
