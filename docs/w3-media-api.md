@@ -6,12 +6,14 @@ Based on ImageRekt api by: Juhani Lavonen, Matti Mäki-Kihniä & Mikael Gousetis
 
 ## Changelog
 
-#### 2016-02-08
+#### 2016-02-09
 
-- add thumbnail images for files 
+- added thumbnail images for files 
   - thumbnails are generated automatically when image file is uploaded
   - full size screen capture and thumbnails are generated automatically when video file is uploaded
-- fix bug: file upload doesn't accept empty parameter values any more 
+- added get all comments method
+- added file search
+- fixed bug: file upload doesn't accept empty parameter values any more 
 
 #### 2016-02-02
 
@@ -29,9 +31,9 @@ Based on ImageRekt api by: Juhani Lavonen, Matti Mäki-Kihniä & Mikael Gousetis
 
 ## Base URLs
 
-Api: http://util.mw.metropolia.fi/ImageRekt/api/v2/
+**REST API**: http://util.mw.metropolia.fi/ImageRekt/api/v2/
 
-Media folder: http://util.mw.metropolia.fi/uploads/
+**Media folder**: http://util.mw.metropolia.fi/uploads/
 
 
 ## Authentication 
@@ -43,17 +45,17 @@ All passwords are sent in clear text. **Use dummy passwords only!**
 
 ## Usage
 
-Use base url + path
+Use [base url](http://util.mw.metropolia.fi/ImageRekt/api/v2/) + path
 
-Example request: GET http://util.mw.metropolia.fi/ImageRekt/api/v2/file/511
+Example request: _GET_ http://util.mw.metropolia.fi/ImageRekt/api/v2/file/511
 
-File paths are relative to media folder: e.g: http://util.mw.metropolia.fi/uploads/ring5.jpg
+File paths are relative to [media folder](http://util.mw.metropolia.fi/uploads/): e.g: http://util.mw.metropolia.fi/uploads/zf8b1v-beach.jpg
 
-Image/video thumbnails are in `thumbs/` sub folder and prefixed with `tn<size>_` where size options are 160, 320 and 640. Videos have also suffix `.png` and a full size screen capture image with prefix `sc_`. E.g. http://util.mw.metropolia.fi/uploads/thumbs/tn160_r1gpm6-dog.mp4.png
+Image/video thumbnails are placed in `thumbs/` sub folder and prefixed with `tn<size>_` where size options are 160, 320 and 640. Videos have also suffix `.png` and a full size screen capture image with prefix `sc_`. E.g. http://util.mw.metropolia.fi/uploads/thumbs/tn160_r1gpm6-dog.mp4.png
 
-Documentation (and api itself) is still work on progress. Use Postman (http://www.getpostman.com/) to test features and report bugs to matti. 
+Documentation (and api itself) is still work in progress. Postman (http://www.getpostman.com/) can be used to test features easily. Report bugs to Matti. 
 
-All input values must be validated on client side.
+All user input values should always be validated on client side before making an http request to api.
 
 ### Users
 
@@ -241,7 +243,7 @@ Parameters:
   "uploadTime": "Mon Feb 01 16:24:59 EET 2016",
   "type": "image",
   "mimeType": "image/jpeg",
-    "thumbNails": {
+  "thumbNails": {
     "small": "thumbs/tn160_filename.jpg",
     "medium": "thumbs/tn320_filename.jpg",
     "large": "thumbs/tn640_filename.jpg"
@@ -266,6 +268,11 @@ Parameters:
   "description": "This is the description of the image",
   "type": "image",
   "mimeType": "image/jpeg",
+  "thumbNails": {
+    "small": "thumbs/tn160_filename.jpg",
+    "medium": "thumbs/tn320_filename.jpg",
+    "large": "thumbs/tn640_filename.jpg"
+  },
   "fileId": 44,
   "userId": 12
 }
@@ -273,7 +280,7 @@ Parameters:
 
 #### List all files by a user
 
-GET `files/{user}`
+GET `files/user/{user}`
 
 Parameters: 
 - user: user id
@@ -283,18 +290,28 @@ Parameters:
 ```js
 [
   {
-    "path": "Koala.jpg",
+    "path": "koala.jpg",
     "title": "koala",
     "fileId": 66,
     "type": "image",
-    "mimeType": "image/jpeg"
+    "mimeType": "image/jpeg",
+    "thumbNails": {
+      "small": "thumbs/tn160_koala.jpg",
+      "medium": "thumbs/tn320_koala.jpg",
+      "large": "thumbs/tn640_koala.jpg"
+    }
   },
   {
     "path": "noidea.jpg",
     "title": "No idea",
     "fileId": 65,
     "type": "image",
-    "mimeType": "image/jpeg"
+    "mimeType": "image/jpeg",
+    "thumbNails": {
+      "small": "thumbs/tn160_noidea.jpg",
+      "medium": "thumbs/tn320_noidea.jpg",
+      "large": "thumbs/tn640_noidea.jpg"
+    }
   }
 ]
 ```
@@ -311,9 +328,14 @@ Parameters:
 ```js
 [
   {
-    "path": "Koala.jpg",
+    "path": "koala.jpg",
     "title": "koala",
     "mimeType": "image/jpeg",
+    "thumbNails": {
+      "small": "thumbs/tn160_koala.jpg",
+      "medium": "thumbs/tn320_koala.jpg",
+      "large": "thumbs/tn640_koala.jpg"
+    },
     "fileId": 66,
     "userId": 12
   },
@@ -321,11 +343,104 @@ Parameters:
     "path": "noidea.jpg",
     "title": "No idea",
     "mimeType": "image/jpeg",
+    "thumbNails": {
+      "small": "thumbs/tn160_noidea.jpg",
+      "medium": "thumbs/tn320_noidea.jpg",
+      "large": "thumbs/tn640_noidea.jpg"
+    },
     "fileId": 65,
     "userId": 12
   }
 ]
 ```
+
+#### File title search 
+
+POST `files/search/title`
+
+request content-type: application/x-www-form-urlencoded
+
+Required parameters: 
+- title: search string
+
+**Response**: json array, example:
+
+```js
+[
+  {
+    "path": "ytloe2-port-st-java.jpg",
+    "title": "Coffee",
+    "fileId": 71,
+    "type": "image",
+    "mimeType": "image/jpeg",
+    "thumbNails": {
+      "small": "thumbs/tn160_ytloe2-port-st-java.jpg",
+      "medium": "thumbs/tn320_ytloe2-port-st-java.jpg",
+      "large": "thumbs/tn640_ytloe2-port-st-java.jpg"
+    },
+    "userId": 3
+  },
+  {
+    "path": "ptl0dx-airtrick.jpg",
+    "title": "coffee drinker",
+    "fileId": 72,
+    "type": "image",
+    "mimeType": "image/jpeg",
+    "thumbNails": {
+      "small": "thumbs/tn160_ptl0dx-airtrick.jpg",
+      "medium": "thumbs/tn320_ptl0dx-airtrick.jpg",
+      "large": "thumbs/tn640_ptl0dx-airtrick.jpg"
+    },
+    "userId": 12
+  }
+]
+```
+
+#### File title search 
+
+POST `files/search/desc`
+
+request content-type: application/x-www-form-urlencoded
+
+Required parameters: 
+- desc: search string
+
+**Response**: json array, example:
+
+```js
+[
+  {
+    "path": "ptl0dx-airtrick.jpg",
+    "title": "snowboarder",
+    "description": "jump",
+    "type": "image",
+    "mimeType": "image/jpeg",
+    "thumbNails": {
+      "small": "thumbs/tn160_ptl0dx-airtrick.jpg",
+      "medium": "thumbs/tn320_ptl0dx-airtrick.jpg",
+      "large": "thumbs/tn640_ptl0dx-airtrick.jpg"
+    },
+    "fileId": 72,
+    "userId": 1
+  },
+  {
+    "path": "aom5mo-air1.jpg",
+    "title": "trick",
+    "description": "jumping higher",
+    "type": "image",
+    "mimeType": "image/jpeg",
+    "thumbNails": {
+      "small": "thumbs/tn160_aom5mo-air1.jpg",
+      "medium": "thumbs/tn320_aom5mo-air1.jpg",
+      "large": "thumbs/tn640_aom5mo-air1.jpg"
+    },
+    "fileId": 73,
+    "userId": 1
+  }
+]
+```
+
+
 
 #### Remove a file
 
@@ -414,7 +529,32 @@ Required post parameters:
 }
 ```
 
-#### List all comments of a file 
+#### Get all comments
+
+GET `comments`
+
+**Response**: json array, example:
+
+```js
+[
+  {
+    "comment": "nice file",
+    "username": "SomeUser",
+    "userId": 13,
+    "fileId": 213,
+    "time": "Tue Feb 02 15:56:16 EET 2016"
+  },
+  {
+    "comment": "funny cats",
+    "username": "CatLover99",
+    "fileId": 3,
+    "userId": 23,
+    "time": "Tue Feb 02 15:56:34 EET 2016"
+  }
+]
+```
+
+#### Get all comments of a file 
 
 GET `comments/file/{id}`
 
