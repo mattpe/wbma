@@ -27,7 +27,7 @@ cordova run ios/android
 1. rename app.html to index.html
 2. Build your webapp (grunt)
 3. modify dist/index.html:
-	* add '''<script src="cordova.js"></script>'''
+	* add &lt;script src="cordova.js"&gt;&lt;/script&gt;
 4. copy the content of dist-folder to www-folder in the Cordova project
 5. Go to the Cordova-project folder and test app: cordova run ios/android
 
