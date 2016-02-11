@@ -6,12 +6,16 @@ Based on ImageRekt api by: Juhani Lavonen, Matti Mäki-Kihniä & Mikael Gousetis
 
 ## Changelog
 
+#### 2016-02-11
+
+- added _get latest files_ method
+
 #### 2016-02-09
 
 - added thumbnail images for files 
   - thumbnails are generated automatically when image file is uploaded
   - full size screen capture and thumbnails are generated automatically when video file is uploaded
-- added get all comments method
+- added _get all comments_ method
 - added file search
 - fixed bug: file upload doesn't accept empty parameter values any more 
 
@@ -61,7 +65,7 @@ All user input values should always be validated on client side before making an
 
 #### Registration
 
-POST `register` (combine with base url -> http://util.mw.metropolia.fi/ImageRekt/api/v2/register)
+**POST** `register` (combine with base url -> http://util.mw.metropolia.fi/ImageRekt/api/v2/register)
 
 request content-type: application/x-www-form-urlencoded
 
@@ -90,7 +94,7 @@ Check [tips](#post-data) section to see an example
 
 #### Check if username already exists
 
-POST `user/exists`
+**POST** `user/exists`
 
 request content-type: application/x-www-form-urlencoded
 
@@ -109,7 +113,7 @@ Required form parameters:
 
 #### Login
 
-POST `login`
+**POST** `login`
 
 request content-type: application/x-www-form-urlencoded
 
@@ -130,7 +134,7 @@ Required form parameters:
 
 #### List all users in service
 
-GET `users`
+**GET** `users`
 
 **Response**: json array, example:
 
@@ -151,7 +155,7 @@ GET `users`
 
 #### Get a user by id
 
-GET `user/{id}`
+**GET** `user/{id}`
 
 Parameters: 
 - id: user id
@@ -177,7 +181,7 @@ _path_ property in responses refers to _filename_ in media folder: `http://util.
 
 #### Upload a file
 
-POST `api/v2/upload`
+**POST** `api/v2/upload`
 
 request content-type: multipart/form-data
 
@@ -199,36 +203,86 @@ Required parameters:
 }
 ```
 
-#### List all files in service
+#### List all files in the service
 
-GET `files`
+**GET** `files`
 
 **Response**: json array, example:
 
 ```js
 [
   {
-    "path": "image.png",
-    "title": "Name",
-    "fileId": 33,
+    "path": "ox8hzrw14jay.jpg",
+    "title": "Bear",
+    "fileId": 729,
     "type": "image",
-    "mimeType": "image/png",
+    "mimeType": "image/jpeg",
+    "thumbNails": {
+      "small": "thumbs/tn160_ox8hzrw14jay.jpg",
+      "medium": "thumbs/tn320_ox8hzrw14jay.jpg",
+      "large": "thumbs/tn640_ox8hzrw14jay.jpg"
+    },
     "userId": 12
   },
   {
-    "path": "picture.jpg",
-    "title": "Art",
-    "fileId": 32,,
+    "path": "rpsvmnlg1kb3.png",
+    "title": "Skeletor",
+    "fileId": 728,
+    "type": "image",
+    "mimeType": "image/png",
+    "thumbNails": {
+      "small": "thumbs/tn160_rpsvmnlg1kb3.png",
+      "medium": "thumbs/tn320_rpsvmnlg1kb3.png",
+      "large": "thumbs/tn640_rpsvmnlg1kb3.png"
+    },
+    "userId": 20
+  }
+]
+```
+
+#### List latest files in the service
+
+**GET** `files/latest/{number}`
+
+Parameters: 
+- number: number of files in response
+
+**Response**: json array, example:
+
+```js
+[
+  {
+    "path": "ox8hzrw14jay.jpg",
+    "title": "Bear",
+    "fileId": 729,
     "type": "image",
     "mimeType": "image/jpeg",
+    "thumbNails": {
+      "small": "thumbs/tn160_ox8hzrw14jay.jpg",
+      "medium": "thumbs/tn320_ox8hzrw14jay.jpg",
+      "large": "thumbs/tn640_ox8hzrw14jay.jpg"
+    },
     "userId": 12
+  },
+  {
+    "path": "rpsvmnlg1kb3.png",
+    "title": "Skeletor",
+    "fileId": 728,
+    "type": "image",
+    "mimeType": "image/png",
+    "thumbNails": {
+      "small": "thumbs/tn160_rpsvmnlg1kb3.png",
+      "medium": "thumbs/tn320_rpsvmnlg1kb3.png",
+      "large": "thumbs/tn640_rpsvmnlg1kb3.png"
+    },
+    "userId": 20
   }
 ]
 ```
 
 #### Get a file by id
 
-GET `file/{id}`
+**GET** `file/{id}`
 
 Parameters: 
 - id: file id
@@ -254,7 +308,7 @@ Parameters:
 
 #### Get a random file 
 
-GET `file/random`
+**GET** `file/random`
 
 Parameters: 
 - id: file id
@@ -280,7 +334,7 @@ Parameters:
 
 #### List all files by a user
 
-GET `files/user/{user}`
+**GET** `files/user/{user}`
 
 Parameters: 
 - user: user id
@@ -318,7 +372,7 @@ Parameters:
 
 #### List all files filtered by file type
 
-GET `files/type/{type}`
+**GET** `files/type/{type}`
 
 Parameters: 
 - type: file type (image/audio/video)
@@ -356,7 +410,7 @@ Parameters:
 
 #### File title search 
 
-POST `files/search/title`
+**POST** `files/search/title`
 
 request content-type: application/x-www-form-urlencoded
 
@@ -398,7 +452,7 @@ Required parameters:
 
 #### File description search 
 
-POST `files/search/desc`
+**POST** `files/search/desc`
 
 request content-type: application/x-www-form-urlencoded
 
@@ -450,7 +504,7 @@ coming
 
 #### Like a file
 
-GET `like/{file}/{user}`
+**GET** `like/{file}/{user}`
 
 Parameters: 
 
@@ -467,7 +521,7 @@ Parameters:
 
 #### Unlike a file
 
-GET `unlike/{file}/{user}`
+**GET** `unlike/{file}/{user}`
 
 Parameters: 
 
@@ -484,7 +538,7 @@ Parameters:
 
 #### List files liked by a user
 
-GET `likes/user/{id}`
+**GET** `likes/user/{id}`
 
 Parameters: 
 - id: user id
@@ -512,7 +566,7 @@ Parameters:
 
 #### Add a comment to a file 
 
-POST `comment/file/{id}`
+**POST** `comment/file/{id}`
 
 request content-type: application/x-www-form-urlencoded
 
@@ -533,7 +587,7 @@ Required post parameters:
 
 #### Get all comments
 
-GET `comments`
+**GET** `comments`
 
 **Response**: json array, example:
 
@@ -558,7 +612,7 @@ GET `comments`
 
 #### Get all comments of a file 
 
-GET `comments/file/{id}`
+**GET** `comments/file/{id}`
 
 Parameters: 
 - id: file id
