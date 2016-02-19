@@ -664,3 +664,19 @@ $http({
   console.log(error);
 });
 ```
+
+#### Dates & times
+
+Time properties in json responses are created by Java's `Date.toString()` and the format is not the easiest one to utilise. One option to parse and format times is to use [moment.js](http://momentjs.com/) library.
+
+e.g. Angular custom filter with moment.js:
+
+```js
+angular.module('app')
+  .filter('javaDate', function () {
+    return function (javaDateString) {
+      return moment(javaDateString, "ddd MMM DD HH:mm:ss zzz gggg")
+        .format("ddd D.M.YYYY - HH:mm");
+    };
+  });
+```
