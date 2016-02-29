@@ -22,7 +22,7 @@ All content is inside `docs/` folder.
 - https://docs.angularjs.org/tutorial
 - https://docs.angularjs.org/guide
 - http://www.angularjsbook.com/angular-basics/chapters/introduction/
-- https://github.com/johnpapa/angular-styleguide
+- [Angular Style Guide](https://github.com/johnpapa/angular-styleguide/tree/master/a1)
 
 ### Bootstrap
 
