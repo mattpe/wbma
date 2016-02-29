@@ -17,4 +17,8 @@
 
 ## Links
 
-Media API docs: [link here]
+Example project template: https://github.com/mattpe/wbma-seed
+
+Cordova version: https://github.com/mattpe/wbma-seed/tree/cordova
+
+[Media API docs](w3-media-api.md)
