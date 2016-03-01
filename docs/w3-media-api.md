@@ -680,3 +680,7 @@ angular.module('app')
     };
   });
 ```
+
+#### Formdata and image from canvas
+
+http://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata
