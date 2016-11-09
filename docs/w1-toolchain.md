@@ -1,43 +1,49 @@
 class: center, middle
 
-# (Mobile) Web Development Toolchain
+# Mobile Web Development Toolchain
 
 
-## MP 1/2016
+## 1/2017
 
 ---
 
 # Contents
 
-- Editor/IDE: Brackets (or any)
+- Editor/IDE: Visual Studio Code, vscode (or any)
+- Language: TypeScript
 - Run, test & debug: Chrome browser      
 - Version Control System: Git
-- Package managers: NPM & Bower
-- Building & automating tasks: Grunt
-- Development frameworks: AngularJS, Bootstrap
-- Creating a native (hybrid) app: Cordova
+- Package managers: NPM
+- Building & automating tasks: Angular CLI (webpack)
+- Development frameworks: Angular2, Ionic2
+- Creating a native (hybrid) app: Ionic (Cordova)
 
+---
+TODO: Check all
 ---
 
 # Code editor or IDE
 
-Ultimately, it's your choice. Brackets is recommended.
+Ultimately, it's your choice. VSCode is recommended.
 
-## Brackets
+## Visual Studio Code
 
-- free & open source code editor
-- live preview in browser & integrated web server
+- free & open source code editor by Microsoft (**!=** Visual Studio IDE)
 - wide plugin support
-- developed for web development
+- multiplatform
+- good docs & instructions
+- developed for web development ??
+- choice of many Angular2 developers
 
-#### Other picks
+### Other picks
 
-- WebStorm
-  - free student license
+- [Atom](https://atom.io/)
+- [Brackets](http://brackets.io/)
+- [WebStorm](https://www.jetbrains.com/webstorm/)
+  - free student license (only @metropolia.fi email address needed)
   - full featured IDE
   - based on IntelliJ IDEA, just like Android Studio
-- Atom.io
-- IDEs like: Eclipse, NetBeans... 
+- Other IDEs like: IntelliJ Ultimate IDEA, Eclipse, NetBeans... 
 
 ---
 
@@ -57,7 +63,7 @@ Ultimately, it's your choice. Brackets is recommended.
 - npm packages needed in a project (dependencies) are stored in the `package.json` file
 - locally installed (=project specific) packages are downloaded to `node_modules/` folder
 
-## [Bower](http://bower.io/) 
+## ?Deprecated: [Bower](http://bower.io/) 
 
 - is installed using npm
 - Package manager for web:
@@ -75,20 +81,13 @@ package installation folders should be excluded from version control
 # Example package.json
 
 ```js
-{
-  "name": "my-application",
-  "version": "0.1.0",
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-uglify": "~0.5.0"
-  }
-}
+TBD
 
 ```
 
 ---
 
-# Example bower.json
+# ?REMOVE:Example bower.json
 
 ```js
 {
@@ -106,6 +105,8 @@ package installation folders should be excluded from version control
 ---
 
 # Automating Development Tasks
+
+TODO: change to angular-cli
 
 Run frequent routine tasks in development workflow easily using
 [Grunt](http://gruntjs.com/) & Gruntfile.js (like make & makefile in C)
@@ -153,12 +154,14 @@ module.exports = function(grunt) {
 
 ## Layout/HTML/CSS
 
+- Ionic's css components
+
 [Bootstrap](http://getbootstrap.com/)
 - Layout & UI components, widgets
 
 ## Front-end application logic
 
-[AngularJS](https://angularjs.org/)
+[Angular 2](https://angular.io/)
 
 
 ???
@@ -169,7 +172,7 @@ TBD: App arch img
 
 # Source Code Management - Git
 
-Check [Git stuff](https://github.com/mattpe/git-intro/blob/master/git-basics.md) from previous course.
+Check [Git stuff](https://github.com/mattpe/git-intro/blob/master/git-basics.md)
 
 What files to include in repo?
 
@@ -205,7 +208,7 @@ Exclude:
 
 class: center, middle
 
-# Getting Started with Brackets
+# Getting Started with VSCode
 
 ---
         
