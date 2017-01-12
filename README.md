@@ -2,34 +2,37 @@
 
 Front-end development materials & code examples
 
-All content is inside `docs/` folder.
-
+Course content is inside `docs/` folder and in html slide format available [here](https://mattpe.github.io/wbma/).
 
 ## Useful online materials & tutorials
 
-### Tools
+### Toolset
 
 - [Basic shell commands. Read chapters 3 and 5](http://vic.gedris.org/Manual-ShellIntro/1.2/ShellIntro.pdf)
-- Free book: [Pro Git](http://git-scm.com/book/en/v2)
+- Free book on Git: [Pro Git](http://git-scm.com/book/en/v2)
 - Free (and short) Codeschool course: [Try Git](https://www.codeschool.com/courses/try-git)
-- Codecademy Git
+- [Codecademy - Learn Git](https://www.codecademy.com/learn/learn-git)
 
-### Typescript / ES2016
- 
- - tbd
+### Angular 2 & Typescript / ES6
 
-### Angular 2
+Course pre-tasks
 
-- ng-cli: ?
-- http://learnangular2.com/
-- codeschool/codecademy?
-- angular.io docs
-- [Angular Style Guide]()
+1. <http://courses.angularclass.com/p/modern-javascript>
+2. <http://courses.angularclass.com/p/angular-2-fundamentals>
+3. <https://angular.io/docs/ts/latest/tutorial/>
 
-### Ionic 2
+Other
 
-- tbd
+- [Angular Docs](https://angular.io/docs/ts/latest/)
+- [Angular Style Guide](https://angular.io/styleguide)
+- [ng-cli](https://github.com/angular/angular-cli#installation)
+- <http://learnangular2.com/>
+- [MS Virtual academy](https://mva.microsoft.com/en-US/training-courses/introduction-to-angular-20-1654)
+
+### Ionic 2 Framework
+
+- [Ionic docs](https://ionicframework.com/docs/)
 
 ---
 
-Slides are written in markdown and rendered using [Remark](https://github.com/gnab/remark/wiki) (`bower install`). 
+Slides are written in markdown and rendered using [Remark](https://github.com/gnab/remark/wiki). 

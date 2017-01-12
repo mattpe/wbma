@@ -19,23 +19,20 @@ class: center, middle
 - Creating a native (hybrid) app: Ionic (Cordova)
 
 ---
-TODO: Check all
----
 
 # Code editor or IDE
 
 Ultimately, it's your choice. VSCode is recommended.
 
-## Visual Studio Code
+#### Visual Studio Code
 
 - free & open source code editor by Microsoft (**!=** Visual Studio IDE)
-- wide plugin support
-- multiplatform
-- good docs & instructions
-- developed for web development ??
+- wide extension support
+- lightweight, multiplatform support
+- good [docs & instructions](https://code.visualstudio.com/docs/editor/codebasics)
 - choice of many Angular2 developers
 
-### Other picks
+#### Other picks
 
 - [Atom](https://atom.io/)
 - [Brackets](http://brackets.io/)
@@ -49,9 +46,9 @@ Ultimately, it's your choice. VSCode is recommended.
 
 # Browser
 
-- Chrome & [Chrome DevTools](https://developer.chrome.com/devtools) (Brackets Live Preview support)
+- Chrome & [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/) 
       
-![Chrome screenshot](../images/chrome-devtools.png)
+![Chrome screenshot](images/chrome-devtools.png)
 
 ---
 
@@ -59,18 +56,9 @@ Ultimately, it's your choice. VSCode is recommended.
 
 ## [NPM](https://www.npmjs.com/) - node.js package manager
 
-- Install node.js to get the package manager (npm)
-- npm packages needed in a project (dependencies) are stored in the `package.json` file
+- Install [node.js](https://nodejs.org/en/) to get the package manager **npm**
+- npm packages needed in a project (dependencies) are listed in the `package.json` file and can be install with `npm install` command
 - locally installed (=project specific) packages are downloaded to `node_modules/` folder
-
-## ?Deprecated: [Bower](http://bower.io/) 
-
-- is installed using npm
-- Package manager for web:
-  - web/css frameworks
-  - js libraries
-- required dependencies are stored in the `bower.json` file
-- packages are downloaded to `bower_components/` folder
 
 ???
       
@@ -81,92 +69,54 @@ package installation folders should be excluded from version control
 # Example package.json
 
 ```js
-TBD
-
-```
-
----
-
-# ?REMOVE:Example bower.json
-
-```js
 {
-  "name": "app-name",
+  "name": "example-app",
   "version": "0.0.1",
-  "author": "developerName",
-  "license": "ISC",
+  "author": "Example Coder <ecoder@example.com>",
+  "description": "An example app doing something",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./app.js"
+  },
   "dependencies": {
-    "modernizr": "~2.6.2",
-    "jquery": "~1.10.2"
-  }
+    "@angular/common": "~2.1.0",
+    "@angular/core": "~2.1.0"
+  }        }
 }
+
 ```
 
 ---
 
 # Automating Development Tasks
 
-TODO: change to angular-cli
+**angular-cli (ng-cli)** tool - `ng` command.
 
-Run frequent routine tasks in development workflow easily using
-[Grunt](http://gruntjs.com/) & Gruntfile.js (like make & makefile in C)
-
+- Run frequent routine tasks in development workflow easily
+- Create app skeleton
+- Gemerate app components 
 - Run tests
 - Validate code
 - Build/Deploy application
-  - Minify JS & CSS files
-  - Remove comments
-  - Choose, copy & rename files 
+  - Minify & combine source files
+  - Remove comments & other extra stuff not needed in production version
+
+#### Other generic JS task runners
+
+- [Grunt](http://gruntjs.com/) & Gruntfile.js (like make & makefile in C)
+- [Gulp](http://gulpjs.com/) & Gulpfile.js 
 
 ---
 
-# Example Gruntfile.js
-
-
-```js
-module.exports = function(grunt) {
-
-  // Project configuration.
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
-      }
-    }
-  });
-
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  // Default task(s).
-  grunt.registerTask('default', ['uglify']);
-};
-
-```
-
----
-        
 # Frameworks used
-
-## Layout/HTML/CSS
-
-- Ionic's css components
-
-[Bootstrap](http://getbootstrap.com/)
-- Layout & UI components, widgets
 
 ## Front-end application logic
 
 [Angular 2](https://angular.io/)
 
+## Layout/HTML/CSS
 
-???
-
-TBD: App arch img
+[Ionic 2](https://ionicframework.com/) 
 
 ---
 
@@ -178,16 +128,15 @@ What files to include in repo?
 
 - all source code
 - README.md and other documentaion
-- grunt, bower & npm settings files
-- .gitignore file: to exclude stuff not to be included
+- eg. npm grunt or bower settings files
+- .gitignore file: list of local stuff not to be included in the version control:
 
 Exclude:
 
 - IDE specific project files & folders
-- build targets
-- packages managed by npm or bower (= _node_modules/_ & _bower_components/_ folders) 
+- build targets and other automatically generated files
+- packages managed e.g. by npm or bower (= _node_modules/_ & _bower_components/_ folders) 
 - any temp & OS specific files, like Apple's `.DS_Store` 
-
 
 ---
 
@@ -214,106 +163,73 @@ class: center, middle
         
 # Install the Editor
 
-Download & install: [Brackets.io](http://brackets.io/)
+Download & install [Visual Studio Code](https://code.visualstudio.com/)
         
-.center[![Brackets logo](../images/brackets-logo.png)]
+.center[![VSCode logo](images/vscode.png)]
 
 ---
 
 # Install Extensions
 
-Open then Extension Manager by clicking a button ![button](../images/ext-manager.png) on the right. Search for the JSHint plugin (by Raymond Camden) and install it and the Configurator plugin as well.
+Press _ctrl-shift-x_ or click extensions icon on the left panel.
 
-[JSHint](http://jshint.com/about/) is a code analysis (linting) tool that helps you to write better code.
+Search and install:
 
-![Extension window](../images/brackets-install-jshint.png) 
+- Auto Import
+- TSLint
 
----
-        
-## Install Extensions 2        
+Other handy extensions:
 
-Other useful (& optional) plugins:
-        
-- JSHint Configurator is a tool to help setting up file specific JSHint options
-
-- [Brackets Git](https://github.com/zaggino/brackets-git) plugin provides Git integration (you should still be familiar with the command line git as well)
-
-- [Beautify](https://github.com/drewhamlett/brackets-beautify) for automatic code formation 
-
-- Some Angular plugin e.g. https://github.com/angular-ui/AngularJS-brackets
-
-
-
----
-
-# Configure JSHint
-
-To disable built-in JSLint & to enable JSHint:
-- open `brackets.json` settings file _Debug -> Open Preferences File_ (Default location in Windows: `C:\Users\yourUserName\AppData\Roaming\Brackets\brackets.json` )
-- Add following lines on top in the file: 
-
-```js
-{
-  "language": {
-      "javascript": {
-          "linting.prefer": ["JSHint"],
-          "linting.usePreferredOnly": true
-      }
-  },
-  "jshint.globals": {
-      "angular": true,
-      "module": true,
-      "document": true
-  },
-....
-```
-        
+- EditorConfig for VS Code: support for [EditorConfig](http://editorconfig.org/)
+- Duplicate file: Add _right-click -> Duplicate file_ action
     
 ---
 
-# Brackets - Basic Usage
+# VSCode - Basic Usage
 
 Active **project** is the folder open on the left side panel (_File -> Open folder..._) 
-        
-**Live Preview** ![Live view button](../images/brackets-lp-button.png), `Ctrl-ALt-P`: Open current html page in a browser. Brackets creates a local web server and keeps track of changes automatically.
 
-When testing in browser, using local web server (URL eg. `https://127.0.0.1:[port]/yourFile.html`) instead of direct file access (eg. `file://C:\users\yourname\codefolder\yourFile.html`) makes development easier especially with networking tasks in JS.  
+Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard shortcuts_ for more)        
 
-**Inline Editing** provides a quick access to modify CSS files directly from HTML. Just place cursor in tag, class or id and press `Cmd/Ctrl-E`.
-
-In the bottom left corner of the editor are located functionalities to switch between tabs and spaces, set indentation and check JSHint errors.       
-![Editor bottom right corner](../images/brackets-br-corner.png)
-
+- Multiline comment: _ctrl-'_
+- Delete line: _ctrl-shift-k_
+- Move line(s): _alt-up/down_
+- Copy line(s): _alt-shift-up/down_
+- Auto format code: _alt-shift-f_
+- Open integrated console: _ctrl-ö_
+- Quick find/open files: _ctrl-p_
+- Split editor: _ctrl-§_
 
 ---
 
-# Exercise 1: Setup your toolchain and a new web project
+# VSCode - Settings
 
-1. Install missing tools listed in the previous slides (Brackets, Chome, Git, Node)
-2. Configure Brackets & JSHint
-3. Use npm to install [grunt-cli](http://gruntjs.com/getting-started) & [bower](http://bower.io/) **globally** `npm install -g <application>` 
-   - Windows: use Git Bash command line
-   - Mac/Linux: use console/terminal
-   - [npm no sudo fix for Mac/Linux](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
-5. Create a folder for your project
-6. Create app skeleton folders & files:
-    - _src_ folder for dev html/css/js files
-    - _build_ folder for deployment ready application
-    - _.gitignore_ file including appropriate contents (exclude _node_modules/_ & _bower_components/_ at least)
-    - _[package.json](https://docs.npmjs.com/files/package.json)_: install dev-dependencies: bower, grunt & grunt plugins, use `--save-dev` option with `npm`
-    - _[bower.json](http://bower.io/docs/creating-packages/#bowerjson)_: install angular, bootsrap & jquery, use `--save` option with `bower`   
-    - _[Gruntfile.js](http://gruntjs.com/getting-started)_: Tasks: copy & minify _src/app.js_ file to _build/app.min.js_, check code with jshint
-    - add a simple html template and js file into _src/_ folder
-7. Test that libraries installed by bower are accessible in your html
-8. Test that `grunt` is working
-9. Create git repo: `git init` and a remote repository (Github/Bitbucket)
-10. Add remote repo to your local git conf: `git remote add origin [remoteURL]` 
-11. Add & commit files to your local repo (`git add/commit`)
-12. Push local master branch to remote repo: `git push -u origin master`  
-13. Return a link pointing to your repo (needs to be public or shared to teachers)
+Change integrated console to Bash in Windows:
+
+1. Install [Git for Windows](https://git-scm.com/downloads) to default location
+2. Edit vscode settings file (_File -> Preferences -> User settings_) and add the following property into json object:
+
+```js
+// Place your settings in this file to overwrite the default settings
+{
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+}
+```
+
+---
+
+# Exercise 1: Setup your toolchain and a new Angular 2 project
+
+1. Install editor, git, npm, angular-cli
+2. Use ng-cli to generate the app skeleton.
+1. .
+1. tbd
+1. ..
+1. ...
+1. ....
+10. Test that app works, push it to your remote github repository and return the github link to tuubi.
 
 Ask help if you got lost!
-
 
 ---
 
