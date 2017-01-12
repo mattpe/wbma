@@ -1,0 +1,18 @@
+{
+  "name": "wbma",
+  "version": "1.0.0",
+  "description": "WBMA front-end development materials & code examples",
+  "main": "server.js",
+  "scripts": {
+    "start": "node node_modules/http-server/bin/http-server docs/ -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattpe/wbma/issues"
+  },
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
