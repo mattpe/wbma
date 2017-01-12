@@ -2,7 +2,11 @@
 
 Front-end development materials & code examples
 
+<<<<<<< HEAD
 Course content is inside [docs](docs/) folder and available in html slide format [here](https://mattpe.github.io/wbma/).
+=======
+Course content is inside <docs/> folder and available in html slide format [here](https://mattpe.github.io/wbma/).
+>>>>>>> c8d0263075aca56897a6608860ed2a1b36018809
 
 ## Useful online materials & tutorials
 
