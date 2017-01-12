@@ -13,10 +13,10 @@ class: center, middle
 - Language: TypeScript
 - Run, test & debug: Chrome browser      
 - Version Control System: Git
-- Package managers: NPM
+- Package manager: NPM
 - Building & automating tasks: Angular CLI (webpack)
-- Development frameworks: Angular2, Ionic2
-- Creating a native (hybrid) app: Ionic (Cordova)
+- Development frameworks: Angular 2, Ionic 2
+- Creating a native (hybrid) app: Ionic 2 (Cordova)
 
 ---
 
@@ -54,15 +54,20 @@ Ultimately, it's your choice. VSCode is recommended.
 
 # Package Management
 
-## [NPM](https://www.npmjs.com/) - node.js package manager
+## [NPM](https://www.npmjs.com/) - Node.js Package Manager
 
 - Install [node.js](https://nodejs.org/en/) to get the package manager **npm**
 - npm packages needed in a project (dependencies) are listed in the `package.json` file and can be install with `npm install` command
-- locally installed (=project specific) packages are downloaded to `node_modules/` folder
+- locally installed (=project specific) packages are downloaded to `node_modules/` folder (should be excluded from version control)
 
-???
-      
-package installation folders should be excluded from version control
+#### Alternative
+
+[Yarn](https://yarnpkg.com/) 
+
+- newcomer gaining a lot of traction now
+- first [open source release on October, 2016](https://code.facebook.com/posts/1840075619545360). Current version 0.18.1 
+- uses same package.json file and npm registry as npm
+- claimed to be faster, more secure and reliable 
 
 ---
 
@@ -90,16 +95,17 @@ package installation folders should be excluded from version control
 
 # Automating Development Tasks
 
-**angular-cli (ng-cli)** tool - `ng` command.
+**[angular-cli](https://github.com/angular/angular-cli#angular-cli) command line tool** - `ng` command:
 
 - Run frequent routine tasks in development workflow easily
-- Create app skeleton
-- Gemerate app components 
-- Run tests
-- Validate code
+- Create an app skeleton
+- Generate app components 
+- Run development server enviroment
+- Run tests, validate code
 - Build/Deploy application
   - Minify & combine source files
   - Remove comments & other extra stuff not needed in production version
+- project specific settings in _angular-cli.json_ file
 
 #### Other generic JS task runners
 
