@@ -25,7 +25,7 @@ Other
 
 - [Angular Docs](https://angular.io/docs/ts/latest/)
 - [Angular Style Guide](https://angular.io/styleguide)
-- [ng-cli](https://github.com/angular/angular-cli#installation)
+- [angular-cli](https://github.com/angular/angular-cli#installation)
 - <http://learnangular2.com/>
 - [MS Virtual academy](https://mva.microsoft.com/en-US/training-courses/introduction-to-angular-20-1654)
 

@@ -11,7 +11,7 @@ class: center, middle
 
 - Editor/IDE: Visual Studio Code, vscode (or any)
 - Language: TypeScript
-- Run, test & debug: Chrome browser      
+- Run, test & debug: Chrome browser dev tools       
 - Version Control System: Git
 - Package manager: NPM
 - Building & automating tasks: Angular CLI (webpack)
@@ -44,10 +44,11 @@ Ultimately, it's your choice. VSCode is recommended.
 
 ---
 
-# Browser
+# Browser & debugging
 
-- Chrome & [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/) 
-      
+- Chrome & [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
+- [Augury](https://augury.angular.io/) browser extension can be used for advanced debugging
+
 ![Chrome screenshot](images/chrome-devtools.png)
 
 ---
@@ -226,16 +227,19 @@ Change integrated console to Bash in Windows:
 
 # Exercise 1: Setup your toolchain and a new Angular 2 project
 
-1. Install editor, git, npm, angular-cli
-2. Use ng-cli to generate the app skeleton.
-1. .
-1. tbd
-1. ..
-1. ...
-1. ....
-10. Test that app works, push it to your remote github repository and return the github link to tuubi.
+**a.**
 
-Ask help if you got lost!
+1. Install code editor + extensions, git, npm and angular-cli
+2. Use angular-cli to generate the app skeleton ([set style type to _scss_](https://github.com/angular/angular-cli#global-styles)).
+3. Test that app works, run with angular-cli and open in browser
+4. Create a remote git repository (github/bitbucket) and push your app there
+5. If not public, share your repo to both teacher accounts: _mattpe_ & _ilkkamtk_ and return the repo link to tuubi.
+
+**b.**
+
+1. develop your app further following the [Note card tutorial](http://courses.angularclass.com/courses/angular-2-fundamentals/lectures/1280055) but now use `ng` command to generate components.
+2. git add, commit & push to remote repository 
+3. goto b 1.
 
 ---
 
