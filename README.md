@@ -27,7 +27,7 @@ Other
 - [Angular Style Guide](https://angular.io/styleguide)
 - [angular-cli](https://github.com/angular/angular-cli#installation)
 - <http://learnangular2.com/>
-- [MS Virtual academy](https://mva.microsoft.com/en-US/training-courses/introduction-to-angular-20-1654)
+- [MS Virtual academy](https://mva.microsoft.com/en-US/training-courses/introduction-to-angular-20-16540)
 
 ### Ionic 2 Framework
 
