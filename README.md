@@ -8,7 +8,7 @@ Course content is inside [docs](docs/) folder and available in html slide format
 
 ### Toolset
 
-- [Basic shell commands. Read chapters 3 and 5](http://vic.gedris.org/Manual-ShellIntro/1.2/ShellIntro.pdf)
+- [Basic shell commands.](https://www-xray.ast.cam.ac.uk/~jss/lecture/computing/notes/out/commands_basic/)
 - Free book on Git: [Pro Git](http://git-scm.com/book/en/v2)
 - Free (and short) Codeschool course: [Try Git](https://www.codeschool.com/courses/try-git)
 - [Codecademy - Learn Git](https://www.codecademy.com/learn/learn-git)
