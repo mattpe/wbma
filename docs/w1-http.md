@@ -27,3 +27,6 @@ class: center, middle
 1. Remember to import the Http class to the component and also inject the Http class to constructor
 2. [Http class](https://angular.io/docs/ts/latest/api/http/index/Http-class.html)
 3. [Bypass CORS if needed](https://www.thepolyglotdeveloper.com/2014/08/bypass-cors-errors-testing-apis-locally/)
+4. Printing data:
+    - using expression ```{{ variable }}```
+    - iterate repeating data: ```*ngFor```
