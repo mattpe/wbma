@@ -85,7 +85,7 @@ Exclude:
 
 - [instructions](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
 
-#### Alternative
+#### NPM Alternative
 
 [Yarn](https://yarnpkg.com/) 
 
