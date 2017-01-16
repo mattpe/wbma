@@ -53,6 +53,26 @@ Ultimately, it's your choice. VSCode is recommended.
 
 ---
 
+# Source Code Management - Git
+
+Check [Git stuff](https://github.com/mattpe/git-intro/blob/master/git-basics.md)
+
+What files to include in repo?
+
+- all source code
+- README.md and other documentaion
+- eg. npm grunt or bower settings files
+- .gitignore file: list of local stuff not to be included in the version control:
+
+Exclude:
+
+- IDE specific project files & folders
+- build targets and other automatically generated files
+- packages managed e.g. by npm or bower (= _node_modules/_ & _bower_components/_ folders) 
+- any temp & OS specific files, like Apple's `.DS_Store` 
+
+---
+
 # Package Management
 
 ## [NPM](https://www.npmjs.com/) - Node.js Package Manager
@@ -121,29 +141,9 @@ Ultimately, it's your choice. VSCode is recommended.
 
 [Angular 2](https://angular.io/)
 
-## Layout/HTML/CSS
+## Layout HTML/CSS components & Hybrid app
 
 [Ionic 2](https://ionicframework.com/) 
-
----
-
-# Source Code Management - Git
-
-Check [Git stuff](https://github.com/mattpe/git-intro/blob/master/git-basics.md)
-
-What files to include in repo?
-
-- all source code
-- README.md and other documentaion
-- eg. npm grunt or bower settings files
-- .gitignore file: list of local stuff not to be included in the version control:
-
-Exclude:
-
-- IDE specific project files & folders
-- build targets and other automatically generated files
-- packages managed e.g. by npm or bower (= _node_modules/_ & _bower_components/_ folders) 
-- any temp & OS specific files, like Apple's `.DS_Store` 
 
 ---
 
@@ -237,7 +237,7 @@ Change integrated console to Bash in Windows:
 
 **b.**
 
-1. develop your app further following the [Note card tutorial](http://courses.angularclass.com/courses/angular-2-fundamentals/lectures/1280055) but now use `ng` command to generate components.
+1. develop your app further following the [Note card tutorial](http://courses.angularclass.com/courses/angular-2-fundamentals/lectures/1280055) but use now `ng` command to generate components.
 2. git add, commit & push to remote repository 
 3. goto b 1.
 
