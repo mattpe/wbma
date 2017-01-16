@@ -17,7 +17,9 @@ class: center, middle
 
 ### Fetching data with HTTP Client, Task B
 
-1. Create another method that fetches data from API of your choice
+1. Create another method that fetches data from the media API
+    - url: http://media.mw.metropolia.fi/wbma/
+    - [Documentation](http://media.mw.metropolia.fi/wbma/docs/)
 2. First log the data using ```console.log()```
 3. Then print the data using HTML (e.g. table)
 
