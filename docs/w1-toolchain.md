@@ -47,7 +47,7 @@ Ultimately, it's your choice. VSCode is recommended.
 # Browser & debugging
 
 - Chrome & [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
-- [Augury](https://augury.angular.io/) browser extension can be used for advanced debugging
+- [Augury](https://augury.angular.io/) browser extension for Angular 2 debugging
 
 ![Chrome screenshot](images/chrome-devtools.png)
 
@@ -60,9 +60,9 @@ Check [Git stuff](https://github.com/mattpe/git-intro/blob/master/git-basics.md)
 What files to include in repo?
 
 - all source code
-- README.md and other documentaion
+- README.md and other documentation
 - eg. npm grunt or bower settings files
-- .gitignore file: list of local stuff not to be included in the version control:
+- .gitignore file: list of local stuff not to be included in the version control ->
 
 Exclude:
 
