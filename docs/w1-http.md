@@ -1,7 +1,6 @@
 class: center, middle
 
-# Mediapalvelut ja käyttäjäkokemus, Angular HTTP Client
-
+# WBMA, Angular HTTP Client
 
 ## 1/2017
 
@@ -15,18 +14,22 @@ class: center, middle
 5. Then print the data using HTML (e.g. table)
 6. Remember to call the method
 
+---
+
 ### Fetching data with HTTP Client, Task B
 
 1. Create another method that fetches data from the media API
-    - url: http://media.mw.metropolia.fi/wbma/
+    - base url: http://media.mw.metropolia.fi/wbma/
     - [Documentation](http://media.mw.metropolia.fi/wbma/docs/)
 2. First log the data using ```console.log()```
 3. Then print the data using HTML (e.g. table)
 
 ### Some help
+
 1. Remember to import the Http class to the component and also inject the Http class to constructor
 2. [Http class](https://angular.io/docs/ts/latest/api/http/index/Http-class.html)
 3. [Bypass CORS if needed](https://www.thepolyglotdeveloper.com/2014/08/bypass-cors-errors-testing-apis-locally/)
 4. Printing data:
     - using expression ```{{ variable }}```
     - iterate repeating data: ```*ngFor```
+    
