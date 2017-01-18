@@ -1,5 +1,7 @@
 # Course Project
 
+Create an application utilizing [this](http://media.mw.metropolia.fi/wbma/docs/) back-end service.
+
 ## Application requirements
 
 1. upload media *
@@ -21,4 +23,4 @@ starred(*) requirements are mandatory
 
 [Media API docs](http://media.mw.metropolia.fi/wbma/docs/)
 
-postman, ng-cli = scss
+Tip: Use Postman to test how the API works: [Postman](https://www.getpostman.com/)
