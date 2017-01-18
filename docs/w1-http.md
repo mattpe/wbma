@@ -4,7 +4,9 @@ class: center, middle
 
 ## 1/2017
 
-### Fetching data with HTTP Client, Task A
+---
+
+# Fetching data with HTTP Client, Task A
 
 1. Create new app with Angular CLI
 2. Create new component 'http-test'
@@ -16,11 +18,12 @@ class: center, middle
 
 ---
 
-### Fetching data with HTTP Client, Task B
+# Fetching data with HTTP Client, Task B
 
 1. Create another method that fetches data from the media API
-    - base url: http://media.mw.metropolia.fi/wbma/
     - [Documentation](http://media.mw.metropolia.fi/wbma/docs/)
+    - base url: http://media.mw.metropolia.fi/wbma/
+    - Media files location: http://media.mw.metropolia.fi/wbma/uploads/
 2. First log the data using ```console.log()```
 3. Then print the data using HTML (e.g. table)
 
@@ -32,4 +35,3 @@ class: center, middle
 4. Printing data:
     - using expression ```{{ variable }}```
     - iterate repeating data: ```*ngFor```
-    

@@ -23,4 +23,8 @@ starred(*) requirements are mandatory
 
 [Media API docs](http://media.mw.metropolia.fi/wbma/docs/)
 
+API base url: http://media.mw.metropolia.fi/wbma
+
+Media files location: http://media.mw.metropolia.fi/wbma/uploads/
+
 Tip: Use Postman to test how the API works: [Postman](https://www.getpostman.com/)
