@@ -2,6 +2,12 @@
 
 Front-end development materials & code examples
 
+## TOC
+
+1. [Week 1 - Toolchain](docs/w1-toolchain.md)
+1. [Week 1 - HTTP](docs/w1-http.md)
+1. [Week 2 - HTTP, Services](docs/w2-services.md)
+
 Course content is inside [docs](docs/) folder and available in html slide format [here](https://mattpe.github.io/wbma/).
 
 [Tuubi workspace](https://tuubi.metropolia.fi/portal/group/tuubi/etusivu/yleiset-tyokalut/tyotilat?p_p_id=Workspaces_WAR_workspaces&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_Workspaces_WAR_workspaces_workspaceId=340002469)
