@@ -6,8 +6,9 @@ class: center, middle
 
 ---
 1. Clone this repo: https://github.com/ilkkamtk/ngImageEditor.git
-2. Follow teachers instructions and comments in *.component.ts and *.service.ts files to load an image to canvas element and to change brightess and contrast of the image.
-3. Use the BrightContrastComponent as an example to create a color filter and autocontrast. Use the formulas below.
+2. Run `npm install` to load neccessary packages
+3. Follow teachers instructions and comments in *.component.ts and *.service.ts files to load an image to canvas element and to change brightess and contrast of the image.
+4. Use the BrightContrastComponent as an example to create a color filter and autocontrast. Use the formulas below.
 
 ## Extra 
 
