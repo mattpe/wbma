@@ -7,6 +7,7 @@ Front-end development materials & code examples
 1. [Week 1 - Toolchain](docs/w1-toolchain.md)
 1. [Week 1 - HTTP](docs/w1-http.md)
 1. [Week 2 - HTTP, Services](docs/w2-services.md)
+1. [Week 2 - Postman](docs/w2-postman.md)
 
 Course content is inside [docs](docs/) folder and available in html slide format [here](https://mattpe.github.io/wbma/).
 
