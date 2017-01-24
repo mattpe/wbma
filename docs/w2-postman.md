@@ -27,7 +27,7 @@ Use Postman to:
 
 ## Extra 
 
-Add login component and service to yesterdays first [exercise](w12-services.md).
+Add login component and service to yesterdays first [exercise](w2-services.md).
 
 1. Implement login functionality
 2. Save token and user data to local storage
