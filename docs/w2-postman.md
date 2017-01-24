@@ -17,7 +17,7 @@ Use Postman to:
 4. Create an user account (`POST users/`) using your metropolia.fi email
 5. `POST login/` using your account and save the token string from the response
 6. Add the token to your following request headers (key name: _x-access-token_)
-7. Try `PUT users/` to change your password
+7. (Try `PUT users/` to change your password) - **doesn't work, sorry** bug on the server side will be fixed soon. 
 8. `POST media/` to upload a media file
 9. `POST comment/` to some other user's file
 10. `PUT media` to change description of your file
