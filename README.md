@@ -4,6 +4,7 @@ Front-end development materials & code examples
 
 ## TOC
 
+1. [Project description](docs/project.md)
 1. [Week 1 - Toolchain](docs/w1-toolchain.md)
 1. [Week 1 - HTTP](docs/w1-http.md)
 1. [Week 2 - HTTP, Services](docs/w2-services.md)
