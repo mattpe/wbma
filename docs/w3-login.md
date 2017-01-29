@@ -83,7 +83,7 @@ ___
 2. Create new service 'media' to services folder ```ng g s services/media```
 3. In the service create methods 'register' and 'login' with corresponding functionalities
 - 'login': call media API to login user and save users data to [local storage](http://www.w3schools.com/html/html5_webstorage.asp)
-    - when logged in user is redirected to 'front'
+    - when logged in, user is redirected to 'front'
 - 'register': call media API to create new user and automatically login
 
 
