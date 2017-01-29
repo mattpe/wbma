@@ -89,3 +89,80 @@ ___
 
 
 ---
+# Router basics
+
+Route declarations:
+
+_app.module.ts_
+```typescript
+...
+import { RouterModule } from '@angular/router';
+
+const routeConfig = [
+  {
+    path: 'example',
+    component: ExampleComponent
+  }
+];
+
+@NgModule({
+  ...
+  imports: [
+    ...
+   RouterModule.forRoot(routeConfig),
+    ...
+  ],
+  ...
+```
+
+`<router-outlet></router-outlet>` declares the placeholder for routed component tree:
+
+_app.component.html_
+
+```html
+<h1>App works!</h1>
+<router-outlet></router-outlet>
+```
+
+---
+
+# Router - Redirects
+- By default matching of URLs is done with _startsWith_ algorithm
+- `pathMatch: 'full'` can be used to set the algorithm to full matching
+- Redirects can be done with `redirectTo`
+
+_app.module.ts_
+```typescript
+const routeConfig = [
+  {
+*   path: ''
+*   pathMatch: 'full',
+*   redirectTo: 'todos/'
+  },
+  {
+    path: 'example',
+    component: ExampleComponent
+  }
+];
+```
+---
+
+# Router - Navigating
+- Two ways to navigate between states:
+    - Imperatively from within the components code: `this.router.navigateByUrl('example')` or `this.router.navigate(['example'])`
+    - Declaratively from within the template: `<div [routerLink]=['example']>`
+- URLs starting with `/` are absolute navigations, others relative
+- `../` also works for accessing the "parent" URL
+
+_app.component.ts_
+```typescript
+export class AppComponent {
+  constructor(`private router: Router) {
+*   this.router.navigate(['example']);
+  }
+}
+```
+
+_app.component.html_
+```html
+<a [routerLink]="['example']">Example</a>
