@@ -84,6 +84,7 @@ ___
 3. In the service create methods 'register' and 'login' with corresponding functionalities
 - 'login': call media API to login user and save users data to [local storage](http://www.w3schools.com/html/html5_webstorage.asp)
     - when logged in, user is redirected to 'front'
+    - if user has already logged in redirect to 'front' (autodirect)
 - 'register': call media API to create new user and automatically login
 
 
