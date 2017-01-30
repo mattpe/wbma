@@ -135,9 +135,9 @@ _app.module.ts_
 ```typescript
 const routeConfig = [
   {
-*   path: ''
-*   pathMatch: 'full',
-*   redirectTo: 'todos/'
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'todos'
   },
   {
     path: 'example',
@@ -158,7 +158,7 @@ _app.component.ts_
 ```typescript
 export class AppComponent {
   constructor(`private router: Router) {
-*   this.router.navigate(['example']);
+    this.router.navigate(['example']);
   }
 }
 ```
