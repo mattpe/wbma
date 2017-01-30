@@ -10,69 +10,69 @@ class: center, middle
 1. Create new app with Angular CLI
 2. Create components 'front', 'top-bar', 'register' and 'login'
 3. Template for 'top-bar' component:
-```
-  <nav>
-      <ul>
-        <li>
-            <a [routerLink] = "'/front'">Front page</a>
-        </li>
-        <li>
-            <a [routerLink] = "'/login'">Login</a>
-        </li>
-        <li>
-            <a [routerLink] = "'/register'">Register</a>
-        </li>
-      </ul>
-  </nav>
-```
+  ```
+    <nav>
+        <ul>
+          <li>
+              <a [routerLink] = "'/front'">Front page</a>
+          </li>
+          <li>
+              <a [routerLink] = "'/login'">Login</a>
+          </li>
+          <li>
+              <a [routerLink] = "'/register'">Register</a>
+          </li>
+        </ul>
+    </nav>
+  ```
 4. Template for 'front' component:
-```
-<div>Display this content when logged in.</div>
-```
+  ```
+  <div>Display this content when logged in.</div>
+  ```
 5. Create templates for 'login' and 'register' components yourself
 6. For routing edit '/app/app.module.ts/':
 - Before @NGModule add this:
-```
-const routeConfig = [
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: '/login'
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
-  },
-  {
-    path: 'logout',
-    component: LogoutComponent
-  },
-  {
-    path: 'front',
-    component: FrontComponent
-  }
-];
-```
+  ```
+  const routeConfig = [
+    {
+      path: '',
+      pathMatch: 'full',
+      redirectTo: '/login'
+    },
+    {
+      path: 'login',
+      component: LoginComponent
+    },
+    {
+      path: 'register',
+      component: RegisterComponent
+    },
+    {
+      path: 'logout',
+      component: LogoutComponent
+    },
+    {
+      path: 'front',
+      component: FrontComponent
+    }
+  ];
+  ```
 - Edit the imports-array like this:
-```
-...
-imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule.forRoot(routeConfig)
-  ],
+  ```
   ...
-```
+  imports: [
+      BrowserModule,
+      FormsModule,
+      HttpModule,
+      RouterModule.forRoot(routeConfig)
+    ],
+    ...
+  ```
 7. Edit 'app.component.html' to this:
-```
-<app-top-bar></app-top-bar>
-<router-outlet></router-outlet>
-```
+  ```
+  <app-top-bar></app-top-bar>
+  <router-outlet></router-outlet>
+  ```
 8. Now the navigation should work.
 
 ___
@@ -94,35 +94,35 @@ ___
 Route declarations:
 
 _app.module.ts_
-```typescript
-...
-import { RouterModule } from '@angular/router';
-
-const routeConfig = [
-  {
-    path: 'example',
-    component: ExampleComponent
-  }
-];
-
-@NgModule({
+  ```typescript
   ...
-  imports: [
+  import { RouterModule } from '@angular/router';
+
+  const routeConfig = [
+    {
+      path: 'example',
+      component: ExampleComponent
+    }
+  ];
+
+  @NgModule({
     ...
-   RouterModule.forRoot(routeConfig),
+    imports: [
+      ...
+     RouterModule.forRoot(routeConfig),
+      ...
+    ],
     ...
-  ],
-  ...
-```
+  ```
 
 `<router-outlet></router-outlet>` declares the placeholder for routed component tree:
 
 _app.component.html_
 
-```html
-<h1>App works!</h1>
-<router-outlet></router-outlet>
-```
+  ```html
+  <h1>App works!</h1>
+  <router-outlet></router-outlet>
+  ```
 
 ---
 
@@ -132,19 +132,19 @@ _app.component.html_
 - Redirects can be done with `redirectTo`
 
 _app.module.ts_
-```typescript
-const routeConfig = [
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'example'
-  },
-  {
-    path: 'example',
-    component: ExampleComponent
-  }
-];
-```
+  ```typescript
+  const routeConfig = [
+    {
+      path: '',
+      pathMatch: 'full',
+      redirectTo: 'example'
+    },
+    {
+      path: 'example',
+      component: ExampleComponent
+    }
+  ];
+  ```
 ---
 
 # Router - Navigating
@@ -155,14 +155,15 @@ const routeConfig = [
 - `../` also works for accessing the "parent" URL
 
 _*.component.ts_
-```typescript
-export class AppComponent {
-  constructor(`private router: Router) {
-    this.router.navigate(['example']);
+  ```typescript
+  export class AppComponent {
+    constructor(`private router: Router) {
+      this.router.navigate(['example']);
+    }
   }
-}
-```
+  ```
 
 _*.component.html_
-```html
-<a [routerLink]="['example']">Example</a>
+  ```html
+  <a [routerLink]="['example']">Example</a>
+  ```
