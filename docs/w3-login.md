@@ -171,4 +171,3 @@ _*.component.ts_
 _*.component.html_
   ```html
   <a [routerLink]="['example']">Example</a>
-  ```
