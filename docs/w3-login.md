@@ -7,9 +7,10 @@ class: center, middle
 ---
 # Routing
 
-#### 1. Create new app with Angular CLI
-#### 2. Create components 'front', 'top-bar', 'register' and 'login'
-#### 3. Template for 'top-bar' component:
+1. Create new app with Angular CLI
+2. Create components 'front', 'top-bar', 'register' and 'login'
+3. Template for 'top-bar' component:
+
 ```html
 <nav>
   <ul>
@@ -26,12 +27,14 @@ class: center, middle
 </nav>
 ```
 4. Template for 'front' component:
+
   ```html
   <div>Display this content when logged in.</div>
   ```
 5. Create templates for 'login' and 'register' components yourself
 6. For routing edit '/app/app.module.ts/':
 - Before @NGModule add this:
+
   ```typescript
   const routeConfig = [
     {
@@ -69,6 +72,7 @@ class: center, middle
     ...
   ```
 7. Edit 'app.component.html' to this:
+
   ```html
   <app-top-bar></app-top-bar>
   <router-outlet></router-outlet>
