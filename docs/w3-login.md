@@ -154,7 +154,7 @@ const routeConfig = [
 - URLs starting with `/` are absolute navigations, others relative
 - `../` also works for accessing the "parent" URL
 
-_app.component.ts_
+_*.component.ts_
 ```typescript
 export class AppComponent {
   constructor(`private router: Router) {
@@ -163,6 +163,6 @@ export class AppComponent {
 }
 ```
 
-_app.component.html_
+_*.component.html_
 ```html
 <a [routerLink]="['example']">Example</a>
