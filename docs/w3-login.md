@@ -11,21 +11,21 @@ class: center, middle
 2. Create components 'front', 'top-bar', 'register' and 'login'
 3. Template for 'top-bar' component:
 
-```html
-<nav>
-  <ul>
-    <li>
-        <a [routerLink] = "'/front'">Front page</a>
-    </li>
-    <li>
-        <a [routerLink] = "'/login'">Login</a>
-    </li>
-    <li>
-        <a [routerLink] = "'/register'">Register</a>
-    </li>
-  </ul>
-</nav>
-```
+  ```html
+  <nav>
+    <ul>
+      <li>
+          <a [routerLink] = "'/front'">Front page</a>
+      </li>
+      <li>
+          <a [routerLink] = "'/login'">Login</a>
+      </li>
+      <li>
+          <a [routerLink] = "'/register'">Register</a>
+      </li>
+    </ul>
+  </nav>
+  ```
 4. Template for 'front' component:
 
   ```html
