@@ -61,6 +61,7 @@ class: center, middle
   ];
   ```
 - Edit the imports-array like this:
+
   ```typescript
   ...
   imports: [
