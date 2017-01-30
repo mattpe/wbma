@@ -8,7 +8,7 @@ class: center, middle
 # Routing
 
 1. Create new app with Angular CLI
-2. Create components 'front', 'top-bar', 'register' and 'login'
+2. Create components 'front', 'top-bar', 'register', 'login' and 'logout'
 3. Template for 'top-bar' component:
 
   ```html
