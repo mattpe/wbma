@@ -1,6 +1,6 @@
 class: center, middle
 
-# WBMA, Angular HTTP Client
+# WBMA, Angular Routing & Services
 
 ## 3/2017
 
