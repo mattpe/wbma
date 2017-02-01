@@ -12,7 +12,7 @@ Learn how you can use pipes to transform output data values: [Pipes angular.io g
 
 ### Task: Create a custom pipe and use it to get thumbnail images of the media files 
 
-1. Use the previous [exercise](w3-login.md) as a starting point and develop it further
+1. Use the previous [exercise](w3-upload.md) as a starting point and develop it further
 1. Use `FrontComponent` to show thumbnails of the 10 newest media files
     - add getNew() method into `MediaService` and use [GET /media](http://media.mw.metropolia.fi/wbma/docs/#api-Media-GetMediaFiles)
     - inject MediaService into your `FrontComponent`
