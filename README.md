@@ -11,6 +11,8 @@ Front-end development materials & code examples
 1. [Week 2 - Postman](docs/w2-postman.md)
 1. [Week 2 - Image editor](docs/w2-image-editor.md)
 1. [Week 3 - Routing & login](docs/w3-login.md)
+1. [Week 3 - Forms & file upload](docs/w3-upload.md)
+1. [Week 3 - Pipes](docs/w3-pipe.md)
 
 Course content is inside [docs](docs/) folder and available in html slide format [here](https://mattpe.github.io/wbma/).
 
