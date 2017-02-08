@@ -19,7 +19,7 @@ class: center, middle
     - show also other data related to the media file:
         - title
         - description
-        - user (to get username you need to request )
+        - user (to get username you need to request [User endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-User-GetUser) using media file's `user_id`)
         - likes (request [Favourite endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-Favourite) on the media api)
         - liked by user
     
