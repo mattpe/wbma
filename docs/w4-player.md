@@ -14,10 +14,12 @@ class: center, middle
 1. Create a new component for viewing single media files. Features:
     - get a single file from API
     - depending on file type use `<img>`, `<video>` or `<audio>` to show/play media file
+        - <http://www.w3schools.com/tags/tag_video.asp>
+        - <http://www.w3schools.com/tags/tag_audio.asp>  
     - show also other data related to the media file:
         - title
         - description
-        - user
-        - likes
+        - user (to get username you need to request )
+        - likes (request [Favourite endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-Favourite) on the media api)
         - liked by user
     
