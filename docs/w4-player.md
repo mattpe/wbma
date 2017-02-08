@@ -23,7 +23,7 @@ class: center, middle
         - likes (request [Favourite endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-Favourite) on the media api)
         - liked by user
 1. Some help:
-    - Add parameters to url/route: `['/player/', media.id]`
+    - Add parameters to url/route: `['/player', media.id]`
     - Use parameters: 
         
 ```
