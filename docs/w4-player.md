@@ -22,4 +22,20 @@ class: center, middle
         - user (to get username you need to request [User endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-User-GetUser) using media file's `user_id`)
         - likes (request [Favourite endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-Favourite) on the media api)
         - liked by user
-    
+1. Some help:
+    - Add parameters to url/route: `['/player/', media.id]`
+    - Use parameters: 
+        
+        ```
+        constructor(
+        ...
+        private route: ActivatedRoute,
+        ...
+        ) { }
+        ```
+        
+        ```
+        this.route.params.subscribe((params: any) => {
+            console.log(params)
+            });
+        ```
