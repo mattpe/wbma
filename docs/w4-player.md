@@ -26,16 +26,16 @@ class: center, middle
     - Add parameters to url/route: `['/player/', media.id]`
     - Use parameters: 
         
-        ```
-        constructor(
-        ...
-        private route: ActivatedRoute,
-        ...
-        ) { }
-        ```
-        
-        ```
-        this.route.params.subscribe((params: any) => {
-            console.log(params)
-            });
-        ```
+```
+    constructor(
+    ...
+    private route: ActivatedRoute,
+    ...
+    ) { }
+```
+
+```
+    this.route.params.subscribe((params: any) => {
+        console.log(params)
+    });
+```
