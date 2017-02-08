@@ -24,10 +24,24 @@ class: center, middle
         - liked by user
 1. Some help:
     - Add parameters to routerlink: `['/player', media.id]`
-    - Use parameters: 
-        
+    - To use parameters:
+
+_app.module.ts_
+
 ```
-    constructor(
+const routeConfig = [
+...
+    {
+        path: 'player/:fileId',
+        component: SomeComponent
+    }
+...
+];
+```
+
+_some.component.ts_
+```
+    constructor(
     ...
     private route: ActivatedRoute,
     ...
