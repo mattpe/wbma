@@ -3,26 +3,30 @@ class: center, middle
 # Mobile Web Development Toolchain
 
 
-## 1/2017
+## 1/2018
 
 ---
 
 # Contents
 
-- Editor/IDE: Visual Studio Code, vscode (or any)
+- Editor/IDE: WebStrom/PhpStorm, Visual Studio Code, vscode (or any)
 - Language: TypeScript
 - Run, test & debug: Chrome browser dev tools       
 - Version Control System: Git
 - Package manager: NPM
 - Building & automating tasks: Angular CLI (webpack)
-- Development frameworks: Angular 2, Ionic 2
-- Creating a native (hybrid) app: Ionic 2 (Cordova)
+- Development frameworks: Angular, Ionic
+- Creating a native (hybrid) app: Ionic (Cordova)
 
 ---
 
 # Code editor or IDE
 
-Ultimately, it's your choice. VSCode is recommended.
+Ultimately, it's your choice. WebStrom/PhpStorm is recommended.
+
+#### WebStorm/PhpStorm
+- free for Metropolia students. [Apply for license here](https://www.jetbrains.com/student/)
+- quite ready out of the box. No need for plugins.
 
 #### Visual Studio Code
 
@@ -30,7 +34,7 @@ Ultimately, it's your choice. VSCode is recommended.
 - wide extension support
 - lightweight, multiplatform support
 - good [docs & instructions](https://code.visualstudio.com/docs/editor/codebasics)
-- choice of many Angular2 developers
+- choice of many Angular developers
 
 #### Other picks
 
@@ -143,11 +147,11 @@ Exclude:
 
 ## Front-end application logic
 
-[Angular 2](https://angular.io/)
+[Angular](https://angular.io/)
 
 ## Layout HTML/CSS components & Hybrid app
 
-[Ionic 2](https://ionicframework.com/) 
+[Ionic](https://ionicframework.com/) 
 
 ---
 
@@ -168,11 +172,28 @@ Exclude:
 
 class: center, middle
 
+# Getting Started with WebStorm
+
+---
+
+# Install WebStorm
+
+Download & install [WebStorm](https://www.jetbrains.com/webstorm/)
+        
+.center[![VSCode logo](http://resources.jetbrains.com/storage/products/webstorm/img/meta/webstorm_logo_300x300.png)]
+
+# Settings
+- [Accessing default settings](https://www.jetbrains.com/help/webstorm/accessing-default-settings.html)
+- [Change JavaScript version to ES6](https://www.jetbrains.com/help/webstorm/javascript.html#ws_js_choose_language_version). Do this in (also) in default settings.
+- [Enabling TSLint in a project](https://www.jetbrains.com/help/webstorm/tslint.html)
+
+---
+
 # Getting Started with VSCode
 
 ---
         
-# Install the Editor
+# Install VSCode
 
 Download & install [Visual Studio Code](https://code.visualstudio.com/)
         
@@ -233,11 +254,10 @@ Change integrated console to Bash in Windows:
 
 **a.**
 
-1. Install code editor + extensions, git, npm and angular-cli
+1. Install code editor (+ extensions), git, npm and angular-cli
 2. Use angular-cli to generate the app skeleton ([set style type to _scss_](https://github.com/angular/angular-cli#global-styles)).
 3. Test that app works, run with angular-cli and open in browser
-4. Create a remote git repository (github/bitbucket) and push your app there
-5. If not public, share your repo to both teacher accounts: _mattpe_ & _ilkkamtk_ and return the repo link to tuubi.
+4. Submit with GitHub Classroom
 
 **b.**
 
