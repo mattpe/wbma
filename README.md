@@ -18,7 +18,7 @@ Front-end development materials & code examples
 
 Course content is inside [docs](docs/) folder and available in html slide format [here](https://mattpe.github.io/wbma/).
 
-[Tuubi workspace](https://tuubi.metropolia.fi/portal/group/tuubi/etusivu/yleiset-tyokalut/tyotilat?p_p_id=Workspaces_WAR_workspaces&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_Workspaces_WAR_workspaces_workspaceId=340002469)
+[Oma workspace](https://oma.metropolia.fi/tyotilat?p_p_id=WorkspacePortlet_WAR_workspaceportlet&p_p_lifecycle=0&_WorkspacePortlet_WAR_workspaceportlet_struts.portlet.action=%2Fworkspace%2Findex&workspace.id=340008007)
 
 ## Useful online materials & tutorials
 
@@ -29,13 +29,30 @@ Course content is inside [docs](docs/) folder and available in html slide format
 - Free (and short) Codeschool course: [Try Git](https://www.codeschool.com/courses/try-git)
 - [Codecademy - Learn Git](https://www.codecademy.com/learn/learn-git)
 
-### Angular 2 & Typescript / ES6
+### Angular 2 Typescript / ES6
 
 Course pre-tasks
-
-1. <http://courses.angularclass.com/p/modern-javascript>
-2. <http://courses.angularclass.com/p/angular-2-fundamentals>
-3. <https://angular.io/docs/ts/latest/tutorial/>
+1.  [http://javascript.info/](http://javascript.info/)
+    *   Study at least these sections:
+        *   Code quality
+        *   Objects: the basics
+        *   Data types
+        *   Advanced working with functions
+        *   Objects, classes, inheritance
+        *   Introduction into Events
+        *   Promises, async/await
+        *   +everything else you want to recap or want to know more about
+2.  [Angular 2 tutorial](https://coursetro.com/courses/8/Learn-Angular-2-Development-with-our-Free-Course)
+    *   Duration approx 2 hrs.
+    *   With Angular 2 we use TypeScriptiä, which is very much the same as ES6\. The main difference is typing and decorators. So read also [this](https://www.excella.com/insights/typescript-vs-es6-vs-es2015).
+3.  [Angular 5 tutorial](https://coursetro.com/courses/19/Learn-Angular-5-from-Scratch---Angular-5-Tutorial)
+    *   Duration approx 1 hrs. 
+    *   Angular 5 is the current version. Tutorial is quite similar to 2.
+4.  [Googles Angular tutorial](https://angular.io/tutorial)
+    *   This is started on the Angular 2 tutorial. I recommend that you finish this.
+    *   Duration couple of hours
+    *   Read at least FUNDAMENTALS/Architecture and FUNDAMENTALS/Template & Data Binding
+    *   [Cheatsheet](https://angular.io/guide/cheatsheet)
 
 Other
 
@@ -45,7 +62,7 @@ Other
 - <http://learnangular2.com/>
 - [MS Virtual academy](https://mva.microsoft.com/en-US/training-courses/introduction-to-angular-20-16540)
 
-### Ionic 2 Framework
+### Ionic Framework
 
 - [Ionic docs](https://ionicframework.com/docs/)
 
