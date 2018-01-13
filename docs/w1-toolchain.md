@@ -182,6 +182,8 @@ Download & install [WebStorm](https://www.jetbrains.com/webstorm/)
         
 .center[![VSCode logo](http://resources.jetbrains.com/storage/products/webstorm/img/meta/webstorm_logo_300x300.png)]
 
+---
+
 # Settings
 - [Accessing default settings](https://www.jetbrains.com/help/webstorm/accessing-default-settings.html)
 - [Change JavaScript version to ES6](https://www.jetbrains.com/help/webstorm/javascript.html#ws_js_choose_language_version). Do this in (also) in default settings.
