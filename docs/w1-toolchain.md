@@ -261,13 +261,9 @@ Change integrated console to Bash in Windows:
 3. Test that app works, run with angular-cli and open in browser
 4. Submit with GitHub Classroom
 
-(continues...)
----
-
 **b.**
 
-1. develop your app further. Add parts to the app skeleton so that the layout is similar to this: 
-![Layout](https://cdn.tutsplus.com/net/uploads/legacy/397_yourFirstdesign/images/2.jpg =300x)
+1. develop your app further. Add parts to the app skeleton so that the layout is similar to [this](https://cdn.tutsplus.com/net/uploads/legacy/397_yourFirstdesign/images/2.jpg =300x)
 2. git add, commit & push to remote repository 
 3. goto b 1 and add content (text, images) and more CSS.
 
