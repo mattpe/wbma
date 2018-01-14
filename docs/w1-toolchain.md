@@ -261,6 +261,9 @@ Change integrated console to Bash in Windows:
 3. Test that app works, run with angular-cli and open in browser
 4. Submit with GitHub Classroom
 
+(continues...)
+---
+
 **b.**
 
 1. develop your app further. Add parts to the app skeleton so that the layout is similar to this: 
