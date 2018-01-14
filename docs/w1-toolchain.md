@@ -102,7 +102,7 @@ Exclude:
 
 # Example package.json
 
-```js
+```javascript
 {
   "name": "example-app",
   "version": "0.0.1",
@@ -257,15 +257,16 @@ Change integrated console to Bash in Windows:
 **a.**
 
 1. Install code editor (+ extensions), git, npm and angular-cli
-2. Use angular-cli to generate the app skeleton ([set style type to _scss_](https://github.com/angular/angular-cli#global-styles)).
+2. Use angular-cli to generate the app skeleton ([set style type to _scss_](https://github.com/angular/angular-cli/wiki/new). Look for word 'style').
 3. Test that app works, run with angular-cli and open in browser
 4. Submit with GitHub Classroom
 
 **b.**
 
-1. develop your app further following the [Note card tutorial](https://github.com/AngularClass/retain-app/tree/module-4-solution) but use now `ng` command to generate components.
+1. develop your app further. Add parts to the app skeleton so that the layout is similar to this: 
+![Layout](https://cdn.tutsplus.com/net/uploads/legacy/397_yourFirstdesign/images/2.jpg)
 2. git add, commit & push to remote repository 
-3. goto b 1.
+3. goto b 1 and add content (text, images) and more CSS.
 
 ---
 
