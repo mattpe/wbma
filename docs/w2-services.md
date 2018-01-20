@@ -25,18 +25,18 @@ class: center, middle
 # HTTP client. Setting headers
 
 1. Create another service to services folder. Call it digitransit It should fetch data from Digitransit Routing API
-    - [Documentation](https://digitransit.fi/en/developers/services-and-apis/1-routing-api/1-getting-started/)
+    - [Documentation](https://digitransit.fi/en/developers/apis/1-routing-api/)
     - base url for Helsinki region: https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql
 2. As you read the documentation, you find out that Content-Type must be either “application/graphql” or “application/json”
 3. In the digitransit-service create a method that fetches information about routes that go through a certain stop
-    - the method should receive the stop nameas a parameter
+    - the method should receive the stop name as a parameter
     - it should return JSON
 4. Call the method on ListMedia component. Send the name of some nearby bus stop as the parameter (use Google Maps to get stop names) 
 5. Create HTML list of routes to template of ListMedia-component
 
 ### Some help
 
-1. [Override request headers](https://angular.io/docs/ts/latest/guide/server-communication.html#!#override-default-request-options)
+1. [Override request headers](https://angular.io/guide/http#headers)
 2. [Bypass CORS if needed](https://www.thepolyglotdeveloper.com/2014/08/bypass-cors-errors-testing-apis-locally/)
 3. Printing data:
     - using expression ```{{ variable }}```

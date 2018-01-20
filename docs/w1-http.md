@@ -34,4 +34,4 @@ class: center, middle
 3. [Bypass CORS if needed](https://www.thepolyglotdeveloper.com/2014/08/bypass-cors-errors-testing-apis-locally/)
 4. Printing data:
     - using expression ```{{ variable }}```
-    - iterate repeating data: ```*ngFor```
+    - [iterate repeating data](https://angular.io/api/common/NgForOf): ```*ngFor```
