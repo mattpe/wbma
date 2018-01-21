@@ -39,7 +39,7 @@ class: center, middle
     - the method should receive the stop name as a parameter
     - it should return JSON
 4. Call the method on ListMedia component. Send the name of some nearby bus stop as the parameter (use Google Maps to get stop names) 
-5. Create HTML list of routes to template of ListMedia-component
+5. Create HTML list of bus routes to html-template of ListMedia-component
 
 ### Some help
 
