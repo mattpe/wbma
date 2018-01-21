@@ -12,8 +12,15 @@ class: center, middle
 2. Create new folder 'services' to 'app'-folder
 3. Create new service 'media' to services folder ```ng g s services/media```
 4. In the service create a method 'getAllMedia' which fetches all media files from the media API and returns the data as JSON
-    - example ```return ...http.get(...).map(.... resp.json())```
-    - see Week 1 task 2 for help
+    * example: 
+    ```javascript
+    ...
+    getAllMedia() {    
+     return ...http.get(...)
+    }
+    ...
+    ```
+    * see Week 1 task 2 for help
 5. Create new component 'listMedia' 
 6. Call 'getAllMedia' on ListMedia component and use ```console.log``` to log the returned data 
     - to call getAllMedia, you need to inject MediaService to constructor. Call it mediaService ```...(private mediaService: MediaService)```
