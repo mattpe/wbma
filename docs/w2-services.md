@@ -26,6 +26,8 @@ class: center, middle
     - to call getAllMedia, you need to inject MediaService to constructor. Call it mediaService ```...(private mediaService: MediaService)```
     
 7. Create HTML list of images to template of ListMedia-component
+    - display image's [thumbnail](http://media.mw.metropolia.fi/wbma/docs/#api-Media-GetFile) version
+    - display also image's title and description
 
 ---
 
@@ -48,3 +50,5 @@ class: center, middle
 3. Printing data:
     - using expression ```{{ variable }}```
     - iterate repeating data: ```*ngFor```
+4. Use [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) to change filename extension and add thumbnail size info
+    - [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to change values once
