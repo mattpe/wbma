@@ -35,6 +35,7 @@ class: center, middle
 
 1. Create another service to services folder. Call it digitransit It should fetch data from Digitransit Routing API
     - [Documentation](https://digitransit.fi/en/developers/apis/1-routing-api/)
+    - [API Documentation](https://api.digitransit.fi/graphiql/hsl), click 'Docs' on the right.
     - base url for Helsinki region: https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql
 2. As you read the documentation, you find out that Content-Type must be either “application/graphql” or “application/json”
 3. In the digitransit-service create a method that fetches information about routes that go through a certain stop
