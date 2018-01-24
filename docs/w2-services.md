@@ -40,7 +40,7 @@ class: center, middle
 2. As you read the documentation, you find out that Content-Type must be either “application/graphql” or “application/json”
 3. In the digitransit-service create a method that fetches information about routes that go through a certain stop
     - the method should receive the stop name as a parameter
-    - it should return JSON
+    - it should return Observable
 4. Call the method on ListMedia component. Send the name of some nearby bus stop as the parameter (use Google Maps to get stop names) 
 5. Create HTML list of bus routes to html-template of ListMedia-component
 
