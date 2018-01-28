@@ -24,10 +24,3 @@ Use Postman to:
 11. `POST favourite` to like some file
 
 **Submit your user_id AND username you made in bullet 4. to Oma assignment.**
-
-## Extra 
-
-Add login component and service to last weeks Services [exercise](w2-services.md).
-
-1. Implement login functionality
-2. Save token and user data to [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)

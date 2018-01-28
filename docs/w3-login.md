@@ -2,12 +2,12 @@ class: center, middle
 
 # WBMA, Angular Routing & Services
 
-## 3/2017
+## 3/2018
 
 ---
 # Routing
 
-1. Create new app with Angular CLI
+1. Create new app with Angular CLI. Add routing and style=scss [options](https://github.com/angular/angular-cli/wiki/new)
 2. Create components 'front', 'top-bar', 'register', 'login' and 'logout'
 3. Template for 'top-bar' component:
 
@@ -67,7 +67,7 @@ class: center, middle
   imports: [
       BrowserModule,
       FormsModule,
-      HttpModule,
+      HttpClientModule,
       RouterModule.forRoot(routeConfig)
     ],
     ...
@@ -87,7 +87,7 @@ ___
 1. Create new folder 'services' to 'app'-folder
 2. Create new service 'media' to services folder ```ng g s services/media```
 3. In the service create methods 'register' and 'login' with corresponding functionalities
-- 'login': call media API to login user and save users data to [local storage](http://www.w3schools.com/html/html5_webstorage.asp)
+- 'login': call media API to login user and save users token to [local storage](http://www.w3schools.com/html/html5_webstorage.asp)
     - when logged in, user is redirected to 'front'
     - if user has already logged in redirect to 'front' (autodirect)
 - 'register': call media API to create new user and automatically login
@@ -95,6 +95,8 @@ ___
 
 ---
 # Router basics
+
+- [angular.io guide](https://angular.io/guide/router)
 
 Route declarations:
 
