@@ -2,11 +2,11 @@ class: center, middle
 
 # Using Postman to explore APIs
 
-## 2/2017
+## 3/2018
 
 ---
 
-# Task 2: Play with the Postman
+# Task 1: Play with the Postman
 
 1. [Get Postman](https://www.getpostman.com/) and take a look at [docs & tutorials](https://www.getpostman.com/docs/).
 2. Check [Media API docs](http://media.mw.metropolia.fi/wbma/docs/) Base URL for the api endpoints is <http://media.mw.metropolia.fi/wbma> 
@@ -23,11 +23,11 @@ Use Postman to:
 10. `PUT media` to change description of your file
 11. `POST favourite` to like some file
 
-**Return your user_id AND username in the mediaservice to tuubi.**
+**Submit your user_id AND username you made in bullet 4. to Oma assignment.**
 
 ## Extra 
 
-Add login component and service to yesterdays first [exercise](w2-services.md).
+Add login component and service to last weeks Services [exercise](w2-services.md).
 
 1. Implement login functionality
-2. Save token and user data to local storage
+2. Save token and user data to [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
