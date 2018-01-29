@@ -79,6 +79,7 @@ ___
     - when logged in, user is redirected to 'front'
     - if user has already logged in redirect to 'front' (autodirect)
 - 'register': call media API to create new user and automatically login
+- [Angular forms](https://angular.io/guide/user-input)
 
 
 ---
