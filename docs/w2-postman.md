@@ -14,7 +14,7 @@ class: center, middle
 Use Postman to:
 
 3. `GET` a list of files 
-4. Create an user account (`POST users/`) using your metropolia.fi email
+4. Create an user account (`POST users/`) using your metropolia.fi email (insert data in request body and use content-type: _x-www-form-urlencoded_)
 5. `POST login/` using your account and save the token string from the response
 6. Add the token to your following request headers (key name: _x-access-token_)
 7. Try `PUT users/` to change your password and log in again to get a new token
