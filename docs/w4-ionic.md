@@ -40,7 +40,8 @@ Add the features of the previous exercices into an Ionic application:
 1. Create a new Ionic app: `ionic start <APPNAME> <TEMPLATE>`
     - choose a starter template, [list of available options](https://ionicframework.com/docs/cli/starters.html#ionic-angular)
     - go with tabs/sidemenu template if you want to have some ready made examples of pages and navigation between them
-    - note: we dont't use ionic1
+    - choose the default answer (N) for question 'Would you like to integrate your new app with Cordova to target native iOS and Android?'
+    - note: we dont't use ionic1 or ionic pro
 1. Use Ionic cli to generate pages, `ionic generate page <NAME>`
     - front/home page for media (thumbnail) list view
     - user profile/login/registration pages
@@ -60,6 +61,7 @@ Add the features of the previous exercices into an Ionic application:
 - [Ionic docs](https://ionicframework.com/docs/)
 - [A Simple Guide to Navigation in Ionic 2](https://www.joshmorony.com/a-simple-guide-to-navigation-in-ionic-2/)
 - [Build a Todo App from Scratch with Ionic](https://www.joshmorony.com/build-a-todo-app-from-scratch-with-ionic-2-video-tutorial/)
+- [Debugging on a device](https://medium.com/@leetheguy/the-best-way-to-debug-an-ionic-app-on-a-device-79833bef5d1d)
 - [Deploying to a device and building for production](https://ionicframework.com/docs/intro/deploying/)
 
 ### Cordova CLI Reference documentation
