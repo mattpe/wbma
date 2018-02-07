@@ -18,12 +18,14 @@ class: center, middle
 
 Main differences in Ionic compared to "native" Angular web apps:
 
-- Ionic uses the concept of pages (in Angular everything is just components, in Ionic "component" refers many times to [UI components](https://ionicframework.com/docs/components/))
+- Ionic uses the concept of pages (in Angular everything is just components, in Ionic term "component" refers typically to ready-made [UI components](https://ionicframework.com/docs/components/))
 - different routing system, [navigation](https://ionicframework.com/docs//components/#navigation)
 - services are called providers
 - has it's own [cli tool](https://ionicframework.com/docs/cli/commands.html) `ionic`
 - native plugins for different mobile platforms (Cordova)
 - build target is a native mobile app, web browser is used for development
+
+---
 
 ## Task: Port your app to Ionic framework
 
