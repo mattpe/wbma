@@ -20,6 +20,7 @@ Main differences in Ionic compared to "native" Angular web apps:
 
 - Ionic uses the concept of pages (in Angular everything is just components, in Ionic term "component" refers typically to ready-made [UI components](https://ionicframework.com/docs/components/))
 - different routing system, [navigation](https://ionicframework.com/docs//components/#navigation)
+  - [NavController & life cycle events](https://ionicframework.com/docs/api/navigation/NavController/)
 - services are called providers
 - has it's own [cli tool](https://ionicframework.com/docs/cli/commands.html) `ionic`
 - native plugins for different mobile platforms (Cordova)
@@ -40,14 +41,14 @@ Add the features of the previous exercices into an Ionic application:
 1. Create a new Ionic app: `ionic start <APPNAME> <TEMPLATE>`
     - choose a starter template, [list of available options](https://ionicframework.com/docs/cli/starters.html#ionic-angular)
     - go with tabs/sidemenu template if you want to have some ready made examples of pages and navigation between them
-    - choose the default answer (N) for question 'Would you like to integrate your new app with Cordova to target native iOS and Android?'
-    - note: we dont't use ionic1 or ionic pro
+    - choose the default answer (N) for question _'Would you like to integrate your new app with Cordova to target native iOS and Android?'_
+    - NOTE: we dont't use ionic1 version or ionic pro services
 1. Use Ionic cli to generate pages, `ionic generate page <NAME>`
     - front/home page for media (thumbnail) list view
     - user profile/login/registration pages
     - file upload page
 1. Generate media provider (service), `ionic generate provider media`
-1. Develop & test on browser: `ionic serve`
+1. Develop & test on browser: `ionic serve` (not 100% reliable, may need restarting after generating new components..)
 1. Run & test on mobile device
     - native mobile dev kit is needed, Xcode for iOS or Android SDK for Android
     - add your target platform: `ionic cordova platform add android/ios`
@@ -60,6 +61,7 @@ Add the features of the previous exercices into an Ionic application:
 
 - [Ionic docs](https://ionicframework.com/docs/)
 - [A Simple Guide to Navigation in Ionic 2](https://www.joshmorony.com/a-simple-guide-to-navigation-in-ionic-2/)
+- [Navigation Lifecycle Events](https://blog.ionicframework.com/navigating-lifecycle-events/)
 - [Build a Todo App from Scratch with Ionic](https://www.joshmorony.com/build-a-todo-app-from-scratch-with-ionic-2-video-tutorial/)
 - [Debugging on a device](https://medium.com/@leetheguy/the-best-way-to-debug-an-ionic-app-on-a-device-79833bef5d1d)
 - [Deploying to a device and building for production](https://ionicframework.com/docs/intro/deploying/)
