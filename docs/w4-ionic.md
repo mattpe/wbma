@@ -43,10 +43,11 @@ Add the features of the previous exercices into an Ionic application:
     - go with tabs/sidemenu template if you want to have some ready made examples of pages and navigation between them
     - choose the default answer (N) for question _'Would you like to integrate your new app with Cordova to target native iOS and Android?'_
     - NOTE: we dont't use ionic1 version or ionic pro services
-1. Use Ionic cli to generate pages, `ionic generate page <NAME>`
+1. Use Ionic cli to generate pages, `ionic generate page <NAME> [--no-module]`
     - front/home page for media (thumbnail) list view
     - user profile/login/registration pages
     - file upload page
+    - use `--no-module` flag if you don't want to create an extra module within your page
 1. Generate media provider (service), `ionic generate provider media`
 1. Develop & test on browser: `ionic serve` (not 100% reliable, may need restarting after generating new components..)
 1. Run & test on mobile device
@@ -65,6 +66,31 @@ Add the features of the previous exercices into an Ionic application:
 - [Build a Todo App from Scratch with Ionic](https://www.joshmorony.com/build-a-todo-app-from-scratch-with-ionic-2-video-tutorial/)
 - [Debugging on a device](https://medium.com/@leetheguy/the-best-way-to-debug-an-ionic-app-on-a-device-79833bef5d1d)
 - [Deploying to a device and building for production](https://ionicframework.com/docs/intro/deploying/)
+
+### Some notes
+
+Use media provider only as a data service and build your application logic with pages and components. Api requests done by provider should return observables which are subscribed from page/component. See the example snippets below.
+
+Provider (service):
+
+```js
+public getCurrentUser(token: string): Observable<User> {
+  const headers = new HttpHeaders().set('x-access-token', token);
+  return this.http.get<User>(this.apiUrl + '/users/user', {headers: headers});
+}
+```
+
+Page (component):
+
+```js
+this.myService.getCurrentUser('content.of.tokenstring').subscribe(data => {
+  // Do something with the response data
+}, (error: HttpErrorResponse) => {
+  // Do something with the error object
+});
+```
+
+`ionic generate` does not modify automatically `app.module.ts` file. Add declarations, entrycomponents and providers manually when needed.
 
 ### Cordova CLI Reference documentation
 
