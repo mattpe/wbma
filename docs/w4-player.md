@@ -71,4 +71,4 @@ class: center, middle
             return deg[0]['numerator'] + (deg[1]['numerator'] / 60) +
                 (deg[2]['numerator'] / 100 / 3600);
           }
-    ```
+    ```
