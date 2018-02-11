@@ -24,7 +24,7 @@ class: center, middle
         - liked by user
 1. Some help:
     - Sending parameters
-    ´´´TypeScript
+    ```TypeScript
     someFunction(param1, param2) {
         this.navCtrl.push(SomePage, {
           property1: param1,
