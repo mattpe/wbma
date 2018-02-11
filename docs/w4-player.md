@@ -23,33 +23,13 @@ class: center, middle
         - likes (request [Favourite endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-Favourite) on the media api)
         - liked by user
 1. Some help:
-    - Add parameters to routerlink: `['/player', media.id]`
-    - To use parameters:
-
-_app.module.ts_
-
-```
-const routeConfig = [
-...
-    {
-        path: 'player/:fileId',
-        component: SomeComponent
-    }
-...
-];
-```
-
-_some.component.ts_
-```
-    constructor(
-    ...
-    private route: ActivatedRoute,
-    ...
-    ) { }
-```
-
-```
-    this.route.params.subscribe((params: any) => {
-        console.log(params)
-    });
-```
+    - Sending parameters
+    ´´´TypeScript
+    someFunction(param1, param2) {
+        this.navCtrl.push(SomePage, {
+          property1: param1,
+          property2: param2
+        });
+      }
+    ```
+    - To use parameters: https://ionicframework.com/docs/api/navigation/NavParams/
