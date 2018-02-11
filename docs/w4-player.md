@@ -64,3 +64,10 @@ class: center, middle
         }
     ```
 1. Call getExif() on <img> element's load event.
+1. To use GPS coordinates with Google Maps, you need to convert them to decimals:
+    ```TypeScript
+        degreesToDecimals(deg: Array<number>): number {
+            return deg[0]['numerator'] + (deg[1]['numerator'] / 60) +
+                (deg[2]['numerator'] / 100 / 3600);
+          }
+    ```
