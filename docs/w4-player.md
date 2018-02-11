@@ -40,6 +40,7 @@ class: center, middle
 ### Extract EXIF-data from image
 1. Install [exif.js](https://github.com/exif-js/exif-js) with npm
 1. Import to component/page: 
+
     ```Typescript
     ...
     import {EXIF} from 'exif-js';
