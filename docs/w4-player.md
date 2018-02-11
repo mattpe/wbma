@@ -24,12 +24,13 @@ class: center, middle
         - liked by user
 1. Some help:
     - Sending parameters
-    ```TypeScript
-    someFunction(param1, param2) {
-        this.navCtrl.push(SomePage, {
-          property1: param1,
-          property2: param2
-        });
-      }
-    ```
+    
+        ```TypeScript
+        someFunction(param1, param2) {
+            this.navCtrl.push(SomePage, {
+              property1: param1,
+              property2: param2
+            });
+          }
+        ```
     - To use parameters: https://ionicframework.com/docs/api/navigation/NavParams/
