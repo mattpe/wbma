@@ -42,25 +42,25 @@ class: center, middle
 1. Import to component/page: 
 
     ```Typescript
-    ...
-    import {EXIF} from 'exif-js';
-    ...
-    getExif(evt) {
-        try {
-          EXIF.getData(evt.target, () => {
-            // console.log(EXIF.getAllTags(evt.target));
-            if (EXIF.getTag(evt.target, 'GPSLatitude')) {
-              this.lat = this.degreesToDecimals(
-                  EXIF.getTag(evt.target, 'GPSLatitude'));
-              this.lon = this.degreesToDecimals(
-                  EXIF.getTag(evt.target, 'GPSLongitude'));
-            } else {
-              this.message = 'No GPS data';
+        ...
+        import {EXIF} from 'exif-js';
+        ...
+        getExif(evt) {
+            try {
+              EXIF.getData(evt.target, () => {
+                // console.log(EXIF.getAllTags(evt.target));
+                if (EXIF.getTag(evt.target, 'GPSLatitude')) {
+                  this.lat = this.degreesToDecimals(
+                      EXIF.getTag(evt.target, 'GPSLatitude'));
+                  this.lon = this.degreesToDecimals(
+                      EXIF.getTag(evt.target, 'GPSLongitude'));
+                } else {
+                  this.message = 'No GPS data';
+                }
+              });
+            } catch (e) {
+              console.log(e);
             }
-          });
-        } catch (e) {
-          console.log(e);
         }
-  }
     ```
 1. Call getExif() on <img> element's load event.
