@@ -6,16 +6,16 @@ class: center, middle
 
 ---
 
-# Media Player
+## Media Player
 
 ### Task: Create component for viewing single media files
 
 1. Use the previous [exercise](w3-upload.md) as a starting point and develop it further
-1. Create a new component for viewing single media files. Features:
+1. Create a new component (page) for viewing single media files. Features:
     - get a single file from API
     - depending on file type use `<img>`, `<video>` or `<audio>` to show/play media file
         - <http://www.w3schools.com/tags/tag_video.asp>
-        - <http://www.w3schools.com/tags/tag_audio.asp>  
+        - <http://www.w3schools.com/tags/tag_audio.asp>
     - show also other data related to the media file:
         - title
         - description
@@ -24,7 +24,7 @@ class: center, middle
         - liked by user
 1. Some help:
     - Sending parameters
-    
+
         ```TypeScript
         someFunction(param1, param2) {
             this.navCtrl.push(SomePage, {
@@ -34,10 +34,11 @@ class: center, middle
           }
         ```
     - To use parameters: https://ionicframework.com/docs/api/navigation/NavParams/
-    
-## Extra 
+
+## Extra
 
 ### Extract EXIF-data from image
+
 1. Install [exif.js](https://github.com/exif-js/exif-js) with npm
 1. Import to component/page: 
 
@@ -63,7 +64,8 @@ class: center, middle
             }
         }
     ```
-1. Call getExif() on <img> element's load event.
+
+1. Call `getExif()` on `<img>` element's load event.
 1. To use GPS coordinates with Google Maps, you need to convert them to decimals:
 
     ```TypeScript
