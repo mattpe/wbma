@@ -2,7 +2,7 @@ class: center, middle
 
 # WBMA, Angular HTTP Client
 
-## 2/2017
+## 2/2018
 
 ---
 

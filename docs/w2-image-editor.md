@@ -2,13 +2,20 @@ class: center, middle
 
 # Image Editor
 
-## 2/2017
+## 5/2018
 
 ---
-1. Clone this repo: https://github.com/ilkkamtk/ngImageEditor.git
+1. Load this repo as zip: https://github.com/ilkkamtk/mediaApp2 and extract
 2. Run `npm install` to load neccessary packages
-3. Follow teachers instructions and comments in *.component.ts and *.service.ts files to load an image to canvas element and to change brightess and contrast of the image.
-4. Use the BrightContrastComponent as an example to create a color filter and autocontrast. Use the formulas below.
+3. To make cordova.js available in Android emulator edit `node_modules/@ionic/app-scripts/dist/dev/server/serve-config.js`:
+    * replace last row with this: 
+    ```
+    exports.ANDROID_PLATFORM_PATH = path.join('platforms', 'android', 'app/src/main', 'assets', 'www');
+    ```
+4. On android Google Maps and geolocation plugins are clashing. Fix it by editing `plugins/cordova-plugin-geolocation/plugin.xml`:
+    * remove `<uses-feature android:name="android.hardware.location.gps" />`
+5. Run app on emulator or device to make sure everything is working.
+6. Use the BrightContrastComponent as an example to create a color filter and autocontrast. Use the formulas below.
 
 ## Extra 
 
