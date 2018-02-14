@@ -2,7 +2,7 @@ class: center, middle
 
 # WBMA, Ionic Framework
 
-## 2/2018
+## Week 4/2018
 
 ---
 
@@ -14,9 +14,9 @@ class: center, middle
 - native capabilities based on [Cordova](https://cordova.apache.org/)
 - Note: Old Ionic v1 uses old AngularJS (version 1.x), DO NOT touch that one
 
-### From "basic" Angular to Ionic
+### From "native" Angular to Ionic
 
-Main differences in Ionic compared to "native" Angular web apps:
+Main differences in Ionic compared to basic Angular web apps:
 
 - Ionic uses the concept of pages (in Angular everything is just components, in Ionic term "component" refers typically to ready-made [UI components](https://ionicframework.com/docs/components/))
 - different routing system, [navigation](https://ionicframework.com/docs//components/#navigation)
@@ -60,7 +60,7 @@ Add the features of the previous exercices into an Ionic application:
 
 ### Some docs & tutorials
 
-- [Ionic docs](https://ionicframework.com/docs/)
+- [Ionic docs](https://ionicframework.com/docs/): _[Getting started tutorial](https://ionicframework.com/docs/intro/tutorial/)_
 - [A Simple Guide to Navigation in Ionic 2](https://www.joshmorony.com/a-simple-guide-to-navigation-in-ionic-2/)
 - [Navigation Lifecycle Events](https://blog.ionicframework.com/navigating-lifecycle-events/)
 - [Build a Todo App from Scratch with Ionic](https://www.joshmorony.com/build-a-todo-app-from-scratch-with-ionic-2-video-tutorial/)

@@ -14,10 +14,10 @@ Front-end development materials & code examples
 1. [Week 3 - Pipes](docs/w3-pipe.md)
 1. [Week 4 - Sass & Scss](docs/w4-scss.md)
 1. [Week 4 - Ionic](docs/w4-ionic.md)
-1. [Week X - Image editor](docs/w2-image-editor.md)
-1. [Week 4 - Media player](docs/w4-player.md)
+1. [Week 5 - Media player](docs/w4-player.md)
+1. [Week 5 - Image editor](docs/w2-image-editor.md)
 
-Course content is inside [docs](docs/) folder and available in html slide format [here](https://mattpe.github.io/wbma/).
+Course content is inside [docs](docs/) folder.
 
 [Oma workspace](https://oma.metropolia.fi/tyotilat?p_p_id=WorkspacePortlet_WAR_workspaceportlet&p_p_lifecycle=0&_WorkspacePortlet_WAR_workspaceportlet_struts.portlet.action=%2Fworkspace%2Findex&workspace.id=340008007)
 
@@ -66,8 +66,13 @@ Course content is inside [docs](docs/) folder and available in html slide format
 
 ### Ionic Framework
 
-- [Ionic docs](https://ionicframework.com/docs/)
+- [Ionic docs](https://ionicframework.com/docs/): _[Getting started tutorial](https://ionicframework.com/docs/intro/tutorial/)_
+- [A Simple Guide to Navigation in Ionic 2](https://www.joshmorony.com/a-simple-guide-to-navigation-in-ionic-2/)
+- [Navigation Lifecycle Events](https://blog.ionicframework.com/navigating-lifecycle-events/)
+- [Build a Todo App from Scratch with Ionic](https://www.joshmorony.com/build-a-todo-app-from-scratch-with-ionic-2-video-tutorial/)
+- [Debugging on a device](https://medium.com/@leetheguy/the-best-way-to-debug-an-ionic-app-on-a-device-79833bef5d1d)
+- [Deploying to a device and building for production](https://ionicframework.com/docs/intro/deploying/)
 
 ---
 
-Slides are written in markdown and rendered using [Remark](https://github.com/gnab/remark/wiki).
+[Slides](https://mattpe.github.io/wbma/) are written in markdown and rendered using [Remark](https://github.com/gnab/remark/wiki).
