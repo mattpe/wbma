@@ -12,10 +12,16 @@ class: center, middle
     ```
     exports.ANDROID_PLATFORM_PATH = path.join('platforms', 'android', 'app/src/main', 'assets', 'www');
     ```
-4. On android Google Maps and geolocation plugins are clashing. Fix it by editing `plugins/cordova-plugin-geolocation/plugin.xml`:
+4. Try to build: `ionic cordova build android` or `ionic cordova build ios`
+5. On android Google Maps and geolocation plugins are clashing. Fix it by editing `plugins/cordova-plugin-geolocation/plugin.xml`:
     * remove `<uses-feature android:name="android.hardware.location.gps" />`
-5. Run app on emulator or device to make sure everything is working.
-6. Use the BrightContrast method in MediaProvider as an example to create a color filter and autocontrast. Use the formulas below.
+    * remove and re-add Android platform
+        ```
+        ionic cordova platform rm android
+        ionic cordova platform add android
+        ```
+6. Run app on emulator or device to make sure everything is working.
+7. Use the BrightContrast method in MediaProvider as an example to create a color filter and autocontrast. Use the formulas below.
 
 ## Extra 
 
