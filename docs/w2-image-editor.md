@@ -24,7 +24,7 @@ class: center, middle
         ionic cordova platform add android
         ```
 6. Run app on emulator or device to make sure everything is working.
-7. Use the BrightContrast method in MediaProvider as an example to create a color filter and autocontrast. Use the formulas below.
+7. Use the BrightContrast method in EditorProvider as an example to create a color filter and autocontrast. Use the formulas below.
 
 ## Extra 
 
