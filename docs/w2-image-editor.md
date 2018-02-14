@@ -13,6 +13,7 @@ class: center, middle
     exports.ANDROID_PLATFORM_PATH = path.join('platforms', 'android', 'app/src/main', 'assets', 'www');
     ```
 4. Try to build: `ionic cordova build android` or `ionic cordova build ios`
+    * Fix possible linting errors (red color) and try to build again
 5. On android Google Maps and geolocation plugins are clashing. Fix it by editing `plugins/cordova-plugin-geolocation/plugin.xml`:
     * remove `<uses-feature android:name="android.hardware.location.gps" />`
     * remove and re-add Android platform
