@@ -15,7 +15,7 @@ class: center, middle
 4. On android Google Maps and geolocation plugins are clashing. Fix it by editing `plugins/cordova-plugin-geolocation/plugin.xml`:
     * remove `<uses-feature android:name="android.hardware.location.gps" />`
 5. Run app on emulator or device to make sure everything is working.
-6. Use the BrightContrastComponent as an example to create a color filter and autocontrast. Use the formulas below.
+6. Use the BrightContrast method in MediaProvider as an example to create a color filter and autocontrast. Use the formulas below.
 
 ## Extra 
 
