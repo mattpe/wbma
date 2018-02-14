@@ -7,7 +7,7 @@ class: center, middle
 ---
 1. Load this repo as zip: https://github.com/ilkkamtk/mediaApp2 and extract
 2. Run `npm install` to load neccessary packages
-3. To make cordova.js available in Android emulator edit `node_modules/@ionic/app-scripts/dist/dev/server/serve-config.js`:
+3. To make cordova.js available in Android emulator edit `node_modules/@ionic/app-scripts/dist/dev-server/serve-config.js`:
     * replace last row with this: 
     ```
     exports.ANDROID_PLATFORM_PATH = path.join('platforms', 'android', 'app/src/main', 'assets', 'www');
