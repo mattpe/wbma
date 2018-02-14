@@ -102,4 +102,5 @@ this.myService.getCurrentUser('content.of.tokenstring').subscribe(data => {
 If the `ionic cordova run android` fails because of some license errors, you can accept the licenses by running sdkmanager:
 
 - on Windows: `%ANDROID_HOME%/tools/bin/sdkmanager --licenses` in command prompt
+  - or: `C:\Users\<YOUR_USERNAME>\AppData\Local\Android\sdk\tools\bin\sdkmanager --licenses`
 - on Mac/Linux: `$ANDROID_HOME/tools/bin/sdkmanager --licenses` in terminal
