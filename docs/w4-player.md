@@ -11,11 +11,7 @@ class: center, middle
 ### Task: Create component for viewing single media files
 
 1. Use the previous [exercise](w3-upload.md) as a starting point and develop it further
-<<<<<<< HEAD
 1. Create a new component/page for viewing single media files. Features:
-=======
-1. Create a new component (page) for viewing single media files. Features:
->>>>>>> d1da86a0997f8f98e3d4328e6fe01d8e3b5fee1e
     - get a single file from API
     - depending on file type use `<img>`, `<video>` or `<audio>` to show/play media file
         - <http://www.w3schools.com/tags/tag_video.asp>
