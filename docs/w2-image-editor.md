@@ -4,6 +4,8 @@ class: center, middle
 
 ## 5/2018
 
+### Make sure your Android Studio, SDK and Emulator are up to date
+
 ---
 1. Load this repo as zip: https://github.com/ilkkamtk/mediaApp2 and extract
 2. Run `npm install` to load neccessary packages
