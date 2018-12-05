@@ -19,7 +19,7 @@ Front-end development materials & code examples
 
 Course content is inside [docs](docs/) folder.
 
-[Oma workspace](https://oma.metropolia.fi/tyotilat?p_p_id=WorkspacePortlet_WAR_workspaceportlet&p_p_lifecycle=0&_WorkspacePortlet_WAR_workspaceportlet_struts.portlet.action=%2Fworkspace%2Findex&workspace.id=340008007)
+[Oma workspace](https://oma.metropolia.fi/tyotilat?p_p_id=WorkspacePortlet_WAR_workspaceportlet&p_p_lifecycle=0&_WorkspacePortlet_WAR_workspaceportlet_struts.portlet.action=%2Fworkspace%2Findex&workspace.id=340011874)
 
 ## Useful online materials & tutorials
 

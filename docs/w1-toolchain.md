@@ -2,20 +2,19 @@ class: center, middle
 
 # Mobile Web Development Toolchain
 
-
-## 1/2018
+## 1/2019
 
 ---
 
 # Contents
 
-- Editor/IDE: WebStrom/PhpStorm, Visual Studio Code, vscode (or any)
+- Editor/IDE: WebStrom/PhpStorm, Visual Studio Code, (or any)
 - Language: TypeScript
-- Run, test & debug: Chrome browser dev tools       
+- Run, test & debug: Chrome browser dev tools
 - Version Control System: Git
 - Package manager: NPM
-- Building & automating tasks: Angular CLI (webpack)
-- Development frameworks: Angular, Ionic
+- Building & automating tasks: Ionic CLI
+- Development frameworks: Ionic (Angular for application logic)
 - Creating a native (hybrid) app: Ionic (Cordova)
 
 ---
@@ -25,8 +24,12 @@ class: center, middle
 Ultimately, it's your choice. WebStrom/PhpStorm is recommended.
 
 #### WebStorm/PhpStorm
+
 - free for Metropolia students. [Apply for license here](https://www.jetbrains.com/student/)
+  - _@metropolia.fi_ email address needed for a free license
+- full featured IDE
 - quite ready out of the box. No need for plugins.
+- based on IntelliJ IDEA, just like Android Studio
 
 #### Visual Studio Code
 
@@ -40,10 +43,6 @@ Ultimately, it's your choice. WebStrom/PhpStorm is recommended.
 
 - [Atom](https://atom.io/)
 - [Brackets](http://brackets.io/)
-- [WebStorm](https://www.jetbrains.com/webstorm/)
-  - free student license (only @metropolia.fi email address needed)
-  - full featured IDE
-  - based on IntelliJ IDEA, just like Android Studio
 - Other IDEs like: IntelliJ Ultimate IDEA, Eclipse, NetBeans... 
 
 ---
@@ -51,7 +50,7 @@ Ultimately, it's your choice. WebStrom/PhpStorm is recommended.
 # Browser & debugging
 
 - Chrome & [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
-- [Augury](https://augury.angular.io/) browser extension for Angular 2 debugging
+- [Augury](https://augury.angular.io/) browser extension for Angular 2+ debugging
 
 ![Chrome screenshot](images/chrome-devtools.png)
 
@@ -75,6 +74,8 @@ Exclude:
 - packages managed e.g. by npm or bower (= _node_modules/_ & _bower_components/_ folders) 
 - any temp & OS specific files, like Apple's `.DS_Store` 
 
+Ionic CLI generates a .gitignore file automatically.
+
 ---
 
 # Package Management
@@ -96,7 +97,7 @@ Exclude:
 - newcomer gaining a lot of traction now
 - first [open source release on October, 2016](https://code.facebook.com/posts/1840075619545360). Current version 0.18.1 
 - uses same package.json file and npm registry as npm
-- claimed to be faster, more secure and reliable 
+- claimed to be faster, more secure and reliable
 
 ---
 
@@ -252,16 +253,18 @@ Change integrated console to Bash in Windows:
 
 ---
 
-# Exercise 1: Setup your toolchain and a new Angular 2 project
+# Exercise 1: Setup your toolchain and a new Ionic project
 
 **a.**
 
-1. Install code editor (+ extensions), git, npm and angular-cli
-2. Use angular-cli to generate the app skeleton ([set style type to _scss_](https://github.com/angular/angular-cli/wiki/new). Look for word 'style').
-3. Test that app works, run with angular-cli and open in browser
-4. Use link from Oma assignments to create a remote git repository and push your app there
+Check: [Ionic docs](https://ionicframework.com/getting-started#cli)
 
-**b.**
+1. Install code editor (+ extensions), git, npm and Ionic
+2. Use the `ionic` cli tool to generate a _blank_ app skeleton
+3. Test that app works, run it with `ionic <command>` and open in browser
+4. Use the link from Oma assignments to create a remote git repository and push your app there
+
+**TODO: b.**
 
 1. develop your app further. Add parts to the app skeleton so that the layout is similar to [this](https://cdn.tutsplus.com/net/uploads/legacy/397_yourFirstdesign/images/2.jpg)
 2. git add, commit & push to remote repository 
