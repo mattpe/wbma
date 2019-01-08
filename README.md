@@ -6,16 +6,16 @@ Front-end development materials & code examples
 
 1. [Project description](docs/project.md)
 1. [Week 1 - Toolchain](docs/w1-toolchain.md)
-1. [Week 1 - HTTP](docs/w1-http.md)
-1. [Week 2 - HTTP, Services](docs/w2-services.md)
-1. [Week 2 - Postman](docs/w2-postman.md)
-1. [Week 3 - Routing & login](docs/w3-login.md)
-1. [Week 3 - Forms & file upload](docs/w3-upload.md)
+1. [Week 1 - Postman](docs/w1-postman.md)
+1. [Week 1 - First app](docs/w1-first-app.md)
+1. [Week 1 - httpClient](docs/w1-http.md)
+1. [Week 2 - httpClient, Providers](docs/w2-providers.md)
+1. [Week 2 - Routing & login](docs/w3-login.md)
 1. [Week 3 - Pipes](docs/w3-pipe.md)
-1. [Week 4 - Sass & Scss](docs/w4-scss.md)
+1. [Week 3 - Forms](docs/w3-forms.md)
+1. [Week 4 - File upload](docs/w4-upload.md)
 1. [Week 4 - Ionic](docs/w4-ionic.md)
 1. [Week 5 - Media player](docs/w4-player.md)
-1. [Week 5 - Image editor](docs/w2-image-editor.md)
 
 Course content is inside [docs](docs/) folder.
 

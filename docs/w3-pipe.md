@@ -24,7 +24,7 @@ Value of a `Date` object is passed to DatePipe and the output of that is passed 
 
 ### Task: Create a _custom_ pipe and use it to get thumbnail images of the media files
 
-1. Use your previous [exercise](w3-upload.md) as a starting point (preferred) or clone teacher's [simplified starter project](https://github.com/wbma/pipe-starter)
+1. Use your previous [exercise](w4-upload.md) as a starting point (preferred) or clone teacher's [simplified starter project](https://github.com/wbma/pipe-starter)
 1. Use `FrontComponent` to show thumbnails of the 10 newest media files
     - add getNewFiles() method into `MediaService` and use [GET /media](http://media.mw.metropolia.fi/wbma/docs/#api-Media-GetMediaFiles)
     - inject MediaService into your `FrontComponent`

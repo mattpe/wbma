@@ -10,7 +10,7 @@ class: center, middle
 
 - Editor/IDE: WebStrom/PhpStorm, Visual Studio Code, (or any)
 - Language: TypeScript
-- Run, test & debug: Chrome browser dev tools
+- Run, test & debug: Chrome browser dev tools, Safari browser dev tools
 - Version Control System: Git
 - Package manager: NPM
 - Building & automating tasks: Ionic CLI
@@ -50,7 +50,8 @@ Ultimately, it's your choice. WebStrom/PhpStorm is recommended.
 # Browser & debugging
 
 - Chrome & [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
-- [Augury](https://augury.angular.io/) browser extension for Angular 2+ debugging
+- Safari & [Safari Develop menu](https://support.apple.com/guide/safari/use-the-developer-tools-in-the-develop-menu-sfri20948/mac)
+- Enable [USB Debugging Mode on Android](https://www.kingoapp.com/root-tutorials/how-to-enable-usb-debugging-mode-on-android.htm)
 
 ![Chrome screenshot](images/chrome-devtools.png)
 
@@ -125,7 +126,7 @@ Ionic CLI generates a .gitignore file automatically.
 
 # Automating Development Tasks
 
-**[angular-cli](https://github.com/angular/angular-cli#angular-cli) command line tool** - `ng` command:
+**[ionic-cli](https://ionicframework.com/docs/cli/commands.html) command line tool** - `ionic` command:
 
 - Run frequent routine tasks in development workflow easily
 - Create an app skeleton
@@ -135,22 +136,12 @@ Ionic CLI generates a .gitignore file automatically.
 - Build/Deploy application
   - Minify & combine source files
   - Remove comments & other extra stuff not needed in production version
-- project specific settings in _angular-cli.json_ file
-
-#### Other generic JS task runners
-
-- [Grunt](http://gruntjs.com/) & Gruntfile.js (like make & makefile in C)
-- [Gulp](http://gulpjs.com/) & Gulpfile.js 
 
 ---
 
 # Frameworks used
 
-## Front-end application logic
-
-[Angular](https://angular.io/)
-
-## Layout HTML/CSS components & Hybrid app
+## Front-end application logic & Layout HTML/CSS components & Hybrid app
 
 [Ionic](https://ionicframework.com/) 
 
@@ -167,7 +158,7 @@ Ionic CLI generates a .gitignore file automatically.
 - [Ionic Framework](http://ionicframework.com)
   - uses Cordova for building
   - utilizes Angular for application logic
-  - has it's own HTML/CSS components
+  - has it's own HTML/CSS [components](https://ionicframework.com/docs/components/)
 
 ---
 
@@ -188,8 +179,8 @@ Download & install [WebStorm](https://www.jetbrains.com/webstorm/)
 # WebStorm settings
 - [Accessing default settings](https://www.jetbrains.com/help/webstorm/accessing-default-settings.html)
 - [Change JavaScript version to ES6](https://www.jetbrains.com/help/webstorm/javascript.html#ws_js_choose_language_version). Do this in (also) in default settings.
-- [Enabling TSLint in a project](https://www.jetbrains.com/help/webstorm/tslint.html)
-
+- Set JavaScript code style (editor/code style/JavaScript) to Google JavaScript Style Guide
+- Set TypeScript code style (editor/code style/TypeScript) to JavaScript
 ---
 
 # Getting Started with VSCode
@@ -250,25 +241,6 @@ Change integrated console to Bash in Windows:
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 }
 ```
-
----
-
-# Exercise 1: Setup your toolchain and a new Ionic project
-
-**a.**
-
-Check: [Ionic docs](https://ionicframework.com/getting-started#cli)
-
-1. Install code editor (+ extensions), git, npm and Ionic
-2. Use the `ionic` cli tool to generate a _blank_ app skeleton
-3. Test that app works, run it with `ionic <command>` and open in browser
-4. Use the link from Oma assignments to create a remote git repository and push your app there
-
-**TODO: b.**
-
-1. develop your app further. Add parts to the app skeleton so that the layout is similar to [this](https://cdn.tutsplus.com/net/uploads/legacy/397_yourFirstdesign/images/2.jpg)
-2. git add, commit & push to remote repository 
-3. goto b 1 and add content (text, images) and more CSS.
 
 ---
 
