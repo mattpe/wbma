@@ -6,7 +6,7 @@ Check: [Ionic docs](https://ionicframework.com/getting-started#cli)
 
 1. If needed, install code editor (+ extensions), git, npm
 1. Install Ionic `npm install -g ionic`
-1. If you want to use iOS install ios-deploy `npm install -g ios-deploy`
+1. If you want to use iOS, install ios-deploy `npm install -g ios-deploy`
 1. Use the `ionic` cli tool to generate a _blank_ app skeleton `ionic start myFirstApp blank`
    1. Answer no to 4.0 and appflow suggestions 
 1. Test that app works, run it with `ionic <command>` and open in browser
@@ -126,6 +126,7 @@ Check: [Ionic docs](https://ionicframework.com/getting-started#cli)
     ```
     - In home.html add (click)-event which calls for your own made method that starts PhotoViewer 
     - Ionic Native Plugins are providers, so you have to add PhotoViewer as a provider to app.module.ts
+    - Needs to be run with emulator
     - Result:
     
     ![App2](./images/app2.png)
