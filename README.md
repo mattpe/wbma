@@ -19,7 +19,7 @@ Front-end development materials & code examples
 
 Course content is inside [docs](docs/) folder.
 
-[Oma workspace](https://oma.metropolia.fi/tyotilat?p_p_id=WorkspacePortlet_WAR_workspaceportlet&p_p_lifecycle=0&_WorkspacePortlet_WAR_workspaceportlet_struts.portlet.action=%2Fworkspace%2Findex&workspace.id=340011874)
+[Oma workspace](https://oma.metropolia.fi/tyotilat?p_p_id=WorkspacePortlet_WAR_workspaceportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_WorkspacePortlet_WAR_workspaceportlet_struts.portlet.action=%2Fworkspace%2Findex&_WorkspacePortlet_WAR_workspaceportlet_struts.portlet.mode=view&workspace.id=340011874)
 
 ## Useful online materials & tutorials
 
@@ -30,7 +30,7 @@ Course content is inside [docs](docs/) folder.
 - Free (and short) Codeschool course: [Try Git](https://www.codeschool.com/courses/try-git)
 - [Codecademy - Learn Git](https://www.codecademy.com/learn/learn-git)
 
-### Angular 2 Typescript / ES6
+### Angular Typescript / ES6
 
 #### Course pre-tasks
 
@@ -44,16 +44,11 @@ Course content is inside [docs](docs/) folder.
         - Introduction into Events
         - Promises, async/await
         - +everything else you want to recap or want to know more about
-2. [Angular 2 tutorial](https://coursetro.com/courses/8/Learn-Angular-2-Development-with-our-Free-Course)
-    - Duration approx 2 hrs.
-    - With Angular 2 we use TypeScriptiä, which is very much the same as ES6\. The main difference is typing and decorators. So read also [this](https://www.excella.com/insights/typescript-vs-es6-vs-es2015).
-3. [Angular 5 tutorial](https://coursetro.com/courses/19/Learn-Angular-5-from-Scratch---Angular-5-Tutorial)
-    - Duration approx 1 hrs. 
-    - Angular 5 is the current version. Tutorial is quite similar to 2.
-4. [Googles Angular tutorial](https://angular.io/tutorial)
-    - This is started on the Angular 2 tutorial. I recommend that you finish this.
-    - Duration couple of hours
-    - Read at least FUNDAMENTALS/Architecture and FUNDAMENTALS/Template & Data Binding
+1. [Intro to TypeScript](https://www.youtube.com/watch?v=fm2m0ddOAaU)
+    - With Angular 2 we use TypeScriptiä, which is very much the same as ES6\. The main difference is typing and decorators. You can also read [this](https://www.excella.com/insights/typescript-vs-es6-vs-es2015).
+1. [Angular 7 tutorial](https://www.youtube.com/watch?v=5wtnKulcquA)
+1. [Googles Angular tutorial](https://angular.io/tutorial)
+    - Read at least FUNDAMENTALS/Architecture and FUNDAMENTALS/Components & templates
     - [Cheatsheet](https://angular.io/guide/cheatsheet)
 
 #### Other
@@ -61,7 +56,6 @@ Course content is inside [docs](docs/) folder.
 - [Angular Docs](https://angular.io/docs/ts/latest/)
 - [Angular Style Guide](https://angular.io/styleguide)
 - [angular-cli](https://github.com/angular/angular-cli#installation)
-- <http://learnangular2.com/>
 - [MS Virtual academy](https://mva.microsoft.com/en-US/training-courses/introduction-to-angular-20-16540)
 
 ### Ionic Framework
