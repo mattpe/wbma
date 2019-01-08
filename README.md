@@ -6,8 +6,8 @@ Front-end development materials & code examples
 
 1. [Project description](docs/project.md)
 1. [Week 1 - Toolchain](docs/w1-toolchain.md)
-1. [Week 1 - Postman](docs/w1-postman.md)
 1. [Week 1 - First app](docs/w1-first-app.md)
+1. [Week 1 - Postman](docs/w1-postman.md)
 1. [Week 1 - httpClient](docs/w1-http.md)
 1. [Week 2 - httpClient, Providers](docs/w2-providers.md)
 1. [Week 2 - Routing & login](docs/w3-login.md)
