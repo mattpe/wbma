@@ -2,7 +2,7 @@ class: center, middle
 
 # Using Postman to explore APIs
 
-## 3/2018
+## 1/2019
 
 ---
 

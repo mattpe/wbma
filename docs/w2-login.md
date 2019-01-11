@@ -1,8 +1,8 @@
 class: center, middle
 
-# WBMA, Angular Routing & Services
+# WBMA, Ionic Routing
 
-## 3/2018
+## 2/2019
 
 ---
 # Routing

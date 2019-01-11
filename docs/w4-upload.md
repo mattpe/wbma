@@ -8,11 +8,6 @@ class: center, middle
 
 # Forms
 
-Learn about how Angular handles forms: 
-
-- [Angular forms](https://angular.io/guide/forms)
-- [Codecraft](https://codecraft.tv/courses/angular/forms/overview/)
-
 ### Task: Create Upload Form 
 
 1. Use your own version of the previous [exercise](w3-login.md) as a starting point and develop it further

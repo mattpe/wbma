@@ -1,6 +1,6 @@
 class: center, middle
 
-# WBMA, Angular Pipes
+# WBMA, Pipes
 
 ## 2/2018
 

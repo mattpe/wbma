@@ -1,3 +1,10 @@
+class: center, middle
+
+# WBMA, First App
+
+## 1/2019
+
+---
 # Exercise 1: Setup your toolchain and a new Ionic project
 
 **a.**

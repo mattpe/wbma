@@ -1,8 +1,8 @@
 class: center, middle
 
-# WBMA, Angular HTTP Client
+# WBMA, Ionic HTTP Client
 
-## 1/2017
+## 1/2019
 
 ---
 
