@@ -10,7 +10,7 @@ Front-end development materials & code examples
 1. [Week 1 - Postman](docs/w1-postman.md)
 1. [Week 1 - httpClient](docs/w1-http.md)
 1. [Week 2 - httpClient, Providers](docs/w2-providers.md)
-1. [Week 2 - Routing & login](docs/w3-login.md)
+1. [Week 2 - Routing & login](docs/w2-login.md)
 1. [Week 3 - Pipes](docs/w3-pipe.md)
 1. [Week 3 - Forms](docs/w3-forms.md)
 1. [Week 4 - File upload](docs/w4-upload.md)
