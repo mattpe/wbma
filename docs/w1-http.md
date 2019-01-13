@@ -12,7 +12,7 @@ class: center, middle
 1. Save [test.json](./assets/test.json) into 'assets' folder of your project.
 1. Create new interface 'Pic'
     - add folder 'interfaces' to 'src', create new file there 'pic.ts'
-    - move Pic-class to pic.ts and convert it to [array type interface](http://techfunda.com/howto/1079/array-and-class-types-interfaces)
+    - move Pic-class to pic.ts and convert it to [interface](http://masteringionic.com/blog/2018-06-24-understanding-typescript-interfaces/)
 1. Import HttpClientModule in app.module.ts
 1. In HomePage component, inject HttpClient to constructor and create a method which fetches 'test.json' file either with GET or POST
     - Example 
@@ -22,7 +22,7 @@ class: center, middle
     
     }
     ...
-     this.http.get('example.json').subscribe((res:Response) => this.someVariable = res.json());
+     this.http.get<some_type>('example.json').subscribe((res: some_type) => this.someVariable = res.json());
     ...
     ```
 1. First log the data using ```console.log()```
@@ -43,7 +43,7 @@ class: center, middle
 ### Some help
 
 1. Remember to import the Http class to the component and also inject the Http class to constructor
-2. [Http class](https://angular.io/docs/ts/latest/api/http/index/Http-class.html)
+2. [HttpClient](https://angular.io/guide/http)
 3. [Bypass CORS if needed](https://www.thepolyglotdeveloper.com/2014/08/bypass-cors-errors-testing-apis-locally/)
 4. Printing data:
     - using expression ```{{ variable }}```
