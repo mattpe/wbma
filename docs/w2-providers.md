@@ -8,10 +8,10 @@ class: center, middle
 
 # Using services
 
-1. Create new app with Angular CLI
-2. Create new folder 'services' to 'app'-folder
-3. Create new service 'media' to services folder ```ng g s services/media```
-4. In the service create a method 'getAllMedia' which fetches all media files from the media API and returns the data as Observable
+1. Continue last exercise. Create a new branch with git.
+1. Create new folder 'services' to 'app'-folder
+1. Create new provider 'media' to services folder ```ionic generate provider media```
+1. In the provider create a method 'getAllMedia' which fetches all media files from the media API and returns the data
     * example: 
     ```javascript
     ...
@@ -21,17 +21,16 @@ class: center, middle
     ...
     ```
     * see Week 1 task 2 for help
-5. Create new component 'listMedia' 
-6. Call 'getAllMedia' on ListMedia component and use ```console.log``` to log the returned data 
-    - to call getAllMedia, you need to inject MediaService to constructor. Call it mediaService ```...(private mediaService: MediaService)```
+1. In HomePage component call 'getAllMedia' and use ```console.log``` to log the returned data 
+    - to call getAllMedia, you need to inject MediaProvider to constructor. Call it mediaProvider ```...(private mediaProvider: MediaProvider)```
     
-7. Create HTML list of images to template of ListMedia-component
+1. Use the existing list in home.html template
     - display image's [thumbnail](http://media.mw.metropolia.fi/wbma/docs/#api-Media-GetFile) version
     - display also image's title and description
 
 ---
 
-# HTTP client. Setting headers
+# HTTP client. Setting headers TODO something else here
 
 1. Create another service to services folder. Call it digitransit It should fetch data from Digitransit Routing API
     - [Documentation](https://digitransit.fi/en/developers/apis/1-routing-api/)
@@ -47,28 +46,24 @@ class: center, middle
 ### Some help
 
 1. [Override request headers](https://angular.io/guide/http#headers)
-2. [Bypass CORS if needed](https://www.thepolyglotdeveloper.com/2014/08/bypass-cors-errors-testing-apis-locally/)
-3. Printing data:
+1. Proxy to bypass CORS:
+    ```json
+    // add to ionic.config.json
+    {
+    ...
+         "proxies": [
+           {
+             "path":"/api",
+             "proxyUrl": "http://media.mw.metropolia.fi/wbma"
+           }
+         ],
+      ...
+    }
+    ```
+1. Printing data:
     - using expression ```{{ variable }}```
     - iterate repeating data: ```*ngFor```
-4. Use [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) to change filename extension and add thumbnail size info
-    - [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to change values all at once
-
-
-### Extra. Add Bootstrap
-1. Add the Bootstrap 4 library to your project: ```npm install --save bootstrap@next```
-2. Add the following line in file styles.css: ```@import "~bootstrap/dist/css/bootstrap.css";```
-3. Bootstrap JavaScript library is making use of jQuery and is manipulating the DOM directly. For an Angular application any direct DOM manipulations should be avoided and the complete control to update DOM elements should be be given to the Angular framework. Use Bootstrap 4 Angular directives: ```npm install --save @ng-bootstrap/ng-bootstrap```
-4. Having completed the installation the corresponding Angular module NgbModule must be imported in app.module.ts:
-   ```
-   import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-   ```
-5. NgbModule needs to be added to the imports array by calling the forRoot() method as you can see in the following:
-   ```
-   imports: [
-       ...,
-       NgbModule.forRoot()
-     ],
-   ```
+1. Use [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) to change filename extension and add thumbnail size info
+    - [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to change values all at once`
 
 
