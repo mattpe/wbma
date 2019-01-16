@@ -8,7 +8,7 @@ class: center, middle
 
 # Fetching data with HTTP Client, Task A
 
-1. Continue last exercise. Create a new branch `http-a` with git and chekcout it (`git checkout -b http-a`).
+1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
 1. Save [test.json](./assets/test.json) into 'assets' folder of your project.
 1. Create new interface 'Pic'
     - add folder 'interfaces' to 'src', create new file there 'pic.ts'
