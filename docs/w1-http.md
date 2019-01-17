@@ -18,7 +18,7 @@ class: center, middle
     - Example 
     ```typescript
     ...
-    constructor(... public http: HttpClient ...) {
+    constructor(... private http: HttpClient ...) {
     
     }
     ...
