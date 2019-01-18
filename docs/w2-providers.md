@@ -6,7 +6,7 @@ class: center, middle
 
 ---
 
-# Using services
+# Using providers
 
 1. Continue last exercise. Create a new branch with git.
 1. Create new folder 'services' to 'app'-folder

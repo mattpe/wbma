@@ -78,7 +78,7 @@ Check: [Ionic docs](https://ionicframework.com/getting-started#cli)
          ```text
             export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
             export ANDROID_SDK_ROOT=/Users/[your_username_here]/Library/Android/sdk
-            export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$PATH
+            export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$PATH
          ```
          - `source .bash_profile`
       - Gradle not found
