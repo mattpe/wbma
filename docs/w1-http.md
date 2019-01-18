@@ -8,7 +8,7 @@ class: center, middle
 
 # Fetching data with HTTP Client, Task A
 
-1. Continue last exercise. Create a new branch with git.
+1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
 1. Save [test.json](./assets/test.json) into 'assets' folder of your project.
 1. Create new interface 'Pic'
     - add folder 'interfaces' to 'src', create new file there 'pic.ts'
@@ -18,7 +18,7 @@ class: center, middle
     - Example 
     ```typescript
     ...
-    constructor(... public http: HttpClient ...) {
+    constructor(... private http: HttpClient ...) {
     
     }
     ...
@@ -32,7 +32,7 @@ class: center, middle
 
 # Fetching data with HTTP Client, Task B
 
-1. Continue last exercise. Create a new branch with git.
+1. Continue last exercise. Create a new git branch `http-b` and use it.
 1. Modify the app so that you fetch the data from the media API instead of test.json
     - [Documentation](http://media.mw.metropolia.fi/wbma/docs/)
     - base url: http://media.mw.metropolia.fi/wbma/
