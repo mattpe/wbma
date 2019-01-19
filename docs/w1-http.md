@@ -22,7 +22,7 @@ class: center, middle
     
     }
     ...
-     this.http.get<some_type>('example.json').subscribe((res: some_type) => this.someVariable = res.json());
+     this.http.get<some_type>('example.json').subscribe((res: some_type) => this.someVariable = res);
     ...
     ```
 1. First log the data using ```console.log()```

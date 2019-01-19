@@ -14,6 +14,7 @@ Check: [Ionic docs](https://ionicframework.com/getting-started#cli)
 1. If needed, install code editor (+ extensions), git, npm
 1. Install Ionic `npm install -g ionic`
 1. If you want to use iOS, install ios-deploy `npm install -g ios-deploy`
+    - you can also add  application pakage name: `--id com.mycompany.myapp`
 1. Use the `ionic` cli tool to generate a _blank_ app skeleton `ionic start myFirstApp blank`
    1. Answer no to 4.0 and appflow suggestions 
 1. Test that app works, run it with `ionic <command>` and open in browser
