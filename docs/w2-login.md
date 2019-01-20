@@ -28,7 +28,7 @@ ___
     - check if username already exists
 - [Forms with ngModel](https://ionicframework.com/docs/developer-resources/forms/)
 - 'logout'-page: logout
-- Use *ngIf to show/hide login/logout buttons in tab-navigation according to user's login status
+- Use [show]-attribute to show/hide login/logout buttons in tab-navigation according to user's login status
 
 
 ---
