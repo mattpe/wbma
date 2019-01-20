@@ -23,7 +23,8 @@ ___
  - 'login': call media API to login user and save users token to [local storage](http://www.w3schools.com/html/html5_webstorage.asp)
     - when logged in, user is redirected to 'home'
     - if user has already logged in redirect to 'home' (autodirect)
-- 'register'-page: call media API to create new user and automatically login
+- 'register'-page: call media API to create new user 
+    - login automatically after registering
     - check if username already exists
 - [Forms with ngModel](https://ionicframework.com/docs/developer-resources/forms/)
 - 'logout'-page: logout
