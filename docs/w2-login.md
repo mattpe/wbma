@@ -10,7 +10,7 @@ class: center, middle
 1. Continue last exercise. Create a new branch with git.
 1. Create new pages 'menu', 'login-register' and 'logout'
 1. Create templates for 'login-register' components yourself
-1. Create tab navigation. Edit 'Menu'-page to add tab navigation.
+1. Create tab-navigation. Edit 'Menu'-page to add tab navigation.
 ## Some help
 
 - [Tabs](https://ionicframework.com/docs/api/components/tabs/Tabs/#usage)
@@ -24,6 +24,7 @@ ___
     - when logged in, user is redirected to 'home'
     - if user has already logged in redirect to 'home' (autodirect)
 - 'register'-page: call media API to create new user and automatically login
+    - check if username already exists
 - [Forms with ngModel](https://ionicframework.com/docs/developer-resources/forms/)
 - 'logout'-page: logout
 - Use *ngIf to show/hide login/logout buttons in tab-navigation according to user's login status
