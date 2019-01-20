@@ -20,7 +20,7 @@ ___
     - when logged in, user is redirected to 'front'
     - if user has already logged in redirect to 'front' (autodirect)
 - 'register': call media API to create new user and automatically login
-- [Angular forms](https://angular.io/guide/user-input)
+- [Forms with ngModel](https://ionicframework.com/docs/developer-resources/forms/)
 
 
 ---
@@ -32,5 +32,6 @@ ___
 
 
 # Google maps (if we have time)
+https://www.javascripttuts.com/implementing-native-google-maps-in-an-ionic-application/
 
 https://ionic.zendesk.com/hc/en-us/articles/360010049673-Managing-plugins-using-cocoapods-in-Ionic-Pro
