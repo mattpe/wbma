@@ -8,9 +8,10 @@ class: center, middle
 # Routing
 
 1. Continue last exercise. Create a new branch with git.
-1. Create pages 'register', 'login' and 'logout'
-2. Create templates for 'login' and 'register' components yourself
-3. For routing edit X
+1. Create new pages 'register', 'login' and 'logout'
+1. Create templates for 'login' and 'register' components yourself
+1. Create tab navigation....
+1. For routing edit X
 ___
 
 # Using providers II - Login
@@ -31,7 +32,8 @@ ___
 
 
 
-# Google maps (if we have time)
-https://www.javascripttuts.com/implementing-native-google-maps-in-an-ionic-application/
-
-https://ionic.zendesk.com/hc/en-us/articles/360010049673-Managing-plugins-using-cocoapods-in-Ionic-Pro
+# Google maps (optional task)
+1. Create new page 'map' and add it to tabs
+1. Follow [this tutorial](https://www.javascripttuts.com/implementing-native-google-maps-in-an-ionic-application/) to add Google Maps plugin to your app
+1. iOS developers need [cocoaPods](https://cocoapods.org/app) and this [fix](https://ionic.zendesk.com/hc/en-us/articles/360010049673-Managing-plugins-using-cocoapods-in-Ionic-Pro)
+1. API key can be found in Oma assignments
