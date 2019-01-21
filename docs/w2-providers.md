@@ -21,7 +21,7 @@ class: center, middle
     ```
     * see Week 1 task 2 for help
 1. Add the provider to 'app.module.ts'
-1. In HomePage component create a function 'getAllFiles' which is called on 'ionViewDidLoad'. In 'getAllFiles' call getAllMedia' and use ```console.log``` to log the returned data 
+1. In HomePage component create a function 'getAllFiles' which is called on 'ionViewDidLoad' or 'ngOnInit'. In 'getAllFiles' call getAllMedia' and use ```console.log``` to log the returned data 
     - To call getAllMedia, you need to inject MediaProvider to constructor. Call it mediaProvider ```...(private mediaProvider: MediaProvider)```
     
 1. Use the existing list in home.html template
