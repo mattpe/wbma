@@ -55,3 +55,11 @@ class: center, middle
       ...
     }
     ```
+
+# Google maps (optional task, might run only on device)
+1. Create new Ionic project
+1. Follow [this tutorial](https://www.javascripttuts.com/implementing-native-google-maps-in-an-ionic-application/) to add Google Maps plugin to your app
+1. iOS developers need [cocoaPods](https://cocoapods.org/app) and this [fix](https://ionic.zendesk.com/hc/en-us/articles/360010049673-Managing-plugins-using-cocoapods-in-Ionic-Pro)
+1. Android developers, ask for [permissions](https://ionicframework.com/docs/native/android-permissions/) when app starts
+    - required permissions: ACCESS_COARSE_LOCATION and ACCESS_FINE_LOCATION
+1. API key can be found in Oma assignments (6)
