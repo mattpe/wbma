@@ -62,4 +62,4 @@ class: center, middle
 1. iOS developers need [cocoaPods](https://cocoapods.org/app) and this [fix](https://ionic.zendesk.com/hc/en-us/articles/360010049673-Managing-plugins-using-cocoapods-in-Ionic-Pro)
 1. Android developers, ask for [permissions](https://ionicframework.com/docs/native/android-permissions/) when app starts
     - required permissions: ACCESS_COARSE_LOCATION and ACCESS_FINE_LOCATION
-1. API key can be found in Oma assignments (6)
+1. API key can be found in Oma assignment
