@@ -9,7 +9,7 @@ class: center, middle
 # Using providers A
 
 1. Continue last exercise. Create a new branch with git.
-1. Create new provider 'media' to services folder ```ionic generate provider media```
+1. Create new provider 'media' ```ionic generate provider media```
 1. In the provider create a method 'getAllMedia' which fetches all media files from the media API and returns the data as Observable
     * example: 
     ```javascript
