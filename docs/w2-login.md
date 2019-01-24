@@ -26,15 +26,15 @@ _Note 24.1.2019:_ Ionic framework v4 [was published](https://blog.ionicframework
 
 # Using providers II - Login
 
-1. In the MediaProvider create methods 'register' and 'login' with corresponding functionalities
- - 'login'-page: call media API to login user and save users token to [local storage](http://www.w3schools.com/html/html5_webstorage.asp)
+1. In the MediaProvider create methods 'register', 'login' and 'checkIfUserExists' with corresponding functionalities
+ - 'login'-page: call media API to login user and save user's token to [local storage](http://www.w3schools.com/html/html5_webstorage.asp)
     - when logged in, user is redirected to 'home'
     - if user has already logged in redirect to 'home' (autoredirect)
 - 'register'-page: call media API to create new user 
     - login automatically after registering
-    - check if username already exists
+    - check if username already exists before trying to register
 - [Forms with ngModel](https://ionicframework.com/docs/v3/developer-resources/forms/)
-- 'logout'-page: logout
+- 'logout'-page: logout (clear localstorage, update loggedIn status in media provider)
 - Use [show]-attribute to show/hide login/logout buttons in tab-navigation according to user's login status
 
 
