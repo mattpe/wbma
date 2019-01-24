@@ -35,6 +35,7 @@ _Note 24.1.2019:_ Ionic framework v4 [was published](https://blog.ionicframework
     - check if username already exists before trying to register
 - [Forms with ngModel](https://ionicframework.com/docs/v3/developer-resources/forms/)
 - 'logout'-page: logout (clear localstorage, update loggedIn status in media provider)
+    - Use a [lifecycle event](https://blog.ionicframework.com/navigating-lifecycle-events/) for automatic method calls
 - Use [show]-attribute to show/hide login/logout buttons in tab-navigation according to user's login status
 
 
