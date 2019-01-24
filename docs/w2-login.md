@@ -6,6 +6,10 @@ class: center, middle
 
 ---
 
+_Note 24.1.2019:_ Ionic framework v4 [was published](https://blog.ionicframework.com/introducing-ionic-4-ionic-for-everyone/) yesterday and the docs changed. We are still using v3 for now and the documentation is still available at <https://ionicframework.com/docs/v3/>. If old doc links are broken you can fix them by adding `v3/` into the url after the `docs/` part.   
+
+---
+
 # Navigation
 
 1. Continue last exercise. Create a new branch with git.
