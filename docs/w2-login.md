@@ -14,8 +14,8 @@ _Note 24.1.2019:_ Ionic framework v4 [was published](https://blog.ionicframework
 
 1. Continue last exercise. Create a new branch with git.
 1. Create new pages 'menu', 'login-register' and 'logout' (`ionic generate page <PageName> --no-module`)
-1. Create templates for 'login-register' pages yourself
-1. Create tab-navigation. Edit 'Menu'-page to add tab navigation.
+1. Create template for the 'login-register' page yourself
+1. Create tab-navigation. Edit 'Menu'-page to add tab navigation. Update the 'rootPage' of the app.
 
 ## Some help
 
