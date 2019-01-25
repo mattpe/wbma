@@ -22,7 +22,7 @@ Value of a `Date` object is passed to DatePipe and the output of that is passed 
 
 **Read:** [Pipes angular.io guide](https://angular.io/docs/ts/latest/guide/pipes.html).
 
-### Task: Create a _custom_ pipe and use it to get thumbnail images of the media files
+### Task A: Create a _custom_ pipe and use it to get thumbnail images of the media files
 
 1. Continue last exercise. Create a new branch with git.
 1. Show the dates of images in 'HomePage', show the date in Finnish format by using DatePipe. 
@@ -53,4 +53,12 @@ getAllFiles() {
     ```
 
   **Why to use thumbnails instead of full size files?**
+  
+### Task B: Convert logout page to profile page
+1. Change the name of the files and component form logout->profile
+1. Add avatar image to the user
+    - Use postman to upload image and add a tag 'profile' to it
+1. Display users avatar image, name and email in profile page
+    - You'll need to add more methods to 'MediaProvider' to achieve this
+1. Add logout button to profile page.
 
