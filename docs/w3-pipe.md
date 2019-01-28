@@ -26,7 +26,7 @@ Value of a `Date` object is passed to DatePipe and the output of that is passed 
 
 1. Continue last exercise. Create a new branch with git.
 1. Show the dates of images in 'HomePage', show the date in Finnish format by using DatePipe. 
-1. Use ionic-cli to generate a new pipe called _thumbnail_: `ionic generate [PIPE-NAME]` ([Custom pipes @ Angular docs](https://angular.io/guide/pipes#custom-pipes))
+1. Use ionic-cli to generate a new pipe called _thumbnail_: `ionic generate pipe [PIPE-NAME]` ([Custom pipes @ Angular docs](https://angular.io/guide/pipes#custom-pipes))
 1. Add 'PipesModule' to imports in 'app.module.ts'
 1. Modify 'picArray' and 'getAllMedia' method in 'HomePage': 
     ```typescript
