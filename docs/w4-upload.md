@@ -35,6 +35,7 @@ class: center, middle
 1. Add [ion-range](https://ionicframework.com/docs/v3/api/components/range/Range/) elements to change brightness, contrast, saturation and sepia CSS filters
 1. Use [ngStyle](https://angular.io/api/common/NgStyle) to add filters to preview image
 1. Save filter settings as tag when file is uploaded
+    
     ![adjustments](images/adjustments.png)
 1. If you have time, try to recreate [Instagram's Juno filter](https://tricky-photoshop.com/how-to-create-instagram-juno-effect-in-photoshop/)
     - instead of sepia filter, you need to create a [SVG-filter](https://css-tricks.com/gooey-effect/) to do the warming filter
