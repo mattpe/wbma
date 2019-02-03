@@ -8,12 +8,13 @@ class: center, middle
 
 # Forms
 
-### Task: Create Upload Form 
+### Task A: Create Upload Form 
 
 1. Continue the previous exercise. Create a new git branch for these tasks.
 1. Add a button to HomePage to navigate to UploadPage ([navCtrl.push](https://ionicframework.com/docs/v3/api/navigation/NavController/))
 1. Create a new page for the upload functionality
     - add input fields for 'title' (type=text), 'description' (textarea) and 'file' (type=file) to the template
+    - accept only media files to file input
 1. When uploading a file to the API, you need to send [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects) 
     - in previous exercise you got field values with ngModel. When sending a file, you need to use $event (event object)
     - in upload.ts create a method which is called by (change) event of the input element. In the function log event to console to find out how to get the property that has the file. Save the value of that property to a variable of type File. 
@@ -23,4 +24,17 @@ class: center, middle
         - wait 2 seconds before going back so that thumbnail is ready
         - hide spinner
         - when back in HomePage, refresh images (use ionViewDidEnter instead of ionViewDidLoad)
+    - Add img element to UploadPage to show a preview of the selected media file
+        - if media is audio or video use some default image
+    - Example:
+    
+    ![uploadform](images/uploadform.png)
+        
+ ### Task B: Use CSS filters to adjust the image
+ 1. Study [CSS filters](https://css-tricks.com/almanac/properties/f/filter/)
+ 1. Add 'ion-range' elements to change brightness, contrast, saturation and sepia CSS filters
+ 1. Use [ngStyle](https://angular.io/api/common/NgStyle) to add filters to preview image
+ 1. Save filter settings as tag when file is uploaded
+ 
+ ![adjustments](images/adjustments.png)
     
