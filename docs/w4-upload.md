@@ -39,3 +39,4 @@ class: center, middle
     ![adjustments](images/adjustments.png)
 1. If you have time, try to recreate [Instagram's Juno filter](https://tricky-photoshop.com/how-to-create-instagram-juno-effect-in-photoshop/)
     - instead of sepia filter, you need to create a [SVG-filter](https://css-tricks.com/gooey-effect/) to do the warming filter
+    - [feColorMatrix generator](https://kazzkiq.github.io/svg-color-filter/)
