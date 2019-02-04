@@ -14,7 +14,6 @@ Front-end development materials & code examples
 1. [Week 3 - Pipes](docs/w3-pipe.md)
 1. [Week 3 - Forms](docs/w3-forms.md)
 1. [Week 4 - File upload](docs/w4-upload.md)
-1. [Week 4 - Ionic](docs/w4-ionic.md)
 1. [Week 5 - Media player](docs/w4-player.md)
 
 Course content is inside [docs](docs/) folder.
