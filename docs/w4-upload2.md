@@ -26,7 +26,17 @@ class: center, middle
     - Description is optional but minimun length is ?
     - Media file of correct type (image/video/audio) is required
 1. Add reset button for clearing the whole form and image preview
-1. Test in emulator/phone
+1. Test in emulator/phone (check: [Debugging in Android devices](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/))
+
+### Troubleshooting
+
+GOT _Failed to load resource: net::ERR_CACHE_MISS_ error on Android? Try:
+
+```sh
+ionic cordova platform rm android
+ionic cordova platform add android
+``` 
+_
 
 ## Task 2 (extra): Use Camera
 
