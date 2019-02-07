@@ -35,8 +35,12 @@ GOT _Failed to load resource: net::ERR_CACHE_MISS_ error on Android? Try:
 ```sh
 ionic cordova platform rm android
 ionic cordova platform add android
-``` 
-_
+```
+
+When problems are related to photoviewer plugin, try building without it:
+
+1. Remove the plugin: `ionic cordova plugin rm com-sarriaroman-photoviewer`  
+2. Remove photoviewer imports & references from `app.module.ts` and your `home` page 
 
 ## Task 2 (extra): Use Camera
 
