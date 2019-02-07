@@ -15,7 +15,7 @@ class: center, middle
     - Version 4 should work (`npm install --save @ionic-native/chooser@4` <- _@4_ suffix)
     - [Add to app module](https://ionicframework.com/docs/v3/native/#Add_Plugins_to_Your_App_Module)
 1. Use Chooser instead of `<ion-input type="file"...`
-    - use e.g. button and click event to start the chooser (_NOTE:_ when inserting more <button> elements inside `<form>` element add e.g. `type="button"` attribute to `<button>` to prevent unwanted submission of form)
+    - use e.g. button and click event to start the chooser (_NOTE:_ when inserting more `<button>` elements inside `<form>` element add e.g. `type="button"` attribute to `<button>` to prevent unwanted submission of form)
     - Chooser result is not a File object -> [Blob object](https://developer.mozilla.org/en-US/docs/Web/API/Blob) must be created before appending to [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData)
     `myBlob = new Blob([chooserResult.data], {type: chooserResult.mediaType});`
     - handle the case where user starts the chooser but cancels before choosing any file
