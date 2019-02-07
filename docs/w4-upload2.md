@@ -37,10 +37,25 @@ ionic cordova platform rm android
 ionic cordova platform add android
 ```
 
-When problems are related to photoviewer plugin, try building without it:
+When problems are related to photoviewer plugin, try downgrading to working version or building without it:
 
-1. Remove the plugin: `ionic cordova plugin rm com-sarriaroman-photoviewer`  
-2. Remove photoviewer imports & references from `app.module.ts` and your `home` page 
+1. Remove the plugin: `ionic cordova plugin remove com-sarriaroman-photoviewer`  
+1. Try to Install working version of the plugin: `ionic cordova plugin add com-sarriaroman-photoviewer@1.1.18` **or** remove photoviewer all imports & references from `app.module.ts` and your `home` page
+
+Build errors caused by _config.xml_ after adding the chooser plugin? Try **REMOVING** the stuff you might have added there:
+
+```xml
+<platform name="android">
+ <edit-config
+   file="app/src/main/AndroidManifest.xml"
+   mode="merge"
+   target="/manifest/application">
+   <application android:largeHeap="true" />
+ </edit-config>
+</platform>
+```
+
+---
 
 ## Task 2 (extra): Use Camera
 
