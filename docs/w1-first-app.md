@@ -15,7 +15,7 @@ Check: [Ionic docs](https://ionicframework.com/getting-started#cli)
 1. Install Ionic `npm install -g ionic`
 1. If you want to use iOS, install ios-deploy `npm install -g ios-deploy`
     - you can also add  application pakage name: `--id com.mycompany.myapp`
-1. Use the `ionic` cli tool to generate a _blank_ app skeleton `ionic start myFirstApp blank`
+1. Use the `ionic` cli tool to generate a _blank_ app skeleton `ionic start myFirstApp blank --type=ionic-angular`
    1. Answer no to 4.0 and appflow suggestions 
 1. Test that app works, run it with `ionic <command>` and open in browser
    - `cd myFirstApp`
@@ -128,9 +128,9 @@ Check: [Ionic docs](https://ionicframework.com/getting-started#cli)
     ```
 1. Develop your app further. Open 'original' image when 'view'-button is clicked.
    - Use [PhotoViever](https://ionicframework.com/docs/native/photo-viewer/) plugin to display the selected image
-   ```text
-    ionic cordova plugin add com-sarriaroman-photoviewer
-    npm install --save @ionic-native/photo-viewer
+   ```sh
+    ionic cordova plugin add com-sarriaroman-photoviewer@1.1.18
+    npm install --save @ionic-native/photo-viewer@4
     ```
     - In home.html add (click)-event which calls for your own made method that starts PhotoViewer 
     - Ionic Native Plugins are providers, so you have to add PhotoViewer as a provider to app.module.ts
