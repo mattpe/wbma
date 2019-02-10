@@ -64,4 +64,4 @@ Build errors caused by _config.xml_ after adding the chooser plugin? Try **REMOV
 1. Upload
 
 - Tip: [Converting dataURI to blob](https://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata)
-- NEW TIP: [File Transfer](https://www.djamware.com/post/599da16580aca768e4d2b130/how-to-upload-file-on-ionic-3-using-native-file-transfer-plugin)
+- New tip. Old but works: [File Transfer](https://www.djamware.com/post/599da16580aca768e4d2b130/how-to-upload-file-on-ionic-3-using-native-file-transfer-plugin)
