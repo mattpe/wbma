@@ -20,9 +20,9 @@ class: center, middle
         - title
         - description
         - user (to get username you need to request [User endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-User-GetUser) using media file's `user_id`)
-        - likes (request [Favourite endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-Favourite) on the media api)
-            - add likes to image(s) with Postman
-        - liked by user
+        - optional: likes (request [Favourite endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-Favourite) on the media api)
+            - add likes to image(s) with Postman or add 'like' button to PlayerPage
+        - optional: show users who like the image
 1. Some help:
     - Sending parameters
 
