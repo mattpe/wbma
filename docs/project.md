@@ -7,13 +7,13 @@ Create an application utilizing [this](http://media.mw.metropolia.fi/wbma/docs/)
 1. upload media *
 2. browsing, searching and viewing media *
 3. commenting/liking media
-4. editing media (related to math)
+4. editing media
 5. client statistics
-6. implemented using JS/HTML/CSS (angular2 & ionic framework) *
+6. implemented using React *
 7. applying UI guidelines *
 8. responsive frontend *
 9. user feedback (incl. testing)
-10. applying/extracting metadata (EXIF)
+10. applying/extracting metadata (for example EXIF)
 11. user registration and authentication *
 12. use of the introduced toolchain *
 

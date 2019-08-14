@@ -1,6 +1,6 @@
 class: center, middle
 
-# Mobile Web Development Toolchain
+# Toolchain
 
 ## 1/2019
 
@@ -9,13 +9,13 @@ class: center, middle
 # Contents
 
 - Editor/IDE: WebStrom/PhpStorm, Visual Studio Code, (or any)
-- Language: TypeScript
+- Language: JavaScript (ES6 ->)
 - Run, test & debug: Chrome browser dev tools, Safari browser dev tools
 - Version Control System: Git
-- Package manager: NPM
-- Building & automating tasks: Ionic CLI
-- Development frameworks: Ionic (Angular for application logic)
-- Creating a native (hybrid) app: Ionic (Cordova)
+- Package manager: NPM or Yarn
+- Building & automating tasks: Create React App
+- Development frameworks: React
+- (Optional) Creating a mobile app: React Native
 
 ---
 
@@ -51,7 +51,6 @@ Ultimately, it's your choice. WebStrom/PhpStorm is recommended.
 
 - Chrome & [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
 - Safari & [Safari Develop menu](https://support.apple.com/guide/safari/use-the-developer-tools-in-the-develop-menu-sfri20948/mac)
-- Enable [USB Debugging Mode on Android](https://www.kingoapp.com/root-tutorials/how-to-enable-usb-debugging-mode-on-android.htm)
 
 ![Chrome screenshot](images/chrome-devtools.png)
 
@@ -70,12 +69,12 @@ What files to include in repo?
 
 Exclude:
 
-- IDE specific project files & folders
+- IDE specific project files & folders (.idea)
 - build targets and other automatically generated files
 - packages managed e.g. by npm or bower (= _node_modules/_ & _bower_components/_ folders) 
 - any temp & OS specific files, like Apple's `.DS_Store` 
 
-Ionic CLI generates a .gitignore file automatically.
+Create React App generates a .gitignore file automatically. Add .idea manually.
 
 ---
 
@@ -89,7 +88,7 @@ Ionic CLI generates a .gitignore file automatically.
 
 #### OS X no sudo
 
-- [instructions](https://johnpapa.net/node-and-npm-without-sudo/)
+- [instructions](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
 
 #### NPM Alternative
 
@@ -123,127 +122,3 @@ Ionic CLI generates a .gitignore file automatically.
 ```
 
 ---
-
-# Automating Development Tasks
-
-**[ionic-cli](https://ionicframework.com/docs/cli/commands.html) command line tool** - `ionic` command:
-
-- Run frequent routine tasks in development workflow easily
-- Create an app skeleton
-- Generate app components 
-- Run development server enviroment
-- Run tests, validate code
-- Build/Deploy application
-  - Minify & combine source files
-  - Remove comments & other extra stuff not needed in production version
-
----
-
-# Frameworks used
-
-## Front-end application logic & Layout HTML/CSS components & Hybrid app
-
-[Ionic](https://ionicframework.com/) 
-
----
-
-# From web page to native app
-
-## Hybrid App
-
-- Written in HTML/CSS/JS
-- Wrapped to native app using packaging tool
-- [Apache Cordova](https://cordova.apache.org/)
-  - Create mobile apps with HTML, CSS & JS
-- [Ionic Framework](http://ionicframework.com)
-  - uses Cordova for building
-  - utilizes Angular for application logic
-  - has it's own HTML/CSS [components](https://ionicframework.com/docs/components/)
-
----
-
-class: center, middle
-
-# Getting Started with WebStorm
-
----
-
-# Install WebStorm
-
-Download & install [WebStorm](https://www.jetbrains.com/webstorm/)
-        
-.center[![VSCode logo](http://resources.jetbrains.com/storage/products/webstorm/img/meta/webstorm_logo_300x300.png)]
-
----
-
-# WebStorm settings
-- [Accessing default settings](https://www.jetbrains.com/help/webstorm/accessing-default-settings.html)
-- [Change JavaScript version to ES6](https://www.jetbrains.com/help/webstorm/javascript.html#ws_js_choose_language_version). Do this in (also) in default settings.
-- Set JavaScript code style (editor/code style/JavaScript) to Google JavaScript Style Guide
-- Set TypeScript code style (editor/code style/TypeScript) to JavaScript
----
-
-# Getting Started with VSCode
-
----
-        
-# Install VSCode
-
-Download & install [Visual Studio Code](https://code.visualstudio.com/)
-        
-.center[![VSCode logo](images/vscode.png)]
-
----
-
-# Install Extensions
-
-Press _ctrl-shift-x_ or click extensions icon on the left panel.
-
-Search and install:
-
-- Auto Import
-- TSLint
-
-Other handy extensions:
-
-- EditorConfig for VS Code: support for [EditorConfig](http://editorconfig.org/)
-- Duplicate file: Add _right-click -> Duplicate file_ action
-    
----
-
-# VSCode - Basic Usage
-
-Active **project** is the folder open on the left side panel (_File -> Open folder..._) 
-
-Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard shortcuts_ for more)        
-
-- Multiline comment: _ctrl-'_
-- Delete line: _ctrl-shift-k_
-- Move line(s): _alt-up/down_
-- Copy line(s): _alt-shift-up/down_
-- Auto format code: _alt-shift-f_
-- Open integrated console: _ctrl-ö_
-- Quick find/open files: _ctrl-p_
-- Split editor: _ctrl-§_
-
----
-
-# VSCode - Settings
-
-Change integrated console to Bash in Windows:
-
-1. Install [Git for Windows](https://git-scm.com/downloads) to default location
-2. Edit vscode settings file (_File -> Preferences -> User settings_) and add the following property into json object:
-
-```js
-// Place your settings in this file to overwrite the default settings
-{
-  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-}
-```
-
----
-
-## Useful online material
-
-Check [Readme file](https://github.com/mattpe/wbma) of this repo.
