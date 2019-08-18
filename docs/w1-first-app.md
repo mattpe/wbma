@@ -126,7 +126,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 **c.**
 
 1. Study [Handling Touches](https://facebook.github.io/react-native/docs/handling-touches) and [Using List Views](https://facebook.github.io/react-native/docs/using-a-listview)
-1. Add this after the import statements: 
+1.  Develop your app further. Add this after the import statements: 
     ```ecmascript 6
     const data = [
       {
@@ -158,7 +158,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
       },
     ];
     ```
-1. Develop your app further. Add `<Flatlist>`, `<TouchableOpacity>`, `<Text>` and `<Image>` components to the existing `<View>`. Example:
+1. Add `<Flatlist>`, `<TouchableOpacity>`, `<Text>` and `<Image>` components to the existing `<View>`. Example:
     ```jsx
     <FlatList
         data={data}
