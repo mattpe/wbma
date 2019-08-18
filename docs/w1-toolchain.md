@@ -70,17 +70,11 @@ Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard
 
 # VSCode - Settings
 
-Change integrated console to Bash in Windows:
+(Windows users only) Change integrated console to Bash in Windows:
 
 1. Install [Git for Windows](https://git-scm.com/downloads) to default location
-2. Edit vscode settings file (_File -> Preferences -> User settings_) and add the following property into json object:
-
-```js
-// Place your settings in this file to overwrite the default settings
-{
-  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-}
-```
+2. Edit vscode settings file (_File -> Preferences -> Settings_) and search for 'terminal'. 
+- Change 'Terminal › External: Windows Exec' value to "C:\\Program Files\\Git\\bin\\bash.exe"
 
 ---
 
