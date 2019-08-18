@@ -43,6 +43,7 @@ Course content is inside [docs](docs/) folder.
         - +everything else you want to recap or want to know more about
 1. [React concepts](https://medium.freecodecamp.org/all-the-fundamental-react-js-concepts-jammed-into-this-single-medium-article-c83f9b53eac2)
 1. [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A)
+1. [React Navtive crash course](https://www.youtube.com/watch?v=mkualZPRZCs&t=1116s)
 1. [Longer React course](https://www.youtube.com/watch?v=DLX62G4lc44&t=435s)
     * [Same as an interactive course](https://scrimba.com/g/glearnreact)
 1. [Online book: React.js Training](https://rangle-io.gitbooks.io/react-training/content/)

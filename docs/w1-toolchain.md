@@ -13,9 +13,8 @@ class: center, middle
 - Run, test & debug: Chrome browser dev tools, Safari browser dev tools
 - Version Control System: Git
 - Package manager: NPM or Yarn
-- Building & automating tasks: Create React App
-- Development frameworks: React
-- (Optional) Creating a mobile app: React Native
+- Building & automating tasks: Expo
+- Development frameworks: React Native
 
 ---
 
