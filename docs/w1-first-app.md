@@ -5,26 +5,29 @@ class: center, middle
 ## 1/2019
 
 ---
-# Exercise 1: Setup your toolchain and a new React project
+# Exercise 1: Setup your toolchain and a new React Native project
 
-Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 0:00 to 39:52
+Study [Getting started and Learn the basics](https://facebook.github.io/react-native/docs/getting-started) from React Native documentation
 
 ### Exercise
 
 **a.**
 
-Check: [Create React App](https://github.com/facebook/create-react-app)
-
 1. If needed, install code editor (+ extensions), git, npm
-1. Use the `create-react-app` cli tool to generate an app skeleton `npx create-react-app my-app`
+1. Use the `Expo` cli tool to generate an app skeleton
+    * create a folder for your React Native projects
+    * use Git Bash or terminal to go to this folder `cd foldername/otherfoldername/etc...`
+    * `npm install -g expo-cli`
+    * `expo init MyApp`
+        * choose 'blank' template
 1. Test that app works; run it and open in browser
-   - `cd my-app`
-   - `yarn start`
+   - `cd MyApp`
+   - `npm start`
 1. Create a remote git repository and push your app there
 
 **b.**  
-1. Install ESlint to your project `yarn add -D eslint@5.12.0 eslint-plugin-react eslint-config-google`
-1. Initialize ESlint: `yarn eslint --init` or `node eslint --init` or `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`
+1. Install ESlint to your project `npm i --save-dev eslint eslint-plugin-react eslint-plugin-react-native`
+1. Initialize ESlint: `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`
     * Choose:
         1. To check syntax, find problems, and enforce code style
         1. JavaScript modules (import/export)
@@ -33,13 +36,10 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
         1. Use a popular style guide
         1. Google
         1. JavaScript
-        1. n (because already installed)
-1. Enable ESLint in your WebStrom project
-   - [Instructions](https://www.jetbrains.com/help/webstorm/eslint.html)
+        1. Y
 1. Modify .eslintrc.js:
    ```JavaScript
     module.exports = {
-      'parser': 'babel-eslint',
       'env': {
         'browser': true,
         'es6': true,
@@ -62,11 +62,13 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
       },
       'plugins': [
         'react',
+        'react-native'
       ],
       'rules': {
         'react/jsx-uses-react': 'error',
-        'react/jsx-uses-vars': 'error',
-        'no-console': 0,
+            'react/jsx-uses-vars': 'error',
+            'no-console': 0,
+            'require-jsdoc': 0,
       },
       'settings': {
         'react': {
@@ -93,8 +95,33 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
       },
     };
    ```
-1. If you want to lint a certain file: `yarn eslint src/App.js` or `./node_modules/.bin/eslint src/App.js`.
-1. You can correct code automatically with ctr-alt-l (remember to choose Google style form settings(preferences)/editor/code style/javascript first)
+1. You can correct code automatically with shift-alt-f
+1. Fix curly-braces error in Preferences/Settings
+    * search for braces and uncheck all 'Insert space after...' checkboxes
+1. Convert the App function to arrow function:
+    ```jsx
+   import React from 'react';
+   import {StyleSheet, Text, View} from 'react-native';
+   
+   const App = () => {
+     return (
+       <View style={styles.container}>
+         <Text>Open up App.js to start working on your app!</Text>
+       </View>
+     );
+   };
+   
+   const styles = StyleSheet.create({
+     container: {
+       flex: 1,
+       backgroundColor: '#fff',
+       alignItems: 'center',
+       justifyContent: 'center',
+     },
+   });
+   
+   export default App;
+   ```
 
 **c.**
 

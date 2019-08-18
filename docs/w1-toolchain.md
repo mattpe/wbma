@@ -20,7 +20,69 @@ class: center, middle
 
 # Code editor or IDE
 
-Ultimately, it's your choice. WebStrom/PhpStorm is recommended.
+Ultimately, it's your choice. VSCode is recommended.
+
+#### Visual Studio Code
+
+- free & open source code editor by Microsoft (**!=** Visual Studio IDE)
+- wide extension support
+- lightweight, multiplatform support
+- good [docs & instructions](https://code.visualstudio.com/docs/editor/codebasics)
+- choice of many React developers
+
+# Install Extensions
+
+Press _ctrl-shift-x_ or click extensions icon on the left panel.
+
+Search and install:
+
+- EditorConfig for VS Code
+- Auto Import
+- ESLint
+- JavaScript (ES6) Code Snippets
+- React Pure To Class
+- React-Native/React/Redux snippets for es6/es7
+
+
+Other handy extensions:
+
+- Duplicate file: Add _right-click -> Duplicate file_ action
+- Prettier: Code formatter
+    
+---
+
+# VSCode - Basic Usage
+
+Active **project** is the folder open on the left side panel (_File -> Open folder..._) 
+
+Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard shortcuts_ for more)        
+
+- Multiline comment: _ctrl-'_
+- Delete line: _ctrl-shift-k_
+- Move line(s): _alt-up/down_
+- Copy line(s): _alt-shift-up/down_
+- Auto format code: _alt-shift-f_
+- Open integrated console: _ctrl-ö_
+- Quick find/open files: _ctrl-p_
+- Split editor: _ctrl-§_
+
+---
+
+# VSCode - Settings
+
+Change integrated console to Bash in Windows:
+
+1. Install [Git for Windows](https://git-scm.com/downloads) to default location
+2. Edit vscode settings file (_File -> Preferences -> User settings_) and add the following property into json object:
+
+```js
+// Place your settings in this file to overwrite the default settings
+{
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+}
+```
+
+---
 
 #### WebStorm/PhpStorm
 
@@ -29,14 +91,6 @@ Ultimately, it's your choice. WebStrom/PhpStorm is recommended.
 - full featured IDE
 - quite ready out of the box. No need for plugins.
 - based on IntelliJ IDEA, just like Android Studio
-
-#### Visual Studio Code
-
-- free & open source code editor by Microsoft (**!=** Visual Studio IDE)
-- wide extension support
-- lightweight, multiplatform support
-- good [docs & instructions](https://code.visualstudio.com/docs/editor/codebasics)
-- choice of many Angular developers
 
 #### Other picks
 
@@ -73,7 +127,7 @@ Exclude:
 - packages managed e.g. by npm or bower (= _node_modules/_ & _bower_components/_ folders) 
 - any temp & OS specific files, like Apple's `.DS_Store` 
 
-Create React App generates a .gitignore file automatically. Add .idea manually.
+Expo generates a .gitignore file automatically.
 
 ---
 
@@ -85,7 +139,7 @@ Create React App generates a .gitignore file automatically. Add .idea manually.
 - npm packages needed in a project (dependencies) are listed in the `package.json` file and can be install with `npm install` command
 - locally installed (=project specific) packages are downloaded to `node_modules/` folder (should be excluded from version control)
 
-#### OS X no sudo
+#### OS X no sudo for Mac users
 
 - [instructions](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
 
@@ -96,7 +150,7 @@ Create React App generates a .gitignore file automatically. Add .idea manually.
 - newcomer gaining a lot of traction now
 - first [open source release on October, 2016](https://code.facebook.com/posts/1840075619545360). Current version 0.18.1 
 - uses same package.json file and npm registry as npm
-- claimed to be faster, more secure and reliable
+- claimed to be faster, more secure and reliable but npm has been catching up
 
 ---
 
@@ -121,3 +175,4 @@ Create React App generates a .gitignore file automatically. Add .idea manually.
 ```
 
 ---
+
