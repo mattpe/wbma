@@ -202,6 +202,18 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
     ```
     * Move <Flatlist> to 'List.js' and the content of <Flatlist> to 'ListItem.js'
     * Add imports, component function and style object. (Basically the same as 'App.js'. Just change the name of the component function.)
+    * PropTypes for List:
+    ```jsx harmony
+   List.propTypes = {
+     mediaArray: PropTypes.array,
+   };
+   ```
+    * PropTypes for ListItem:
+   ```jsx harmony
+    ListItem.propTypes = {
+      singleMedia: PropTypes.object,
+    };
+    ```
     * In 'App.js' pass 'data' array as prop called 'mediaArray' from App to List:
     ```jsx harmony
     const App = () => {
