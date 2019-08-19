@@ -183,8 +183,8 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 
 1. Study [Layout with Flexbox](https://facebook.github.io/react-native/docs/flexbox)
 1. Develop your app further. Modify the app so that the layout is similar to this: 
-    ![View 1](./images/app1.png)
-1. You can do it either inline or by adding properties to the 'styles' object at the end of the file. 
+    ![View 1](images/app1_old.png)
+1. You can modify the styles either inline or by adding properties to the 'styles' object at the end of the file.*öä
 
 
 // TODO:
