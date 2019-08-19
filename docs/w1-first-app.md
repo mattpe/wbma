@@ -99,7 +99,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 1. Fix curly-braces error in Preferences/Settings
     * search for braces and uncheck all 'Insert space after...' checkboxes
 1. Convert the App function to arrow function:
-    ```jsx
+    ```jsx harmony
    import React from 'react';
    import {StyleSheet, Text, View} from 'react-native';
    
@@ -159,7 +159,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
     ];
     ```
 1. Add `<Flatlist>`, `<TouchableOpacity>`, `<Text>` and `<Image>` components to the existing `<View>`. Example:
-    ```jsx
+    ```jsx harmony
     <FlatList
         data={data}
         renderItem={({item}) => {
@@ -184,45 +184,52 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 1. Study [Layout with Flexbox](https://facebook.github.io/react-native/docs/flexbox)
 1. Develop your app further. Modify the app so that the layout is similar to this: 
     ![View 1](images/app01.png)
-1. You can modify the styles either inline or by adding properties to the 'styles' object at the end of the file.*öä
+1. You can modify the styles either inline or by adding properties to the 'styles' object at the end of the file.
 
+**e.**
 
-// TODO:
-1. Create components for table, tbody and tr.
+1. Study [Props](https://facebook.github.io/react-native/docs/props) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
+1. Split the app to multiple files. In other words: create components.
+    * create folder 'components' and there a new files 'List.js' and 'ListItem.js'
     * Hierarchy:
     ```text
     App
-       -table
-           -tbody
-               -tr
-               -tr
+       -View
+           -List
+               -ListItem
                ...
  
     ```
-    * you can put each comoponent (table, tbody, tr) to one file or you can make own file for each component 
-    * Pass picArray as props from App to table to tbody.
-    * Iterate picArray in tbody to create multiple tr components
-    
-1. Develop your app further. Open 'filename' image when `<a>` is clicked.
-1. (Optional) Develop your app further. Add more CSS. For example open 'filename' image to your self made modal.
+    * Move <Flatlist> to 'List.js' and the content of <Flatlist> to 'ListItem.js'
+    * Add imports, component function and style object. (Basically the same as 'App.js'. Just change the name of the component function.)
+    * In 'App.js' pass 'data' array as prop called 'mediaArray' from App to List:
+    ```jsx harmony
+    const App = () => {
+      return (
+        <View>
+          <List mediaArray={data} />
+        </View>
+      );
+    };
+    ```
+   * In 'List.js' pass 'item' object as prop called 'singleMedia' from List to ListItem:
+   ```jsx harmony
+    const List = (props) => {
+      console.log(props);
+      return (
+        <FlatList
+          data={props.mediaArray}
+          renderItem={({item}) => <ListItem singleMedia={item} />}
+        />
+      );
+    };
+    ```
 1. git add, commit & push to remote repository
-    * git checkout -b 'oksan-nimi'
+    * git checkout -b someBranchName
     * git add .
-    * git commit -m 'viesti'
+    * git commit -m describeChangesSomehow
     * git push
-1. Deploy project to your public_html (see below for instructions)
 
 ---
-
-## Deploy React Project
-
-1. Add following to package.json (e.g after devDependencies):
-    ```json
-     "homepage": "."
-    ```
-1. Run `yarn build` or `npm run build`
-1. Set deployment settings in WebStorm:
-    ![Build conf0](./images/build_conf0.png)
-    ![Build conf1](./images/build_conf1.png)
-    ![Build conf2](./images/build_conf2.png)
-1. Move build folder to your public_html
+####(Optional)
+Develop your app further. Open 'filename' image in a [Modal](https://facebook.github.io/react-native/docs/modal.html) when `<TouchableOpacity>` is tapped.
