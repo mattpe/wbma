@@ -231,5 +231,5 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
     * git push
 
 ---
-####(Optional)
+#### (Optional)
 Develop your app further. Open 'filename' image in a [Modal](https://facebook.github.io/react-native/docs/modal.html) when `<TouchableOpacity>` is tapped.
