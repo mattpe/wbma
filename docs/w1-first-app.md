@@ -26,7 +26,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 1. Create a remote git repository and push your app there
 
 **b.**  
-1. Install ESlint to your project `npm i --save-dev eslint eslint-plugin-react eslint-plugin-react-native`
+1. Install ESlint to your project `npm i --save-dev eslint eslint-plugin-react eslint-plugin-react-native babel-eslint`
 1. Initialize ESlint: `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`
     * Choose:
         1. To check syntax, find problems, and enforce code style
@@ -40,6 +40,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 1. Modify .eslintrc.js:
    ```JavaScript
     module.exports = {
+      'parser': 'babel-eslint',
       'env': {
         'browser': true,
         'es6': true,
