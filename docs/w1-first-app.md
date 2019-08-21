@@ -109,7 +109,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
     ```
 1. You can correct code automatically with shift-alt-f
 1. Fix curly-braces error in Preferences/Settings
-    * search for braces and uncheck all 'Insert space after...' checkboxes
+    * search for 'braces' and uncheck all 'Insert space after...' checkboxes
 1. Convert the App function to arrow function:
     ```jsx harmony
    import React from 'react';
