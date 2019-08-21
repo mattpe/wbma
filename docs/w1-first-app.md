@@ -141,7 +141,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 1. Study [Handling Touches](https://facebook.github.io/react-native/docs/handling-touches) and [Using List Views](https://facebook.github.io/react-native/docs/using-a-listview)
 1.  Develop your app further. Add this after the import statements: 
     ```ecmascript 6
-    const data = [
+    const mediaArray = [
       {
         'key': '0',
         'title': 'Title 1',
@@ -174,7 +174,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 1. Add `<Flatlist>`, `<TouchableOpacity>`, `<Text>` and `<Image>` components to the existing `<View>`. Example:
     ```jsx harmony
     <FlatList
-        data={data}
+        data={mediaArray}
         renderItem={({item}) => {
           return (
             <TouchableOpacity>
@@ -232,7 +232,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
     const App = () => {
       return (
         <View>
-          <List mediaArray={data} />
+          <List mediaArray={mediaArray} />
         </View>
       );
     };
