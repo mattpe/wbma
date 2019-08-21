@@ -17,7 +17,7 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:2
     - fetch is used in the examples
 1. First log the data using `console.log()`
     * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
-1. Save the data to state and then print the data to the table made in last exercise
+1. Save the data to state and then print the data to the list made in last exercise
 1. git add, commit & push to remote repository
 
 ---
