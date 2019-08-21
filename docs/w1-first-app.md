@@ -95,6 +95,18 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
       },
     };
    ```
+1. Create new file '.editorconfig' and add this content:
+    ```editorconfig
+    root = true
+    
+    [*]
+    indent_style = space
+    indent_size = 2
+    end_of_line = lf
+    charset = utf-8
+    trim_trailing_whitespace = true
+    insert_final_newline = true
+    ```
 1. You can correct code automatically with shift-alt-f
 1. Fix curly-braces error in Preferences/Settings
     * search for braces and uncheck all 'Insert space after...' checkboxes
