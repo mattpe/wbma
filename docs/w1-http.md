@@ -6,7 +6,7 @@ class: center, middle
 
 ---
 
-Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://reactjs.org/docs/hooks-state.html) and [this article](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
+Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](https://reactjs.org/docs/hooks-effect.html) and [this article](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
 * We'll use the coding method in the article as an example to do the following tasks 
 
 # Fetching data with AJAX, Task A
@@ -15,7 +15,10 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
 1. TODO_CONTEXT_API_HOWTO
 1. [test.json](./assets/test.json) url = https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json
 1. In App.js, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) or axios to load test.json
-    - fetch is used in the examples
+    - fetch is used in teacher's examples
+    - 
+    - prevent fetch from looping by using [cleanup](https://medium.com/@selvaganesh93/how-to-clean-up-subscriptions-in-react-components-using-abortcontroller-72335f19b6f7)
+        - read Cleanup in hooks
 1. First log the data using `console.log()`
     * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
 1. Save the data to state and then print the data to the list made in last exercise
