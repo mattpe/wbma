@@ -6,7 +6,8 @@ class: center, middle
 
 ---
 
-Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:25:55 to 1:38:23
+Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://reactjs.org/docs/hooks-state.html) and [this article](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
+* We'll use the coding method in the article as an example to do the following tasks 
 
 # Fetching data with AJAX, Task A
 
