@@ -54,4 +54,4 @@ Course content is inside [docs](docs/) folder.
 
 - [React Docs](https://reactjs.org/)
 - [React patterns](https://reactpatterns.com/)
-- [Create React App](https://github.com/facebook/create-react-app)
+- [Expo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli/)
