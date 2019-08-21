@@ -16,7 +16,6 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
 1. [test.json](./assets/test.json) url = https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json
 1. In App.js, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) or axios to load test.json
     - fetch is used in teacher's examples
-    - 
     - prevent fetch from looping by using [cleanup](https://medium.com/@selvaganesh93/how-to-clean-up-subscriptions-in-react-components-using-abortcontroller-72335f19b6f7)
         - read Cleanup in hooks
 1. First log the data using `console.log()`
