@@ -11,7 +11,7 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:2
 # Fetching data with AJAX, Task A
 
 1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
-1. Save [test.json](./assets/test.json) into 'public' folder of your project.
+1. Save [test.json](./assets/test.json) into 'assets' folder of your project.
 1. In App.js, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) or axios to load test.json
     - fetch is used in the examples
 1. First log the data using `console.log()`
