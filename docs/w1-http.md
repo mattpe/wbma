@@ -16,8 +16,7 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
 1. [test.json](./assets/test.json) url = https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json
 1. In App.js, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) or axios to load test.json
     - fetch is used in teacher's examples
-    - prevent fetch from looping by using [cleanup](https://medium.com/@selvaganesh93/how-to-clean-up-subscriptions-in-react-components-using-abortcontroller-72335f19b6f7)
-        - read Cleanup in hooks
+    - prevent fetch from looping by using effect-hook. [Example](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6)
 1. First log the data using `console.log()`
     * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
 1. Save the data to state and then print the data to the list made in last exercise

@@ -25,19 +25,19 @@
     ...
     export {getAllMedia}
     ```
-1. In App.js use getAllMedia in componentDidMount-hook to add files to state and display the data in table the same way as last exercise.
+1. In List.js use getAllMedia in effect-hook to add files to state and display the data in table the same way as last exercise.
     - when using webStorm MediaAPI.js should be auto imported. If not, import it manually.
 
 # Routing 
 
-Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:15:48  to 1:25:44
+Study [Navigating Between Screens](https://facebook.github.io/react-native/docs/navigation) and [Tab Navigation](https://reactnavigation.org/docs/en/tab-based-navigation.html)
 
-1. Install react-router-dom with npm or yarn
+1. Install react-navigation with npm
 1. Goal is to make a navigation between three 'pages'
     * main menu has two links: 'Home' and 'Profile'
     * Each media file has 'view' link next to it. Clicking that should take to 'Single'
-1. Create new component 'Nav.js' (to components folder)
-    * content for Nav.js:
+1. Add tans to App.js
+    * content for Tabs.js:
     ```javascript
     import React from 'react';
     

@@ -1,14 +1,14 @@
 class: center, middle
 
-# Material-UI
+# NativeBase
 
 ## 3/2019
 
 ---
 ### Task A: Convert the app we've made so far to use Material-UI
 1. Continue last exercise. Create a new branch with git.
-1. Study [Material Design](https://material.io/design/introduction/) and [Metrial-UI](https://material-ui.com/)
-1. Convert the app we've made so far to use Material-UI
+1. Study [this article](https://blog.bitsrc.io/11-react-native-component-libraries-you-should-know-in-2018-71d2a8e33312) and [NativeBase](https://nativebase.io/)
+1. Convert the app we've made so far to use NativeBase
   
 ### Task B: Develop profile page
 1. Add avatar image to the user
