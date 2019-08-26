@@ -214,7 +214,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
                ...
  
     ```
-    * Move <Flatlist> to 'List.js' and the content of <Flatlist> to 'ListItem.js'
+    * Move `<Flatlist>` to 'List.js' and the content of `<Flatlist>` to 'ListItem.js'
     * Add imports, component function and style object. (Basically the same as 'App.js'. Just change the name of the component function.)
     * PropTypes for List:
     ```jsx harmony
