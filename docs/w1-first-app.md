@@ -20,6 +20,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
     * `npm install -g expo-cli`
     * `expo init MyApp`
         * choose 'blank' template
+        * if this fails on Windows, use cmd instead of GitBash
 1. Test that app works; run it and open in browser
    - `cd MyApp`
    - `npm start`
