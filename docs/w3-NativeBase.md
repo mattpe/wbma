@@ -5,7 +5,7 @@ class: center, middle
 ## 3/2019
 
 ---
-### Task A: Convert the app we've made so far to use Material-UI
+### Task A: Convert the app we've made so far to use NativeBase
 1. Continue last exercise. Create a new branch with git.
 1. Study [this article](https://blog.bitsrc.io/11-react-native-component-libraries-you-should-know-in-2018-71d2a8e33312) and [NativeBase](https://nativebase.io/)
 1. Convert the app we've made so far to use NativeBase
