@@ -9,7 +9,7 @@ class: center, middle
 Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](https://reactjs.org/docs/hooks-effect.html) and [this article](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
 * We'll use the coding method in the article as an example to do the following tasks 
 
-## Fetching data with AJAX, Task A
+## Fetching data with AJAX and sharing it with Context, Task A
 
 1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
     1. Create contexts folder next to components folder
@@ -73,20 +73,6 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
     - base url: http://media.mw.metropolia.fi/wbma/
     - Media files location: http://media.mw.metropolia.fi/wbma/uploads/
 1. First log the data using ```console.log()```
-    - Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also thumbnails.
-        - Study Promise.all [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) and [here](http://promise-nuggets.github.io/articles/14-map-in-parallel.html)
-        - example: 
-        ```javascript
-        // 2nd fetch:
-        Promise.all(array.map(item => {
-            return fetch(url + item.id).
-                then(response => {
-                  return response.json();
-                });
-          })).then(items => {
-            console.log(items);
-            // save items to state
-          });
-        ```
-1. Save the data to state and then print the data to the table
+    - Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also the thumbnails.
+1. Save the data to MediaContext's state and then print the data to the table
 1. git add, commit & push to remote repository
