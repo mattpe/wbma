@@ -20,7 +20,7 @@ Use Postman to:
 7. Try `PUT users/` to change your password and log in again to get a new token
 8. `POST media/` to upload a media file (use body content-type: _form-data_, change field type for the file row: _text -> file_)
 9. `POST comment/` to some other user's file
-10. `PUT media` to change description of your file
-11. `POST favourite` to like some file
+10. `PUT media/<FILE_ID>` to change description of your file
+11. `POST favourites` to like some file
 
 **Submit your user_id AND username you made in bullet 4. to Oma assignment.**
