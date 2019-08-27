@@ -18,7 +18,7 @@ Use Postman to:
 5. `POST login/` using your account and save the token string from the response
 6. Add the token to your following request **headers** (key name: _x-access-token_)
 7. Try `PUT users/` to change your password and log in again to get a new token
-8. `POST media/` to upload a media file (use body content-type: _form-data_)
+8. `POST media/` to upload a media file (use body content-type: _form-data_, change field type for the file row: _text -> file_)
 9. `POST comment/` to some other user's file
 10. `PUT media` to change description of your file
 11. `POST favourite` to like some file
