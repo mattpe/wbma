@@ -1,167 +1,254 @@
-# AJAX, Routing
+# Navigation
 
 ## 2/2019
 
 ---
 
-# AJAX 2, Move reusable functions to a separate file
-
-1. Continue last exercise. Create a new branch with git.
-1. Create new folder 'utils' to 'src' folder
-1. In the 'utils' folder create a new file 'MediaAPI.js'
-1. In 'MediaAPI.js' make function getAllMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
-    - getAllMedia should fetch all media files and their thumbnails from MediaAPI (just like last exercise)
-    * example: 
-    ```javascript
-    ...
-    const getAllMedia = () => {    
-     return fetch(apiUrl).then(param => {
-     ...then(someParam => {
-           return Promise.all(someParam.map(item => {
-             return fetch(...
-             ...
-       }
-    }
-    ...
-    export {getAllMedia}
-    ```
-1. In List.js use getAllMedia in effect-hook to add files to state and display the data in table the same way as last exercise.
-    - when using webStorm MediaAPI.js should be auto imported. If not, import it manually.
-
 # Routing 
 
-Study [Navigating Between Screens](https://facebook.github.io/react-native/docs/navigation) and [Tab Navigation](https://reactnavigation.org/docs/en/tab-based-navigation.html)
+Study:
+* [Three dots](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+* [React Navigation](https://reactnavigation.org/docs/en/getting-started.html)
+* [Stack Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html)
+* [Tab Navigation](https://reactnavigation.org/docs/en/tab-based-navigation.html)
+* Navigation prop reference, createStackNavigator, createBottomTabNavigator in the [API](https://reactnavigation.org/docs/en/api-reference.html)
 
-1. Install react-navigation with npm
+####A
+1. Create a new react native project called 'Stack' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
+1. Install react-navigation with npm `npm install react-navigation --save`
+1. Install react-native-gesture-handler and react-native-reanimated `expo install react-native-gesture-handler react-native-reanimated`
+1. Follow [Hello React Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html) and [Moving between screens](https://reactnavigation.org/docs/en/navigating.html) articles to create a simple stack navigation
+
+####B
+1. Create a new react native project called 'Tabs' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
+1. Install react-navigation with npm `npm install react-navigation --save`
+1. Install react-native-gesture-handler and react-native-reanimated `expo install react-native-gesture-handler react-native-reanimated`
+1. Follow [Tab Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html) article to create a simple tab navigation
+
+####C
+Continue the app made in previous labs. Create a new branch `navigation` with git and checkout it (`git checkout -b navigation`).
 1. Goal is to make a navigation between three 'pages'
-    * main menu has two links: 'Home' and 'Profile'
-    * Each media file has 'view' link next to it. Clicking that should take to 'Single'
-1. Add tans to App.js
-    * content for Tabs.js:
-    ```javascript
-    import React from 'react';
-    
-    const Nav = () => {
-      return (
-          <nav>
-            <ul>
-              <li>
-                Home
-              </li>
-              <li>
-                Profile
-              </li>
-            </ul>
-          </nav>
-      );
-    };
-    
-    export default Nav;
-    ```
-1. Add Nav-component to App.js so that you can see it above Table component in browser
-1. Create new folder 'views' to folder 'src'
+    * Bottom tab menu has two links: 'Home' and 'Profile'
+    * Each thumbnail is TouchableOpacity and tapping them should take to 'Single' to show the selected media file (just images at this point)
+1. Install react-navigation with npm `npm install react-navigation --save`
+1. Install react-native-gesture-handler and react-native-reanimated `expo install react-native-gesture-handler react-native-reanimated`
+1. Create new folder 'views'
 1. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
-    * Home.js will be the component that should show first when the app starts
-    * Content for Home.js
+1. Home.js will be the component that should show first when the app starts
+    * Copy the content of App.js to Home.js and change function name and export default to Home
+    * Modify Home function: 
     ```jsx harmony
-    import React from 'react';
-    
-    const Home = (props) => {
-      return (
-          <React.Fragment>
-            <h1>Home</h1>
-          </React.Fragment>
-      );
-    };
-    
-    export default Home;
+      const Home = () => {
+        return (
+          <View style={styles.container}>
+            <List></List>
+          </View>
+        );
+      };
+
     ```
-    * Move the following jsx from App.js to Home.js
+    * Modify App.js:
     ```jsx harmony
-      <Table picArray={this.state.picArray}/>
-    ```
-    * Replace it with
-    ```jsx harmony
-      <Home picArray={this.state.picArray} />
+      const App = () => {
+        return (
+          <StateProvider>
+            <Home></Home>
+          </StateProvider>
+        );
+      };
     ``` 
-    * In Home.js, make the moved code to use props instead of state. Also remove `this`because Home.js is funciton component not class.
+    * Remove unused styles and imports etc.
     * The app should at this point work the same as before
-1. Content for Profile.js (this is a [function component](https://reactjs.org/docs/components-and-props.html#function-and-class-components)):
-    ```javascript
+1. Content for Profile.js
+    ```jsx harmony
     import React from 'react';
+    import {StyleSheet, View, Text} from 'react-native';
     
-    const Profile = (props) => {
+    const Profile = () => {
       return (
-          <React.Fragment>
-            <h1>Profile</h1>
-          </React.Fragment>
+        <View style={styles.container}>
+          <Text>Profile</Text>
+        </View>
       );
     };
+    
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingTop: 40,
+      },
+    });
     
     export default Profile;
     ```
-1. Content for Single.js (this is a [class component](https://reactjs.org/docs/components-and-props.html#function-and-class-components)):
-   ```javascript
-   import React, {Component} from 'react';
-   import PropTypes from 'prop-types';
+1. Content for Single.js:
+   ```jsx harmony
+   import React from 'react';
+   import {StyleSheet, View, Text} from 'react-native';
    
-   class Single extends Component {
-     mediaUrl = 'http://media.mw.metropolia.fi/wbma/uploads/';
-     state = {
-       file: {
-         filename: 'b2db3cce51674aba84d9476a545c5cc4.jpg',
-         title: 'Test',
-       },
-     };   
-   
-     render() {
-       return (
-           <React.Fragment>
-             <h1>{this.state.file.title}</h1>
-             <img src={this.mediaUrl + this.state.file.filename}
-                  alt={this.state.file.title}/>
-           </React.Fragment>
-       );
-     }   
-   }
-   
-   Single.propTypes = {
-     match: PropTypes.object,
+   const Single = () => {
+     return (
+       <View style={styles.container}>
+         <Text>Profile</Text>
+       </View>
+     );
    };
+   
+   const styles = StyleSheet.create({
+     container: {
+       flex: 1,
+       backgroundColor: '#fff',
+       alignItems: 'center',
+       justifyContent: 'center',
+       paddingTop: 40,
+     },
+   });
    
    export default Single;
    ```
-1. Study the video above and create routing described in bullet 2.
-    ```jsx harmony
-    // sending props to route
-    <Route path="/example" render={(props) => (
-                    <Example {...props} file={this.state.file}/>
-                )}/>
-    ```
-    ```javascript
-1. [three dots](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-1. To make links work also in subfolders when building add basename attribute to Route:
-    ```jsx harmony
-    <Router basename='/~username/foldername'>
-    ```
-## Show single file & local state
-  
-1. In 'mediaAPI.js' make function getSingleMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
-    - getSingleMedia should fetch one media file with thumbnails from MediaAPI (just like last exercise)
-    * example: 
-    ```javascript
-    ...
-    const getSingleMedia = (id) => {
-      return fetch(...
-    };
-    ...
-    ```
-1. In Tr.js make the 'view' link to open 'Single' component and send file_id as a parameter.
 
-1. Study [react-router-dom url parameters](https://tylermcginnis.com/react-router-url-parameters/) to get file_id to Single.js
-1. In Single.js receive the file_id parameter and use getSingleMedia in componentDidMount-hook to add file to state and display the title in `<h1>` element and file in `<img>` element.
+1. Create tab navigation
+    * create new folder 'navigators'
+    * create new file 'Navigator.js' to 'navigators'
+    * in 'Navigator.js' use `createBottomTabNavigator` to make a simple tab navigation to Home and Profile 
+    ```jsx harmony
+    ...
+    const Navigator = createBottomTabNavigator(
+        {
+          Home: {
+            screen: Home,
+            navigationOptions: {
+              title: 'Home',
+            },
+          },
+          Profile: {
+            screen: Profile,
+            navigationOptions: {
+              title: 'Profile',
+            },
+          },
+        },
+        {
+          initialRouteName: 'Home',
+        }
+    );
+   ...
+    ```
+   * modify App.js (remember to add neccessary and remove unneccessary imports):
+   ```jsx harmony
+   const App = () => {
+     return (
+       <StateProvider>
+         <Navigator></Navigator>
+       </StateProvider>
+     );
+   };
+   ```
+    * The app should at this point have tab navigation between Home and Profile
+
+####D
+1. Navigate to 'Single' component by tapping thumbnails. For this we need to combine tab navigation with stack navigation in Navigator.js:
+    ```jsx harmony
+    import {
+      createAppContainer,
+      createBottomTabNavigator,
+      createStackNavigator,
+    } from 'react-navigation';
+    import Home from '../views/Home';
+    import Profile from '../views/Profile';
+    import Single from '../views/Single';
+    
+    const TabNavigator = createBottomTabNavigator(
+        {
+          Home: {
+            screen: Home,
+            navigationOptions: {
+              title: 'Home',
+            },
+          },
+          Profile: {
+            screen: Profile,
+            navigationOptions: {
+              title: 'Profile',
+            },
+          },
+        },
+        {
+          initialRouteName: 'Home',
+        }
+    );
+    
+    const Navigator = createStackNavigator(
+        // RouteConfigs
+        {
+          Home: {
+            screen: TabNavigator,
+            navigationOptions: {
+              header: null, // this will hide the header
+            },
+          },
+          Single: {
+            screen: Single,
+          },
+        },
+    );
+    
+    export default createAppContainer(Navigator);
+    ```
+1. Pass 'navigation' prop from Home to List to ListItem and use push-method to navigate to 'Single'-component:
+   ```jsx harmony
+   // Home.js
+   const Home = (props) => {
+      const {navigation} = props;
+      return (
+        <View style={styles.container}>
+          <List navigation={navigation}></List>
+        </View>
+      );
+   };
+   
+   // List.js
+   const List = (props) => {
+     ...
+     return (
+       <FlatList
+         ...
+         renderItem={
+           ({item}) => <ListItem
+             navigation={props.navigation}
+             singleMedia={item}
+           />
+         }
+         ...
+       />
+     );
+   };
+   
+   // ListItem.js
+   <TouchableOpacity
+         ...
+         onPress={
+           () => {
+             props.navigation.push('Single');
+           }
+         }
+         ...
+       >
+    ``` 
+1. The app should at this point navigate to 'Single' component when any thumbnail is tapped
+  
+####E
+1. Show selected file in 'Single' component 
+1. In 'ListItem' you have file data in props. Pass the file data as a prameter wit navigation.push
+1. In Single.js receive the file parameter and use it's 'filename' property to show the file in `<Image>` and 'title' property in `<Text>
 1. git add, commit & push to remote repository
-1. Deploy project to your public_html 
+
+####F - Optional -
+1. Study [Asynchronous image loading](https://snack.expo.io/HkjHS1ttZ)
+1. Use `<AsyncImage>` instead of `<Image>` in the whole app to show text 'Loading' or some kind of spinner when images are loading
 
 ---
 
