@@ -13,19 +13,19 @@ Study:
 * [Tab Navigation](https://reactnavigation.org/docs/en/tab-based-navigation.html)
 * Navigation prop reference, createStackNavigator, createBottomTabNavigator in the [API](https://reactnavigation.org/docs/en/api-reference.html)
 
-####A
+#### A
 1. Create a new react native project called 'Stack' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
 1. Install react-navigation with npm `npm install react-navigation --save`
 1. Install react-native-gesture-handler and react-native-reanimated `expo install react-native-gesture-handler react-native-reanimated`
 1. Follow [Hello React Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html) and [Moving between screens](https://reactnavigation.org/docs/en/navigating.html) articles to create a simple stack navigation
 
-####B
+#### B
 1. Create a new react native project called 'Tabs' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
 1. Install react-navigation with npm `npm install react-navigation --save`
 1. Install react-native-gesture-handler and react-native-reanimated `expo install react-native-gesture-handler react-native-reanimated`
 1. Follow [Tab Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html) article to create a simple tab navigation
 
-####C
+#### C
 Continue the app made in previous labs. Create a new branch `navigation` with git and checkout it (`git checkout -b navigation`).
 1. Goal is to make a navigation between three 'pages'
     * Bottom tab menu has two links: 'Home' and 'Profile'
@@ -149,7 +149,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
    ```
     * The app should at this point have tab navigation between Home and Profile
 
-####D
+#### D
 1. Navigate to 'Single' component by tapping thumbnails. For this we need to combine tab navigation with stack navigation in Navigator.js:
     ```jsx harmony
     import {
@@ -240,13 +240,13 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     ``` 
 1. The app should at this point navigate to 'Single' component when any thumbnail is tapped
   
-####E
+#### E
 1. Show selected file in 'Single' component 
 1. In 'ListItem' you have file data in props. Pass the file data as a prameter wit navigation.push
 1. In Single.js receive the file parameter and use it's 'filename' property to show the file in `<Image>` and 'title' property in `<Text>
 1. git add, commit & push to remote repository
 
-####F - Optional -
+#### F - Optional -
 1. Study [Asynchronous image loading](https://snack.expo.io/HkjHS1ttZ)
 1. Use `<AsyncImage>` instead of `<Image>` in the whole app to show text 'Loading' or some kind of spinner when images are loading
 
