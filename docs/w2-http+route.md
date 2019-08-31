@@ -248,7 +248,8 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
 
 #### F - Optional -
 1. Study [Asynchronous image loading](https://snack.expo.io/HkjHS1ttZ)
-1. Use `<AsyncImage>` instead of `<Image>` in the whole app to show text 'Loading' or some kind of spinner when images are loading
+1. Use `<AsyncImage>` instead of `<Image>` in the whole app to show text 'Loading' or [ActivityIndicator](https://docs.expo.io/versions/latest/react-native/activityindicator/)
+ when images are loading
 
 ---
 
