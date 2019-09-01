@@ -257,6 +257,8 @@
    * Modify 'signInAsync' function to get username and password from 'inputs' object
 
 1. Display user's info (username, fullname and email) in Profile.js
+   * You can store also the user data to AsyncStorage
+   * Remember that AsyncStorage is asynchronous, so you need useState-hook to display anything stored to AsyncStorage
    
 #### D. Registering
 1. Add another "form" to Login.js for registering.
