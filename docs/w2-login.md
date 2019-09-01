@@ -267,7 +267,7 @@
 1. Make login to happen automatically registering
    * in other words run 'signInAsync' after registering is done
    
-#### E. Move Media API calls to one file
+#### Extra. Move Media API calls to one file
 1. create 'ApiHooks.js' to 'hooks' folder
 1. move all functions that do fetches to Media Api to 'ApiHooks.js'
 1. Use 'LoginHooks.js' as reference
