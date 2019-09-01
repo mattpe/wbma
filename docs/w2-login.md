@@ -258,7 +258,7 @@
 
 1. Display user's info (username, fullname and email) in Profile.js
    * You can store also the user data to AsyncStorage
-   * Remember that AsyncStorage is asynchronous, so you need useState-hook to display anything stored to AsyncStorage
+   * Remember that AsyncStorage is asynchronous, so you need useState-hook to display anything stored to AsyncStorage and useEffect-hook to prevent infinite loop.
    
 #### D. Registering
 1. Add another "form" to Login.js for registering.
