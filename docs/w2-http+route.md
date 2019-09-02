@@ -16,6 +16,7 @@ Study:
 #### A
 1. Create a new react native project called 'Stack' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
 1. Install react-navigation with npm `npm install react-navigation --save`
+1. Install react-navigation-stack with npm `npm install react-navigation-stack --save`
 1. Install react-native-gesture-handler and react-native-reanimated `expo install react-native-gesture-handler react-native-reanimated`
 1. Follow [Hello React Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html) and [Moving between screens](https://reactnavigation.org/docs/en/navigating.html) articles to create a simple stack navigation
 
@@ -33,6 +34,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     * Each thumbnail is TouchableOpacity and tapping them should take to 'Single' to show the selected media file (just images at this point)
 1. Install react-navigation with npm `npm install react-navigation --save`
 1. Install react-navigation-tabs with npm `npm install --save react-navigation-tabs`
+1. Install react-navigation-stack with npm `npm install react-navigation-stack --save`
 1. Install react-native-gesture-handler and react-native-reanimated `expo install react-native-gesture-handler react-native-reanimated`
 1. Create new folder 'views'
 1. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
