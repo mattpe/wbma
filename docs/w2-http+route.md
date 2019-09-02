@@ -22,6 +22,7 @@ Study:
 #### B
 1. Create a new react native project called 'Tabs' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
 1. Install react-navigation with npm `npm install react-navigation --save`
+1. Install react-navigation-tabs with npm `npm install --save react-navigation-tabs`
 1. Install react-native-gesture-handler and react-native-reanimated `expo install react-native-gesture-handler react-native-reanimated`
 1. Follow [Tab Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html) article to create a simple tab navigation
 
@@ -31,6 +32,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     * Bottom tab menu has two links: 'Home' and 'Profile'
     * Each thumbnail is TouchableOpacity and tapping them should take to 'Single' to show the selected media file (just images at this point)
 1. Install react-navigation with npm `npm install react-navigation --save`
+1. Install react-navigation-tabs with npm `npm install --save react-navigation-tabs`
 1. Install react-native-gesture-handler and react-native-reanimated `expo install react-native-gesture-handler react-native-reanimated`
 1. Create new folder 'views'
 1. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
