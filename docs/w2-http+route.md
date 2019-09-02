@@ -156,11 +156,9 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
 #### D
 1. Navigate to 'Single' component by tapping thumbnails. For this we need to combine tab navigation with stack navigation in Navigator.js:
     ```jsx harmony
-    import {
-      createAppContainer,
-      createBottomTabNavigator,
-      createStackNavigator,
-    } from 'react-navigation';
+    import {createAppContainer} from 'react-navigation';
+    import {createBottomTabNavigator} from 'react-navigation-tabs';
+    import {createStackNavigator} from 'react-navigation-stack';
     import Home from '../views/Home';
     import Profile from '../views/Profile';
     import Single from '../views/Single';
