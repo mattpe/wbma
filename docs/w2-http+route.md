@@ -153,8 +153,8 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
    ```
     * The app should at this point have tab navigation between Home and Profile
 
-#### D
-1. Navigate to 'Single' component by tapping thumbnails. For this we need to combine tab navigation with stack navigation in Navigator.js:
+#### D. Navigate to 'Single' component by tapping thumbnails
+1. For this we need to combine tab navigation with stack navigation in Navigator.js:
     ```jsx harmony
     import {createAppContainer} from 'react-navigation';
     import {createBottomTabNavigator} from 'react-navigation-tabs';
@@ -242,9 +242,9 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     ``` 
 1. The app should at this point navigate to 'Single' component when any thumbnail is tapped
   
-#### E
-1. Show selected file in 'Single' component 
-1. In 'ListItem' you have file data in props. Pass the file data as a prameter with navigation.push
+#### E. Show selected file in 'Single' component
+1. Study [Passing parameters to routes](https://reactnavigation.org/docs/en/params.html)
+1. In 'ListItem' you have file data in props. Pass the file data as a parameter with navigation.push
 1. In Single.js receive the file parameter and use it's 'filename' property to show the file in `<Image>` and 'title' property in `<Text>`
 1. git add, commit & push to remote repository
 
