@@ -244,7 +244,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
   
 #### E
 1. Show selected file in 'Single' component 
-1. In 'ListItem' you have file data in props. Pass the file data as a prameter wit navigation.push
+1. In 'ListItem' you have file data in props. Pass the file data as a prameter with navigation.push
 1. In Single.js receive the file parameter and use it's 'filename' property to show the file in `<Image>` and 'title' property in `<Text>
 1. git add, commit & push to remote repository
 
