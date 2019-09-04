@@ -11,7 +11,7 @@
 ### A. hard coded login
 
 1. Continue last exercise. Create a new branch with git.
-1. Create 'Authloading.js', 'Login.js' to 'views'
+1. Create 'AuthoLoading.js', 'Login.js' to 'views/'
 1. _Login.js_
     * Eventually this will be the login and register page
     * For now we'll do hard coded login:
@@ -58,7 +58,7 @@
     export default Login;
    ```
 
-1. _Authloading.js_:
+1. _AuthLoading.js_:
 
    ```jsx harmony
    import React, {useEffect} from 'react';
@@ -84,7 +84,7 @@
      }, []);
    };
 
-   const AuthLoadingScreen = (props) => {
+   const AuthLoading = (props) => {
      bootstrapAsync(props);
      return (
        <View>
@@ -94,14 +94,14 @@
      );
    };
 
-   export default AuthLoadingScreen;
+   export default AuthLoading;
    ```
 
 1. Modify _Navigator.js_ to add switch navigator like in [Authentication flows](https://reactnavigation.org/docs/en/auth-flow.html):
 
     ```jsx harmony
    ...
-   import AuthLoadingScreen from '../views/AuthLoadingScreen';
+   import AuthLoading from '../views/AuthLoading';
    import Login from '../views/Login';
    ...
    const StackNavigator = createStackNavigator(
@@ -123,7 +123,7 @@
   
     const Navigator = createSwitchNavigator(
         {
-          AuthLoading: AuthLoadingScreen,
+          AuthLoading: AuthLoading,
           App: StackNavigator,
           Auth: Login,
         },
