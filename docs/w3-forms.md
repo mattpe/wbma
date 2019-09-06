@@ -10,7 +10,7 @@ class: center, middle
 
 ## Task 1: Smarter Login/Registration page
 
-1. Study[Conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
+1. Study [Conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
     * especially [Inline If with Logical && Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator)
 1. Continue the previous exercise. Create a new git branch for these tasks.
 1. Show only login form when opening the Login page
