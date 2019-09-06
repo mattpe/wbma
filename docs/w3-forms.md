@@ -22,10 +22,10 @@ class: center, middle
 
 ## Task 2: Form validation
 
-- Study [react-form-validator-core](https://www.npmjs.com/package/react-form-validator-core) and [react-material-ui-form-validator](https://www.npmjs.com/package/react-material-ui-form-validator)
+- Study [Validating Forms in React Native](https://medium.com/@pavsidhu/validating-forms-in-react-native-7adc625c49cf) and [Validate.JS](http://validatejs.org/)
 - User inputs should always be checked before making any api calls
-  - username must exist and be long enough
-  - password must exist and be long enough
+  - username must exist and be long enough (see below)
+  - password must exist and be long enough (see below)
   - email format must be correct
   - full name is optional but should be validated if entered?
 1. Add "confirm password" functionality
