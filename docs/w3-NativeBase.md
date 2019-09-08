@@ -41,7 +41,8 @@ class: center, middle
    ```
 ### Task B: Develop profile page
 1. Add avatar image to the user
-    - Use postman to upload image and add a tag 'avatar_SomeUserId' to it
+    - Use postman to upload image and add a [tag](http://media.mw.metropolia.fi/wbma/docs/#api-Tag-PostTag) 'avatar_CurrentUserId' to it (e.g avatar_85)
+    - When fetching avatars, you can use _CurrentUserId to limit the amount of fetched data.
 1. Display users avatar image, name and email in profile page
    - You'll need to add more methods to 'ApiHooks.js' to achieve this
    - Hint: Userdata is already in AsyncStorage but it might be more convenient to add it also to context state:
