@@ -12,7 +12,6 @@ class: center, middle
 
 1. Continue the previous exercise. Create a new git branch for these tasks.
 1. Create a new file Upload.js  to views folder for the upload functionality
-    - add normal HTML form (don't use Material UI at this point)
     - add input fields for 'title' (type=text), 'description' (textarea) and 'file' (type=file)
     - accept only media files to file input
     - add title and description to state (like in Login.js)
