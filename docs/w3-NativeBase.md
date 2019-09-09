@@ -39,6 +39,34 @@ class: center, middle
        </Container>
      );
    ```
+1. Adding icons to bottom tabs
+   ```jsx harmony
+   const TabNavigator = createBottomTabNavigator(
+        {
+          Home,
+          Profile,
+        },
+        {
+          defaultNavigationOptions: ({navigation}) => ({
+            tabBarIcon: () => {
+              const {routeName} = navigation.state;
+              let iconName;
+              if (routeName === 'Home') {
+                iconName = 'home';
+              } else if (routeName === 'Profile') {
+                iconName = 'person';
+              }
+
+              // You can return any component that you like here!
+              return <Icon
+                name={iconName}
+                size={25}
+              />;
+            },
+          }),
+        }
+    );
+   ```
 ### Task B: Develop profile page
 1. Add avatar image to the user
     - Use postman to upload image and add a [tag](http://media.mw.metropolia.fi/wbma/docs/#api-Tag-PostTag) 'avatar_CurrentUserId' to it (e.g avatar_85)
