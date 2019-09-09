@@ -42,6 +42,8 @@ class: center, middle
 1. Adding icons to bottom tabs
    ```jsx harmony
    // Navigator.js
+   /* eslint-disable react/display-name */
+   import React from 'react';
    ...
    const TabNavigator = createBottomTabNavigator(
         {
