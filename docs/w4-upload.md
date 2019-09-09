@@ -36,4 +36,4 @@ class: center, middle
 1. Study [gl-react-expo](https://www.npmjs.com/package/gl-react-expo)
 1. Do a new app where user can select existing picture or take a new picture with phone's camera and then edit brightness, contrast and saturation (of course tou can add the functionalities to the existing app instead)
    - [Example](https://github.com/gre/gl-react/tree/master/examples/expo-gl-react-camera-effects)
-1.[More examples](https://gl-react-cookbook.surge.sh/)
+1. [More examples](https://gl-react-cookbook.surge.sh/)
