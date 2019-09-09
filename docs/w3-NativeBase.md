@@ -116,7 +116,7 @@ class: center, middle
    
    MediaProvider.defaultProps = {
      media: [],
-     selectedUser: {}
+     user: {}
    };
    
    export {MediaContext, MediaProvider};
