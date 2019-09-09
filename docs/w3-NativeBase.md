@@ -41,6 +41,8 @@ class: center, middle
    ```
 1. Adding icons to bottom tabs
    ```jsx harmony
+   // Navigator.js
+   ...
    const TabNavigator = createBottomTabNavigator(
         {
           Home,
@@ -66,6 +68,7 @@ class: center, middle
           }),
         }
     );
+    ...
    ```
 ### Task B: Develop profile page
 1. Add avatar image to the user
