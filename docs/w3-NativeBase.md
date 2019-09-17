@@ -198,3 +198,8 @@ export default App;
      });
    ...
    ```
+
+  **Note!**
+
+  When using NativeBase you can import the [`<Image>` component](https://facebook.github.io/react-native/docs/images.html#network-images) still from `react-native` library to avoid issues with network sourced images.
+  
