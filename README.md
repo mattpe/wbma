@@ -11,7 +11,7 @@ Front-end development materials & code examples
 1. [Week 1 - AJAX, State](docs/w1-http.md)
 1. [Week 2 - AJAX, Route](docs/w2-http+route.md)
 1. [Week 2 - Routing & login](docs/w2-login.md)
-1. [Week 3 - Material-UI](docs/w3-NativeBase.md)
+1. [Week 3 - NativeBase](docs/w3-NativeBase.md)
 1. [Week 3 - Forms](docs/w3-forms.md)
 1. [Week 4 - File upload](docs/w4-upload.md)
 1. [Week 5 - Media player](docs/w5-player.md)
