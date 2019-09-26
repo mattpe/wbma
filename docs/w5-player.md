@@ -19,30 +19,6 @@
         - optional: likes (request [Favourite endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-Favourite) on the media api)
             - add likes to image(s) with Postman or add 'like' button to Single.js
         - optional: show users who like the image
- 1. - If you want to save additional data with files, you can add it to the 'description' like this:
-    ```javascript
-      
-      ...
-      const moreData = {
-        description: 'This is the actual description',
-        someData: 'Some other data I want to save',
-        someMoreData: {width: 300, height: 450 } 
-      }
-      ...
-          // FormData
-         formData.append('description', JSON.stringify(moreData));
-      ...
-      
-    ```
-    You can extract data later like this:
-    ```javascript
-    getData = (descriptionFromAPI) => {
-        const allData = JSON.parse(descriptionFromAPI);
-        const description = allData.description;
-        const someData = allData.someData;
-        const someMoreData = allData.someMoreData;
-      };
-    ```
 
 ## Show user's files + update
 
@@ -66,3 +42,30 @@
     - delete does not need it's own page
     - modify is 90% same as Upload
         - make a copy of Upload.js and remove ImagePicker
+
+### Tips for project
+- Add a tag with your app name automatically to all uploaded files. This way they don't get mixed with files uploaded by other apps.
+- If you want to save additional data with files, you can add it to the 'description' like this:
+    ```javascript
+      
+      ...
+      const moreData = {
+        description: 'This is the actual description',
+        someData: 'Some other data I want to save',
+        someMoreData: {width: 300, height: 450 } 
+      }
+      ...
+          // FormData
+         formData.append('description', JSON.stringify(moreData));
+      ...
+      
+    ```
+    You can extract data later like this:
+    ```javascript
+    getData = (descriptionFromAPI) => {
+        const allData = JSON.parse(descriptionFromAPI);
+        const description = allData.description;
+        const someData = allData.someData;
+        const someMoreData = allData.someMoreData;
+      };
+    ```
