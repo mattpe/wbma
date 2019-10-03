@@ -62,13 +62,8 @@
     ```
     You can extract data later like this:
     ```javascript
-    const getData = (descriptionFromAPI) => {
-        const allData = JSON.parse(descriptionFromAPI);
-        return allData;
-    };
-  
-    const data = getData(descriptionFromAPI)
-    const description = data.description;
-    const someData = data.someData;
-    const someMoreData = data.someMoreData;
+    const allData = JSON.parse(descriptionFromAPI);
+    const description = allData.description;
+    const someData = allData.someData;
+    const someMoreData = allData.someMoreData;
     ```
