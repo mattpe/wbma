@@ -2,17 +2,17 @@ class: center, middle
 
 # Toolchain
 
-## 1/2019
+## 1/2020
 
 ---
 
 # Contents
 
-- Editor/IDE: WebStrom/PhpStorm, Visual Studio Code, (or any)
+- Editor/IDE: Visual Studio Code (or WebStrom/PhpStorm or any)
 - Language: JavaScript (ES6 ->)
-- Run, test & debug: Chrome browser dev tools, Safari browser dev tools
+- Run, test & debug: browser + dev tools, expo + device/emulator
 - Version Control System: Git
-- Package manager: NPM or Yarn
+- Package manager: NPM (or Yarn)
 - Building & automating tasks: Expo
 - Development frameworks: React Native
 
@@ -22,7 +22,7 @@ class: center, middle
 
 Ultimately, it's your choice. VSCode is recommended.
 
-#### Visual Studio Code
+## Visual Studio Code
 
 - free & open source code editor by Microsoft (**!=** Visual Studio IDE)
 - wide extension support
@@ -30,7 +30,7 @@ Ultimately, it's your choice. VSCode is recommended.
 - good [docs & instructions](https://code.visualstudio.com/docs/editor/codebasics)
 - choice of many React developers
 
-# Install Extensions
+### Install Extensions
 
 Press _ctrl-shift-x_ or click extensions icon on the left panel.
 
@@ -43,19 +43,18 @@ Search and install:
 - React Pure To Class
 - React-Native/React/Redux snippets for es6/es7
 
-
 Other handy extensions:
 
 - Duplicate file: Add _right-click -> Duplicate file_ action
 - Prettier: Code formatter
-    
+
 ---
 
-# VSCode - Basic Usage
+### VSCode - Basic Usage
 
-Active **project** is the folder open on the left side panel (_File -> Open folder..._) 
+Active **project** is the folder open on the left side panel (_File -> Open folder..._)
 
-Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard shortcuts_ for more)        
+Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard shortcuts_ for more)
 
 - Multiline comment: _ctrl-'_
 - Delete line: _ctrl-shift-k_
@@ -68,17 +67,17 @@ Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard
 
 ---
 
-# VSCode - Settings
+### VSCode - Settings
 
 (Windows users only) Change integrated console to Bash in Windows:
 
 1. Install [Git for Windows](https://git-scm.com/downloads) to default location
-2. Edit vscode settings file (_File -> Preferences -> Settings_) and search for 'terminal'. 
-- Change 'Terminal › External: Windows Exec' value to "C:\\Program Files\\Git\\bin\\bash.exe"
+2. Edit vscode settings file (_File -> Preferences -> Settings_) and search for 'terminal'.
+3. Change 'Terminal › External: Windows Exec' value to "C:\\Program Files\\Git\\bin\\bash.exe"
 
 ---
 
-#### WebStorm/PhpStorm
+## WebStorm/PhpStorm
 
 - free for Metropolia students. [Apply for license here](https://www.jetbrains.com/student/)
   - _@metropolia.fi_ email address needed for a free license
@@ -86,20 +85,22 @@ Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard
 - quite ready out of the box. No need for plugins.
 - based on IntelliJ IDEA, just like Android Studio
 
-#### Other picks
+## Other picks
 
 - [Atom](https://atom.io/)
 - [Brackets](http://brackets.io/)
-- Other IDEs like: IntelliJ Ultimate IDEA, Eclipse, NetBeans... 
+- Other IDEs like: IntelliJ Ultimate IDEA, Eclipse, NetBeans...
 
 ---
 
-# Browser & debugging
+## Browser & debugging
 
 - Chrome & [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
 - Safari & [Safari Develop menu](https://support.apple.com/guide/safari/use-the-developer-tools-in-the-develop-menu-sfri20948/mac)
 
 ![Chrome screenshot](images/chrome-devtools.png)
+
+- Expo
 
 ---
 
@@ -118,31 +119,31 @@ Exclude:
 
 - IDE specific project files & folders (.idea)
 - build targets and other automatically generated files
-- packages managed e.g. by npm or bower (= _node_modules/_ & _bower_components/_ folders) 
-- any temp & OS specific files, like Apple's `.DS_Store` 
+- packages managed e.g. by npm or bower (= _node_modules/_ & _bower_components/_ folders)
+- any temp & OS specific files, like Apple's `.DS_Store`
 
 Expo generates a .gitignore file automatically.
 
 ---
 
-# Package Management
+## Package Management
 
-## [NPM](https://www.npmjs.com/) - Node.js Package Manager
+### [NPM](https://www.npmjs.com/) - Node.js Package Manager
 
 - Install [node.js](https://nodejs.org/en/) to get the package manager **npm**
 - npm packages needed in a project (dependencies) are listed in the `package.json` file and can be install with `npm install` command
 - locally installed (=project specific) packages are downloaded to `node_modules/` folder (should be excluded from version control)
 
-#### OS X no sudo for Mac users
+### OS X no sudo for Mac users
 
 - [instructions](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
 
-#### NPM Alternative
+### NPM Alternative
 
-[Yarn](https://yarnpkg.com/) 
+[Yarn](https://yarnpkg.com/)
 
 - newcomer gaining a lot of traction now
-- first [open source release on October, 2016](https://code.facebook.com/posts/1840075619545360). Current version 0.18.1 
+- first [open source release on October, 2016](https://code.facebook.com/posts/1840075619545360). Current version 0.18.1
 - uses same package.json file and npm registry as npm
 - claimed to be faster, more secure and reliable but npm has been catching up
 
@@ -151,22 +152,7 @@ Expo generates a .gitignore file automatically.
 # Example package.json
 
 ```javascript
-{
-  "name": "example-app",
-  "version": "0.0.1",
-  "author": "Example Coder <ecoder@example.com>",
-  "description": "An example app doing something",
-  "license": "MIT",
-  "scripts": {
-    "start": "node ./app.js"
-  },
-  "dependencies": {
-    "@angular/common": "~2.1.0",
-    "@angular/core": "~2.1.0"
-  }        }
-}
-
+//tba
 ```
 
 ---
-

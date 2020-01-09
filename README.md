@@ -24,7 +24,6 @@ Course content is inside [docs](docs/) folder.
 
 - [Basic shell commands.](https://www-xray.ast.cam.ac.uk/~jss/lecture/computing/notes/out/commands_basic/)
 - Free book on Git: [Pro Git](http://git-scm.com/book/en/v2)
-- Free (and short) Codeschool course: [Try Git](https://www.codeschool.com/courses/try-git)
 - [Codecademy - Learn Git](https://www.codecademy.com/learn/learn-git)
 
 ### ES6 + React
@@ -45,7 +44,7 @@ Course content is inside [docs](docs/) folder.
 1. [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A)
 1. [React Native crash course](https://www.youtube.com/watch?v=mkualZPRZCs&t=1116s)
 1. [Longer React course](https://www.youtube.com/watch?v=DLX62G4lc44&t=435s)
-    * [Same as an interactive course](https://scrimba.com/g/glearnreact)
+    - [Same as an interactive course](https://scrimba.com/g/glearnreact)
 1. [Online book: React.js Training](https://rangle-io.gitbooks.io/react-training/content/)
 1. [Full stack open course](https://fullstackopen.com/en/)
 1. [Full stack open (in Finnish)](https://fullstackopen.com/)
