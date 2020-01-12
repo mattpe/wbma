@@ -4,16 +4,14 @@
 
 ---
 
-## Exercise 1: Setup your toolchain and a new React Native project
+## Exercise 1: Setup your toolchain and create a new React Native project
 
 Study [Getting started and Learn the basics](https://facebook.github.io/react-native/docs/getting-started) from React Native documentation
-
-### Exercise
 
 **a.**
 
 1. If needed, install code editor (+ extensions), git, npm
-1. Use the `Expo` cli tool to generate an app skeleton
+1. Use the `[expo](https://docs.expo.io/versions/v36.0.0/get-started/create-a-new-app/)` cli tool to generate an app skeleton
     * create a folder for your React Native projects
     * use Git Bash or terminal to go to this folder `cd foldername/otherfoldername/etc...`
     * `npm install -g expo-cli`
