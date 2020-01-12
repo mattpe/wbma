@@ -1,11 +1,10 @@
-class: center, middle
-
 # WBMA, First App
 
-## 1/2019
+## 1/2020
 
 ---
-# Exercise 1: Setup your toolchain and a new React Native project
+
+## Exercise 1: Setup your toolchain and a new React Native project
 
 Study [Getting started and Learn the basics](https://facebook.github.io/react-native/docs/getting-started) from React Native documentation
 
@@ -20,25 +19,28 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
     * `npm install -g expo-cli`
     * `expo init MyApp`
         * choose 'blank' template
-        * if this fails on Windows, use cmd instead of GitBash
+        * if this fails on Windows due to missing interactive mode, use cmd instead of Git Bash
 1. Test that app works; run it and open in browser
-   - `cd MyApp`
-   - `npm start`
-1. Create a remote git repository and push your app there
+    * `cd MyApp`
+    * `npm start`
+1. Create a remote git repository (Github) and push your app there
 
 **b.**  
+
 1. Install ESlint to your project `npm i --save-dev eslint eslint-plugin-react eslint-plugin-react-native babel-eslint`
-1. Initialize ESlint: `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`
+1. Initialize ESlint: `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init` (note: needs an interactive shell and does not work in Git Bash on Windows. Use cmd or VSCode's terminal instead.)
     * Choose:
         1. To check syntax, find problems, and enforce code style
         1. JavaScript modules (import/export)
-        1. React 
+        1. React
+        1. No TypeScript
         1. Browser
         1. Use a popular style guide
         1. Google
         1. JavaScript
         1. Y
 1. Modify .eslintrc.js:
+
    ```JavaScript
     module.exports = {
       'parser': 'babel-eslint',
@@ -97,10 +99,12 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
       },
     };
    ```
+
 1. Create new file '.editorconfig' and add this content:
+
     ```editorconfig
     root = true
-    
+
     [*]
     indent_style = space
     indent_size = 2
@@ -109,14 +113,16 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
     trim_trailing_whitespace = true
     insert_final_newline = true
     ```
-1. You can correct code automatically with shift-alt-f
+
+1. You can format code automatically with _shift-alt-f_
 1. Fix curly-braces error in Preferences/Settings
     * search for 'braces' and uncheck all 'Insert space after...' checkboxes
 1. Convert the App function to arrow function:
+
     ```jsx harmony
    import React from 'react';
    import {StyleSheet, Text, View} from 'react-native';
-   
+
    const App = () => {
      return (
        <View style={styles.container}>
@@ -124,7 +130,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
        </View>
      );
    };
-   
+
    const styles = StyleSheet.create({
      container: {
        flex: 1,
@@ -133,14 +139,15 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
        justifyContent: 'center',
      },
    });
-   
+
    export default App;
    ```
 
 **c.**
 
 1. Study [Handling Touches](https://facebook.github.io/react-native/docs/handling-touches) and [Using List Views](https://facebook.github.io/react-native/docs/using-a-listview)
-1.  Develop your app further. Add this after the import statements: 
+1. Develop your app further. Add this after the import statements:
+
     ```ecmascript 6
     const mediaArray = [
       {
@@ -172,7 +179,9 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
       },
     ];
     ```
+
 1. Add `<Flatlist>`, `<TouchableOpacity>`, `<Text>` and `<Image>` components to the existing `<View>`. Example:
+
     ```jsx harmony
     <FlatList
         data={mediaArray}
@@ -204,31 +213,38 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 
 1. Study [Props](https://facebook.github.io/react-native/docs/props) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
 1. Split the app to multiple files. In other words: create components.
-    * create folder 'components' and there a new files 'List.js' and 'ListItem.js'
-    * Hierarchy:
+    * Create a folder 'components' and there a new files 'List.js' and 'ListItem.js'
+    * Component hierarchy:
+
     ```text
     App
        -View
            -List
                -ListItem
                ...
- 
+
     ```
+
     * Move `<Flatlist>` to 'List.js' and the content of `<Flatlist>` to 'ListItem.js'
     * Add imports, component function and style object. (Basically the same as 'App.js'. Just change the name of the component function.)
     * PropTypes for List:
+
     ```jsx harmony
    List.propTypes = {
      mediaArray: PropTypes.array,
    };
    ```
+
     * PropTypes for ListItem:
+
    ```jsx harmony
     ListItem.propTypes = {
       singleMedia: PropTypes.object,
     };
     ```
+
     * In 'App.js' pass 'data' array as prop called 'mediaArray' from App to List:
+
     ```jsx harmony
     const App = () => {
       return (
@@ -238,7 +254,9 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
       );
     };
     ```
+
    * In 'List.js' pass 'item' object as prop called 'singleMedia' from List to ListItem:
+
    ```jsx harmony
     const List = (props) => {
       console.log(props);
@@ -250,12 +268,15 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
       );
     };
     ```
-1. git add, commit & push to remote repository
-    * git checkout -b someBranchName
-    * git add .
-    * git commit -m describeChangesSomehow
-    * git push
+
+1. Create a new branch, add, commit & push your project to remote repository
+    * `git checkout -b someBranchName`
+    * `git add .`
+    * `git commit -m "describe changes somehow"`
+    * `git push`
 
 ---
-#### (Optional)
+
+### Bonus (Optional)
+
 Develop your app further. Open 'filename' image in a [Modal](https://facebook.github.io/react-native/docs/modal.html) when `<TouchableOpacity>` is tapped.
