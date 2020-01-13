@@ -55,7 +55,7 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
 
     6. Test that the app still works.
 1. Use [test.json](./assets/test.json) url = https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json instead of the hard coded mediaArray
-   * In _List.js_, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) or axios to load test.json,
+   * In _List.js_, use [fetch](https://javascript.info/async-await#await) or axios to load test.json,
      * fetch is used in the course
      * prevent fetch from looping by using effect-hook.
      * follow [this example](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6)
