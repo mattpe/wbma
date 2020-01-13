@@ -12,8 +12,8 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
 ## Fetching data with AJAX and sharing it with Context, Task A
 
 1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
-    1. Create contexts folder next to components folder
-    2. Add MediaContext.js file:
+    1. Create 'contexts' folder to project root folder
+    2. Add MediaContext.js file to contexts:
 
         ```js
         import React, {useState} from 'react';
@@ -59,6 +59,7 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
      * fetch is used in the course
      * prevent fetch from looping by using effect-hook.
      * follow [this example](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6)
+        * create 'hooks' folder to project root and save 'hooks.js' there
    * First log the data using `console.log()`
      * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
    * Save the data to MediaContext's state using `setMedia` and then print the data to the list made in last exercise
