@@ -60,10 +60,11 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
      * prevent fetch from looping by using effect-hook.
      * Use 'hooks.js' from [this article](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6) as an example
         * create 'hooks' folder to project root and save 'hooks.js' there
-        * in _hooks.js_ instead of local state `const [data, setData] = useState([]);` use global state (context): `const [media, setMedia] = useContext(MediaContext);`. Also convert functions to arrow functions.
-        * First log the loaded data using `console.log()`
+        * convert functions to arrow functions.
+        * In _List.js_ First log the loaded data using `console.log()`
            * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
-        * Save the data to MediaContext's state using `setMedia`, return it and then use the data in _List.js_. Use _Photos.js_ in the article as example.
+           * Use _Photos.js_ in the article as example.
+        * Save the data to MediaContext's state using `setMedia`. 
         * Use [keyExtractor](https://www.techiediaries.com/react-native-tutorial/flatlist-with-renderitem-and-keyextractor/) in _List.js_ to fix the warning about missing keys
 1. git add, commit & push to remote repository
 
@@ -76,7 +77,18 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
     - [Documentation](http://media.mw.metropolia.fi/wbma/docs/)
     - base url: http://media.mw.metropolia.fi/wbma/
     - Media files location: http://media.mw.metropolia.fi/wbma/uploads/
-1. First log the data using ```console.log()```
-    - Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also the thumbnails.
-1. Save the data to MediaContext's state and then print the data to the table
+1. In _hooks.js_ 
+   * add this after imports: `const apiUrl = 'http://media.mw.metropolia.fi/wbma/';`
+   * rename useFetch function to 'getAllMedia' and remove url parameter from parens.
+   * change `const response = await fetch(url);` to `const response = await fetch(apiUrl + 'media');`
+1. First log the loaded data using ```console.log()```
+   * Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also the thumbnails.
+   * To combine the results of multiple fetch results use [Promise.all](https://www.freecodecamp.org/news/promise-all-in-javascript-with-example-6c8c5aea3e32/):
+   ```javascript
+   const result = await Promise.all(array.map(async (item) => {
+      const response = await fetch(url);
+      return await response.json();
+    }));
+   ```
+1. In _List.js_ use _getAllMedia_ instead of useFetch
 1. git add, commit & push to remote repository
