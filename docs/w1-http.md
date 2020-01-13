@@ -63,6 +63,7 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
    * First log the data using `console.log()`
      * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
    * Save the data to MediaContext's state using `setMedia` and then print the data to the list made in last exercise
+   * Use [keyExtractor](https://www.techiediaries.com/react-native-tutorial/flatlist-with-renderitem-and-keyextractor/) to fix the warning about missing keys
 1. git add, commit & push to remote repository
 
 ---
