@@ -55,11 +55,12 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
 
     6. Test that the app still works.
 1. Use [test.json](./assets/test.json) url = https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json instead of the hard coded mediaArray
-   * In _List.js_, use [fetch](https://javascript.info/async-await#await) or axios to load test.json,
-     * fetch is used in the course
+   * use [fetch](https://javascript.info/async-await#await) or axios to load test.json,
+     * fetch is used in the course material
      * prevent fetch from looping by using effect-hook.
-     * follow [this example](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6)
+     * Use 'hooks.js' from [this article](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6) as an example
         * create 'hooks' folder to project root and save 'hooks.js' there
+        * in _hooks.js_ instead of local state `const [data, setData] = useState([]);` use global state (context): `const [media, setMedia] = useContext(MediaContext);`. Also convert functions to arrow functions.
    * First log the data using `console.log()`
      * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
    * Save the data to MediaContext's state using `setMedia` and then print the data to the list made in last exercise
