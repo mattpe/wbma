@@ -61,10 +61,10 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
      * Use 'hooks.js' from [this article](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6) as an example
         * create 'hooks' folder to project root and save 'hooks.js' there
         * in _hooks.js_ instead of local state `const [data, setData] = useState([]);` use global state (context): `const [media, setMedia] = useContext(MediaContext);`. Also convert functions to arrow functions.
-   * First log the data using `console.log()`
-     * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
-   * Save the data to MediaContext's state using `setMedia` and then print the data to the list made in last exercise
-   * Use [keyExtractor](https://www.techiediaries.com/react-native-tutorial/flatlist-with-renderitem-and-keyextractor/) to fix the warning about missing keys
+        * First log the loaded data using `console.log()`
+           * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
+        * Save the data to MediaContext's state using `setMedia`, return it and then use the data in _List.js_. Use _Photos.js_ in the article as example.
+        * Use [keyExtractor](https://www.techiediaries.com/react-native-tutorial/flatlist-with-renderitem-and-keyextractor/) in _List.js_ to fix the warning about missing keys
 1. git add, commit & push to remote repository
 
 ---
