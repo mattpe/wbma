@@ -237,7 +237,7 @@
    * study [this article about forms and hooks](https://medium.com/@geeky_writer_/using-react-hooks-to-create-awesome-forms-6f846a4ce57)
       * especially 'Creating Custom Hooks' and 'Connecting the Hook to the Form
       * note that article is React (HTML) but we are coding React Native, for example the [events](https://facebook.github.io/react-native/docs/textinput#onchangetext) are different.
-1. To get text from the form to local state, create folder 'hooks' and add 'LoginHooks.js' there
+1. To get text from the form to local state, create 'LoginHooks.js' to 'hooks' folder
    * _LoginHooks.js_:
 
    ```jsx harmony
