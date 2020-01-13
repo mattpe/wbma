@@ -55,12 +55,12 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
 
     6. Test that the app still works.
 1. Use [test.json](./assets/test.json) url = https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json instead of the hard coded mediaArray
-1. In _List.js_, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) or axios to load test.json,
-    * fetch is used in teacher's examples
-    * prevent fetch from looping by using effect-hook. [Example](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6)
-1. First log the data using `console.log()`
-    * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
-1. Save the data to MediaContext's state using `setMedia` and then print the data to the list made in last exercise
+   * In _List.js_, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) or axios to load test.json,
+     * fetch is used in teacher's examples
+     * prevent fetch from looping by using effect-hook. [Example](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6)
+   * First log the data using `console.log()`
+     * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
+   * Save the data to MediaContext's state using `setMedia` and then print the data to the list made in last exercise
 1. git add, commit & push to remote repository
 
 ---
