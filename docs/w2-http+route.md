@@ -145,9 +145,9 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
    ```jsx harmony
    const App = () => {
      return (
-       <StateProvider>
+       <MediaProvider>
          <Navigator></Navigator>
-       </StateProvider>
+       </MediaProvider>
      );
    };
    ```
