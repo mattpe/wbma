@@ -35,7 +35,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
 1. Install react-navigation with npm `npm install react-navigation --save`
 1. Install react-navigation-tabs with npm `npm install --save react-navigation-tabs`
 1. Install react-navigation-stack with npm `npm install react-navigation-stack --save`
-1. Install react-native-gesture-handler and react-native-reanimated `expo install react-native-gesture-handler react-native-reanimated`
+1. Install react-native-gesture-handler and react-native-reanimated and react-native-screens `expo install react-navigation react-native-gesture-handler react-native-reanimated react-native-screens`
 1. Create new folder 'views'
 1. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
 1. Home.js will be the component that should show first when the app starts
