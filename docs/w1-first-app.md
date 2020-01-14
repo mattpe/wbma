@@ -11,7 +11,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 **a.**
 
 1. If needed, install code editor (+ extensions), git, npm
-1. Use the `[expo](https://docs.expo.io/versions/v36.0.0/get-started/create-a-new-app/)` cli tool to generate an app skeleton
+1. Use the [expo](https://docs.expo.io/versions/v36.0.0/get-started/create-a-new-app/) cli tool to generate an app skeleton
     * create a folder for your React Native projects
     * use Git Bash or terminal to go to this folder `cd foldername/otherfoldername/etc...`
     * `npm install -g expo-cli`
