@@ -59,12 +59,14 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
      * fetch is used in the course material
      * prevent fetch from looping by using effect-hook.
      * Use 'hooks.js' from [this article](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6) as an example
-        * create 'hooks' folder to project root and save 'hooks.js' there
+        * create 'hooks' folder to project root and save 'hooks.js' from the article as 'APIhooks.js' there
         * convert functions to arrow functions.
+        * instead of local state `const [data, setData] = useState([]);` use global state (context): `const [media, setMedia] = useContext(MediaContext);`.
+        * Save the loaded data to MediaContext's state using `setMedia`.
+        * Return 'media' instead of 'data' at the end of 'useFetch' function
         * In _List.js_ First log the loaded data using `console.log()`
            * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
            * Use _Photos.js_ in the article as example.
-        * Save the data to MediaContext's state using `setMedia`. 
         * Use [keyExtractor](https://www.techiediaries.com/react-native-tutorial/flatlist-with-renderitem-and-keyextractor/) in _List.js_ to fix the warning about missing keys
 1. git add, commit & push to remote repository
 
