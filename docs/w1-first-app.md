@@ -18,12 +18,12 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
     * `expo init MyApp`
         * choose 'blank' template
         * if this fails on Windows due to missing interactive mode, use cmd instead of Git Bash
-1. Test that app works; run it and open in browser
+1. Test that app works; run it and open in browser (interactive shell is needed to get the menu option (_w_) for launhing in browser)
     * `cd MyApp`
     * `npm start`
 1. Create a remote git repository (Github) and push your app there
 
-**b.**  
+**b.**
 
 1. Install ESlint to your project `npm i --save-dev eslint eslint-plugin-react eslint-plugin-react-native babel-eslint`
 1. Initialize ESlint: `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init` (note: needs an interactive shell and does not work in Git Bash on Windows. Use cmd or VSCode's terminal instead.)
@@ -203,7 +203,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
 **d.**
 
 1. Study [Layout with Flexbox](https://facebook.github.io/react-native/docs/flexbox)
-1. Develop your app further. Modify the app so that the layout is similar to this: 
+1. Develop your app further. Modify the app so that the layout is similar to this:
     ![View 1](images/app01.png)
 1. You can modify the styles either inline or by adding properties to the 'styles' object at the end of the file.
 

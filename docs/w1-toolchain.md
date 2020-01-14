@@ -150,7 +150,7 @@ Exclude:
 <https://expo.io/learn>
 
 - _Expo CLI_ command line tool: bootstrap, serve, share, build, and publish apps
-- _Expo Client_ Android/iOS app: test & run apps on device before deploying
+- _Expo Client_ [Android/iOS](https://expo.io/tools#client) app: test & run apps on device before deploying
 - _Expo SDK_ libraries: access native device APIs
 - (_[Snack](https://snack.expo.io/)_: Online development enviroment)
 
