@@ -59,7 +59,7 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
      * fetch is used in the course material
      * prevent fetch from looping by using effect-hook.
      * Use 'hooks.js' from [this article](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6) as an example
-        * create 'hooks' folder to project root and save 'hooks.js' there
+        * create 'hooks' folder to project root and save 'hooks.js' as 'APIHooks.js' there
         * convert functions to arrow functions.
         * In _List.js_ First log the loaded data using `console.log()`
            * [Debugging JavaScript](https://docs.expo.io/versions/v34.0.0/workflow/debugging/#debugging-javascript)
@@ -77,7 +77,7 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
     - [Documentation](http://media.mw.metropolia.fi/wbma/docs/)
     - base url: http://media.mw.metropolia.fi/wbma/
     - Media files location: http://media.mw.metropolia.fi/wbma/uploads/
-1. In _hooks.js_ 
+1. In _APIHooks.js_ 
    * add this after imports: `const apiUrl = 'http://media.mw.metropolia.fi/wbma/';`
    * rename useFetch function to 'getAllMedia' and remove url parameter from parens.
    * change `const response = await fetch(url);` to `const response = await fetch(apiUrl + 'media');`
