@@ -189,7 +189,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
           Home: {
             screen: TabNavigator,
             navigationOptions: {
-              header: null, // this will hide the header
+              headerMode: 'none', // this will hide the header
             },
           },
           Single: {
