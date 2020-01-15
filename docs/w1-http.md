@@ -80,9 +80,9 @@ Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://rea
 1. In _APIHooks.js_ 
    * add this after imports: `const apiUrl = 'http://media.mw.metropolia.fi/wbma/';`
    * rename useFetch function to 'getAllMedia' and remove url parameter from parens.
-   * change `const response = await fetch(url);` to `const response = await fetch(apiUrl + 'media');`
+   * change `const response = await fetch(url);` to `const response = await fetch(apiUrl + 'media/all');`
 1. First log the loaded data using ```console.log()```
-   * Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also the thumbnails.
+   * Note that '/media/all' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also the thumbnails. To get the file_id:s you need to iterate 'files' property from the response.
    * To combine multiple fetch results use [Promise.all](https://www.freecodecamp.org/news/promise-all-in-javascript-with-example-6c8c5aea3e32/):
    ```javascript
    const result = await Promise.all(array.map(async (item) => {
