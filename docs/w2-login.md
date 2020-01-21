@@ -287,36 +287,40 @@
 
 ### Extra. Move Media API calls to one file
 
-1. create 'ApiHooks.js' to 'hooks' folder
+1. Modify 'ApiHooks.js' in 'hooks' folder
 1. move all functions that do fetches to Media Api to 'ApiHooks.js'
 1. Use 'LoginHooks.js' as reference
    * example:
 
    ```jsx harmony
-    import {useState, useContext, useEffect} from 'react';
-    import {AsyncStorage} from 'react-native';
-    import {StateContext} from '../contexts/StateContext';
+    import {useState, useEffect} from 'react';
 
-    const mediaAPI = () => {
-      const useFetch = (url) => {
-        const [media, setMedia] = useContext(StateContext);
-        const [loading, setLoading] = useState(true);
-        async function fetchUrl() {
-          const response = await fetch(url);
+    const apiUrl = 'http://media.mw.metropolia.fi/wbma/';
+
+    const getAllMedia = () => {
+      const [data, setData] = useState([]);
+      const [loading, setLoading] = useState(true);
+      const fetchUrl = async () => {
+        try {
+          const response = await fetch(apiUrl + 'media/all');
           const json = await response.json();
-          setMedia(json);
+          const result = await Promise.all(json.files.map(async (item) => {
+            const tnResponse = await fetch(apiUrl + 'media/' + item.file_id);
+            return await tnResponse.json();
+          }));
+          console.log('apihooks', result);
+          setData(result);
           setLoading(false);
+        } catch (e) {
+          console.log('error', e.message);
         }
-        useEffect(() => {
-          fetchUrl();
-        }, []);
-        return [media, loading];
       };
-
-      return {
-        useFetch,
-      };
+      useEffect(() => {
+        fetchUrl();
+      }, []);
+      return [data, loading];
     };
+    export {getAllMedia};
 
     export default mediaAPI;
    ```
