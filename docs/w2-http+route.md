@@ -25,7 +25,7 @@ Study:
 1. Install react-navigation with npm `npm install react-navigation --save`
 1. Install react-navigation-tabs with npm `npm install --save react-navigation-tabs`
 1. Install these packages with expo to get correct versions: `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context`
-1. Follow [Tab Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html) article to create a simple tab navigation
+1. Follow [Tab Navigation]https://reactnavigation.org/docs/en/next/tab-based-navigation.html) article to create a simple tab navigation
 
 #### C
 Continue the app made in previous labs. Create a new branch `navigation` with git and checkout it (`git checkout -b navigation`).
