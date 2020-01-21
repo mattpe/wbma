@@ -96,7 +96,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
    const Single = () => {
      return (
        <View style={styles.container}>
-         <Text>Profile</Text>
+         <Text>Single</Text>
        </View>
      );
    };
