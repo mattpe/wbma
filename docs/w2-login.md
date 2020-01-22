@@ -109,7 +109,7 @@
           Home: {
             screen: TabNavigator,
             navigationOptions: {
-              header: null, // this will hide the header
+              headerMode: 'none', // this will hide the header
             },
           },
           Single: {
