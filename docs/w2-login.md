@@ -11,7 +11,7 @@
 ### A. hard coded login
 
 1. Continue last exercise. Create a new branch with git.
-1. Create 'AuthoLoading.js', 'Login.js' to 'views/'
+1. Create 'AuthLoading.js', 'Login.js' to 'views/'
 1. _Login.js_
     * Eventually this will be the login and register page
     * For now we'll do hard coded login:
