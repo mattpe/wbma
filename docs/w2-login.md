@@ -71,7 +71,7 @@
    } from 'react-native';
 
    const bootstrapAsync = async (props) => {
-     async function getToken() {
+     const getToken = async () => {
        const userToken = await AsyncStorage.getItem('userToken');
 
        // This will switch to the App screen or Auth screen and this loading
