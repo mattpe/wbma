@@ -285,44 +285,6 @@
 1. Make login to happen automatically after registering
    * in other words run 'signInAsync' after registering is done
 
-### Extra. Move Media API calls to one file
+### Extra. Optimize APIHooks.js
 
-1. Modify 'ApiHooks.js' in 'hooks' folder
-1. move all functions that do fetches to Media Api to 'ApiHooks.js'
-1. Use 'LoginHooks.js' as reference
-   * example:
-
-   ```jsx harmony
-    import {useState, useEffect} from 'react';
-
-    const apiUrl = 'http://media.mw.metropolia.fi/wbma/';
-
-    const getAllMedia = () => {
-      const [data, setData] = useState([]);
-      const [loading, setLoading] = useState(true);
-      const fetchUrl = async () => {
-        try {
-          const response = await fetch(apiUrl + 'media/all');
-          const json = await response.json();
-          const result = await Promise.all(json.files.map(async (item) => {
-            const tnResponse = await fetch(apiUrl + 'media/' + item.file_id);
-            return await tnResponse.json();
-          }));
-          console.log('apihooks', result);
-          setData(result);
-          setLoading(false);
-        } catch (e) {
-          console.log('error', e.message);
-        }
-      };
-      useEffect(() => {
-        fetchUrl();
-      }, []);
-      return [data, loading];
-    };
-    export {getAllMedia};
-
-    export default mediaAPI;
-   ```
-
----
+1. Don't repeat yourself! Is there any repeating code in APIHooks.js that you could put into a separate function? 
