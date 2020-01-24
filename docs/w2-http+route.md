@@ -200,6 +200,20 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     
     export default createAppContainer(Navigator);
     ```
+    * If title in header is not changing, add the following code after TabNavigator function:
+    ```javascript
+    TabNavigator.navigationOptions = ({navigation}) => {
+     const {routeName} = navigation.state.routes[navigation.state.index];
+
+     // You can do whatever you like here to pick the title based on the route name
+     const headerTitle = routeName;
+
+     return {
+       headerTitle,
+     };
+   };
+
+    ```
 1. Pass 'navigation' prop from Home to List to ListItem and use push-method to navigate to 'Single'-component:
    ```jsx harmony
    // Home.js
