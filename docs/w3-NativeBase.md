@@ -2,9 +2,13 @@ class: center, middle
 
 # NativeBase
 
-## 3/2019
+## 3/2020
 
 ---
+  **Note!**
+
+  When using NativeBase you should import the [`<Image>` component](https://facebook.github.io/react-native/docs/images.html#network-images) still from `react-native` library to avoid issues with network sourced images.
+
 
 ### Task A: Convert the app we've made so far to use NativeBase
 
@@ -126,7 +130,6 @@ export default App;
 
 ![Single screen](images/single.png)
 
-![Profile screen](images/profile.png)
 
 ### Task B: Develop profile page
 
@@ -134,11 +137,8 @@ export default App;
     - Use postman to upload image and add a [tag](http://media.mw.metropolia.fi/wbma/docs/#api-Tag-PostTag) 'avatar_CurrentUserId' to it (e.g avatar_85)
     - When fetching avatars, you can use _CurrentUserId to limit the amount of fetched data.
 1. Display users avatar image, name and email in profile page
-   - You'll need to add more methods to 'ApiHooks.js' to achieve this
+   - You'll need to use existing or add more methods to 'ApiHooks.js' to achieve this
    - Hint: Userdata is already in AsyncStorage
 
-
-  **Note!**
-
-  When using NativeBase you should import the [`<Image>` component](https://facebook.github.io/react-native/docs/images.html#network-images) still from `react-native` library to avoid issues with network sourced images.
+![Profile screen](images/profile.png)
   
