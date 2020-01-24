@@ -119,9 +119,13 @@ export default App;
 
 ```
 1. Try to make the app look like these images:
+
 ![Login screen](images/login.png)
+
 ![Home screen](images/home.png)
+
 ![Single screen](images/single.png)
+
 ![Profile screen](images/profile.png)
 
 ### Task B: Develop profile page
