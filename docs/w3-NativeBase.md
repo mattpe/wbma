@@ -31,7 +31,6 @@ class: center, middle
    import {List as BaseList} from 'native-base';
    ...
    return (
-       <Container>
          <BaseList
            dataArray={media}
            renderRow={
@@ -42,7 +41,6 @@ class: center, middle
            }
            keyExtractor={(item, index) => index.toString()}
          />
-       </Container>
      );
    ```
 
@@ -120,6 +118,11 @@ const App = () => {
 export default App;
 
 ```
+1. Try to make the app look like these images:
+![Login screen](images/login.png)
+![Home screen](images/home.png)
+![Single screen](images/single.png)
+![Profile screen](images/profile.png)
 
 ### Task B: Develop profile page
 
@@ -128,79 +131,10 @@ export default App;
     - When fetching avatars, you can use _CurrentUserId to limit the amount of fetched data.
 1. Display users avatar image, name and email in profile page
    - You'll need to add more methods to 'ApiHooks.js' to achieve this
-   - Hint: Userdata is already in AsyncStorage but it might be more convenient to add it also to context state:
+   - Hint: Userdata is already in AsyncStorage
 
-   ```jsx harmony
-   // MediaContext.js:
-   import React, {useState} from 'react';
-   import PropTypes from 'prop-types';
-
-   const MediaContext = React.createContext({});
-   const MediaProvider = (props) => {
-     const {
-       media: initialMedia,
-       user: initialUser,
-       children
-     } = props;
-     const [media, setMedia] = useState(initialMedia);
-     const [user, setUser] = useState(initialUser);
-
-     const appContext = {
-       user,
-       setUser,
-       media,
-       setMedia,
-     };
-
-     return (
-       <MediaContext.Provider value={appContext}>
-         {children}
-       </MediaContext.Provider>
-     );
-   };
-
-   MediaProvider.propTypes = {
-     media: PropTypes.array,
-     user: PropTypes.object,
-     children: PropTypes.node,
-   };
-
-   MediaProvider.defaultProps = {
-     media: [],
-     user: {}
-   };
-
-   export {MediaContext, MediaProvider};
-
-
-   // ApiHooks.js
-   ...
-   const userToContext = async () => { // Call this when app starts (= Home.js)
-       const {user, setUser} = useContext(MediaContext);
-       const getFromStorage = async () => {
-         const storageUser = JSON.parse(await AsyncStorage.getItem('user'));
-         console.log('storage', storageUser);
-         setUser(storageUser);
-       }
-       useEffect(() => {
-         getFromStorage();
-       }, []);
-       return [user];
-     };
-   ...
-
-   // Home.js
-   ...
-   const Home = (props) => {
-     ...
-     const {userToContext} = mediaAPI();
-     userToContext().then((user) => {
-       console.log('usercontext', user);
-     });
-   ...
-   ```
 
   **Note!**
 
-  When using NativeBase you can import the [`<Image>` component](https://facebook.github.io/react-native/docs/images.html#network-images) still from `react-native` library to avoid issues with network sourced images.
+  When using NativeBase you should import the [`<Image>` component](https://facebook.github.io/react-native/docs/images.html#network-images) still from `react-native` library to avoid issues with network sourced images.
   
