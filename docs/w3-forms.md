@@ -14,6 +14,7 @@
 1. Show only login form when opening the Login page
 1. Add a link/button for switching between login/register forms ("No account yet?" or something).
 1. When registering check that the username is free just after the username input field gets filled
+   * there is an [endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-User-CheckUserName) for that
    * use e.g. [onChangeText](https://facebook.github.io/react-native/docs/textinput.html#onchangetext)  or [onEndEditing](https://facebook.github.io/react-native/docs/textinput.html#onendediting) events
 
    ```jsx harmony
