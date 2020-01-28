@@ -27,6 +27,7 @@ class: center, middle
 
     - You can customise NativeBase components later
 1. [NativeBase components](https://docs.nativebase.io/Components.html#Components)
+   - Some components you may find useful for the task: `Body`, `Button`, `Card`, `CardItem`, `Container`, `Content, `Header`, `Icon`, `List`, `ListItem`, `Left`, `Right`, `Thumbnail`, `Text`, `Title`...    
    - By default you can use [Ionicons](https://ionicons.com/) as value for name attribute of [Icon](https://docs.nativebase.io/Components.html#icon-def-headref)
 1. In our app there are already `List` and `ListItem` components so if you want to use the [List](https://docs.nativebase.io/Components.html#list-def-headref) (and ListItem) component of NativeBase you need to use `import as` syntax:
 
