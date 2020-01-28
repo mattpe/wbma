@@ -12,6 +12,7 @@
     * especially [Inline If with Logical && Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator)
 1. Continue the previous exercise. Create a new git branch for these tasks.
 1. Show only login form when opening the Login page
+   * remember that changing the view requires change in state (useState)
 1. Add a link/button for switching between login/register forms ("No account yet?" or something).
 1. When registering check that the username is free just after the username input field gets filled
    * there is an [endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-User-CheckUserName) for that
