@@ -47,6 +47,8 @@ class: center, middle
          />
      );
    ```
+   
+   **Note:** native-base `List` uses a different prop name for data array than react-native `FlatList`: Change `data` -> `dataArray` 
 
 1. Adding icons to bottom tabs
 
