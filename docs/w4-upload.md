@@ -32,9 +32,8 @@ class: center, middle
     - Description is optional but minimun length is ?
 1. Add reset button for clearing the whole form and image preview
 
-### Extra: Use OpenGL to add filters to image
+### Extra: Additional features
 
-1. Study [gl-react-expo](https://www.npmjs.com/package/gl-react-expo)
-1. Do a new app where user can select existing picture or take a new picture with phone's camera and then edit brightness, contrast and saturation (of course tou can add the functionalities to the existing app instead)
-   - [Example](https://github.com/gre/gl-react/tree/master/examples/expo-gl-react-camera-effects)
-1. [More examples](https://gl-react-cookbook.surge.sh/)
+1. When starting the app, check that the token stored in AsyncStorage is valid
+1. Show spinners when loading data
+1. Could the code be cleaner? Maybe put some JSX into separate files (to components folder)
