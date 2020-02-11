@@ -6,7 +6,7 @@
 ## Media Player
 
 ### Task: Modify page for viewing single media files
-#### Unless you are using Metropolia's wifi due to irregularites in Metropolia's firewall, you'll need to enable VPN on your mobile device to make videos show on your device. [Instructions](https://wiki.metropolia.fi/pages/viewpage.action?pageId=149652071#VPN-et%C3%A4yhteydet-VPN-apuohjelmanasennusjak%C3%A4ytt%C3%B6mobiililaitteissa)
+#### Unless you are using Metropolia's wifi - due to irregularites in Metropolia's firewall - you'll need to enable VPN on your mobile device to make videos show on your device. [Instructions](https://wiki.metropolia.fi/pages/viewpage.action?pageId=149652071#VPN-et%C3%A4yhteydet-VPN-apuohjelmanasennusjak%C3%A4ytt%C3%B6mobiililaitteissa)
 
 1. Continue the previous exercise. Create a new git branch for these tasks.
 1. Modify 'Single.js'. Features:
