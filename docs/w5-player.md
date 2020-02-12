@@ -26,6 +26,7 @@
 1. Add a button (for example to profile page) which opens MyFiles
 1. Display a list of user's own files
     - very similar to Home (and List)
+    - [Navigation events](https://reactnavigation.org/docs/en/4.x/navigation-events.html)
 1. Add 'view', 'modify' and 'delete' buttons next to each file.
     - onPress example for delete:
     ```jsx harmony
