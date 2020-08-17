@@ -44,6 +44,7 @@ Course content is inside [docs](docs/) folder.
 1. [What is React](https://youtu.be/N3AkSS5hXMA)
 1. [Learn React in five minutes](https://www.youtube.com/watch?v=MRIMT0xPXFI)
 1. [If five minutes is not enough](https://www.youtube.com/watch?v=NJWI1b1upps&list=PLDIXF8nb0VG1v4S-smVy7GV0MHsJ3PJiL)
+1. [React Native crash course](https://www.youtube.com/watch?v=Hf4MJH0jDb4)
 1. [Online book: React.js Training](https://rangle-io.gitbooks.io/react-training/content/)
 6. [Full stack open (in Finnish)](https://fullstackopen.github.io/)
 
