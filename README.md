@@ -40,14 +40,12 @@ Course content is inside [docs](docs/) folder.
         - Introduction into Events
         - Promises, async/await
         - +everything else you want to recap or want to know more about
-1. [React concepts](https://medium.freecodecamp.org/all-the-fundamental-react-js-concepts-jammed-into-this-single-medium-article-c83f9b53eac2)
-1. [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A)
-1. [React Native crash course](https://www.youtube.com/watch?v=mkualZPRZCs&t=1116s)
-1. [Longer React course](https://www.youtube.com/watch?v=DLX62G4lc44&t=435s)
-    - [Same as an interactive course](https://scrimba.com/g/glearnreact)
+1. [React concepts](https://jscomplete.com/learn/complete-intro-react)
+1. [What is React](https://youtu.be/N3AkSS5hXMA)
+1. [Learn React in five minutes](https://www.youtube.com/watch?v=MRIMT0xPXFI)
+1. [If five minutes is not enough](https://www.youtube.com/watch?v=NJWI1b1upps&list=PLDIXF8nb0VG1v4S-smVy7GV0MHsJ3PJiL)
 1. [Online book: React.js Training](https://rangle-io.gitbooks.io/react-training/content/)
-1. [Full stack open course](https://fullstackopen.com/en/)
-1. [Full stack open (in Finnish)](https://fullstackopen.com/)
+6. [Full stack open (in Finnish)](https://fullstackopen.github.io/)
 
 ### Other
 
