@@ -21,6 +21,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 1. Test that app works; run it and open in browser (interactive shell is needed to get the menu option (_w_) for launhing in browser)
     * `cd MyApp`
     * `npm start`
+1. From now on open 'MyApp' folder in your editor/IDE to edit your project
 1. Create a remote git repository (Github) and push your app there
 
 **b.**
@@ -36,7 +37,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
         1. Use a popular style guide
         1. Google
         1. JavaScript
-        1. Y
+        1. Yes
 1. Modify .eslintrc.js:
 
    ```JavaScript
@@ -44,7 +45,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
       'parser': 'babel-eslint',
       'env': {
         'browser': true,
-        'es6': true,
+        'es2020': true,
       },
       'extends': [
         'google',
@@ -112,8 +113,8 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
     insert_final_newline = true
     ```
 
-1. You can format code automatically with _shift-alt-f_
-1. Fix curly-braces error in Preferences/Settings
+1. In VSCode you can format code automatically with _shift-alt-f_
+1. In VSCode fix potential curly-braces error in Preferences/Settings
     * search for 'braces' and uncheck all 'Insert space after...' checkboxes
 1. Convert the App function to arrow function:
 
