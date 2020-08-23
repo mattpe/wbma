@@ -5,55 +5,30 @@ class: center, middle
 ## 1/2019
 
 ---
+Study [Understanding and handling API requests](https://www.youtube.com/watch?v=2N9iqkWfjC8&list=PLDIXF8nb0VG1v4S-smVy7GV0MHsJ3PJiL&index=7) and [Using Hooks](https://www.youtube.com/watch?v=rEFYriigJ5A&list=PLDIXF8nb0VG1v4S-smVy7GV0MHsJ3PJiL&index=9)
 
-Study [Context](https://reactjs.org/docs/context.html), [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](https://reactjs.org/docs/hooks-effect.html) and [this article](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
+Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](https://reactjs.org/docs/hooks-effect.html) and [this article](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
 * We'll use the coding method in the article as an example to do the following tasks 
 
-## Fetching data with AJAX and sharing it with Context, Task A
+## Fetching data with AJAX, Task A
 
 1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
-    1. Create 'contexts' folder to project root folder
-    2. Add MediaContext.js file to contexts:
-
-        ```js
-        import React, {useState} from 'react';
-        import PropTypes from 'prop-types';
-
-        const MediaContext = React.createContext([{}, () => {}]);
-
-        const mediaArray = [];
-
-        const MediaProvider = (props) => {
-          const [media, setMedia] = useState(mediaArray);
-          return (
-            <MediaContext.Provider value={[media, setMedia]}>
-              {props.children}
-            </MediaContext.Provider>
-          );
-        };
-
-        MediaProvider.propTypes = {
-          children: PropTypes.node,
-        };
-
-        export {MediaContext, MediaProvider};
+    1. Remove mediaArray from List.js. We will load the data from a static json file instead.
+    1. In List.js, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) to load [test.json](./assets/test.json)
+        - Add the new code to MediaTable function:
+        ```javascript
+        const url = 'https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json';
+        let mediaArray = [];
+         const loadMedia = async () => {
+           const response = await fetch(url);
+           const json = await response.json();
+           console.log(json);
+         };
+       
+         loadMedia();
         ```
 
-    3. Move mediaArray from App.js to MediaContext's state
-    4. Add _MediaProvider_ to App.js JSX
-    5. Modify List.js to use the data from MediaContext instead of prop
-
-        ```js
-        ...
-        const [media, setMedia] = useContext(MediaContext);
-        ...
-        ...
-        <FlatList
-          data={media}
-        ...
-        ```
-
-    6. Test that the app still works.
+    
 1. Use [test.json](./assets/test.json) url = https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json instead of the hard coded mediaArray
    * use [fetch](https://javascript.info/async-await#await) or axios to load test.json,
      * fetch is used in the course material
