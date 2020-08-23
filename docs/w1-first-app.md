@@ -163,7 +163,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
         'title': 'Title 2',
         'description': 'Donec dignissim tincidunt nisl, non scelerisque massa pharetra ut. Sed vel velit ante. Aenean quis viverra magna. Praesent eget cursus urna. Ut rhoncus interdum dolor non tincidunt. Sed vehicula consequat facilisis. Pellentesque pulvinar sem nisl, ac vestibulum erat rhoncus id. Vestibulum tincidunt sapien eu ipsum tincidunt pulvinar. ',
         'thumbnails': {
-          w160: 'http://placekitten.com/160/162',
+          w160: 'http://placekitten.com/160/164',
         },
         'filename': 'http://placekitten.com/2041/1922',
       },
@@ -172,14 +172,14 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
         'title': 'Title 3',
         'description': 'Phasellus imperdiet nunc tincidunt molestie vestibulum. Donec dictum suscipit nibh. Sed vel velit ante. Aenean quis viverra magna. Praesent eget cursus urna. Ut rhoncus interdum dolor non tincidunt. Sed vehicula consequat facilisis. Pellentesque pulvinar sem nisl, ac vestibulum erat rhoncus id. ',
         'thumbnails': {
-          w160: 'http://placekitten.com/160/163',
+          w160: 'http://placekitten.com/160/167',
         },
         'filename': 'http://placekitten.com/2039/1920',
       },
     ];
     ```
 
-1. Add `<Flatlist>`, `<TouchableOpacity>`, `<Text>` and `<Image>` components to the existing `<View>`. Example:
+1. Add `<Flatlist>`, `<TouchableOpacity>`, `<Text>` and `<Image>` components to the existing `<View>`. Remember to import them. Example:
 
     ```jsx harmony
     <FlatList
@@ -203,6 +203,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 
 **d.**
 
+1. Replace View with SafeAreaView to prevent your app going under the statusbar of your phone.
 1. Study [Layout with Flexbox](https://facebook.github.io/react-native/docs/flexbox)
 1. Develop your app further. Modify the app so that the layout is similar to this:
     ![View 1](images/app01.png)
@@ -212,61 +213,84 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 
 1. Study [Props](https://facebook.github.io/react-native/docs/props) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
 1. Split the app to multiple files. In other words: create components.
-    * Create a folder 'components' and there a new files 'List.js' and 'ListItem.js'
-    * Component hierarchy:
+   * Create a folder 'components' and there a new files 'List.js' and 'ListItem.js'
+   * Add imports, component function and style object. (Use App.js as an example)
+   * Component hierarchy will be:
 
-    ```text
+   ```text
     App
-       -View
+       -SafeAreaView
            -List
                -ListItem
                ...
 
-    ```
-
-    * Move `<Flatlist>` to 'List.js' and the content of `<Flatlist>` to 'ListItem.js'
-    * Add imports, component function and style object. (Basically the same as 'App.js'. Just change the name of the component function.)
-    * PropTypes for List:
-
-    ```jsx harmony
-   List.propTypes = {
-     mediaArray: PropTypes.array,
-   };
    ```
-
-    * PropTypes for ListItem:
-
+   * Move mediaArray from App.js to List.js
+   * Move `<Flatlist>` to 'List.js':
    ```jsx harmony
-    ListItem.propTypes = {
-      singleMedia: PropTypes.object,
-    };
-    ```
-
-    * In 'App.js' pass 'data' array as prop called 'mediaArray' from App to List:
-
-    ```jsx harmony
-    const App = () => {
+    const List = () => {
       return (
-        <View>
-          <List mediaArray={mediaArray} />
-        </View>
+        <FlatList
+          data={mediaArray}
+          renderItem={({item}) => {
+            return (
+              <TouchableOpacity style={styles.someStyle}>
+                <View style={styles.someStyle}>
+                  <Image
+                    style={styles.someStyle}
+                    source={{uri: item.thumbnails.w160}}
+                  />
+                </View>
+                <View style={styles.someStyle}>
+                  <Text style={styles.someStyle}>{item.title}</Text>
+                  <Text>{item.description}</Text>
+                </View>
+              </TouchableOpacity>
+            );
+          }}
+        />
       );
     };
-    ```
-
+   ```
+   * App.js is now like this:
+   ```jsx harmony
+    const App = () => {
+      return (
+        <SafeAreaView style={styles.container}>
+          <List />
+          <StatusBar style="auto"/>
+        </SafeAreaView>
+      );
+   };
+   ```
+    
+   * The app shoud work the same as before.
+   * Move the content of the function in `renderItem` of `<Flatlist>` to 'ListItem.js' (`<TouchableOpacity>` etc.) similar to previous step.
    * In 'List.js' pass 'item' object as prop called 'singleMedia' from List to ListItem:
 
    ```jsx harmony
-    const List = (props) => {
-      console.log(props);
+    const List = () => {
       return (
         <FlatList
-          data={props.mediaArray}
+          data={mediaArray}
           renderItem={({item}) => <ListItem singleMedia={item} />}
         />
       );
     };
-    ```
+   ```
+   * Import PropTypes in ListItem:
+   ```jsx harmony
+   import PropTypes from 'prop-types';
+   ```
+   * Add PropType to ListItem:
+   
+   ```jsx harmony
+   ListItem.propTypes = {
+     singleMedia: PropTypes.object,
+   };   
+   ```
+   * <b>Task: How to get the items to show in ListItem?</b>
+
 
 1. Create a new branch, add, commit & push your project to remote repository
     * `git checkout -b someBranchName`
@@ -276,6 +300,6 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 
 ---
 
-### Bonus (Optional)
+### If you are bored (optional):
 
 Develop your app further. Open 'filename' image in a [Modal](https://facebook.github.io/react-native/docs/modal.html) when `<TouchableOpacity>` is tapped.
