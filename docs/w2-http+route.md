@@ -69,9 +69,9 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     
     const Profile = () => {
       return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
           <Text>Profile</Text>
-        </View>
+        </SafeAreaView>
       );
     };
     
@@ -94,9 +94,9 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
    
    const Single = () => {
      return (
-       <View style={styles.container}>
+       <SafeAreaView style={styles.container}>
          <Text>Single</Text>
-       </View>
+       </SafeAreaView>
      );
    };
    
@@ -118,35 +118,28 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     * create new file 'Navigator.js' to 'navigators'
     * in 'Navigator.js' use `createBottomTabNavigator` to make a simple tab navigation to Home and Profile 
     ```jsx harmony
-    ...
-    const Navigator = createBottomTabNavigator(
-        {
-          Home: {
-            screen: Home,
-            navigationOptions: {
-              title: 'Home',
-            },
-          },
-          Profile: {
-            screen: Profile,
-            navigationOptions: {
-              title: 'Profile',
-            },
-          },
-        },
-        {
-          initialRouteName: 'Home',
-        }
-    );
-   ...
+    import React from 'react';
+    import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+    import {NavigationContainer} from '@react-navigation/native';
+    
+    const Tab = createBottomTabNavigator();
+   
+    const Navigator = () => {
+      return (
+        <NavigationContainer>
+          // TODO: Make tab navigator here
+        </NavigationContainer>
+      );
+    };
+    
+    export default Navigator;
+   
     ```
    * modify App.js (remember to add neccessary and remove unneccessary imports):
    ```jsx harmony
    const App = () => {
      return (
-       <MediaProvider>
          <Navigator></Navigator>
-       </MediaProvider>
      );
    };
    ```
@@ -155,74 +148,46 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
 #### D. Navigate to 'Single' component by tapping thumbnails
 1. For this we need to combine tab navigation with stack navigation in Navigator.js:
     ```jsx harmony
-    import {createAppContainer} from 'react-navigation';
-    import {createBottomTabNavigator} from 'react-navigation-tabs';
-    import {createStackNavigator} from 'react-navigation-stack';
-    import Home from '../views/Home';
-    import Profile from '../views/Profile';
-    import Single from '../views/Single';
+    // TODO: add neccessary imports
     
-    const TabNavigator = createBottomTabNavigator(
-        {
-          Home: {
-            screen: Home,
-            navigationOptions: {
-              title: 'Home',
-            },
-          },
-          Profile: {
-            screen: Profile,
-            navigationOptions: {
-              title: 'Profile',
-            },
-          },
-        },
-        {
-          initialRouteName: 'Home',
-        }
-    );
-    
-    const Navigator = createStackNavigator(
-        // RouteConfigs
-        {
-          Home: {
-            screen: TabNavigator,
-            navigationOptions: {
-              headerMode: 'none', // this will hide the header
-            },
-          },
-          Single: {
-            screen: Single,
-          },
-        },
-    );
-    
-    export default createAppContainer(Navigator);
-    ```
-    * If title in header is not changing, add the following code after TabNavigator function:
-    ```javascript
-    TabNavigator.navigationOptions = ({navigation}) => {
-     const {routeName} = navigation.state.routes[navigation.state.index];
-
-     // You can do whatever you like here to pick the title based on the route name
-     const headerTitle = routeName;
-
-     return {
-       headerTitle,
-     };
+   // add after createBottomTabNavigator
+    const Stack = createStackNavigator();
+   
+   const TabScreen = () => {
+     return (
+       // TODO: move content of <NavigationContainer> here
+     );
    };
-
+   
+   const StackScreen = () => {
+     return (
+       <Stack.Navigator>
+         // TODO: make two stack screens:
+         // 1st: name=Home, component=TabScreen
+         // 2nd: name=Single, component=Single
+       </Stack.Navigator>
+     );
+   };
+   
+   const Navigator = () => {
+     return (
+       <NavigationContainer>
+         <StackScreen/>
+       </NavigationContainer>
+     );
+   };
+    
+   export default Navigator;
     ```
-1. Pass 'navigation' prop from Home to List to ListItem and use push-method to navigate to 'Single'-component:
+    
+    1. Pass 'navigation' prop from Home to List to ListItem and use navigate-method to navigate to 'Single'-component:
    ```jsx harmony
    // Home.js
    const Home = (props) => {
       const {navigation} = props;
-      return (
-        <View style={styles.container}>
+      ...
           <List navigation={navigation}></List>
-        </View>
-      );
+      ...
    };
    
    // List.js
@@ -233,7 +198,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
          ...
          renderItem={
            ({item}) => <ListItem
-             navigation={props.navigation}
+             navigation={props.navigation} // without destucturing
              singleMedia={item}
            />
          }
@@ -247,16 +212,17 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
          ...
          onPress={
            () => {
-             props.navigation.push('Single');
+             props.navigation.navigate('Single');
            }
          }
          ...
        >
     ``` 
+1. When using props, remember to add the appropriate PropTypes
 1. The app should at this point navigate to 'Single' component when any thumbnail is tapped
   
 #### E. Show selected file in 'Single' component
-1. Study [Passing parameters to routes](https://reactnavigation.org/docs/en/params.html)
+1. Study [Passing parameters to routes](https://reactnavigation.org/docs/params/)
 1. In 'ListItem' you have file data in props. Pass the file data as a parameter with navigation.push
 1. In Single.js receive the file parameter and use it's 'filename' property to show the file in `<Image>` and 'title' property in `<Text>`
 1. git add, commit & push to remote repository
