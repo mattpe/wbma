@@ -6,7 +6,7 @@
 
 ## Exercise 1: Setup your toolchain and create a new React Native project
 
-Study [Getting started and Learn the basics](https://facebook.github.io/react-native/docs/getting-started) from React Native documentation
+Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [Getting started and Learn the basics](https://facebook.github.io/react-native/docs/getting-started) from React Native documentation
 
 **a.**
 
@@ -15,7 +15,7 @@ Study [Getting started and Learn the basics](https://facebook.github.io/react-na
     * create a folder for your React Native projects
     * use Git Bash or terminal to go to this folder `cd foldername/otherfoldername/etc...`
     * `npm install -g expo-cli`
-    * `expo init MyApp`
+    * `expo init MyApp --npm`
         * choose 'blank' template
         * if this fails on Windows due to missing interactive mode, use cmd instead of Git Bash
 1. Test that app works; run it and open in browser (interactive shell is needed to get the menu option (_w_) for launhing in browser)
