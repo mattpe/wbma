@@ -44,9 +44,10 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     ```jsx harmony
       const Home = () => {
         return (
-          <View style={styles.container}>
-            <List></List>
-          </View>
+          <SafeAreaView style={styles.container}>
+            <List />
+            <StatusBar style="auto"/>
+          </SafeAreaView>
         );
       };
 
