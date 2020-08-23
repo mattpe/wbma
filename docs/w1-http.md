@@ -33,7 +33,7 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
   - set the value of `mediaArray` state to `json` 
   - what do you see in the console?
 1. Prevent infinite loop with [useEffect](https://www.robinwieruch.de/react-hooks-fetch-data).
- 
+1. Use [try/catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) to catch possible errors from promises.
 1. Use [keyExtractor](https://www.techiediaries.com/react-native-tutorial/flatlist-with-renderitem-and-keyextractor/) in _List.js_ to fix the warning about missing keys
 1. git add, commit & push to remote repository
 
@@ -46,22 +46,18 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
     - [Documentation](http://media.mw.metropolia.fi/wbma/docs/)
     - base url: http://media.mw.metropolia.fi/wbma/
     - Media files location: http://media.mw.metropolia.fi/wbma/uploads/
-1. Modify `loadMedia` function to load the data from the '/media/all' endpoint of the API.
+1. Modify `loadMedia` function to load the data from the '/media' endpoint of the API.
 1. First log the loaded data using ```console.log()```
-   * Note that '/media/all' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also the thumbnails. To get the file_id:s you need to iterate 'files' property from the '/media/all' endpoints response.
+   * Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also the thumbnails. To get the file_id:s you need to iterate the '/media' endpoints response.
       * Study Promise.all [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) and [here](http://promise-nuggets.github.io/articles/14-map-in-parallel.html)
       * example: 
       ```javascript
       // 2nd fetch:
-      Promise.all(array.map(item => {
-          return fetch(url + item.id).
-              then(response => {
-                return response.json();
-              });
-        })).then(items => {
-          console.log(items);
-          // save items to state
-        });
+      Promise.all(array.map(async (item) => {
+          const response =  await fetch(url + item.id);
+          const json = await response.json();
+          return json;
+        }));
       ```
   1. Save the data to state and then print the data to the table
   1. git add, commit & push to remote repository
