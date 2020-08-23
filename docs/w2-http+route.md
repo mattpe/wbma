@@ -8,34 +8,34 @@
 
 Study:
 * [Three dots](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-* [React Navigation](https://reactnavigation.org/docs/en/getting-started.html)
-* [Stack Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html)
-* [Tab Navigation](https://reactnavigation.org/docs/en/tab-based-navigation.html)
-* Navigation prop reference, createStackNavigator, createBottomTabNavigator in the [API](https://reactnavigation.org/docs/en/api-reference.html)
+* [React Navigation](https://reactnavigation.org/docs/getting-started/)
+* [Stack Navigation](https://reactnavigation.org/docs/hello-react-navigation/)
+* [Tab Navigation](https://reactnavigation.org/docs/tab-based-navigation/)
+* API Reference: [Navigation prop reference](https://reactnavigation.org/docs/navigation-prop), [createStackNavigator](https://reactnavigation.org/docs/stack-navigator), [createBottomTabNavigator](https://reactnavigation.org/docs/bottom-tab-navigator) 
 
 #### A
 1. Create a new react native project called 'Stack' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
-1. Install react-navigation with npm `npm install react-navigation --save`
-1. Install react-navigation-stack with npm `npm install react-navigation-stack --save`
-1. Install these packages with expo to get correct versions: `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context`
-1. Follow [Hello React Navigation](https://reactnavigation.org/docs/en/hello-react-navigation.html) and [Moving between screens](https://reactnavigation.org/docs/en/navigating.html) articles to create a simple stack navigation
+1. Install react-navigation with npm `npm i @react-navigation/native`
+1. Install react-navigation-stack with npm `npm i @react-navigation/stack`
+1. Install these packages with expo to get correct versions: `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
+1. Follow [Hello React Navigation](https://reactnavigation.org/docs/hello-react-navigation/) and [Moving between screens](https://reactnavigation.org/docs/navigating/) articles to create a simple stack navigation
 
 #### B
 1. Create a new react native project called 'Tabs' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
-1. Install react-navigation with npm `npm install react-navigation --save`
-1. Install react-navigation-tabs with npm `npm install --save react-navigation-tabs`
-1. Install these packages with expo to get correct versions: `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context`
-1. Follow [Tab Navigation](https://reactnavigation.org/docs/en/next/tab-based-navigation.html) article to create a simple tab navigation
+1. Install react-navigation with npm `npm i @react-navigation/native`
+1. Install react-navigation-bottom-tabs with npm `npm i @react-navigation/bottom-tabs`
+1. Install these packages with expo to get correct versions: `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
+1. Follow [Tab Navigation](https://reactnavigation.org/docs/tab-based-navigation/) article to create a simple tab navigation
 
 #### C
 Continue the app made in previous labs. Create a new branch `navigation` with git and checkout it (`git checkout -b navigation`).
 1. Goal is to make a navigation between three 'pages'
     * Bottom tab menu has two links: 'Home' and 'Profile'
     * Each thumbnail is TouchableOpacity and tapping them should take to 'Single' to show the selected media file (just images at this point)
-1. Install react-navigation with npm `npm install react-navigation --save`
-1. Install react-navigation-tabs with npm `npm install --save react-navigation-tabs`
-1. Install react-navigation-stack with npm `npm install react-navigation-stack --save`
-1. Install these packages with expo to get correct versions: `expo install react-navigation react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
+1. Install react-navigation with npm `npm i @react-navigation/native`
+1. Install react-navigation-bottom-tabs with npm `npm i @react-navigation/bottom-tabs`
+1. Install react-navigation-stack with npm `npm i @react-navigation/stack`
+1. Install these packages with expo to get correct versions: `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
 1. Create new folder 'views'
 1. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
 1. Home.js will be the component that should show first when the app starts
@@ -55,9 +55,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     ```jsx harmony
       const App = () => {
         return (
-          <MediaProvider>
             <Home></Home>
-          </MediaProvider>
         );
       };
     ``` 
