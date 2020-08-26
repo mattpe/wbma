@@ -11,6 +11,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 **a.**
 
 1. If needed, install code editor (+ extensions), git, npm
+1. Install Expo app to your phone. [iOS](https://apps.apple.com/us/app/expo-client/id982107779) or [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=fi)
 1. Use the [expo](https://docs.expo.io/versions/v36.0.0/get-started/create-a-new-app/) cli tool to generate an app skeleton
     * create a folder for your React Native projects
     * use Git Bash or terminal to go to this folder `cd foldername/otherfoldername/etc...`
