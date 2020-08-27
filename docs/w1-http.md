@@ -1,37 +1,37 @@
-class: center, middle
-
 # AJAX + state
 
-## 1/2019
+W1/2020
 
 ---
+
 Study [Understanding and handling API requests](https://www.youtube.com/watch?v=2N9iqkWfjC8&list=PLDIXF8nb0VG1v4S-smVy7GV0MHsJ3PJiL&index=7) and [Using Hooks](https://www.youtube.com/watch?v=rEFYriigJ5A&list=PLDIXF8nb0VG1v4S-smVy7GV0MHsJ3PJiL&index=9)
 
 Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](https://reactjs.org/docs/hooks-effect.html) 
+
 ## Fetching data with AJAX, Task A
 
 1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
 1. Remove mediaArray from List.js. We will load the data from a static json file instead.
 1. In List.js, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) to load [test.json](./assets/test.json)
-  - Add the new code to MediaTable function:
-  ```javascript
-    const url = 'https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json';
-    let mediaArray = [];
-     const loadMedia = async () => {
-       const response = await fetch(url);
-       const json = await response.json();
-       console.log(json);
-     };
-   
-     loadMedia();
-  ```
+    - Add the new code to `List` component:
+    ```javascript
+      const url = 'https://raw.githubusercontent.com/mattpe/wbma/master/docs/assets/test.json';
+      let mediaArray = [];
+       const loadMedia = async () => {
+         const response = await fetch(url);
+         const json = await response.json();
+         console.log(json);
+       };
+
+       loadMedia();
+    ```
 1. Open the [developer menu](https://docs.expo.io/workflow/debugging/#developer-menu) in your device.
-  * Enable Remote Debugging, open console in the browser window that opens and then reload app.
-  * Why aren't the images etc. not showing anymore? Where does React get its name from? What is state?
+    - Enable Remote Debugging, open console in the browser window that opens and then reload app.
+    - Why aren't the images etc. not showing anymore? Where does React get its name from? What is state?
 1. Save the loaded data to state and try to get the image list back.
-  - convert `let mediaArray...` to state with `useState` -hook
-  - set the value of `mediaArray` state to `json` 
-  - what do you see in the console?
+    - convert `let mediaArray...` to state with `useState` -hook
+    - set the value of `mediaArray` state to `json` 
+    - what do you see in the console?
 1. Prevent infinite loop with [useEffect](https://www.robinwieruch.de/react-hooks-fetch-data).
 1. Use [try/catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) to catch possible errors from promises.
 1. Use [keyExtractor](https://www.techiediaries.com/react-native-tutorial/flatlist-with-renderitem-and-keyextractor/) in _List.js_ to fix the warning about missing keys
