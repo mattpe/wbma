@@ -5,13 +5,14 @@
 ## Authentication
 
 * Study:
-  * [AsyncStorage](https://docs.expo.io/versions/latest/react-native/asyncstorage/#__next)
-  * [React Navigation authentication flows](https://reactnavigation.org/docs/en/auth-flow.html)
-
+  * [React Navigation authentication flows](https://reactnavigation.org/docs/auth-flow/)
+  * [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
+  * [AsyncStorage](https://react-native-community.github.io/async-storage/docs/usage/)
+                                                                                       
 ### A. hard coded login
 
 1. Continue last exercise. Create a new branch with git.
-1. Create 'AuthLoading.js', 'Login.js' to 'views/'
+1. Create 'Login.js' to 'views/'
 1. _Login.js_
     * Eventually this will be the login and register page
     * For now we'll do hard coded login:
@@ -23,158 +24,217 @@
       View,
       Text,
       Button,
-      AsyncStorage,
     } from 'react-native';
-
-   const Login = (props) => { // props is needed for navigation
-     const signInAsync = async () => {
-         await AsyncStorage.setItem('userToken', 'abc');
-         props.navigation.navigate('App');
-       };
+    import PropTypes from 'prop-types';   
+    
+    const Login = (props) => { // props is needed for navigation   
+      const logIn = () => {
+          props.navigation.navigate('Home');
+      };
       return (
         <View style={styles.container}>
           <Text>Login</Text>
-          <Button title="Sign in!" onPress={
-            () => {
-              signInAsync(); 
-            }
-          } />
+          <Button title="Sign in!" onPress={logIn}/>
         </View>
       );
     };
-
+    
     const styles = StyleSheet.create({
       container: {
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: 40,
       },
     });
-
-   // proptypes here
-
+    
+    Login.propTypes = {
+      navigation: PropTypes.object,
+    };
+    
     export default Login;
+
    ```
 
-1. _AuthLoading.js_:
+1. Modify _Navigator.js_ to add conditional navigator like in [Authentication flows](https://reactnavigation.org/docs/auth-flow/):
 
    ```jsx harmony
-   import React, {useEffect} from 'react';
-   import {
-     ActivityIndicator,
-     AsyncStorage,
-     StatusBar,
-     View,
-     Text,
-   } from 'react-native';
+   ...
+   const StackScreen = () => {
+     const isLoggedIn = false;
+     return (
+       <Stack.Navigator>
+         {isLoggedIn ? (
+           <>
+             <Stack.Screen name="Home" component={TabScreen}/>
+             <Stack.Screen name="Single" component={Single}/>
+           </>
+         ) : (
+           <>
+             <Stack.Screen name="Login" component={Login}/>
+           </>
+         )}
+       </Stack.Navigator>
+     );
+   };
+   ...
+   ```
 
-   const bootstrapAsync = async (props) => {
-     const getToken = async () => {
+1. At this point you should see Login screen when you start the app. If you change the value of isLoggedIn to true you should see the Home page
+
+### B. Context
+1. To do actual login/logout we need to add a [context](https://reactjs.org/docs/context.html) to change the value of isLoggedIn and to share that to different components like Navigator, Login and Profile
+1. Create folder 'contexts' and there add a new file 'AuthContext.js':
+   ```jsx
+   import React, {useState} from 'react';
+   import PropTypes from 'prop-types';
+   
+   const AuthContext = React.createContext({});
+   
+   const AuthProvider = (props) => {
+     const [isLoggedIn, setIsLoggedIn] = useState(false);
+   
+     return (
+       <AuthContext.Provider value={[isLoggedIn, setIsLoggedIn]}>
+         {props.children}
+       </AuthContext.Provider>
+     );
+   };
+   
+   AuthProvider.propTypes = {
+     children: PropTypes.node,
+   };
+   
+   export {AuthContext, AuthProvider};
+   ```
+1. Add AuthProvider to App.js so components can access the context
+   ```jsx
+   ...
+    <AuthProvider>
+         <Navigator/>   
+   </AuthProvider>
+   ...
+   ```
+1. Modify Navigator.js to use AuthContext:
+   ```jsx
+   ...
+   const StackScreen = () => {
+     const [isLoggedIn] = useContext(AuthContext);
+   ...
+   ```
+1. Modify Login.js to use AuthContext:
+   ```jsx
+   ...
+   const Login = (props) => { // props is needed for navigation
+     const [isLoggedIn, setIsLoggedIn] = useContext(AuthContext);
+     console.log('ili', isLoggedIn);
+     const logIn = () => {
+       setIsLoggedIn(true);
+       if (isLoggedIn) {  // this is to make sure isLoggedIn has changed, will be removed later
+         props.navigation.navigate('Home');
+       }
+     };
+     return (
+   ...
+   ```
+1. Add logout functionality to _Profile.js_:
+   ```jsx harmony
+   ...
+   const Profile = (props) => {
+     const [isLoggedIn, setIsLoggedIn] = useContext(AuthContext);
+     console.log('profile', isLoggedIn);
+     const logout = () => {
+       setIsLoggedIn(false);
+       if (!isLoggedIn) { // this is to make sure isLoggedIn has changed, will be removed later
+         props.navigation.navigate('Login');
+       }
+     };
+     return (
+       <SafeAreaView style={styles.container}>
+         <Text>Profile</Text>
+         <Button title={'Logout'} onPress={logout} />
+       </SafeAreaView>
+     );
+   };
+   ...
+   ```
+1. Remember to add necessary imports and PropTypes to above steps.
+1. At this point the app should have basic login/logout functionality.
+
+### C. Remembering if user has logged in
+1. Install [AsyncStorage](https://react-native-community.github.io/async-storage/): `npm i @react-native-community/async-storage`
+1. Import AsyncStorage to Login.js and Profile.js:
+   ```jsx
+   ...
+   import AsyncStorage from '@react-native-community/async-storage';
+   ... 
+   ```
+1. Modify logIn() function in Login.js:
+   ```jsx
+   const logIn = async () => {
+      setIsLoggedIn(true);   
+      await AsyncStorage.setItem('userToken', 'abc');
+      props.navigation.navigate('Home');
+     };
+   ```
+1. Modify logout() function in Profile.js:
+   ```jsx
+   const logout = async () => {
+       setIsLoggedIn(false);
+       await AsyncStorage.clear();
+       props.navigation.navigate('Login');
+     };
+   ```
+1. Add getToken() function to Login.js to check the token when app starts:
+   ```jsx
+   const getToken = async () => {
        const userToken = await AsyncStorage.getItem('userToken');
-
-       // This will switch to the App screen or Auth screen and this loading
-       // screen will be unmounted and thrown away.
        console.log('token', userToken);
-       props.navigation.navigate(userToken ? 'App' : 'Auth');
-     }
+       if (userToken === 'abc') {
+         setIsLoggedIn(true);
+         props.navigation.navigate('Home');
+       }
+     };
      useEffect(() => {
        getToken();
      }, []);
-   };
-
-   const AuthLoading = (props) => {
-     bootstrapAsync(props);
-     return (
-       <View>
-         <ActivityIndicator />
-         <StatusBar barStyle="default" />
-       </View>
-     );
-   };
-
-   export default AuthLoading;
    ```
+1. Remeber to add necessary imports.
+1. Press login and reload the app. App should go automatically to Home.
+1. Logout and reload the app. App should stay in the Login screen.
 
-1. Modify _Navigator.js_ to add switch navigator like in [Authentication flows](https://reactnavigation.org/docs/en/auth-flow.html):
-
-    ```jsx harmony
-   ...
-   import AuthLoading from '../views/AuthLoading';
-   import Login from '../views/Login';
-   ...
-   const StackNavigator = createStackNavigator(
-        {
-          Home: {
-            screen: TabNavigator,
-            navigationOptions: {
-              headerMode: 'none', // this will hide the header
-            },
-          },
-          Single: {
-            screen: Single,
-          },
-          Logout: {
-            screen: Login,
-          },
-        },
-    );
-  
-    const Navigator = createSwitchNavigator(
-        {
-          AuthLoading: AuthLoading,
-          App: StackNavigator,
-          Auth: Login,
-        },
-        {
-          initialRouteName: 'AuthLoading',
-        }
-    );
-    ...
-   ```
-  
-1. Logout functionality to _Profile.js_:
-
-   ```jsx harmony
-   ...
-
-   const Profile = (props) => {
-     const signOutAsync = async () => {
-          await AsyncStorage.clear();
-          props.navigation.navigate('Auth');
-        };
-     return (
-       <View style={styles.container}>
-         <Text>Profile</Text>
-         <Button title="Logout!" onPress={signOutAsync} />
-       </View>
-     );
-   };
-   ...
-   ```
-
-1. At this point the app should have basic login/logout functionality.
-
-### B. Fetch token from Media API
+### D. Fetch token from Media API
 
 1. Recap how to make [POST request with fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Supplying_request_options)
 1. [Login endpoint in the Media API](http://media.mw.metropolia.fi/wbma/docs/#api-Authentication-PostAuth)
-1. Modify _Login.js_
+1. Modify _logIn()_ function in _Login.js_. The function should get the token from the API
 
    ```jsx harmony
    ...
-   const signInAsync = async (props) => {
+   const logIn = async () => {
      // do async fetch here like in List and ListItem
      // hard code your username and password
      // you need to use POST method, see API documentation for details
      await AsyncStorage.setItem('userToken', tokenFromApi);
-     props.navigation.navigate('App');
+     props.navigation.navigate('Home');
    };
    ...
    ```
+1. Modify _getToken()_ function in _Login.js_. The function should check if _userToken_ matches the token fetched from the API and then allow or deny access to the app.
+   ```jsx
+   const getToken = async () => {
+       const userToken = await AsyncStorage.getItem('userToken');
+       console.log('token', userToken);
+       // do async fetch to /users/user
+       // you need to send userToken
+       // if you get successful result 
+       // set isLoggedIn to true
+       // and navigate to Home
+     };
+   ```
 
-### C. Login form
+
+### D. Login form
 
 1. Add 'FormTextInput.js' to 'components' folder:
 
@@ -236,7 +296,7 @@
 1. Now we need to send the values from FormTextInputs to the API
    * study [this article about forms and hooks](https://medium.com/@geeky_writer_/using-react-hooks-to-create-awesome-forms-6f846a4ce57)
       * especially 'Creating Custom Hooks' and 'Connecting the Hook to the Form
-      * note that article is React (HTML) but we are coding React Native, for example the [events](https://facebook.github.io/react-native/docs/textinput#onchangetext) are different.
+      * note that article is React (HTML) but we are coding React Native, so for example the [events](https://facebook.github.io/react-native/docs/textinput#onchangetext) are different.
 1. To get text from the form to local state, create 'LoginHooks.js' to 'hooks' folder
    * _LoginHooks.js_:
 
@@ -271,19 +331,18 @@
 
 1. Modify _Login.js_
    * Add value and onChangeText attributes to FormTextInputs like in the linked article above
-   * Modify 'signInAsync' function to get username and password from 'inputs' object
+   * Modify _logIn()_ function to get username and password from 'inputs' object
 
 1. Display user's info (username, fullname and email) in _Profile.js_
-   * You can store also the user data to AsyncStorage
-   * Remember that AsyncStorage is asynchronous, so you need useState-hook to display anything stored to AsyncStorage and useEffect-hook to prevent infinite loop.
-
+   * You can store also the user data to AuthContext
+   
 ### D. Registering
 
 1. Add another "form" to _Login.js_ for registering.
    * registering is basically the same as login. The difference is the [endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-User-PostUser) in the media API
 1. Do the registering functionality the same way as login functionality
 1. Make login to happen automatically after registering
-   * in other words run 'signInAsync' after registering is done
+   * in other words run _logIn()_ after registering is done
 
 ### Extra. Optimize APIHooks.js
 
