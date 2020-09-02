@@ -205,6 +205,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 **d.**
 
 1. Replace View with SafeAreaView to prevent your app going under the statusbar of your phone.
+   * [SafeAreaView hack for Android](https://stackoverflow.com/questions/51289587/react-native-how-to-use-safeareaview-for-android-notch-devices/55017347) 
 1. Study [Layout with Flexbox](https://facebook.github.io/react-native/docs/flexbox)
 1. Develop your app further. Modify the app so that the layout is similar to this:
     ![View 1](images/app01.png)
