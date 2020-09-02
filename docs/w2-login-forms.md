@@ -1,6 +1,4 @@
-# Login, Register
-
-# Login - add forms
+# Login and Register
 
 1. Study [useState with forms](https://www.youtube.com/watch?v=R7T5GQLxRD4)
 1. Study [Using React Hooks To Create Awesome Forms](https://medium.com/@geeky_writer_/using-react-hooks-to-create-awesome-forms-6f846a4ce57)
