@@ -212,9 +212,10 @@
    ```jsx harmony
    ...
    const logIn = async () => {
-     // do async fetch here like in List and ListItem
+     // do async fetch here like in List.js
      // hard code your username and password
      // you need to use POST method, see API documentation for details
+     // handle errors with try/catch and response.ok
      await AsyncStorage.setItem('userToken', tokenFromApi);
      props.navigation.navigate('Home');
    };
@@ -234,7 +235,7 @@
    ```
 
 
-### D. Login form
+### E. Login form
 
 1. Add 'FormTextInput.js' to 'components' folder:
 
@@ -297,7 +298,7 @@
    * study [this article about forms and hooks](https://medium.com/@geeky_writer_/using-react-hooks-to-create-awesome-forms-6f846a4ce57)
       * especially 'Creating Custom Hooks' and 'Connecting the Hook to the Form
       * note that article is React (HTML) but we are coding React Native, so for example the [events](https://facebook.github.io/react-native/docs/textinput#onchangetext) are different.
-1. To get text from the form to local state, create 'LoginHooks.js' to 'hooks' folder
+1. To get text from the form to local state, create 'hooks' folder and there new file 'LoginHooks.js'
    * _LoginHooks.js_:
 
    ```jsx harmony
@@ -336,7 +337,7 @@
 1. Display user's info (username, fullname and email) in _Profile.js_
    * You can store also the user data to AuthContext
    
-### D. Registering
+### F. Registering
 
 1. Add another "form" to _Login.js_ for registering.
    * registering is basically the same as login. The difference is the [endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-User-PostUser) in the media API
@@ -346,4 +347,4 @@
 
 ### Extra. Optimize APIHooks.js
 
-1. Don't repeat yourself! Is there any repeating code in APIHooks.js that you could put into a separate function? 
+1. Don't repeat yourself! Is there any repeating code in that you could put into reusable functions? Create ApiHooks.js to hooks folder and collect all API fetches there and then think about how you could do reusable functions of the repeating code. 
