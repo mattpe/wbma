@@ -347,4 +347,4 @@
 
 ### Extra. Optimize APIHooks.js
 
-1. Don't repeat yourself! Is there any repeating code in that you could put into reusable functions? Create ApiHooks.js to hooks folder and collect all API fetches there and then think about how you could do reusable functions of the repeating code. 
+1. Don't repeat yourself! Is there any repeating code in that you could put into reusable functions? Create ApiHooks.js to hooks folder and collect all API fetches there and then think about how you could do reusable functions from the repeating code. 
