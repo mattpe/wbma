@@ -65,7 +65,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
 1. Content for Profile.js
     ```jsx harmony
     import React from 'react';
-    import {StyleSheet, View, Text} from 'react-native';
+    import {StyleSheet, SafeAreaView, Text} from 'react-native';
     
     const Profile = () => {
       return (
@@ -90,7 +90,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
 1. Content for Single.js:
    ```jsx harmony
    import React from 'react';
-   import {StyleSheet, View, Text} from 'react-native';
+   import {StyleSheet, SafeAreaView, Text} from 'react-native';
    
    const Single = () => {
      return (
