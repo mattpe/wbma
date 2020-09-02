@@ -51,42 +51,9 @@ class: center, middle
    
    **Note:** native-base `List` uses a different prop name for data array than react-native `FlatList`: Change `data` -> `dataArray` 
 
-1. Adding icons to bottom tabs
+1. [Adding icons to bottom tabs](https://reactnavigation.org/docs/material-bottom-tab-navigator/#example)
 
-   ```jsx harmony
-   // Navigator.js
-   /* eslint-disable react/display-name */
-   import React from 'react';
-   ...
-   const TabNavigator = createBottomTabNavigator(
-        {
-          Home,
-          Profile,
-        },
-        {
-          defaultNavigationOptions: ({navigation}) => ({
-            tabBarIcon: () => {
-              const {routeName} = navigation.state;
-              let iconName;
-              if (routeName === 'Home') {
-                iconName = 'home';
-              } else if (routeName === 'Profile') {
-                iconName = 'person';
-              }
-
-              // You can return any component that you like here!
-              return <Icon
-                name={iconName}
-                size={25}
-              />;
-            },
-          }),
-        }
-    );
-    ...
-   ```
-
-1. In Android devices you need to [load the NativeBase fonts](https://docs.nativebase.io/docs/GetStarted.html) ([example](https://github.com/GeekyAnts/NativeBase-KitchenSink/blob/CRNA/src/boot/setup.js)) before you can use them. It can be done by using useEffect hook in the _App.js_:
+1. In Android devices you might need to [load the NativeBase fonts](https://docs.nativebase.io/docs/GetStarted.html) ([example](https://github.com/GeekyAnts/NativeBase-KitchenSink/blob/CRNA/src/boot/setup.js)) before you can use them. It can be done by using useEffect hook in the _App.js_:
 
 ```jsx harmony
 import React, { useState, useEffect } from 'react';
