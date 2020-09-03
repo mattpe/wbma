@@ -21,7 +21,7 @@
    };
    ...
    ```
-1. Modify _getToken()_ function in _Login.js_. The function should check if _userToken_ matches the token fetched from the API and then allow or deny access to the app.
+1. Modify _getToken()_ function in _Login.js_. The function should check with the API if the saved _userToken_ is valid and then allow or deny access to the app.
    ```jsx
    const getToken = async () => {
        const userToken = await AsyncStorage.getItem('userToken');
