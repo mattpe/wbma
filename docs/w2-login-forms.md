@@ -209,5 +209,5 @@
    ```
 1. Use the saved user data in _Profile.js_
    - log user data to console (for debugging)
-   - use [<Text> components](https://reactnative.dev/docs/text) to display the user data on the profile page
+   - use [_Text_ component](https://reactnative.dev/docs/text) to display the user data on the profile page
 1. Add and commit changes to git, push to Github/GItLab.
