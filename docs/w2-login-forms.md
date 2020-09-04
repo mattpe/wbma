@@ -83,7 +83,30 @@
        </View>
    ...
    ```
-    * Use 'CustomHooks.js' in 'Using React Hooks...' article as an example to handle form events. Instead of using 'CustomHooks.js' as filename, use 'RegisterHooks.js'
+    
+    - Create a new re-usable componet called `FormTextInput` into 'components' folder to use the same styling for all text input fields
+    ```
+    ...
+    const FormTextInput = ({style, ...otherProps}) => {
+  return (
+    <TextInput
+      style={[styles.textInput, style]}
+      {...otherProps}
+    />
+  );
+};
+
+const styles = StyleSheet.create({
+  textInput: {
+    height: 40,
+    borderColor: '#ccc',
+    borderWidth: 1,
+  },
+});
+    ...
+    ```
+   
+    - Use 'CustomHooks.js' in 'Using React Hooks...' article as an example to handle form events. Instead of using 'CustomHooks.js' as filename, use 'RegisterHooks.js'
     ```javascript
     // RegisterHooks.js:
     import {useState} from 'react';
