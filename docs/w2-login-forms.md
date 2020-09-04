@@ -85,7 +85,7 @@
    ```
     
     - Create a new re-usable componet called `FormTextInput` into 'components' folder to use the same styling for all text input fields
-    ```
+    ```jsx
     ...
     const FormTextInput = ({style, ...otherProps}) => {
         return (
