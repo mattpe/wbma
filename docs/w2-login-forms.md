@@ -207,5 +207,7 @@
    const {setUser, isLoggedIn, user, setIsLoggedIn} = useContext(authContext);
    setUser(userdataFromApi.user); 
    ```
-1. Log the saved user data to console in Profile.js
+1. Use the saved user data in _Profile.js_
+   - log user data to console (for debugging)
+   - use [<Text> components](https://reactnative.dev/docs/text) to display the user data on the profile page
 1. Add and commit changes to git, push to Github/GItLab.
