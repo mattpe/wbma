@@ -9,16 +9,15 @@ class: center, middle
 
   When using NativeBase you should import the [`<Image>` component](https://facebook.github.io/react-native/docs/images.html#network-images) still from `react-native` library to avoid issues with network sourced images.
 
-
-### Task A: Convert the app we've made so far to use NativeBase
+### Setup
 
 1. Continue last exercise. Create a new branch with git.  
 1. Study [this article](https://blog.bitsrc.io/11-react-native-component-libraries-you-should-know-in-2018-71d2a8e33312) and [NativeBase](https://nativebase.io/)
 1. Convert the app we've made so far to use NativeBase
 1. Install NativeBase
-    - `npm install native-base --save`
+    - `npm i native-base`
     - `expo install expo-font`
-1. Remove all styling from the files where you use NativeBase components:
+1. Note: Remove all styling from the files where you use NativeBase components:
 
    ```jsx harmony
    // remove this part:
@@ -83,15 +82,17 @@ const App = () => {
   }
 
   return (
-    <MediaProvider>
-      <Navigator></Navigator>
-    </MediaProvider>
+    <AuthProvider>
+      <Navigator />
+    </AuthProvider>
   );
 };
 
 export default App;
 
 ```
+### Task A: Convert the app we've made so far to use NativeBase
+
 1. Try to make the app look like these images:
 
 ![Login screen](images/login.png)
