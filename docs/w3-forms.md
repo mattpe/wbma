@@ -10,7 +10,7 @@
 
 1. Study [Conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
     * especially [Inline If with Logical && Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator)
-1. Continue the previous exercise. Create a new git branch for these tasks.
+1. Continue the previous exercise. Create a new git branch 'smartforms' for these tasks.
 1. Show only login form when opening the Login page
    * remember that changing the view requires change in state (useState)
 1. Add a link/button for switching between login/register forms ("No account yet?" or something).
@@ -23,6 +23,8 @@
    onEndEditing={(evt) =>
         {
             const text = evt.nativeEvent.text;
+            console.log('reg form', text);
+            // TODO: function to check availability
         }
      }
    />

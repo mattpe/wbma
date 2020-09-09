@@ -11,7 +11,7 @@ class: center, middle
 
 ### Setup
 
-1. Continue last exercise. Create a new branch with git.  
+1. Continue last exercise. Create a new branch 'nativebase' with git.  
 1. Study [this article](https://blog.bitsrc.io/11-react-native-component-libraries-you-should-know-in-2018-71d2a8e33312) and [NativeBase](https://nativebase.io/)
 1. Convert the app we've made so far to use NativeBase
 1. Install NativeBase
@@ -28,27 +28,21 @@ class: center, middle
 1. [NativeBase components](https://docs.nativebase.io/Components.html#Components)
    - Some components you may find useful for the task: `Body`, `Button`, `Card`, `CardItem`, `Container`, `Content`, `Header`, `Icon`, `List`, `ListItem`, `Left`, `Right`, `Thumbnail`, `Text`, `Title`...    
    - By default you can use [Ionicons](https://ionicons.com/) as value for name attribute of [Icon](https://docs.nativebase.io/Components.html#icon-def-headref)
-1. In our app there are already `List` and `ListItem` components so if you want to use the [List](https://docs.nativebase.io/Components.html#list-def-headref) (and ListItem) component of NativeBase you need to use `import as` syntax:
+1. In our app there are already `ListItem` component so if you want to use the ListItem of [List](https://docs.nativebase.io/Components.html#list-def-headref) component of NativeBase you need to use `import as` syntax:
 
    ```jsx harmony
    ...
-   import {List as BaseList} from 'native-base';
+   import {ListItem as NBListItem} from 'native-base';
    ...
    return (
-         <BaseList
-           dataArray={media}
-           renderRow={
-             (item) => <ListItem
-               navigation={props.navigation}
-               singleMedia={item}
-             />
-           }
-           keyExtractor={(item, index) => index.toString()}
-         />
+         <NBListItem thumbnail>
+               <Left>
+                 <Thumbnail>
+         etc...
      );
    ```
    
-   **Note:** native-base `List` uses a different prop name for data array than react-native `FlatList`: Change `data` -> `dataArray` 
+   **Note:** native-base `List` is deprecated, use FlatList (which we already have in List.js)
 
 1. [Adding icons to bottom tabs](https://reactnavigation.org/docs/material-bottom-tab-navigator/#example)
 
@@ -109,7 +103,6 @@ export default App;
     - When fetching avatars, you can use _CurrentUserId to limit the amount of fetched data.
 1. Display users avatar image, name and email in profile page
    - You'll need to use existing or add more methods to 'ApiHooks.js' to achieve this
-   - Hint: Userdata is already in AsyncStorage
 
 ![Profile screen](images/profile.png)
   
