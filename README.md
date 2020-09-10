@@ -13,7 +13,7 @@ Front-end development materials & code examples
 1. [Week 2 - Navigation & login](docs/w2-login.md)
 1. [Week 2 - Login and registration with forms](docs/w2-login-forms.md)
 1. [Week 3 - NativeBase](docs/w3-NativeBase.md)
-1. [Week 3 - Forms](docs/w3-forms.md)
+1. [Week 3 - Conditional rendering and form validation](docs/w3-forms.md)
 1. [Week 4 - File upload](docs/w4-upload.md)
 1. [Week 5 - Media player](docs/w5-player.md)
 

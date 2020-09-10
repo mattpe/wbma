@@ -1,4 +1,4 @@
-# WBMA, Forms
+# WBMA, Conditional rendering and form validation
 
 ## 3/2019
 
@@ -35,6 +35,29 @@
 ### Task 2: Form validation
 
 * Study [Validating Forms in React Native](https://medium.com/@pavsidhu/validating-forms-in-react-native-7adc625c49cf) and [Validate.JS](http://validatejs.org/)
+* Create folder 'utils' and add there file 'validator.js': 
+   ```javascript
+   // adapted from function validate() in https://medium.com/@pavsidhu/validating-forms-in-react-native-7adc625c49cf
+   import validate from 'validate.js';
+   
+   const validator = (field, value, constraints) => {
+     let object = {};
+     if (typeof value === 'string') {
+       object[field] = value;
+     } else {
+       object = value;
+     }
+   
+     const constraint = constraints[field];
+     const result = validate(object, {[field]: constraint});
+     if (result) {
+       return result[field][0];
+     }
+     return null;
+   };
+   
+   export {validator};
+   ```
 * User inputs should always be checked before making any api calls
   * username must exist and be long enough (see below)
   * password must exist and be long enough (see below)
