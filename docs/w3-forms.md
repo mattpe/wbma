@@ -31,6 +31,20 @@
    ```
 
    * show notification if username is already in use
+      ```jsx
+       // example using nativebase, send error message as string (prop error)
+      const FormTextInput = ({error, ...otherProps}) => {
+        return (
+          <View>
+            <Item>
+              <Input {...otherProps} />
+            </Item>
+            {error !== '' &&
+            <Label style={{color: 'red', fontSize: 12}}>{error}</Label>}
+          </View>
+        );
+      };
+      ```
 
 ### Task 2: Form validation
 
