@@ -1,6 +1,6 @@
 # WBMA, Conditional rendering and form validation
 
-## 3/2019
+## 9/2020
 
 ---
 
@@ -35,7 +35,8 @@
 ### Task 2: Form validation
 
 * Study [Validating Forms in React Native](https://medium.com/@pavsidhu/validating-forms-in-react-native-7adc625c49cf) and [Validate.JS](http://validatejs.org/)
-* Create folder 'utils' and add there file 'validator.js': 
+* Create folder 'utils' and add there file 'validator.js':
+
    ```javascript
    // adapted from function validate() in https://medium.com/@pavsidhu/validating-forms-in-react-native-7adc625c49cf
    import validate from 'validate.js';
@@ -58,19 +59,20 @@
    
    export {validator};
    ```
+   
 * User inputs should always be checked before making any api calls
   * username must exist and be long enough (see below)
   * password must exist and be long enough (see below)
   * email format must be correct
   * full name is optional but should be validated if entered(?)
 
+1. Add required input validation to each field
+1. Notify the user about problems when needed
+1. You can also combine username availability with the rest of the form validation
 1. Add "confirm password" functionality
     * add another password field
     * check that user input of both password fields match before making an api call
     * notify user if the passwords do not match
-1. Add required input validation to each field
-1. Notify the user about problems when needed
-1. You can also combine username availability with the rest of the form validation
 
 _Note:_ new user registrations without valid username (min length 3 characters), password (min length 5) and email (correctly formatted) are not accepted
 
@@ -78,3 +80,4 @@ _Note:_ new user registrations without valid username (min length 3 characters),
 
 * Add user update functionality to profile page
 * Check: <https://media.mw.metropolia.fi/wbma/docs/#api-User-PutUser>
+* Add user notifications for other errors too (network connection problems, failed login attempt, etc.)
