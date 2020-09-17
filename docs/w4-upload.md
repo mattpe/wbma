@@ -21,7 +21,7 @@
 1. Study [ImagePicker](https://docs.expo.io/versions/v34.0.0/sdk/imagepicker/) and use the example to select Image from ImagePicker and display it in `<Image>` when the first button is pressed.
 1. When uploading a file to the API, you need to send [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects)
     - current version of Expo or React Native seems to have an issue with fetch using FormData so lets try [Axios](https://github.com/axios/axios) instead 
-    - in Upload.js create functon 'doUpload' which is called by onPress event of the second button (a bit like LoginForm.js).
+    - in Upload.js create functon 'doUpload' which is called by onPress event of the second button (a bit like in _Login.js_).
        - you can use [this article](https://stackoverflow.com/questions/42521679/how-can-i-upload-a-photo-with-expo) as a reference (use Axios instead of fetch). See the part after this comment "// ImagePicker saves the taken photo to disk and returns a local URI to it". NOTE: the example generates an invalid [mime-type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JPEG) for `.jpg` files. This can be fixed e.g. ("quick'n'dirty" style) by adding a row `if (type === 'image/jpg') type = 'image/jpeg';` after the `let type = ...` statement
     - After image is uploaded (promise returned by async upload function is completed) redirect to Home
         - wait 1-2 seconds before going to Home so that thumbnail (generated on the server) is ready
@@ -29,18 +29,18 @@
   
 1. Upload button should be activated only when the form is correctly filled and media file is selected
     - Title is required and minimun length is ?
-    - Descriptio minimun length is ?
+    - Description minimun length is ?
     - Hint: Button component has property 'disabled'  
 1. Add reset button for clearing the whole form and image preview
     - also reset the form after file is uploaded.
     
-### Task B: List files limiting to those uploaded from own app
+### Task B: List files limiting to those uploaded from your own app
 
-1. Come up with an identifier for your app. It can be anything. For example LH345D
+1. Come up with an unique identifier for your app. It can be anything. For example _LH345D_. 
 1. When uploading add the identifier as a [tag](http://media.mw.metropolia.fi/wbma/docs/#api-Tag-PostTag) to the uploaded file.
 1. Modify useAllMedia() in ApiHooks.js to show only the files which have the identifier tag of your app.
 
 ### Extra: Additional features
 
-1. Show spinners when loading and uploading data
+1. Show [spinners](https://docs.nativebase.io/Components.html#Spinner) when loading and uploading data
 1. Could the code be cleaner? Maybe put some JSX into separate files (to components folder)
