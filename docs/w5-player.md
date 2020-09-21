@@ -44,7 +44,7 @@
     - for 'view' use Single.js
     - delete does not need it's own view
        - after deleting use navigation.replace() to update the file list.
-    - modify is 90% same as Upload
+    - Create _Modify.js_ to _views_ folder. Modify is 90% same as Upload
         - make a copy of Upload.js and remove ImagePicker
 
 ### Tips for project
