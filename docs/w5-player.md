@@ -7,7 +7,7 @@
 ### Task: Modify page for viewing single media files
 #### Unless you are using Metropolia's wifi - due to irregularites in Metropolia's firewall - you'll need to enable VPN on your mobile device to make videos show on your device. [Instructions](https://wiki.metropolia.fi/pages/viewpage.action?pageId=149652071#VPN-et%C3%A4yhteydet-VPN-apuohjelmanasennusjak%C3%A4ytt%C3%B6mobiililaitteissa)
 
-1. Continue the previous exercise. Create a new git branch for these tasks.
+1. Continue the previous exercise. Create a new git branch 'player' for these tasks.
 1. Modify 'Single.js'. Features:
     - depending on file type use `<Image>` or `<Video>` to show/play media file
         - https://docs.expo.io/versions/latest/sdk/video/
@@ -25,8 +25,10 @@
 1. Add new view 'MyFiles.js'
 1. Add a button (for example to profile page) which opens MyFiles
 1. Display a list of user's own files
-    - very similar to Home (and List)
-    - [Navigation events](https://reactnavigation.org/docs/en/4.x/navigation-events.html)
+    - Very similar to Home
+       - You can use List and ListItem as example and make new components.
+       - Or you can send props to List and depending the value of the prop show edit and delete buttons (if statement)
+       - In both cases make new function useMyMedia() to ApiHooks. It's very similar to 'useLoadMedia'. The difference is that it should return only the logged in users own files.
 1. Add 'view', 'modify' and 'delete' buttons next to each file.
     - onPress example for delete:
     ```jsx harmony
@@ -40,7 +42,8 @@
     ```
 1. Add corresponding functionality to the buttons
     - for 'view' use Single.js
-    - delete does not need it's own page
+    - delete does not need it's own view
+       - after deleting use navigation.replace() to update the file list.
     - modify is 90% same as Upload
         - make a copy of Upload.js and remove ImagePicker
 
@@ -48,7 +51,6 @@
 - Add a tag with your app name automatically to all uploaded files. This way they don't get mixed with files uploaded by other apps.
 - If you want to save additional data with files, you can add it to the 'description' like this:
     ```javascript
-      
       ...
       const moreData = {
         description: 'This is the actual description',
