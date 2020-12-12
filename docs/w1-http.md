@@ -59,5 +59,33 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
           return json;
         }));
       ```
-  1. Save the data to state and then print the data to the table
-  1. git add, commit & push to remote repository
+1. Save the data to state and then print the data to the table
+1. git add, commit & push to remote repository
+
+## Custom hooks, Task C
+
+1. Create `hooks` folder and add there a new file `ApiHooks.js`.
+1. Create a custom hook `useLoadMedia` to ApiHooks.js and move fetch related functionalities from List.js:
+   ```javascript
+   // TODO: add necessary imports
+   const apiUrl = 'http://media.mw.metropolia.fi/wbma/';
+   const useLoadMedia = () => {
+     // TODO: move mediaArray state here
+     // TODO: move loadMedia function here
+     // TODO: move useEffect here
+     return mediaArray;
+   };
+
+   export {useLoadMedia};
+   ```
+1. Modify List.js:
+   ```javascript
+   ...
+   const List = ({navigation}) => {
+     const mediaArray = useLoadMedia();
+     return (
+     <FlatList 
+   ...
+   ```
+1. The app should work the same as before
+1. git add, commit & push to remote repository
