@@ -166,9 +166,14 @@
         },
         body: JSON.stringify(inputs),
       };
-      const response = await fetch(apiUrl + 'users', fetchOptions);
-      const json = await response.json();
-      console.log(json);
+      try {
+         const response = await fetch(apiUrl + 'users', fetchOptions);
+         const json = await response.json();
+         return json;
+      } catch (e) {
+          console.log('ApiHooks register', e.message);
+          return false;
+      }
     };
     ```
 1. To prevent warnings about Promises use try/catch for all awaits. You can use one try for multiple awaits.
@@ -176,20 +181,18 @@
    ```jsx
    ...
    const doRegister = async () => {
-       try {
-         const serverResponse = await register(inputs); // remember imports
-         console.log(serverResponse);   
-       } catch (e) {
-         console.log(e.message);
+       const serverResponse = await register(inputs);
+       if (serverResponse) {
+         Alert.alert(serverResponse.message);
+       } else {
+         Alert.alert('register failed');
        }
-     };
+   };
    
    const {inputs, handleInputChange} = useSignUpForm(); // makes inputs and handleInput change visible from RegisterHooks.js
    ...
    ```
 1. Do the login functionalites the same way as above to LoginForm.js
-1. Make login to happen automatically after registering
-   * in other words run _logIn()_ after registering is done
 1. Add the final functionalities:
     * when logging in, save user data to [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react). Save token to AsyncStorage. With Context you can create a global state which can be accessed from all components.
     * Modify AuthContext.js:
