@@ -18,7 +18,7 @@
      // handle errors with try/catch and response.ok
      // if login succesful do the following
      await AsyncStorage.setItem('userToken', tokenFromApi);
-     setLoggedIn(true);
+     setIsLoggedIn(true);
    };
    ...
    useEffect(() => {
