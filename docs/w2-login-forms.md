@@ -12,13 +12,21 @@
    ```jsx harmony
    ...
    const logIn = async () => {
-     // do async fetch here like in List.js
+     // make login function to ApiHooks.js and do async fetch there, call the function here
      // hard code your username and password
      // you need to use POST method, see API documentation for details
      // handle errors with try/catch and response.ok
+     // if login succesful do the following
      await AsyncStorage.setItem('userToken', tokenFromApi);
-     props.navigation.navigate('Home');
+     setLoggedIn(true);
    };
+   ...
+   useEffect(() => {
+    getToken();
+    if (isLoggedIn) {
+      navigation.navigate('Home');
+    }
+   }, []);
    ...
    ```
 1. Modify _getToken()_ function in _Login.js_. The function should check with the API if the saved _userToken_ is valid and then allow or deny access to the app.
@@ -30,7 +38,6 @@
        // you need to send userToken
        // if you get successful result 
        // set isLoggedIn to true
-       // and navigate to Home
      };
    ```
 
