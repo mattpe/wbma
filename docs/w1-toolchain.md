@@ -34,17 +34,16 @@ Press _ctrl-shift-x_ or click extensions icon on the left panel.
 
 Search and install:
 
+- Prettier
 - EditorConfig for VS Code
 - Auto Import
 - ESLint
 - JavaScript (ES6) Code Snippets
-- React Pure To Class
-- React-Native/React/Redux snippets for es6/es7
+- ES7 React/Redux/GraphQL/React-Native snippets
 
 Other handy extensions:
 
 - Duplicate file: Add _right-click -> Duplicate file_ action
-- Prettier: Code formatter
 
 #### VSCode - Basic Usage
 
