@@ -84,20 +84,20 @@
 
 ### B. Context
 1. To do actual login/logout we need to add a [context](https://reactjs.org/docs/context.html) to change the value of isLoggedIn and to share that to different components like Navigator, Login and Profile
-1. Create folder 'contexts' and there add a new file 'AuthContext.js':
+1. Create folder 'contexts' and there add a new file 'MainContext.js':
    ```jsx
    import React, {useState} from 'react';
    import PropTypes from 'prop-types';
    
-   const AuthContext = React.createContext({});
+   const MainContext = React.createContext({});
    
    const AuthProvider = (props) => {
      const [isLoggedIn, setIsLoggedIn] = useState(false);
    
      return (
-       <AuthContext.Provider value={[isLoggedIn, setIsLoggedIn]}>
+       <MainContext.Provider value={[isLoggedIn, setIsLoggedIn]}>
          {props.children}
-       </AuthContext.Provider>
+       </MainContext.Provider>
      );
    };
    
@@ -105,7 +105,7 @@
      children: PropTypes.node,
    };
    
-   export {AuthContext, AuthProvider};
+   export {MainContext, AuthProvider};
    ```
 1. Add AuthProvider to App.js so components can access the context
    ```jsx
@@ -115,18 +115,18 @@
    </AuthProvider>
    ...
    ```
-1. Modify Navigator.js to use AuthContext:
+1. Modify Navigator.js to use MainContext:
    ```jsx
    ...
    const StackScreen = () => {
-     const [isLoggedIn] = useContext(AuthContext);
+     const [isLoggedIn] = useContext(MainContext);
    ...
    ```
-1. Modify Login.js to use AuthContext:
+1. Modify Login.js to use MainContext:
    ```jsx
    ...
    const Login = (props) => { // props is needed for navigation
-     const [isLoggedIn, setIsLoggedIn] = useContext(AuthContext);
+     const [isLoggedIn, setIsLoggedIn] = useContext(MainContext);
      console.log('ili', isLoggedIn);
      const logIn = () => {
        setIsLoggedIn(true);
@@ -141,7 +141,7 @@
    ```jsx harmony
    ...
    const Profile = (props) => {
-     const [isLoggedIn, setIsLoggedIn] = useContext(AuthContext);
+     const [isLoggedIn, setIsLoggedIn] = useContext(MainContext);
      console.log('profile', isLoggedIn);
      const logout = () => {
        setIsLoggedIn(false);

@@ -195,7 +195,7 @@
 1. Do the login functionalites the same way as above to LoginForm.js
 1. Add the final functionalities:
     * when logging in, save user data to [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react). Save token to AsyncStorage. With Context you can create a global state which can be accessed from all components.
-    * Modify AuthContext.js:
+    * Modify MainContext.js:
     ```jsx
     ...
     const AuthProvider = ({children}) => {
@@ -203,21 +203,22 @@
       const [user, setUser] = useState({});
     
       return (
-        <AuthContext.Provider value={{isLoggedIn, setIsLoggedIn, user, setUser}}>
+        <MainContext.Provider value={{isLoggedIn, setIsLoggedIn, user, setUser}}>
           {children}
-        </AuthContext.Provider>
+        </MainContext.Provider>
       );
     };
     ...
     ```
-   * <b>Note the change from [] to {} in AuthContext.Provider value</b>. This means that you need to change square brackets to curly braces everywhere where you have `const [isLoggedIn, setIsLoggedIn] = useContext(AuthContext);`
+   * <b>Note the change from [] to {} in MainContext.Provider value</b>. This means that you need to change square brackets to curly braces everywhere where you have `const [isLoggedIn, setIsLoggedIn] = useContext(MainContext);`
    * Setting user data example:
    ```javascript
    // now the vars and funcs can be in any order.
-   const {setUser, isLoggedIn, user, setIsLoggedIn} = useContext(authContext);
+   const {setUser, isLoggedIn, user, setIsLoggedIn} = useContext(MainContext);
    setUser(userdataFromApi.user); 
    ```
+1. Try the app on a real device. You can see that it's hard/impossible to write since keyboard is covering the input fields. Use [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview) in Login.js to fix the issue. 
 1. Use the saved user data in _Profile.js_
    - log user data to console (for debugging)
    - use [_Text_ component](https://reactnative.dev/docs/text) to display the user data on the profile page
-1. Add and commit changes to git, push to Github/GItLab.
+1. Add and commit changes to git, push to Github/GitLab.

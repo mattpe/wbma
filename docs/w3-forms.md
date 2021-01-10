@@ -9,7 +9,7 @@
 ### Task 1: Smarter Login/Registration page
 
 1. Study [Conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
-    * especially [Inline If with Logical && Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator)
+    * especially [Inline If with Logical && Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator) and [Inline If-Else with Conditional Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
 1. Continue the previous exercise. Create a new git branch 'smartforms' for these tasks.
 1. Show only login form when opening the Login page
    * remember that changing the view requires change in state (useState)
@@ -19,9 +19,8 @@
    * use e.g. [onChangeText](https://facebook.github.io/react-native/docs/textinput.html#onchangetext)  or [onEndEditing](https://facebook.github.io/react-native/docs/textinput.html#onendediting) events
 
    ```jsx harmony
-   <TextInput
-   onEndEditing={(evt) =>
-        {
+   <FormTextInput
+        onEndEditing={(evt) => {
             const text = evt.nativeEvent.text;
             console.log('reg form', text);
             // TODO: function to check availability
@@ -33,15 +32,14 @@
    * show notification if username is already in use
       ```jsx
        // example using nativebase, send error message as string (prop error)
-      const FormTextInput = ({error, ...otherProps}) => {
+      const FormTextInput = ({style, error, label, ...otherProps}) => {
         return (
-          <View>
-            <Item>
-              <Input {...otherProps} />
-            </Item>
-            {error !== '' &&
-            <Label style={{color: 'red', fontSize: 12}}>{error}</Label>}
-          </View>
+          <Input
+              errorStyle={{color: 'red'}}
+              errorMessage={error}
+              style={[style]}
+              {...otherProps}
+           />
         );
       };
       ```
