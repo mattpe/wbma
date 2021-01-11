@@ -52,6 +52,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
         'google',
         'eslint:recommended',
         'plugin:react/recommended',
+        'plugin:prettier/recommended',
       ],
       'globals': {
         'Atomics': 'readonly',
@@ -66,13 +67,15 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
       },
       'plugins': [
         'react',
-        'react-native'
+        'react-native',
+        'prettier'
       ],
       'rules': {
         'react/jsx-uses-react': 'error',
-            'react/jsx-uses-vars': 'error',
-            'no-console': 0,
-            'require-jsdoc': 0,
+        'react/jsx-uses-vars': 'error',
+        'no-console': 0,
+        'require-jsdoc': 0,
+        'prettier/prettier': 'error',
       },
       'settings': {
         'react': {
@@ -114,7 +117,19 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
     insert_final_newline = true
     ```
 
-1. In VSCode you can format code automatically with _shift-alt-f_
+1. Install prettier: `npm install --save-dev prettier eslint-plugin-prettier eslint-config-prettier`
+1. Create new file '.prettierrc' and add this content: 
+   ```
+   {
+       "semi": true,
+       "singleQuote": true,
+       "tabWidth": 2,
+       "useTabs": false,
+       "bracketSpacing": false
+   }
+   ```   
+
+1. In VSCode you can format code automatically with _shift-alt-f_. Restart VSCode if necessary.
 1. In VSCode fix potential curly-braces error in Preferences/Settings
     * search for 'braces' and uncheck all 'Insert space after...' checkboxes
 1. Convert the App function to arrow function:
