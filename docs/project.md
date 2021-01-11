@@ -30,3 +30,5 @@ Media files location: http://media.mw.metropolia.fi/wbma/uploads/
 Tip: Use Postman to test how the API works: [Postman](https://www.getpostman.com/)
 
 [Example app](https://expo.io/@ilkkamtk/projects/MyApp) using the API. Install [Expo client](https://expo.io/@ilkkamtk/projects/MyApp) to test on your device.
+
+[Proper readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
