@@ -42,7 +42,8 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 1. Modify .eslintrc.js:
 
    ```JavaScript
-    module.exports = {
+   // eslint-disable-next-line no-undef 
+   module.exports = {
       'parser': 'babel-eslint',
       'env': {
         'browser': true,
