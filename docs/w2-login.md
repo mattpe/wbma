@@ -166,7 +166,7 @@
 1. Import AsyncStorage to Login.js and Profile.js:
    ```jsx
    ...
-   import AsyncStorage from '@react-native-community/async-storage';
+   import AsyncStorage from '@react-native-async-storage/async-storage';
    ... 
    ```
 1. Modify logIn() function in Login.js:
