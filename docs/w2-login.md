@@ -7,7 +7,7 @@
 * Study:
   * [React Navigation authentication flows](https://reactnavigation.org/docs/auth-flow/)
   * [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
-  * [AsyncStorage](https://react-native-community.github.io/async-storage/docs/usage/)
+  * [AsyncStorage](https://react-native-async-storage.github.io/async-storage/docs/install/)
                                                                                        
 ### A. hard coded login
 
