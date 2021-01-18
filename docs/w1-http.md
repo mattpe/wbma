@@ -81,7 +81,7 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
 1. Modify List.js:
    ```javascript
    ...
-   const List = ({navigation}) => {
+   const List = () => {
      const mediaArray = useLoadMedia();
      return (
      <FlatList 
