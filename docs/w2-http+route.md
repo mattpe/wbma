@@ -220,6 +220,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     ``` 
 1. When using props, remember to add the appropriate PropTypes
 1. The app should at this point navigate to 'Single' component when any thumbnail is tapped
+1. Try props with destructuring. E.g. `const Home = ({navigation}) => {` etc...
   
 #### E. Show selected file in 'Single' component
 1. Study [Passing parameters to routes](https://reactnavigation.org/docs/params/)
