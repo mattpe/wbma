@@ -91,7 +91,7 @@
    
    const MainContext = React.createContext({});
    
-   const AuthProvider = (props) => {
+   const MainProvider = (props) => {
      const [isLoggedIn, setIsLoggedIn] = useState(false);
    
      return (
@@ -101,18 +101,18 @@
      );
    };
    
-   AuthProvider.propTypes = {
+   MainProvider.propTypes = {
      children: PropTypes.node,
    };
    
-   export {MainContext, AuthProvider};
+   export {MainContext, MainProvider};
    ```
-1. Add AuthProvider to App.js so components can access the context
+1. Add MainProvider to App.js so components can access the context
    ```jsx
    ...
-    <AuthProvider>
+    <MainProvider>
          <Navigator/>   
-   </AuthProvider>
+   </MainProvider>
    ...
    ```
 1. Modify Navigator.js to use MainContext:

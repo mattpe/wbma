@@ -198,7 +198,7 @@
     * Modify MainContext.js:
     ```jsx
     ...
-    const AuthProvider = ({children}) => {
+    const MainProvider = ({children}) => {
       const [isLoggedIn, setIsLoggedIn] = useState(false);
       const [user, setUser] = useState({});
     
