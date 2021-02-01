@@ -16,7 +16,7 @@
    - `expo install expo-constants`
 1. Create a new file 'views/Upload.js' for the upload functionality. Add function component and the usual imports and exports.
 1. Add a button to bottom tabs to navigate to Upload component
-1. add `<Image>` and input fields for 'title' and 'description' like in Login.js. Also add two buttons for selecting and uploading a file.
+1. add `<Image>` and input fields for 'title' and 'description' like in LoginForm.js. Also add two buttons for selecting and uploading a file.
 1. Create 'hooks/UploadHooks.js' and make hooks for title and description like in LoginHooks.js
 1. Study [ImagePicker](https://docs.expo.io/versions/v34.0.0/sdk/imagepicker/) and use the example to select Image from ImagePicker and display it in `<Image>` when the first button is pressed.
 1. When uploading a file to the API, you need to send [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects)
