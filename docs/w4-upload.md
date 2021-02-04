@@ -1,6 +1,6 @@
 # WBMA, Forms + Upload
 
-## 9/2020
+## 9/2021
 
 ---
 
@@ -23,8 +23,9 @@
     - current version of Expo or React Native seems to have an issue with fetch using FormData so lets try [Axios](https://github.com/axios/axios) instead 
     - in Upload.js create functon 'doUpload' which is called by onPress event of the second button (a bit like in _Login.js_).
        - you can use [this article](https://stackoverflow.com/questions/42521679/how-can-i-upload-a-photo-with-expo) as a reference (use Axios instead of fetch). See the part after this comment "// ImagePicker saves the taken photo to disk and returns a local URI to it". NOTE: the example generates an invalid [mime-type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JPEG) for `.jpg` files. This can be fixed e.g. ("quick'n'dirty" style) by adding a row `if (type === 'image/jpg') type = 'image/jpeg';` after the `let type = ...` statement
-    - After image is uploaded (promise returned by async upload function is completed) redirect to Home
-        - wait 1-2 seconds before going to Home so that thumbnail (generated on the server) is ready
+    - display an [`<ActivityIndicator>`](https://reactnative.dev/docs/activityindicator) when file is being uploaded
+    - After the file is uploaded (promise returned by async upload function is completed) redirect to Home
+        - there might be a need to wait 1-2 seconds before going to Home so that thumbnail (generated on the server) is ready
         - when going to Home-view use [push](https://reactnavigation.org/docs/stack-actions/#push) instead of [navigate](https://reactnavigation.org/docs/navigation-actions/#navigate). Why? 
   
 1. Upload button should be activated only when the form is correctly filled and media file is selected
