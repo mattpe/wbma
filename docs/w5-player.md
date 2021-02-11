@@ -45,7 +45,7 @@
        - after deleting use update state in `MainContext` to update the file list.
     - Create _Modify.js_ to _views_ folder. Modify is 90% same as Upload
         - make a copy of Upload.js and remove ImagePicker
-        - use PUT instead of POST
+        - use [PUT](http://media.mw.metropolia.fi/wbma/docs/#api-Media-UpdateMediaFile) instead of POST
 
 ### Tips for the project
 
