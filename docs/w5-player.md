@@ -4,8 +4,7 @@
 
 ## Media Player
 
-### Task: Modify page for viewing single media files
-#### Unless you are using Metropolia's wifi - due to irregularites in Metropolia's firewall - you'll need to enable VPN on your mobile device to make videos show on your device. [Instructions](https://wiki.metropolia.fi/pages/viewpage.action?pageId=149652071#VPN-et%C3%A4yhteydet-VPN-apuohjelmanasennusjak%C3%A4ytt%C3%B6mobiililaitteissa)
+### Task A: Modify page for viewing single media files
 
 1. Continue the previous exercise. Create a new git branch 'player' for these tasks.
 1. Modify 'Single.js'. Features:
@@ -20,7 +19,7 @@
             - add likes to image(s) with Postman or add 'like' button to Single.js
         - optional: show users who like the image
 
-## Show user's files + update
+## Task B: Show user's files + update
 
 1. Add new view 'MyFiles.js'
 1. Add a button (for example to profile page) which opens MyFiles
@@ -29,7 +28,7 @@
        - You can use List and ListItem as example and make new components.
        - Or you can send props to List and depending the value of the prop show edit and delete buttons (if statement)
        - In both cases make new function useMyMedia() to ApiHooks. It's very similar to 'useLoadMedia'. The difference is that it should return only the logged in users own files.
-1. Add 'view', 'modify' and 'delete' buttons next to each file.
+1. Add 'view', 'modify' and 'delete' buttons next to each file owned by the logged in user
     - onPress example for delete:
     ```jsx harmony
      <Button onPress={() => {
@@ -43,13 +42,16 @@
 1. Add corresponding functionality to the buttons
     - for 'view' use Single.js
     - delete does not need it's own view
-       - after deleting use navigation.replace() to update the file list.
+       - after deleting use update state in `MainContext` to update the file list.
     - Create _Modify.js_ to _views_ folder. Modify is 90% same as Upload
         - make a copy of Upload.js and remove ImagePicker
+        - use PUT instead of POST
 
-### Tips for project
+### Tips for the project
+
 - Add a tag with your app name automatically to all uploaded files. This way they don't get mixed with files uploaded by other apps.
 - If you want to save additional data with files, you can add it to the 'description' like this:
+
     ```javascript
       ...
       const moreData = {
@@ -63,7 +65,9 @@
       ...
       
     ```
+    
     You can extract data later like this:
+
     ```javascript
     const allData = JSON.parse(descriptionFromAPI);
     const description = allData.description;
