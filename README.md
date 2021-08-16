@@ -29,7 +29,7 @@ Course content is inside [docs](docs/) folder.
 
 ### ES6 + React
 
-#### Course pre-tasks (Study at least 1, 2, 3 and 4)
+#### Course pre-tasks (Study at least 1-4 and 6)
 
 1. [http://javascript.info/](http://javascript.info/)
     - Study at least these sections:
