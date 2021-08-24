@@ -82,7 +82,7 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
    ```javascript
    ...
    const List = () => {
-     const mediaArray = useLoadMedia();
+     const {mediaArray} = useMedia();
      return (
      <FlatList 
    ...
