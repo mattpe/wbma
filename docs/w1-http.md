@@ -69,14 +69,14 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
    ```javascript
    // TODO: add necessary imports
    const apiUrl = 'http://media.mw.metropolia.fi/wbma/';
-   const useLoadMedia = () => {
+   const useMedia = () => {
      // TODO: move mediaArray state here
      // TODO: move loadMedia function here
      // TODO: move useEffect here
      return mediaArray;
    };
 
-   export {useLoadMedia};
+   export {useMedia};
    ```
 1. Modify List.js:
    ```javascript
