@@ -73,7 +73,7 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
      // TODO: move mediaArray state here
      // TODO: move loadMedia function here
      // TODO: move useEffect here
-     return mediaArray;
+     return {mediaArray};
    };
 
    export {useMedia};
