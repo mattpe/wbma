@@ -151,7 +151,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     // TODO: add neccessary imports
     
    // add after createBottomTabNavigator
-    const Stack = createStackNavigator();
+    const Stack = createNativeStackNavigator();
    
    const TabScreen = () => {
      return (
