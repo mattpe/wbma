@@ -16,7 +16,7 @@ Study:
 #### A
 1. Create a new react native project called 'Stack' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
 1. Install react-navigation with npm `npm i @react-navigation/native`
-1. Install react-navigation-stack with npm `npm i @react-navigation/stack`
+1. Install react-navigation-stack with npm `npm i @react-navigation/native-stack`
 1. Install these packages with expo to get correct versions: `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
 1. Follow [Hello React Navigation](https://reactnavigation.org/docs/hello-react-navigation/) and [Moving between screens](https://reactnavigation.org/docs/navigating/) articles to create a simple stack navigation
 
