@@ -34,11 +34,11 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     * Each thumbnail is TouchableOpacity and tapping them should take to 'Single' to show the selected media file (just images at this point)
 1. Install react-navigation with npm `npm i @react-navigation/native`
 1. Install react-navigation-bottom-tabs with npm `npm i @react-navigation/bottom-tabs`
-1. Install react-navigation-stack with npm `npm i @react-navigation/stack`
-1. Install these packages with expo to get correct versions: `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
-1. Create new folder 'views'
-1. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
-1. Home.js will be the component that should show first when the app starts
+1. Install react-navigation-stack with npm `npm i @react-navigation/native-stack`
+3. Install these packages with expo to get correct versions: `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
+4. Create new folder 'views'
+5. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
+6. Home.js will be the component that should show first when the app starts
     * Copy the content of App.js to Home.js and change function name and export default to Home
     * Modify Home function: 
     ```jsx harmony
