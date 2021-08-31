@@ -1,7 +1,5 @@
 # Login, Register
 
-## 2/2019
-
 ## Authentication
 
 * Study:
@@ -83,6 +81,7 @@
 1. At this point you should see Login screen when you start the app. If you change the value of isLoggedIn to true you should see the Home page
 
 ### B. Context
+
 1. To do actual login/logout we need to add a [context](https://reactjs.org/docs/context.html) to change the value of isLoggedIn and to share that to different components like Navigator, Login and Profile
 1. Create folder 'contexts' and there add a new file 'MainContext.js':
    ```jsx
