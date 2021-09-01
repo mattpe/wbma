@@ -1,4 +1,4 @@
-# Login, Register
+# Login (dummy)
 
 ## Authentication
 
