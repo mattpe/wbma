@@ -1,10 +1,6 @@
-# WBMA, Conditional rendering and form validation
+# Conditional rendering and form validation
 
-## 9/2020
-
----
-
-## Forms
+## Smarter forms
 
 ### Task 1: Smarter Login/Registration page
 
