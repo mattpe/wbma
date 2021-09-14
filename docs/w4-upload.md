@@ -20,7 +20,7 @@
 1. Create 'hooks/UploadHooks.js' and make hooks for title and description like in LoginHooks.js
 1. Study [ImagePicker](https://docs.expo.io/versions/v34.0.0/sdk/imagepicker/) and use the example to select Image from ImagePicker and display it in `<Image>` when the first button is pressed.
 1. When uploading a file to the API, you need to send [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects)
-    - current version of Expo or React Native seems to have an issue with fetch using FormData so lets try [Axios](https://github.com/axios/axios) instead 
+    - if current version of Expo or React Native seems to have an issue with fetch using FormData try [Axios](https://github.com/axios/axios) instead. Currently (9/21) fetch seems to be working.
     - in Upload.js create functon 'doUpload' which is called by onPress event of the second button (a bit like in _Login.js_).
        - you can use [this article](https://stackoverflow.com/questions/42521679/how-can-i-upload-a-photo-with-expo) as a reference (use Axios instead of fetch). See the part after this comment "// ImagePicker saves the taken photo to disk and returns a local URI to it". NOTE: the example generates an invalid [mime-type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JPEG) for `.jpg` files. This can be fixed e.g. ("quick'n'dirty" style) by adding a row `if (type === 'image/jpg') type = 'image/jpeg';` after the `let type = ...` statement
        - !!IMPORTANT!! In iOS type can be just 'image' or 'video' etc. Android requires full MIME type like 'image/png'. That is why there is 'Infer the type of the image' in the article above.
