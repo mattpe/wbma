@@ -46,7 +46,7 @@
 1. Add corresponding functionality to the buttons
     - for 'view' use Single.js
     - delete does not need it's own view
-       - after deleting use update state in `MainContext` to update the file list.
+       - after deleting update the file list.
     - Create _Modify.js_ to _views_ folder. Modify is 90% same as Upload
         - make a copy of Upload.js and remove ImagePicker
         - use [PUT](http://media.mw.metropolia.fi/wbma/docs/#api-Media-UpdateMediaFile) instead of POST
