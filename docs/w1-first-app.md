@@ -44,10 +44,11 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
    ```JavaScript
    // eslint-disable-next-line no-undef 
    module.exports = {
-      'parser': 'babel-eslint',
+      'parser': '@babel/eslint-parser',
       'env': {
         'browser': true,
         'es2020': true,
+        'react-native/react-native': true,
       },
       'extends': [
         'google',
@@ -63,7 +64,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
         'ecmaFeatures': {
           'jsx': true,
         },
-        'ecmaVersion': 2018,
+        'ecmaVersion': 13,
         'sourceType': 'module',
       },
       'plugins': [
