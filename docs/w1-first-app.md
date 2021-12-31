@@ -27,7 +27,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 
 **b.**
 
-1. Install ESlint to your project `npm i --save-dev eslint eslint-plugin-react eslint-plugin-react-native babel-eslint`
+1. Install ESlint to your project `npm i eslint @babel/core @babel/eslint-parser eslint-plugin-react-native`
 1. Initialize ESlint: `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init` (note: needs an interactive shell and does not work in Git Bash on Windows. Use cmd or VSCode's terminal instead.)
     * Choose:
         1. To check syntax, find problems, and enforce code style
