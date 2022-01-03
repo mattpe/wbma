@@ -139,12 +139,16 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
     ```jsx harmony
    import React from 'react';
    import {StyleSheet, Text, View} from 'react-native';
-
+   import {StatusBar} from 'expo-status-bar';
+   
    const App = () => {
      return (
-       <View style={styles.container}>
-         <Text>Open up App.js to start working on your app!</Text>
-       </View>
+       <>
+          <View style={styles.container}>
+            <Text>Open up App.js to start working on your app!</Text>
+          </View>
+       <StatusBar style="auto"/>
+       </>
      );
    };
 
@@ -275,10 +279,12 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
    ```jsx harmony
     const App = () => {
       return (
-        <SafeAreaView style={styles.container}>
-          <List />
+        <>
+          <SafeAreaView style={styles.container}>
+            <List />
+          </SafeAreaView>
           <StatusBar style="auto"/>
-        </SafeAreaView>
+        </>
       );
    };
    ```
