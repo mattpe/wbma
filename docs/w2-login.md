@@ -157,43 +157,41 @@
 
 ### C. Remembering if user has logged in
 1. Install [AsyncStorage](https://react-native-async-storage.github.io/async-storage/docs/install/): `npm i @react-native-async-storage/async-storage`
-1. Import AsyncStorage to Login.js and Profile.js:
+2. Import AsyncStorage to Login.js and Profile.js:
    ```jsx
    ...
    import AsyncStorage from '@react-native-async-storage/async-storage';
    ... 
    ```
-1. Modify logIn() function in Login.js:
+3. Modify logIn() function in Login.js:
    ```jsx
    const logIn = async () => {
       setIsLoggedIn(true);   
       await AsyncStorage.setItem('userToken', 'abc');
-      props.navigation.navigate('Home');
+      navigation.navigate('Home');
      };
    ```
-1. Modify logout() function in Profile.js:
+4. Modify logout() function in Profile.js:
    ```jsx
    const logout = async () => {
        setIsLoggedIn(false);
        await AsyncStorage.clear();
-       props.navigation.navigate('Login');
+       navigation.navigate('Login');
      };
    ```
-1. Add getToken() function to Login.js to check the token when app starts:
+5. Add getToken() function to Login.js to check the token when app starts:
    ```jsx
    const getToken = async () => {
-       const userToken = await AsyncStorage.getItem('userToken');
+       // TODO: save the value of userToken saved in AsyncStorage as userToken
        console.log('token', userToken);
-       if (userToken === 'abc') {
-         setIsLoggedIn(true);
-         props.navigation.navigate('Home');
-       }
+       // TODO if the content of userToken is 'abc'), set isLoggedIn to true and navigate to Home
      };
      useEffect(() => {
        getToken();
      }, []);
    ```
-1. Remeber to add necessary imports.
-1. Press login and reload the app. App should go automatically to Home.
-1. Logout and reload the app. App should stay in the Login screen.
-1. Add and commit changes to git, push to Github/GItLab.
+6. Remeber to add necessary imports.
+7. Press login and reload the app. App should go automatically to Home.
+8. You will get warning 'Possible Unhandled promise rejection'. Fix it by adding try/catch to all promises (await ....)
+9. Logout and reload the app. App should stay in the Login screen.
+10. Add and commit changes to git, push to Github/GItLab.
