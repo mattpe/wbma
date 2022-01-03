@@ -1,11 +1,9 @@
-# Conditional rendering and form validation
+# Form validation
 
 ## Smarter forms
 
 ### Task 1: Smarter Login/Registration page
 
-1. Study [Conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
-    * especially [Inline If with Logical && Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator) and [Inline If-Else with Conditional Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
 1. Continue the previous exercise. Create a new git branch 'smartforms' for these tasks.
 1. Show only login form when opening the Login page
    * remember that changing the view requires change in state (useState)

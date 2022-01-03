@@ -3,6 +3,8 @@
 ## Authentication
 
 * Study:
+  * [Conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
+    * especially [Inline If with Logical && Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator) and [Inline If-Else with Conditional Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
   * [React Navigation authentication flows](https://reactnavigation.org/docs/auth-flow/)
   * [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
   * [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
@@ -10,8 +12,8 @@
 ### A. hard coded login
 
 1. Continue last exercise. Create a new branch with git.
-1. Create 'Login.js' to 'views/'
-1. _Login.js_
+2. Create 'Login.js' to 'views/'
+3. _Login.js_
     * Eventually this will be the login and register page
     * For now we'll do hard coded login:
 
@@ -25,9 +27,9 @@
     } from 'react-native';
     import PropTypes from 'prop-types';   
     
-    const Login = (props) => { // props is needed for navigation   
+    const Login = ({navigation}) => { // props is needed for navigation   
       const logIn = () => {
-          props.navigation.navigate('Home');
+          console.log('Button pressed');
       };
       return (
         <View style={styles.container}>
@@ -54,7 +56,7 @@
 
    ```
 
-1. Modify _Navigator.js_ to add conditional navigator like in [Authentication flows](https://reactnavigation.org/docs/auth-flow/):
+4. Modify _Navigator.js_ to add conditional navigator like in [Authentication flows](https://reactnavigation.org/docs/auth-flow/):
 
    ```jsx harmony
    ...
@@ -62,36 +64,32 @@
      const isLoggedIn = false;
      return (
        <Stack.Navigator>
-         {isLoggedIn ? (
-           <>
+         // TODO: if isLoggedIn is true render Home and Single      
              <Stack.Screen name="Home" component={TabScreen}/>
-             <Stack.Screen name="Single" component={Single}/>
-           </>
-         ) : (
-           <>
-             <Stack.Screen name="Login" component={Login}/>
-           </>
-         )}
+             <Stack.Screen name="Single" component={Single}/>          
+         // TODO: else render Login
+             <Stack.Screen name="Login" component={Login}/>          
        </Stack.Navigator>
      );
    };
    ...
    ```
 
-1. At this point you should see Login screen when you start the app. If you change the value of isLoggedIn to true you should see the Home page
+5. Complete the TODOs by using conditional rendering
+6. At this point you should see Login screen when you start the app. If you change the value of isLoggedIn to true you should see the Home page
 
 ### B. Context
 
 1. To do actual login/logout we need to add a [context](https://reactjs.org/docs/context.html) to change the value of isLoggedIn and to share that to different components like Navigator, Login and Profile
-1. Create folder 'contexts' and there add a new file 'MainContext.js':
+2. Create folder 'contexts' and there add a new file 'MainContext.js':
    ```jsx
-   import React, {useState} from 'react';
+   import React from 'react';
    import PropTypes from 'prop-types';
    
    const MainContext = React.createContext({});
    
    const MainProvider = (props) => {
-     const [isLoggedIn, setIsLoggedIn] = useState(false);
+     // TODO: create state isLoggedIn, set value to false
    
      return (
        <MainContext.Provider value={[isLoggedIn, setIsLoggedIn]}>
@@ -106,7 +104,8 @@
    
    export {MainContext, MainProvider};
    ```
-1. Add MainProvider to App.js so components can access the context
+3. Complete the TODO
+4. Add MainProvider to App.js so components can access the context
    ```jsx
    ...
     <MainProvider>
@@ -114,40 +113,36 @@
    </MainProvider>
    ...
    ```
-1. Modify Navigator.js to use MainContext:
+5. Modify Navigator.js to use MainContext:
    ```jsx
    ...
    const StackScreen = () => {
      const [isLoggedIn] = useContext(MainContext);
    ...
    ```
-1. Modify Login.js to use MainContext:
+6. Modify Login.js to use MainContext:
    ```jsx
    ...
-   const Login = (props) => { // props is needed for navigation
-     const [isLoggedIn, setIsLoggedIn] = useContext(MainContext);
-     console.log('ili', isLoggedIn);
+   const Login = ({navigation}) => { // props is needed for navigation
+     // TODO: get isLoggedIn and setIsLoggedIn from MainContext
+     console.log('login isLoggedIn', isLoggedIn);
      const logIn = () => {
-       setIsLoggedIn(true);
-       if (isLoggedIn) {  // this is to make sure isLoggedIn has changed, will be removed later
-         props.navigation.navigate('Home');
-       }
+       // TODO: set isLoggedIn to true;
+       // TODO: if isLoggedIn is true navigate to Home (this if statement is to make sure isLoggedIn has changed, will be removed later)
      };
      return (
    ...
    ```
-1. Add logout functionality to _Profile.js_:
+7. Add logout functionality to _Profile.js_:
    ```jsx harmony
    ...
-   const Profile = (props) => {
-     const [isLoggedIn, setIsLoggedIn] = useContext(MainContext);
-     console.log('profile', isLoggedIn);
+   const Profile = ({navigation}) => {
+     // TODO: get isLoggedIn and setIsLoggedIn from MainContext
+     console.log('profile isLoggedIn', isLoggedIn);
      const logout = () => {
-       setIsLoggedIn(false);
-       if (!isLoggedIn) { // this is to make sure isLoggedIn has changed, will be removed later
-         props.navigation.navigate('Login');
-       }
-     };
+       // TODO: set isLoggedIn to false;
+       // TODO: if isLoggedIn is false navigate to Login (this if statement is to make sure isLoggedIn has changed, will be removed later)
+    };
      return (
        <SafeAreaView style={styles.container}>
          <Text>Profile</Text>
@@ -157,8 +152,8 @@
    };
    ...
    ```
-1. Remember to add necessary imports and PropTypes to above steps.
-1. At this point the app should have basic login/logout functionality.
+8. Remember to add necessary imports and PropTypes to above steps.
+9. At this point the app should have simple login/logout functionality.
 
 ### C. Remembering if user has logged in
 1. Install [AsyncStorage](https://react-native-async-storage.github.io/async-storage/docs/install/): `npm i @react-native-async-storage/async-storage`
