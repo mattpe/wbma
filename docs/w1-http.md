@@ -65,20 +65,21 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
 ## Custom hooks, Task C
 
 1. Create `hooks` folder and add there a new file `ApiHooks.js`.
-1. Create a custom hook `useLoadMedia` to ApiHooks.js and move fetch related functionalities from List.js:
+2. The idea is to make hooks for each path in the [API](https://media.mw.metropolia.fi/wbma/docs/): login, users, media, etc.
+3. Create a custom hook `useMedia` to ApiHooks.js and move fetch related functionalities from List.js:
    ```javascript
    // TODO: add necessary imports
    const apiUrl = 'http://media.mw.metropolia.fi/wbma/';
-   const useLoadMedia = () => {
+   const useMedia = () => {
      // TODO: move mediaArray state here
      // TODO: move loadMedia function here
      // TODO: move useEffect here
      return {mediaArray};
    };
 
-   export {useLoadMedia};
+   export {useMedia};
    ```
-1. Modify List.js:
+4. Modify List.js:
    ```javascript
    ...
    const List = () => {
@@ -87,5 +88,5 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
      <FlatList 
    ...
    ```
-1. The app should work the same as before
-1. git add, commit & push to remote repository
+5. The app should work the same as before
+6. git add, commit & push to remote repository

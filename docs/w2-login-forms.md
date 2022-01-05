@@ -1,35 +1,51 @@
 # Login and Register forms
 
 1. Study [useState with forms](https://www.youtube.com/watch?v=R7T5GQLxRD4)
-1. Study [Using React Hooks To Create Awesome Forms](https://medium.com/@geeky_writer_/using-react-hooks-to-create-awesome-forms-6f846a4ce57)
-1. Continue last exercise. Create a new branch 'forms' with git.
+2. Study [React Native Forms using React-Hook-Form](https://www.akashmittal.com/react-native-forms-using-react-hook-form/)
+3. Continue last exercise. Create a new branch 'forms' with git.
 ### A. Fetch token from Media API
 
 1. Recap how to make [POST request with fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Supplying_request_options)
-1. [Login endpoint in the Media API](http://media.mw.metropolia.fi/wbma/docs/#api-Authentication-PostAuth)
-1. Modify _logIn()_ function in _Login.js_. The function should get the token from the API
-
-   ```jsx harmony
+2. [Login endpoint in the Media API](http://media.mw.metropolia.fi/wbma/docs/#api-Authentication-PostAuth)
+3. Add a new hook called _useLogin_ to ApiHooks.js. Add a new function _postLogin_ to _useLogin_ hook:
+  ```jsx harmony
+   // ApiHooks.js
    ...
-   const logIn = async () => {
-     // make login function to ApiHooks.js and do async fetch there, call the function here
-     // hard code your username and password
-     // you need to use POST method, see API documentation for details
-     // handle errors with try/catch and response.ok
-     // if login succesful do the following
-     await AsyncStorage.setItem('userToken', tokenFromApi);
-     setIsLoggedIn(true);
+   const useLogin = () => {
+  
+      const postLogin = async (userCredentials) => { // user credentials format: {username: 'someUsername', password: 'somePassword'}
+         const options = {
+            // TODO: add method, headers and body for sending json data with POST
+         };
+         try {
+            // TODO: use fetch to send request to login endpoint return the result as json, handle errors with try/catch and response.ok
+         } catch (error) {
+            throw new Error(error.message);
+         }
+      };
+      
+      return {postLogin};
    };
    ...
-   useEffect(() => {
-    getToken();
-    if (isLoggedIn) {
-      navigation.navigate('Home');
-    }
-   }, []);
+  ```
+5. Modify _logIn()_ function in _Login.js_. The function should call postLogin in useLogin hook to get the userdata and token from the API
+   ```jsx harmony
+   // Login.js
+   ...
+   const logIn = async () => {
+     // hard code your username and password:
+     const data = {username: 'someUsername', password: 'somePassword'};
+      // TODO: call postLogin
+      // TODO: if login succesful do the following:
+     await AsyncStorage.setItem('userToken', tokenFromApi);
+     setIsLoggedIn(true);
+     navigation.navigate('Home');
+   };
    ...
    ```
-1. Modify _getToken()_ function in _Login.js_. The function should check with the API if the saved _userToken_ is valid and then allow or deny access to the app.
+6. Test the Login button and then reload the app.
+7. Add new function _checkToken_ to _useLogin_
+8. Modify _getToken()_ function in _Login.js_. The function should check with the API if the saved _userToken_ is valid and then allow or deny access to the app.
    ```jsx
    const getToken = async () => {
        const userToken = await AsyncStorage.getItem('userToken');
@@ -43,12 +59,8 @@
 
 ### B. Login and Register forms  
  
-1. Create files:
-    * 'LoginHooks.js' and 'RegisterHooks.js' to 'hooks' 
-    * 'LoginForm.js' and 'RegisterForm.js' to 'components'
-1. Login.js will hold LoginForm and RegisterForm components
-    * Add the usual imports, component function and export to LoginForm and RegisterForm
-    * Modify Login.js:
+1. Create LoginForm.js to components folder. Use ['React Native demo'](https://react-hook-form.com/get-started#ReactNative) as an example and create a form with two fields: 'username' and 'password'. Set both fields as required and log the contents to console when submit button is pressed.
+2. Add LoginForm component to Login.js:
     ```jsx harmony
     const Login = ({navigation}) => {
     ...   
@@ -56,12 +68,11 @@
         <View style={styles.container}>
           <Text>Login</Text>
           <LoginForm navigation={navigation}/>
-          <RegisterForm navigation={navigation} />
         </View>
       );
    ...
    ```
-1. Add form to RegisterForm.js with username, password, email and full_name fields and submit button:
+3. Add form to RegisterForm.js with username, password, email and full_name fields and submit button:
    ```jsx
    ...
    <View>
@@ -143,7 +154,7 @@
     
     export default useSignUpForm;
     ```
-1. Do the same with LoginForm.
+4. Do the same with LoginForm.
    * Instead of using 'RegisterHooks.js' as filename, use 'LoginHooks.js'
    * Rename 'useSignUpForm' function in 'LoginHooks.js' to 'useLoginForm'
    * Make this change:
@@ -155,7 +166,7 @@
      });
    ```
     
-1. In APiHooks.js create function 'register' with corresponding functionality. Log the results of API fetches to console at this point. Also move the login function from Login.js to APIhooks.js.
+5. In APiHooks.js create function 'register' with corresponding functionality. Log the results of API fetches to console at this point. Also move the login function from Login.js to APIhooks.js.
     * Example 'register' function:
     ```javascript
     const register = async (inputs) => {
@@ -176,8 +187,8 @@
       }
     };
     ```
-1. To prevent warnings about Promises use try/catch for all awaits. You can use one try for multiple awaits.
-1. Use register function from APIhooks.js in _RegisterForm()_ function:
+6. To prevent warnings about Promises use try/catch for all awaits. You can use one try for multiple awaits.
+7. Use register function from APIhooks.js in _RegisterForm()_ function:
    ```jsx
    ...
    const doRegister = async () => {
@@ -192,8 +203,8 @@
    const {inputs, handleInputChange} = useSignUpForm(); // makes inputs and handleInput change visible from RegisterHooks.js
    ...
    ```
-1. Do the login functionalites the same way as above to LoginForm.js
-1. Add the final functionalities:
+8. Do the login functionalites the same way as above to LoginForm.js
+9. Add the final functionalities:
     * when logging in, save user data to [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react). Save token to AsyncStorage. With Context you can create a global state which can be accessed from all components.
     * Modify MainContext.js:
     ```jsx
@@ -217,8 +228,8 @@
    const {setUser, isLoggedIn, user, setIsLoggedIn} = useContext(MainContext);
    setUser(userdataFromApi.user); 
    ```
-1. Try the app on a real device. You can see that it's hard/impossible to write since keyboard is covering the input fields. Use [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview) in Login.js to fix the issue. 
-1. Use the saved user data in _Profile.js_
-   - log user data to console (for debugging)
-   - use [_Text_ component](https://reactnative.dev/docs/text) to display the user data on the profile page
-1. Add and commit changes to git, push to Github/GitLab.
+10. Try the app on a real device. You can see that it's hard/impossible to write since keyboard is covering the input fields. Use [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview) in Login.js to fix the issue. 
+11. Use the saved user data in _Profile.js_
+    - log user data to console (for debugging)
+    - use [_Text_ component](https://reactnative.dev/docs/text) to display the user data on the profile page
+12. Add and commit changes to git, push to Github/GitLab.
