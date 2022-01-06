@@ -179,16 +179,17 @@
        navigation.navigate('Login');
      };
    ```
-5. Add getToken() function to Login.js to check the token when app starts:
+5. Add _checkToken_ function to Login.js to check the token when app starts:
    ```jsx
-   const getToken = async () => {
-       // TODO: save the value of userToken saved in AsyncStorage as userToken
-       console.log('token', userToken);
-       // TODO if the content of userToken is 'abc'), set isLoggedIn to true and navigate to Home
-     };
-     useEffect(() => {
-       getToken();
-     }, []);
+    const checkToken = async () => {
+      // TODO: save the value of userToken saved in AsyncStorage as userToken
+      console.log('token', userToken);
+      // TODO if the content of userToken is 'abc'), set isLoggedIn to true and navigate to Home
+    };
+   
+    useEffect(() => {
+      checkToken(); 
+    }, []);
    ```
 6. Remeber to add necessary imports.
 7. Press login and reload the app. App should go automatically to Home.

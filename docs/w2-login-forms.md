@@ -18,7 +18,7 @@
             // TODO: add method, headers and body for sending json data with POST
          };
          try {
-            // TODO: use fetch to send request to login endpoint return the result as json, handle errors with try/catch and response.ok
+            // TODO: use fetch to send request to login endpoint and return the result as json, handle errors with try/catch and response.ok
          } catch (error) {
             throw new Error(error.message);
          }
@@ -28,7 +28,7 @@
    };
    ...
   ```
-5. Modify _logIn()_ function in _Login.js_. The function should call postLogin in useLogin hook to get the userdata and token from the API
+5. Modify _logIn_ function in _Login.js_. The function should call postLogin in useLogin hook to get the userdata and token from the API
    ```jsx harmony
    // Login.js
    ...
@@ -43,17 +43,38 @@
    };
    ...
    ```
-6. Test the Login button and then reload the app.
-7. Add new function _checkToken_ to _useLogin_
-8. Modify _getToken()_ function in _Login.js_. The function should check with the API if the saved _userToken_ is valid and then allow or deny access to the app.
+6. Test the Login button and then reload the app. The app should login, but it does not remember the you have logged in after reloading.
+7. Add new hook _useUser_ to ApiHooks.js and a new function _getUserByToken_ to _useUser_:
    ```jsx
-   const getToken = async () => {
+   const useUser = () => {
+   
+    const getUserByToken = async (token) => {
+      try {
+        const options = {
+          method: 'GET',
+          headers: {'x-access-token': token},
+        };
+        const response = await fetch(baseUrl + 'users/user', options);
+        const userData = response.json();
+        if (response.ok) {
+          return userData;
+        } else {
+          throw new Error(userData.message);
+        }
+      } catch (error) {
+        throw new Error(error.message);
+      }
+    };
+   
+    return {getUserByToken};
+   };
+   ```
+8. Modify _checkToken_ function in _Login.js_. The function should call _getUserByToken_ function with the saved _userToken_. Then allow or deny access to the app.
+   ```jsx
+   const checkToken = async () => {
        const userToken = await AsyncStorage.getItem('userToken');
        console.log('token', userToken);
-       // do async fetch to /users/user
-       // you need to send userToken
-       // if you get successful result 
-       // set isLoggedIn to true
+       // TODO: call getUserByToken(userToken), if you get successful result, set isLoggedIn to true and navigate to Home
      };
    ```
 
@@ -72,155 +93,44 @@
       );
    ...
    ```
-3. Add form to RegisterForm.js with username, password, email and full_name fields and submit button:
-   ```jsx
-   ...
-   <View>
-         <FormTextInput
-           autoCapitalize="none"
-           placeholder="username"
-           onChangeText={(txt) => handleInputChange('username', txt)}
-         />
-         <FormTextInput
-           autoCapitalize="none"
-           placeholder="password"
-           onChangeText={(txt) => handleInputChange('password', txt)}
-           secureTextEntry={true}
-         />
-         <FormTextInput
-           autoCapitalize="none"
-           placeholder="email"
-           onChangeText={(txt) => handleInputChange('email', txt)}
-         />
-         <FormTextInput
-           autoCapitalize="none"
-           placeholder="full name"
-           onChangeText={(txt) => handleInputChange('full_name', txt)}
-         />
-         <Button title="Register!" onPress={doRegister}/>
-       </View>
-   ...
-   ```
-    
-    - Create a new re-usable componet called `FormTextInput` into 'components' folder to use the same styling for all text input fields
-    ```jsx
-    ...
-    const FormTextInput = ({style, ...otherProps}) => {
-        return (
-          <TextInput
-            style={[styles.textInput, style]}
-            {...otherProps}
-          />
-        );
-      };
+   
 
-      const styles = StyleSheet.create({
-        textInput: {
-          height: 40,
-          borderColor: '#ccc',
-          borderWidth: 1,
-        },
-      });
-    ...
-    ```
-   
-    - Use 'CustomHooks.js' in 'Using React Hooks...' article as an example to handle form events. Instead of using 'CustomHooks.js' as filename, use 'RegisterHooks.js'
-    ```javascript
-    // RegisterHooks.js:
-    import {useState} from 'react';
-    
-    const useSignUpForm = (callback) => {
-      const [inputs, setInputs] = useState({
-        username: '',
-        password: '',
-        email: '',
-        full_name: '',
-      });
-    
-      const handleInputChange = (name, text) => {
-        console.log(name, text);
-        setInputs((inputs) => {
-          return {
-            ...inputs,
-            [name]: text,
-          };
-        });
-      };
-      return {
-        handleInputChange,
-        inputs,
-      };
+3. Fill the form and press submit button and check the log.
+4. To use the form for the login functionality move the logic from _logIn_ function in Login.js to _onSubmit_ function in LoginForm.js. Remember to update the imports etc.
+5. The login form should now work.
+6. Create new file 'RegisterForm.js' to components folder. Use LoginForm.js as an example and add four fields username, password, email and full_name and submit button. All fields except full_name are required.
+7. Add new function _postUser_ to _useUser_ hook in ApiHooks.js: 
+   ```jsx
+   // ApiHooks.js
+   ...
+   const postUser = async (data) => {
+    const options = {
+      // TODO: add method, headers and body for sending json data with POST
     };
-    
-    export default useSignUpForm;
-    ```
-4. Do the same with LoginForm.
-   * Instead of using 'RegisterHooks.js' as filename, use 'LoginHooks.js'
-   * Rename 'useSignUpForm' function in 'LoginHooks.js' to 'useLoginForm'
-   * Make this change:
-   ```javascript
-   // LoginHooks.js:
-   const [inputs, setInputs] = useState({
-       username: '',
-       password: '',
-     });
+    try {
+      // TODO: use fetch to send request to users endpoint and return the result as json, handle errors with try/catch and response.ok
+    } catch (error) {
+      throw new Error(error.message);
+    }
+   ...
    ```
-    
-5. In APiHooks.js create function 'register' with corresponding functionality. Log the results of API fetches to console at this point. Also move the login function from Login.js to APIhooks.js.
-    * Example 'register' function:
-    ```javascript
-    const register = async (inputs) => {
-      const fetchOptions = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(inputs),
-      };
-      try {
-         const response = await fetch(apiUrl + 'users', fetchOptions);
-         const json = await response.json();
-         return json;
-      } catch (e) {
-          console.log('ApiHooks register', e.message);
-          return false;
-      }
-    };
-    ```
-6. To prevent warnings about Promises use try/catch for all awaits. You can use one try for multiple awaits.
-7. Use register function from APIhooks.js in _RegisterForm()_ function:
+8. Add the final functionalities:
+   * when logging in, save user data to [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react). Save token to AsyncStorage. With Context you can create a global state which can be accessed from all components.
+   * Modify MainContext.js:
    ```jsx
    ...
-   const doRegister = async () => {
-       const serverResponse = await register(inputs);
-       if (serverResponse) {
-         Alert.alert(serverResponse.message);
-       } else {
-         Alert.alert('register failed');
-       }
-   };
-   
-   const {inputs, handleInputChange} = useSignUpForm(); // makes inputs and handleInput change visible from RegisterHooks.js
-   ...
-   ```
-8. Do the login functionalites the same way as above to LoginForm.js
-9. Add the final functionalities:
-    * when logging in, save user data to [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react). Save token to AsyncStorage. With Context you can create a global state which can be accessed from all components.
-    * Modify MainContext.js:
-    ```jsx
-    ...
-    const MainProvider = ({children}) => {
-      const [isLoggedIn, setIsLoggedIn] = useState(false);
-      const [user, setUser] = useState({});
+   const MainProvider = ({children}) => {
+       const [isLoggedIn, setIsLoggedIn] = useState(false);
+       const [user, setUser] = useState({});
     
-      return (
-        <MainContext.Provider value={{isLoggedIn, setIsLoggedIn, user, setUser}}>
-          {children}
-        </MainContext.Provider>
-      );
-    };
-    ...
-    ```
+       return (
+         <MainContext.Provider value={{isLoggedIn, setIsLoggedIn, user, setUser}}>
+           {children}
+         </MainContext.Provider>
+       );
+     };
+     ...
+     ```
    * <b>Note the change from [] to {} in MainContext.Provider value</b>. This means that you need to change square brackets to curly braces everywhere where you have `const [isLoggedIn, setIsLoggedIn] = useContext(MainContext);`
    * Setting user data example:
    ```javascript
@@ -228,8 +138,8 @@
    const {setUser, isLoggedIn, user, setIsLoggedIn} = useContext(MainContext);
    setUser(userdataFromApi.user); 
    ```
-10. Try the app on a real device. You can see that it's hard/impossible to write since keyboard is covering the input fields. Use [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview) in Login.js to fix the issue. 
-11. Use the saved user data in _Profile.js_
+9. Try the app on a real device. You can see that it's hard/impossible to write since keyboard is covering the input fields. Use [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview) in Login.js to fix the issue. 
+10. Use the saved user data in _Profile.js_
     - log user data to console (for debugging)
     - use [_Text_ component](https://reactnative.dev/docs/text) to display the user data on the profile page
-12. Add and commit changes to git, push to Github/GitLab.
+11. Add and commit changes to git, push to Github/GitLab.
