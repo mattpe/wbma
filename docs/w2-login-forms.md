@@ -96,7 +96,7 @@
 3. Fill the form and press submit button and check the log.
 4. To use the form for the login functionality move the logic from _logIn_ function in Login.js to _onSubmit_ function in LoginForm.js. Remember to update the imports etc.
 5. The login form should now work.
-6. You might want to change some [props of the TextInputs](https://reactnative.dev/docs/textinput#props) to secure the password field and get rid of automatic capitalisation.
+6. You might want to change some [props of the TextInputs](https://reactnative.dev/docs/textinput#props) to secure the password field and get rid of automatic capitalisation and maybe add placeholders.
 7. Create new file 'RegisterForm.js' to components folder. Use LoginForm.js as an example and add four fields username, password, email and full_name and submit button. All fields except full_name are required.
 8. Add _RegisterForm_ component to Login.js:
    ```jsx
@@ -151,8 +151,8 @@
     const {setUser, isLoggedIn, user, setIsLoggedIn} = useContext(MainContext);
     setUser(userdataFromApi.user); 
     ```
-12. Try the app on a real device. You can see that it's hard/impossible to write since keyboard is covering the input fields. Use [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview) in Login.js to fix the issue. 
-13. Use the saved user data in _Profile.js_
+12. Use the saved user data in _Profile.js_
     - log user data to console (for debugging)
     - use [_Text_ component](https://reactnative.dev/docs/text) to display the user data on the profile page
+13. Try the app on a real device. You can see that it's hard/impossible to write since keyboard is covering the input fields. Use [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview) in Login.js to fix the issue. 
 14. Add and commit changes to git, push to Github/GitLab.
