@@ -155,4 +155,15 @@
     - log user data to console (for debugging)
     - use [_Text_ component](https://reactnative.dev/docs/text) to display the user data on the profile page
 13. Try the app on a real device. You can see that it's hard/impossible to write since keyboard is covering the input fields. Use [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview) in Login.js to fix the issue. 
-14. Add and commit changes to git, push to Github/GitLab.
+14. Hiding the keyboard has to be done manally:
+   ```jsx
+   <TouchableOpacity
+        onPress={() => Keyboard.dismiss()}
+        style={{flex: 1}}
+        activeOpacity={1}
+      >
+    ...
+    ...
+   </TouchableOpacity>
+   ```
+15. Add and commit changes to git, push to Github/GitLab.
