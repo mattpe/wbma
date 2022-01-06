@@ -64,10 +64,10 @@
      const isLoggedIn = false;
      return (
        <Stack.Navigator>
-         // TODO: if isLoggedIn is true render Home and Single      
-             <Stack.Screen name="Home" component={TabScreen}/>
+         // TODO: if isLoggedIn is true add Tabs and Single      
+             <Stack.Screen name="Tabs" component={TabScreen}/>
              <Stack.Screen name="Single" component={Single}/>          
-         // TODO: else render Login
+         // TODO: else add Login
              <Stack.Screen name="Login" component={Login}/>          
        </Stack.Navigator>
      );
@@ -76,7 +76,7 @@
    ```
 
 5. Complete the TODOs by using conditional rendering
-6. At this point you should see Login screen when you start the app. If you change the value of isLoggedIn to true you should see the Home page
+6. At this point you should see Login screen when you start the app. If you change the value of isLoggedIn to true you should see the Home page (= tab navigator _Tabs_)
 
 ### B. Context
 
@@ -128,7 +128,7 @@
      console.log('login isLoggedIn', isLoggedIn);
      const logIn = () => {
        // TODO: set isLoggedIn to true;
-       // TODO: if isLoggedIn is true navigate to Home (this if statement is to make sure isLoggedIn has changed, will be removed later)
+       // TODO: if isLoggedIn is true navigate to Tabs (this if statement is to make sure isLoggedIn has changed, will be removed later)
      };
      return (
    ...
@@ -168,7 +168,7 @@
    const logIn = async () => {
       setIsLoggedIn(true);   
       await AsyncStorage.setItem('userToken', 'abc');
-      navigation.navigate('Home');
+      navigation.navigate('Tabs');
      };
    ```
 4. Modify logout() function in Profile.js:
@@ -184,7 +184,7 @@
     const checkToken = async () => {
       // TODO: save the value of userToken saved in AsyncStorage as userToken
       console.log('token', userToken);
-      // TODO if the content of userToken is 'abc'), set isLoggedIn to true and navigate to Home
+      // TODO if the content of userToken is 'abc'), set isLoggedIn to true and navigate to Tabs
     };
    
     useEffect(() => {
@@ -192,7 +192,7 @@
     }, []);
    ```
 6. Remeber to add necessary imports.
-7. Press login and reload the app. App should go automatically to Home.
-8. You will get warning 'Possible Unhandled promise rejection'. Fix it by adding try/catch to all promises (await ....)
+7. Press login and reload the app. App should go automatically to Home page (= tab navigator _Tabs_).
+8. You might get warning 'Possible Unhandled promise rejection'. Fix it by adding try/catch to all promises (await ....)
 9. Logout and reload the app. App should stay in the Login screen.
-10. Add and commit changes to git, push to Github/GItLab.
+10. Add and commit changes to git, push to Github/GitLab.

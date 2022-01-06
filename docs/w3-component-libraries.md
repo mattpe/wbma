@@ -53,11 +53,18 @@ There are many component libraries for React Native: [article 1](https://www.cod
 
 ### Task B: Develop profile page
 
-1. Add avatar image to the user
+1. Add avatar/profile image to the user
     - Use postman to upload image and add a [tag](http://media.mw.metropolia.fi/wbma/docs/#api-Tag-PostTag) 'avatar_CurrentUserId' to it (e.g avatar_85)
     - When fetching avatars, you can use _CurrentUserId to limit the amount of fetched data.
 1. Display users avatar image, name and email in profile page
-   - You'll need to use existing or add more methods to 'ApiHooks.js' to achieve this
+   - You'll need to use existing or add more functions to 'ApiHooks.js' to achieve this
+   - You'll also need to add a new state to show the avatar after it's url has been loaded from the API:
+   ```jsx
+   // Profile.js
+   ...
+   const [avatar, setAvatar] = useState('http://placekitten.com/640'); // placekitten... is default is user has no avatar
+   ...
+   ```
 
    ![Profile screen](images/profile.png)
 

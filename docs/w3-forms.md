@@ -13,7 +13,7 @@
    * use e.g. [onChangeText](https://facebook.github.io/react-native/docs/textinput.html#onchangetext)  or [onEndEditing](https://facebook.github.io/react-native/docs/textinput.html#onendediting) events
 
    ```jsx harmony
-   <FormTextInput
+   <Input
         onEndEditing={(evt) => {
             const text = evt.nativeEvent.text;
             console.log('reg form', text);

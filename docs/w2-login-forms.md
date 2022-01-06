@@ -39,7 +39,7 @@
       // TODO: if login succesful do the following:
      await AsyncStorage.setItem('userToken', tokenFromApi);
      setIsLoggedIn(true);
-     navigation.navigate('Home');
+     navigation.navigate('Tabs');
    };
    ...
    ```
@@ -74,7 +74,7 @@
    const checkToken = async () => {
        const userToken = await AsyncStorage.getItem('userToken');
        console.log('token', userToken);
-       // TODO: call getUserByToken(userToken), if you get successful result, set isLoggedIn to true and navigate to Home
+       // TODO: call getUserByToken(userToken), if you get successful result, set isLoggedIn to true and navigate to Tabs
      };
    ```
 

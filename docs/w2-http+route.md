@@ -162,7 +162,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
      return (
        <Stack.Navigator>
          // TODO: make two stack screens:
-         // 1st: name=Home, component=TabScreen, options=hide header
+         // 1st: name=Tabs, component=TabScreen, options=hide header
          // 2nd: name=Single, component=Single
        </Stack.Navigator>
      );
