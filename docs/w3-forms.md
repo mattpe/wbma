@@ -86,7 +86,8 @@
     * check that user input of both password fields match before making an api call
     * notify user if the passwords do not match
     * you can do this by adding _validate_ to _rules_ of `<Controller>` of confirm password field
-      * extract [_getValues_](https://react-hook-form.com/api/useform/getvalues) from _useForm_ to get the value of password field 
+      * extract [_getValues_](https://react-hook-form.com/api/useform/getvalues) from _useForm_ to get the value of password field
+    * before sending the form to the API you'll need to delete confirm password property from the data object because API will reject data if it has extra properties.
 
 
 
