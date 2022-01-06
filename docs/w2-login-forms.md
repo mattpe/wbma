@@ -93,13 +93,25 @@
       );
    ...
    ```
-   
-
 3. Fill the form and press submit button and check the log.
 4. To use the form for the login functionality move the logic from _logIn_ function in Login.js to _onSubmit_ function in LoginForm.js. Remember to update the imports etc.
 5. The login form should now work.
-6. Create new file 'RegisterForm.js' to components folder. Use LoginForm.js as an example and add four fields username, password, email and full_name and submit button. All fields except full_name are required.
-7. Add new function _postUser_ to _useUser_ hook in ApiHooks.js: 
+6. You might want to change some [props of the TextInputs](https://reactnative.dev/docs/textinput#props) to secure the password field and get rid of automatic capitalisation.
+7. Create new file 'RegisterForm.js' to components folder. Use LoginForm.js as an example and add four fields username, password, email and full_name and submit button. All fields except full_name are required.
+8. Add _RegisterForm_ component to Login.js:
+   ```jsx
+   // Login.js
+   ...
+   return (
+    <View style={styles.container}>
+      <Text>Login</Text>
+      <LoginForm navigation={navigation}></LoginForm>
+      <RegisterForm></RegisterForm>
+    </View>
+   );
+   ...
+   ```
+9. Add new function _postUser_ to _useUser_ hook in ApiHooks.js: 
    ```jsx
    // ApiHooks.js
    ...
@@ -114,32 +126,33 @@
     }
    ...
    ```
-8. Add the final functionalities:
-   * when logging in, save user data to [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react). Save token to AsyncStorage. With Context you can create a global state which can be accessed from all components.
-   * Modify MainContext.js:
-   ```jsx
-   ...
-   const MainProvider = ({children}) => {
-       const [isLoggedIn, setIsLoggedIn] = useState(false);
-       const [user, setUser] = useState({});
+10. Test that you can create new users with _RegisterForm_
+11. Add the final functionalities:
+    * when logging in, save user data to [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react). With Context you can create a global state which can be accessed from all components. Token is still saved to AsyncStorage.
+    * Modify MainContext.js:
+    ```jsx
+    ...
+    const MainProvider = ({children}) => {
+        const [isLoggedIn, setIsLoggedIn] = useState(false);
+        const [user, setUser] = useState({});
     
-       return (
-         <MainContext.Provider value={{isLoggedIn, setIsLoggedIn, user, setUser}}>
-           {children}
-         </MainContext.Provider>
-       );
-     };
-     ...
-     ```
-   * <b>Note the change from [] to {} in MainContext.Provider value</b>. This means that you need to change square brackets to curly braces everywhere where you have `const [isLoggedIn, setIsLoggedIn] = useContext(MainContext);`
-   * Setting user data example:
-   ```javascript
-   // now the vars and funcs can be in any order.
-   const {setUser, isLoggedIn, user, setIsLoggedIn} = useContext(MainContext);
-   setUser(userdataFromApi.user); 
-   ```
-9. Try the app on a real device. You can see that it's hard/impossible to write since keyboard is covering the input fields. Use [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview) in Login.js to fix the issue. 
-10. Use the saved user data in _Profile.js_
+        return (
+          <MainContext.Provider value={{isLoggedIn, setIsLoggedIn, user, setUser}}>
+            {children}
+          </MainContext.Provider>
+        );
+      };
+      ...
+      ```
+    * <b>Note the change from [] to {} in MainContext.Provider value</b>. This means that you need to change square brackets to curly braces everywhere where you have `const [isLoggedIn, setIsLoggedIn] = useContext(MainContext);`
+    * Setting user data example:
+    ```javascript
+    // now the vars and funcs can be in any order.
+    const {setUser, isLoggedIn, user, setIsLoggedIn} = useContext(MainContext);
+    setUser(userdataFromApi.user); 
+    ```
+12. Try the app on a real device. You can see that it's hard/impossible to write since keyboard is covering the input fields. Use [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview) in Login.js to fix the issue. 
+13. Use the saved user data in _Profile.js_
     - log user data to console (for debugging)
     - use [_Text_ component](https://reactnative.dev/docs/text) to display the user data on the profile page
-11. Add and commit changes to git, push to Github/GitLab.
+14. Add and commit changes to git, push to Github/GitLab.
