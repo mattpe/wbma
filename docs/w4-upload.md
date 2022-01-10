@@ -60,7 +60,6 @@
     - add new function _reset_ which resets all the things you want to reset
     - call _reset_ when reset button is pressed
     - also call _reset_ after file is uploaded or user navigates away from this screen with [useFocusEffect](https://reactnavigation.org/docs/use-focus-effect/)
-    ```
     
 ### Task B: List files limiting to those uploaded from your own app
 

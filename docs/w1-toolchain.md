@@ -129,7 +129,29 @@ Exclude:
 
 ### OS X no sudo for Mac users
 
-- [instructions](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
+MacOS no sudo for Mac users!!
+* Older MacOS (bash terminal)
+```
+mkdir ~/.npm-packages
+npm config set prefix ~/.npm-packages
+echo NPM_PACKAGES="${HOME}/.npm-packages" >> ${HOME}/.bashrc
+echo prefix=${HOME}/.npm-packages >> ${HOME}/.npmrc
+echo NODE_PATH=\"\$NPM_PACKAGES/lib/node_modules:\$NODE_PATH\" >> ${HOME}/.bashrc
+echo PATH=\"\$NPM_PACKAGES/bin:\$PATH\" >> ${HOME}/.bashrc
+echo source "~/.bashrc" >> ${HOME}/.bash_profile
+source ~/.bashrc
+```
+* Newer MacOS (zsh terminal)
+```
+mkdir ~/.npm-packages
+npm config set prefix ~/.npm-packages
+echo NPM_PACKAGES="${HOME}/.npm-packages" >> ${HOME}/.zshrc
+echo prefix=${HOME}/.npm-packages >> ${HOME}/.npmrc
+echo NODE_PATH=\"\$NPM_PACKAGES/lib/node_modules:\$NODE_PATH\" >> ${HOME}/.zshrc
+echo PATH=\"\$NPM_PACKAGES/bin:\$PATH\" >> ${HOME}/.zshrc
+echo source "~/.zshrc" >> ${HOME}/.zsh_profile
+source ~/.zshrc
+```
 
 ### NPM Alternative
 
