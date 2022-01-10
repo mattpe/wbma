@@ -323,7 +323,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
     * `git checkout -b someBranchName`
     * `git add .`
     * `git commit -m "describe changes somehow"`
-    * `git push`
+    * `git push origin someBranchName`
 
 ---
 
