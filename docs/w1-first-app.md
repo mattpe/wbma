@@ -66,6 +66,10 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
         },
         'ecmaVersion': 13,
         'sourceType': 'module',
+        'parserOptions': {
+          'requireConfigFile': 'false',
+          'babelOptions': {configFile: './babel.config.js'},
+        },
       },
       'plugins': [
         'react',
