@@ -50,6 +50,17 @@ There are many component libraries for React Native: [article 1](https://www.cod
 
    ![Single screen](images/single.png)
 
+2. Tips'n tricks:
+   1. (Adding SVG support)(https://kumar2396jayant.medium.com/how-to-use-svg-in-react-native-e581eca59534)
+   2. (Lottie)[https://airbnb.design/lottie/]
+      1. (Create Lottie without After Effects)(https://www.youtube.com/watch?v=zoBMb72UDeI)
+      2. (Convert SVG to Lottie)(https://lottiefiles.com/svg-to-lottie/convert)
+         1. [MacOS download](https://github.com/HaikuTeam/animator/releases/)
+         2. Build with Windows
+            1. (Step 1)[https://github.com/HaikuTeam/animator#windows-os-dependencies] (no need for git or node installation, you have them already)
+            2. (Step 2)[https://github.com/HaikuTeam/animator#2-install-project-dependencies]
+            3. (Step 3)[https://github.com/HaikuTeam/animator#3-start-development-server]
+   3. [Masonry list](https://github.com/hyochan/react-native-masonry-list#react-native-masonry-list)
 
 ### Task B: Develop profile page
 
