@@ -88,7 +88,7 @@
     return (
         <View style={styles.container}>
           <Text>Login</Text>
-          <LoginForm navigation={navigation}/>
+          <LoginForm />
         </View>
       );
    ...
@@ -105,8 +105,8 @@
    return (
     <View style={styles.container}>
       <Text>Login</Text>
-      <LoginForm navigation={navigation}></LoginForm>
-      <RegisterForm></RegisterForm>
+      <LoginForm />
+      <RegisterForm />
     </View>
    );
    ...
