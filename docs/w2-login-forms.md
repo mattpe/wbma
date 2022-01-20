@@ -39,7 +39,6 @@
       // TODO: if login succesful do the following:
      await AsyncStorage.setItem('userToken', tokenFromApi);
      setIsLoggedIn(true);
-     navigation.navigate('Tabs');
    };
    ...
    ```
