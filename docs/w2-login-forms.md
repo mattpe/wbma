@@ -79,6 +79,7 @@
 
 ### B. Login and Register forms  
  
+1. Install React Hook Form `npm i react-hook-form`
 1. Create LoginForm.js to components folder. Use ['React Native demo'](https://react-hook-form.com/get-started#ReactNative) as an example and create a form with two fields: 'username' and 'password'. Set both fields as required and log the contents to console when submit button is pressed.
 2. Add LoginForm component to Login.js:
     ```jsx harmony
