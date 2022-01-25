@@ -19,8 +19,6 @@
 
    ![Profile screen](images/profile.png)
 
-1. Add and commit changes to git, push to Github/GitLab.
-
 ---
 
 ## Task B: Convert the app we've made so far to use React Native Elements
@@ -31,7 +29,6 @@ There are many component libraries for React Native: [article 1](https://www.cod
 
 1. Continue last exercise. Create a new branch 'comp-lib' with git.  
 1. Study [getting started](https://reactnativeelements.com/docs/)
-1. Convert the app we've made so far to use React Native Elements
 1. Install React Native Elements
     - `npm i react-native-elements`
 1. Note: Remove all styling from the files where you use React Native Elements components:
@@ -80,3 +77,4 @@ There are many component libraries for React Native: [article 1](https://www.cod
             1. [Step 2](https://github.com/HaikuTeam/animator#2-install-project-dependencies)
             1. [Step 3](https://github.com/HaikuTeam/animator#3-start-development-server)
    1. [Masonry list](https://github.com/hyochan/react-native-masonry-list#react-native-masonry-list)
+1. Add and commit changes to git, push to Github/GitLab.
