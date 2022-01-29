@@ -70,11 +70,11 @@ There are many component libraries for React Native: [article 1](https://www.cod
    1. [Adding SVG support](https://kumar2396jayant.medium.com/how-to-use-svg-in-react-native-e581eca59534)
    1. [Lottie](https://airbnb.design/lottie/)
       1. [Create Lottie without After Effects](https://www.youtube.com/watch?v=zoBMb72UDeI)
-      1. [Convert SVG to Lottie](https://lottiefiles.com/svg-to-lottie/convert)
          1. [MacOS download](https://github.com/HaikuTeam/animator/releases/)
-         1. Build with Windows
+         2. Build with Windows
             1. [Step 1](https://github.com/HaikuTeam/animator#windows-os-dependencies) (no need for git or node installation, you have them already)
-            1. [Step 2](https://github.com/HaikuTeam/animator#2-install-project-dependencies)
-            1. [Step 3](https://github.com/HaikuTeam/animator#3-start-development-server)
+            2. [Step 2](https://github.com/HaikuTeam/animator#2-install-project-dependencies)
+            3. [Step 3](https://github.com/HaikuTeam/animator#3-start-development-server)
+      2. [Convert SVG to Lottie](https://lottiefiles.com/svg-to-lottie/convert)
    1. [Masonry list](https://github.com/hyochan/react-native-masonry-list#react-native-masonry-list)
 1. Add and commit changes to git, push to Github/GitLab.
