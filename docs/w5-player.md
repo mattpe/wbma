@@ -27,7 +27,7 @@
     - Very similar to Home
        - You can use List and ListItem as example and make new components.
        - Or you can send props to List and depending the value of the prop show edit and delete buttons (if statement)
-       - In both cases make new function useMyMedia() to ApiHooks. It's very similar to 'useLoadMedia'. The difference is that it should return only the logged in users own files.
+       - In both cases modify loadMedia() in ApiHooks.  Add boolean variable to change wether to load all files all user's own files.
 1. Add 'view', 'modify' and 'delete' buttons next to each file uploaded by the user
     - onPress example for delete:
     
