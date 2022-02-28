@@ -7,7 +7,6 @@ Create an application utilizing [this](http://media.mw.metropolia.fi/wbma/docs/)
 1. upload media *
 2. browsing, searching and viewing media *
 3. commenting/liking media
-4. editing media
 5. client statistics
 6. implemented using React *
 7. applying UI guidelines *
