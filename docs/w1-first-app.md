@@ -47,7 +47,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
       'parser': '@babel/eslint-parser',
       'env': {
         'browser': true,
-        'es2020': true,
+        'es2021': true,
         'react-native/react-native': true,
       },
       'extends': [
@@ -77,6 +77,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
       'rules': {
         'react/jsx-uses-react': 'error',
         'react/jsx-uses-vars': 'error',
+        'react/react-in-jsx-scope': 0,
         'no-console': 0,
         'require-jsdoc': 0,
         'prettier/prettier': 'error',
