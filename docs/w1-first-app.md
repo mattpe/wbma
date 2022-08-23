@@ -18,7 +18,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
     * `npm install -g expo-cli`
     * `expo init MyApp --npm`
         * choose 'blank' template
-        * if this fails on Windows due to missing interactive mode, use cmd instead of Git Bash
+        * if this fails on Windows due to missing interactive mode, use power shell instead of Git Bash
 1. Test that app works; run it and open in browser (interactive shell is needed to get the menu option (_w_) for launhing in browser)
     * `cd MyApp`
     * `npm start`
