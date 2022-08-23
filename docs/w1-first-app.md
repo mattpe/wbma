@@ -140,7 +140,6 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 1. Convert the App function to arrow function:
 
     ```jsx harmony
-   import React from 'react';
    import {StyleSheet, Text, View} from 'react-native';
    import {StatusBar} from 'expo-status-bar';
    
