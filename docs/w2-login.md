@@ -128,7 +128,6 @@
      console.log('login isLoggedIn', isLoggedIn);
      const logIn = () => {
        // TODO: set isLoggedIn to true;
-       // TODO: if isLoggedIn is true navigate to Tabs (this if statement is to make sure isLoggedIn has changed, will be removed later)
      };
      return (
    ...
@@ -141,7 +140,6 @@
      console.log('profile isLoggedIn', isLoggedIn);
      const logout = () => {
        // TODO: set isLoggedIn to false;
-       // TODO: if isLoggedIn is false navigate to Login (this if statement is to make sure isLoggedIn has changed, will be removed later)
     };
      return (
        <SafeAreaView style={styles.container}>
@@ -168,7 +166,6 @@
    const logIn = async () => {
       setIsLoggedIn(true);   
       await AsyncStorage.setItem('userToken', 'abc');
-      navigation.navigate('Tabs');
      };
    ```
 4. Modify logout() function in Profile.js:
@@ -176,7 +173,6 @@
    const logout = async () => {
        setIsLoggedIn(false);
        await AsyncStorage.clear();
-       navigation.navigate('Login');
      };
    ```
 5. Add _checkToken_ function to Login.js to check the token when app starts:
