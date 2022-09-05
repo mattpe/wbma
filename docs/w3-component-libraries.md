@@ -30,8 +30,10 @@ There are many component libraries for React Native: [article 1](https://www.cod
 1. Continue last exercise. Create a new branch 'comp-lib' with git.  
 1. Study [getting started](https://reactnativeelements.com/docs/)
 1. Install React Native Elements
-    - `npm i react-native-elements`
-1. Note: Remove all styling from the files where you use React Native Elements components:
+    - `npm install @rneui/themed @rneui/base`
+1. Install Peer dependencies
+    - `npm install react-native-safe-area-context`
+3. Note: Remove all styling from the files where you use React Native Elements components:
 
    ```jsx harmony
    // remove this part:
