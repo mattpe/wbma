@@ -13,7 +13,7 @@
    ```jsx
    // Profile.js
    ...
-   const [avatar, setAvatar] = useState('http://placekitten.com/640'); // placekitten... is default is user has no avatar
+   const [avatar, setAvatar] = useState('http://placekitten.com/640'); // placekitten... is default if user has no avatar
    ...
    ```
 
