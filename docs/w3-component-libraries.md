@@ -48,7 +48,7 @@ There are many component libraries for React Native: [article 1](https://www.cod
 
    ```jsx harmony
    ...
-   import {ListItem as NBListItem} from 'react-native-elements';
+   import {ListItem as NBListItem} from '@rneui/themed';
    ...
    return (
          <NBListItem thumbnail>
