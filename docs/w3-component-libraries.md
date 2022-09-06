@@ -44,7 +44,7 @@ There are many component libraries for React Native: [article 1](https://www.cod
 1. [React Native Elements components](https://reactnativeelements.com/docs)
    - Some components you may find useful for the task: `Button`, `Card`, `Divider`, `Content`, `Header`, `Icon`, `Text`...    
    - By default [Icon component](https://reactnativeelements.com/docs/components/icon) uses  [Material icons](https://material.io/resources/icons/?style=baseline) as value for type attribute
-1. In our app there is already `ListItem` component so if you want to use the [ListItem](https://reactnativeelements.com/docs/listitem) component of React Native Elements you need to use `import as` syntax:
+1. In our app there is already `ListItem` component so if you want to use the [ListItem](https://reactnativeelements.com/docs/components/listitem) component of React Native Elements you need to use `import as` syntax:
 
    ```jsx harmony
    ...
