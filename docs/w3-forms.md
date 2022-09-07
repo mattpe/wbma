@@ -1,7 +1,7 @@
 # Form validation
 
 ## Smarter forms
-* Study Regular Expressions: [Learn Regular Expressions In 20 Minutes, Youtube](https://www.youtube.com/watch?v=rhzKDrUiJVk&t=588s), [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), [some examples](https://devinduct.com/cheatsheet/10/regex)
+* Study Regular Expressions: [Learn Regular Expressions In 20 Minutes (Youtube)](https://www.youtube.com/watch?v=rhzKDrUiJVk&t=588s), [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), [some examples](https://devinduct.com/cheatsheet/10/regex)
 * Study [Creating Form in React Native Using React Hook Form](https://medium.com/skyshidigital/creating-form-in-react-native-using-react-hook-form-a81a99e45605)
 
 
