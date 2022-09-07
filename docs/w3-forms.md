@@ -1,7 +1,7 @@
 # Form validation
 
 ## Smarter forms
-* Study [Regular Expressions](https://www.youtube.com/watch?v=rhzKDrUiJVk&t=588s)
+* Study Regular Expressions: [Learn Regular Expressions In 20 Minutes, Youtube](https://www.youtube.com/watch?v=rhzKDrUiJVk&t=588s), [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), [some examples](https://devinduct.com/cheatsheet/10/regex)
 * Study [Creating Form in React Native Using React Hook Form](https://medium.com/skyshidigital/creating-form-in-react-native-using-react-hook-form-a81a99e45605)
 
 
@@ -88,8 +88,6 @@
     * you can do this by adding _validate_ to _rules_ of `<Controller>` of confirm password field
       * extract [_getValues_](https://react-hook-form.com/api/useform/getvalues) from _useForm_ to get the value of password field
     * before sending the form to the API you'll need to delete confirm password property from the data object because API will reject data if it has extra properties.
-
-
 
 ### Extra
 
