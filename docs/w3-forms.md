@@ -74,7 +74,7 @@
           },
    }}
    ``` 
-2. Notify the user about problems by using the [_errorMessage_ prop of _Input_](https://reactnativeelements.com/docs/input#errormessage)
+2. Notify the user about problems by using the [_errorMessage_ prop of _Input_](https://reactnativeelements.com/docs/components/input#props)
 3. _Note:_ new user registrations without valid username, password and email are not accepted. Validation properties:
    1. username: required, at least 3 characters
    2. password: required, at least 5 characters
@@ -91,6 +91,6 @@
 
 ### Extra
 
-* Add user update functionality to profile page
+* Add user profile update functionality to profile page
 * Check: <https://media.mw.metropolia.fi/wbma/docs/#api-User-PutUser>
 * Add user notifications for other errors too (network connection problems, failed login attempt, etc.)
