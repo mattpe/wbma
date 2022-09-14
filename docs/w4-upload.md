@@ -1,10 +1,6 @@
-# WBMA, Forms + Upload
+# WBMA Week 4 
 
-## 9/2021
-
----
-
-## Forms
+## Forms & File Upload
 
 ### Task A: Create Upload Form
 
@@ -43,7 +39,7 @@
       }
       ...
    ```
-9. Display an [`<ActivityIndicator>`](https://reactnative.dev/docs/activityindicator) when file is being uploaded or if you are using `<Button>` from React Native Elements, you can use [loading](https://reactnativeelements.com/docs/button#loading) prop. You'll need to add a new state (e.g. loading) to achieve this.
+9. Display an [`<ActivityIndicator>`](https://reactnative.dev/docs/activityindicator) when file is being uploaded or if you are using `<Button>` from React Native Elements, you can use [loading](https://reactnativeelements.com/docs/components/button#button-with-loading-spinner) prop. You'll need to add a new state (e.g. loading) to achieve this.
 10. After the file is uploaded (promise returned by async upload function is completed) redirect to Home tab
     * there might be a need to wait 1-2 seconds before going to Home so that thumbnail (generated on the server) is ready. So use [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) or [Alert with confirmation](https://reactnative.dev/docs/alert)
 11. After [navigating](https://reactnavigation.org/docs/navigation-actions/#navigate) to Home-tab the file list must be refreshed to see new files
