@@ -1,6 +1,4 @@
-## Week 5/2021
-
----
+# WBMA Week 5
 
 ## Media Player
 
@@ -27,7 +25,7 @@
     - Very similar to Home
        - You can use List and ListItem as example and make new components.
        - Or you can send props to List and depending the value of the prop show edit and delete buttons (if statement)
-       - In both cases modify loadMedia() in ApiHooks.  Add boolean variable to change wether to load all files all user's own files.
+       - In both cases modify loadMedia() in ApiHooks.  Add a boolean variable to change whether to load all files  or user's own files.
 1. Add 'view', 'modify' and 'delete' buttons next to each file uploaded by the user
     - onPress example for delete:
     
