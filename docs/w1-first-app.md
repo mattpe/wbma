@@ -12,18 +12,19 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 
 1. If needed, install code editor (+ extensions), git, npm
 1. Install Expo app to your phone. [iOS](https://apps.apple.com/us/app/expo-client/id982107779) or [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=fi)
-1. Use the [expo](https://docs.expo.io/versions/v36.0.0/get-started/create-a-new-app/) cli tool to generate an app skeleton
+1. Use the [expo](https://docs.expo.dev/get-started/create-a-new-app/) to generate an app skeleton
     * create a folder for your React Native projects
     * use Git Bash or terminal to go to this folder `cd foldername/otherfoldername/etc...`
     * `npm install -g expo-cli`
-    * `expo init MyApp --npm`
+    * `npx create-expo-app --template`
         * choose 'blank' template
         * if this fails on Windows due to missing interactive mode, use power shell instead of Git Bash
 1. Test that app works; run it and open in browser (interactive shell is needed to get the menu option (_w_) for launhing in browser)
-    * `cd MyApp`
+    * `cd <MyAppName>`
     * `npm start`
-1. From now on open 'MyApp' folder in your editor/IDE to edit your project
+1. From now on open 'MyAppName' folder in your editor/IDE to edit your project
 1. Create a remote git repository (Github) and push your app there
+1. Server can be stopped by pressing _ctrl-c_  
 
 ### b.
 
@@ -251,7 +252,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
                ...
 
    ```
-   
+
    * Move mediaArray from App.js to List.js
    * Move `<Flatlist>` to 'List.js':
    ```jsx harmony
