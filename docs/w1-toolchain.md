@@ -1,6 +1,6 @@
-# Toolchain
+# Web Based Mobile Applications
 
-## 1/2020
+## Toolchain
 
 ---
 
@@ -41,10 +41,6 @@ Search and install:
 - JavaScript (ES6) Code Snippets
 - ES7 React/Redux/GraphQL/React-Native snippets
 
-Other handy extensions:
-
-- Duplicate file: Add _right-click -> Duplicate file_ action
-
 #### VSCode - Basic Usage
 
 Active **project** is the folder open on the left side panel (_File -> Open folder..._)
@@ -78,11 +74,7 @@ Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard
 - quite ready out of the box. No need for plugins.
 - based on IntelliJ IDEA, just like Android Studio
 
-### Other picks
-
-- [Atom](https://atom.io/)
-- [Brackets](http://brackets.io/)
-- Other IDEs like: IntelliJ Ultimate IDEA, Eclipse, NetBeans...
+- Other IDEs like: IntelliJ Ultimate IDEA, Eclipse, NetBeans, etc. could work too
 
 ---
 

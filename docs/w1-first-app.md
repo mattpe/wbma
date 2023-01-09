@@ -1,6 +1,6 @@
-# WBMA, First App
+# Web Based Mobile Applications
 
-## 1/2020
+## First App
 
 ---
 
@@ -8,7 +8,7 @@
 
 Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [Getting started and Learn the basics](https://facebook.github.io/react-native/docs/getting-started) from React Native documentation
 
-**a.**
+### a.
 
 1. If needed, install code editor (+ extensions), git, npm
 1. Install Expo app to your phone. [iOS](https://apps.apple.com/us/app/expo-client/id982107779) or [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=fi)
@@ -25,7 +25,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 1. From now on open 'MyApp' folder in your editor/IDE to edit your project
 1. Create a remote git repository (Github) and push your app there
 
-**b.**
+### b.
 
 1. Install ESlint to your project `npm i eslint @babel/core @babel/eslint-parser eslint-plugin-react-native`
 1. Initialize ESlint: `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init` (note: needs an interactive shell and does not work in Git Bash on Windows. Use cmd or VSCode's terminal instead.)
@@ -124,7 +124,8 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 
 1. Install prettier: `npm install --save-dev prettier eslint-plugin-prettier eslint-config-prettier`
 1. Create new file '.prettierrc' and add this content: 
-   ```
+   
+   ```json
    {
        "semi": true,
        "singleQuote": true,
@@ -166,12 +167,12 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
    export default App;
    ```
 
-**c.**
+### c.
 
 1. Study [Handling Touches](https://facebook.github.io/react-native/docs/handling-touches) and [Using List Views](https://facebook.github.io/react-native/docs/using-a-listview)
 1. Develop your app further. Add this after the import statements:
 
-    ```ecmascript 6
+    ```js
     const mediaArray = [
       {
         'key': '0',
@@ -225,7 +226,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
       />
     ```
 
-**d.**
+### d.
 
 1. Replace View with SafeAreaView to prevent your app going under the statusbar of your phone.
    * [SafeAreaView hack for Android](https://stackoverflow.com/questions/51289587/react-native-how-to-use-safeareaview-for-android-notch-devices/55017347) 
@@ -234,7 +235,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
     ![View 1](images/app01.png)
 1. You can modify the styles either inline or by adding properties to the 'styles' object at the end of the file.
 
-**e.**
+### e.
 
 1. Study [Props](https://facebook.github.io/react-native/docs/props) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
 1. Split the app to multiple files. In other words: create components.
@@ -250,6 +251,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
                ...
 
    ```
+   
    * Move mediaArray from App.js to List.js
    * Move `<Flatlist>` to 'List.js':
    ```jsx harmony
@@ -277,7 +279,9 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
       );
     };
    ```
+   
    * App.js is now like this:
+   
    ```jsx harmony
     const App = () => {
       return (
@@ -306,9 +310,11 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
     };
    ```
    * Import PropTypes in ListItem:
+   
    ```jsx harmony
    import PropTypes from 'prop-types';
    ```
+   
    * Add PropType to ListItem:
    
    ```jsx harmony
@@ -316,7 +322,8 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
      singleMedia: PropTypes.object,
    };   
    ```
-   * <b>Task: How to get the items to show in ListItem?</b>
+   
+   * **Task: How to get the items to show in ListItem?**
 
 
 1. Create a new branch, add, commit & push your project to remote repository
