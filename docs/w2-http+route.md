@@ -235,7 +235,7 @@ Study:
 1. Study [Passing parameters to routes](https://reactnavigation.org/docs/params/)
 1. In `ListItem` you have file data in props (`singleMedia`). Pass the file data as a parameter with `navigation.navigate`
 1. In 'Single.js' receive the file parameter and use it's `filename` property to show the file in `<Image>` and `title` property in `<Text>`
-1. git add, commit & push to _navigation_ branch remote repository and merge to _main_ branch
+1. git add, commit & push your _navigation_ branch to the remote repository and merge it to the _main_ branch
 
 ### F. Asynchronous image loading (Optional)
 
