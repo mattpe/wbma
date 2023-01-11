@@ -1,4 +1,3 @@
-
 # Profile page & Component libraries
 
 ## Task A: Develop a user profile page

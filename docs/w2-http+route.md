@@ -1,40 +1,40 @@
 # Navigation
 
-## 2/2019
-
----
-
-# Routing 
+## Routing 
 
 Study:
-* [Three dots](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-* [React Navigation](https://reactnavigation.org/docs/getting-started/)
-* [Stack Navigation](https://reactnavigation.org/docs/hello-react-navigation/)
-* [Tab Navigation](https://reactnavigation.org/docs/tab-based-navigation/)
-* API Reference: [Navigation prop reference](https://reactnavigation.org/docs/navigation-prop), [createStackNavigator](https://reactnavigation.org/docs/stack-navigator), [createBottomTabNavigator](https://reactnavigation.org/docs/bottom-tab-navigator) 
 
-#### A
+- [Three dots](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [React Navigation](https://reactnavigation.org/docs/getting-started/)
+- [Stack Navigation](https://reactnavigation.org/docs/hello-react-navigation/)
+- [Tab Navigation](https://reactnavigation.org/docs/tab-based-navigation/)
+- API Reference: [Navigation prop reference](https://reactnavigation.org/docs/navigation-prop), [createStackNavigator](https://reactnavigation.org/docs/stack-navigator), [createBottomTabNavigator](https://reactnavigation.org/docs/bottom-tab-navigator) 
+
+### A.
+
 1. Create a new react native project called 'Stack' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
 1. Follow [Hello React Navigation](https://reactnavigation.org/docs/hello-react-navigation/) and [Moving between screens](https://reactnavigation.org/docs/navigating/) articles to create a simple stack navigation
 
-#### B
+### B.
+
 1. Create a new react native project called 'Tabs' with Expo CLI. Make this separate from the app we did in previous labs. No need to submit this or push it to Git
 1. Follow [Tab Navigation](https://reactnavigation.org/docs/tab-based-navigation/) article to create a simple tab navigation
 
-#### C
+### C.
+
 Continue the app made in previous labs. Create a new branch `navigation` with git and checkout it (`git checkout -b navigation`).
 1. Goal is to make a navigation between three 'pages'
-    * Bottom tab menu has two links: 'Home' and 'Profile'
-    * Each thumbnail is TouchableOpacity and tapping them should take to 'Single' to show the selected media file (just images at this point)
+    - Bottom tab menu has two links: 'Home' and 'Profile'
+    - Each thumbnail is TouchableOpacity and tapping them should take to 'Single' to show the selected media file (just images at this point)
 1. Install react-navigation with npm `npm i @react-navigation/native`
 1. Install react-navigation-bottom-tabs with npm `npm i @react-navigation/bottom-tabs`
 1. Install react-navigation-stack with npm `npm i @react-navigation/native-stack`
-3. Install these packages with expo to get correct versions: `expo install react-native-screens react-native-safe-area-context`
-4. Create new folder 'views'
-5. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
-6. Home.js will be the component that should show first when the app starts
-    * Copy the content of App.js to Home.js and change function name and export default to Home
-    * Modify Home function: 
+1. Install these packages with expo to get correct versions: `npx expo install react-native-screens react-native-safe-area-context`
+1. Create new folder 'views'
+1. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
+1. Home.js will be the component that should show first when the app starts
+    - Copy the content of App.js to Home.js and change function name and export default to Home
+    - Modify Home function: 
     ```jsx harmony
       const Home = () => {
         return (
@@ -45,7 +45,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
       };
 
     ```
-    * Modify App.js:
+    - Modify App.js:
     ```jsx harmony
       const App = () => {
         return (
@@ -56,8 +56,9 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
         );
       };
     ``` 
-    * Remove unused styles and imports etc.
-    * The app should at this point work the same as before
+
+    - Remove unused styles and imports etc.
+    - The app should at this point work the same as before
 1. Content for Profile.js
     ```jsx harmony
     import React from 'react';
@@ -110,9 +111,9 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
    ```
 
 1. Create tab navigation
-    * create new folder 'navigators'
-    * create new file 'Navigator.js' to 'navigators'
-    * in 'Navigator.js' use `createBottomTabNavigator` to make a simple tab navigation to Home and Profile 
+    - create new folder 'navigators'
+    - create new file 'Navigator.js' to 'navigators'
+    - in 'Navigator.js' use `createBottomTabNavigator` to make a simple tab navigation to switch between _Home_ and _Profile_ views
     ```jsx harmony
     import React from 'react';
     import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -123,7 +124,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     const Navigator = () => {
       return (
         <NavigationContainer>
-          // TODO: Make tab navigator here
+          {/* TODO: Make tab navigator here */}
         </NavigationContainer>
       );
     };
@@ -131,7 +132,7 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
     export default Navigator;
    
     ```
-   * modify App.js (remember to add neccessary and remove unneccessary imports):
+   - modify App.js (remember to add neccessary and remove unneccessary imports):
    ```jsx harmony
    const App = () => {
      return (
@@ -142,44 +143,45 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
      );
    };
    ```
-    * The app should at this point have tab navigation between Home and Profile
+    - The app should at this point have a tab navigation between _Home_ and _Profile_ views
 
-#### D. Navigate to 'Single' component by tapping thumbnails
-1. For this we need to [nest navigators](https://reactnavigation.org/docs/nesting-navigators) in Navigator.js:
+### D. Navigate to 'Single' component by tapping thumbnails
+
+1. For this we need to [nest navigators](https://reactnavigation.org/docs/nesting-navigators) in 'Navigator.js':
     ```jsx harmony
     // TODO: add neccessary imports
     
-   // add after createBottomTabNavigator
+    // add after createBottomTabNavigator
     const Stack = createNativeStackNavigator();
    
-   const TabScreen = () => {
-     return (
-       // TODO: move content of <NavigationContainer> here
-     );
-   };
-   
-   const StackScreen = () => {
-     return (
-       <Stack.Navigator>
-         // TODO: make two stack screens:
-         // 1st: name=Tabs, component=TabScreen, options=hide header
-         // 2nd: name=Single, component=Single
-       </Stack.Navigator>
-     );
-   };
-   
-   const Navigator = () => {
-     return (
-       <NavigationContainer>
-         <StackScreen/>
-       </NavigationContainer>
-     );
-   };
+    const TabScreen = () => {
+      return (
+        // TODO: move content of <NavigationContainer> here
+      );
+    };
     
-   export default Navigator;
+    const StackScreen = () => {
+      return (
+        <Stack.Navigator>
+          // TODO: make two stack screens:
+          // 1st: name=Tabs, component=TabScreen, options=hide header
+          // 2nd: name=Single, component=Single
+        </Stack.Navigator>
+      );
+    };
+    
+    const Navigator = () => {
+      return (
+        <NavigationContainer>
+          <StackScreen/>
+        </NavigationContainer>
+      );
+    };
+      
+    export default Navigator;
     ```
     
-    1. Pass 'navigation' prop from Home to List to ListItem and use navigate-method to navigate to 'Single'-component:
+    1. Pass `navigation` prop from `Home` to `List` to `ListItem` and use `navigate`-method to navigate to `Single`-component:
    ```jsx harmony
    // Home.js
    const Home = (props) => {
@@ -217,20 +219,19 @@ Continue the app made in previous labs. Create a new branch `navigation` with gi
          ...
        >
     ``` 
-1. When using props, remember to add the appropriate PropTypes
-1. The app should at this point navigate to 'Single' component when any thumbnail is tapped
+1. When using props, remember to add the appropriate `PropTypes`
+1. The app should at this point navigate to `Single` component when any of the thumbnails is tapped
 1. Try props with destructuring. E.g. `const Home = ({navigation}) => {` etc...
   
-#### E. Show selected file in 'Single' component
-1. Study [Passing parameters to routes](https://reactnavigation.org/docs/params/)
-1. In 'ListItem' you have file data in props (singleMedia). Pass the file data as a parameter with navigation.navigate
-1. In Single.js receive the file parameter and use it's 'filename' property to show the file in `<Image>` and 'title' property in `<Text>`
-1. git add, commit & push to remote repository
+### E. Show selected file in 'Single' component
 
-#### F - Optional -
+1. Study [Passing parameters to routes](https://reactnavigation.org/docs/params/)
+1. In `ListItem` you have file data in props (`singleMedia`). Pass the file data as a parameter with `navigation.navigate`
+1. In 'Single.js' receive the file parameter and use it's `filename` property to show the file in `<Image>` and `title` property in `<Text>`
+1. git add, commit & push to _navigation_ branch remote repository and merge to _main_ branch
+
+### F. Asynchronous image loading (Optional)
+
 1. Study [Asynchronous image loading](https://snack.expo.io/HkjHS1ttZ)
 1. Use `<AsyncImage>` instead of `<Image>` in the whole app to show text 'Loading' or [ActivityIndicator](https://docs.expo.io/versions/latest/react-native/activityindicator/)
  when images are loading
-
----
-

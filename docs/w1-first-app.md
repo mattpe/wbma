@@ -15,16 +15,15 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 1. Use the [expo](https://docs.expo.dev/get-started/create-a-new-app/) to generate an app skeleton
     * create a folder for your React Native projects
     * use Git Bash or terminal to go to this folder `cd foldername/otherfoldername/etc...`
-    * `npm install -g expo-cli`
     * `npx create-expo-app --template`
         * choose 'blank' template
         * if this fails on Windows due to missing interactive mode, use power shell instead of Git Bash
-1. Test that app works; run it and open in browser (interactive shell is needed to get the menu option (_w_) for launhing in browser)
+2. Test that app works; run it and open in browser (interactive shell is needed to get the menu option (_w_) for launhing in browser)
     * `cd <MyAppName>`
     * `npm start`
-1. From now on open 'MyAppName' folder in your editor/IDE to edit your project
-1. Create a remote git repository (Github) and push your app there
-1. Server can be stopped by pressing _ctrl-c_  
+3. From now on open 'MyAppName' folder in your editor/IDE to edit your project
+4. Create a remote git repository (Github) and push your app there
+5. Server can be stopped by pressing _ctrl-c_  
 
 ### b.
 
@@ -170,7 +169,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 
 ### c.
 
-1. Study [Handling Touches](https://facebook.github.io/react-native/docs/handling-touches) and [Using List Views](https://facebook.github.io/react-native/docs/using-a-listview)
+1. Study [Handling Touches](https://reactnative.dev/docs/handling-touches and [Using List Views](https://reactnative.dev/docs/using-a-listview)
 1. Develop your app further. Add this after the import statements:
 
     ```js
@@ -250,7 +249,6 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
            -List
                -ListItem
                ...
-
    ```
 
    * Move mediaArray from App.js to List.js

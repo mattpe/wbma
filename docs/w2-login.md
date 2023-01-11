@@ -154,6 +154,7 @@
 9. At this point the app should have simple login/logout functionality.
 
 ### C. Remembering if user has logged in
+
 1. Install [AsyncStorage](https://react-native-async-storage.github.io/async-storage/docs/install/): `npm i @react-native-async-storage/async-storage`
 2. Import AsyncStorage to Login.js and Profile.js:
    ```jsx
