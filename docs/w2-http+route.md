@@ -22,7 +22,14 @@ Study:
 
 ### C.
 
-Continue the app made in previous labs. Create a new branch `navigation` with git and checkout it (`git checkout -b navigation`).
+1. Continue the app made in previous labs (**not** A and B from this page). 
+   1. Make sure the previous branch is committed, then merge it with `main` branch.
+      - (`git commit... etc`)
+      - (`git checkout main`)
+      - (`git merge branch-name`)
+   2. Then create a new branch `navigation` from the `main` branch. (`git checkout -b navigation`).
+   3. Creating branches from the `main` makes more sense than merging branches from other branches so use this method every time when instructions tell you to create a new branch.
+   4. Submit still links to branches when submitting assignments to Oma
 1. Goal is to make a navigation between three 'pages'
     - Bottom tab menu has two links: 'Home' and 'Profile'
     - Each thumbnail is TouchableOpacity and tapping them should take to 'Single' to show the selected media file (just images at this point)
