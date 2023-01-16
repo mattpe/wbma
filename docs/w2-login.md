@@ -156,27 +156,27 @@
 ### C. Remembering if user has logged in
 
 1. Install [AsyncStorage](https://react-native-async-storage.github.io/async-storage/docs/install/): `npm i @react-native-async-storage/async-storage`
-2. Import AsyncStorage to Login.js and Profile.js:
+2. Import `AsyncStorage` to _Login.js_ and _Profile.js_:
    ```jsx
    ...
    import AsyncStorage from '@react-native-async-storage/async-storage';
    ... 
    ```
-3. Modify logIn() function in Login.js:
+3. Modify `logIn()` function in _Login.js_:
    ```jsx
    const logIn = async () => {
       setIsLoggedIn(true);   
       await AsyncStorage.setItem('userToken', 'abc');
      };
    ```
-4. Modify logout() function in Profile.js:
+4. Modify `logout()` function in _Profile.js_:
    ```jsx
    const logout = async () => {
        setIsLoggedIn(false);
        await AsyncStorage.clear();
      };
    ```
-5. Add _checkToken_ function to Login.js to check the token when app starts:
+5. Add `checkToken` function to _Login.js_ to check the token when the app starts:
    ```jsx
     const checkToken = async () => {
       // TODO: save the value of userToken saved in AsyncStorage as userToken
@@ -189,7 +189,7 @@
     }, []);
    ```
 6. Remeber to add necessary imports.
-7. Press login and reload the app. App should go automatically to Home page (= tab navigator _Tabs_).
+7. Press 'login' and reload the app. App should go automatically to Home page (= tab navigator _Tabs_).
 8. You might get warning 'Possible Unhandled promise rejection'. Fix it by adding try/catch to all promises (await ....)
-9. Logout and reload the app. App should stay in the Login screen.
-10. Add and commit changes to git, push to Github/GitLab.
+9. Logout and reload the app. App should stay in the 'Login' screen.
+10. Add and commit your changes to git, merge changes to _main/master_ and push _dummy-login_ & _main_ branches to Github/GitLab.
