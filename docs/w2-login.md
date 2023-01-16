@@ -9,9 +9,9 @@
   * [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
   * [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
                                                                                        
-### A. hard coded login
+### A. Hard coded login
 
-1. Continue last exercise. Create a new branch with git.
+1. Continue last exercise (remember merge your devepopment branch to _main/master_). Create a new branch with git 'dummy-login'.
 2. Create 'Login.js' to 'views/'
 3. _Login.js_
     * Eventually this will be the login and register page
