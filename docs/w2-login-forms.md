@@ -12,7 +12,7 @@
   ```jsx harmony
    // ApiHooks.js
    ...
-   const useLogin = () => {
+   const useAuthentication = () => {
   
       const postLogin = async (userCredentials) => { // user credentials format: {username: 'someUsername', password: 'somePassword'}
          const options = {
