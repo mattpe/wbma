@@ -8,7 +8,7 @@
 
 1. Recap how to make [POST request with fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Supplying_request_options)
 2. [Login endpoint in the Media API](http://media.mw.metropolia.fi/wbma/docs/#api-Authentication-PostAuth)
-3. Add a new hook called _useLogin_ to `ApiHooks.js`. Add a new function _postLogin_ to _useLogin_ hook:
+3. Add a new hook called _useAuthentication_ to `ApiHooks.js`. Add a new function _postLogin_ to _useLogin_ hook:
   ```jsx harmony
    // ApiHooks.js
    ...
