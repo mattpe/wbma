@@ -2,12 +2,12 @@
 
 ## Task A: Develop a user profile page
 
-1. Continue last exercise. Create a new branch 'user-profile' with git.  
+1. Continue last exercise. Merge it to _main_ branch and create a new development branch _user-profile_ with git.  
 1. Add avatar/profile image to the user
-    - Use postman to upload image and add a [tag](http://media.mw.metropolia.fi/wbma/docs/#api-Tag-PostTag) 'avatar_CurrentUserId' to it (e.g avatar_85)
-    - When fetching avatars, you can use _CurrentUserId to limit the amount of fetched data.
-1. Display users avatar image, name and email in profile page
-   - You'll need to use existing or add more functions to 'ApiHooks.js' to achieve this
+    - Use postman to upload image and add a [tag](http://media.mw.metropolia.fi/wbma/docs/#api-Tag-PostTag) 'avatar_CurrentUserId' to it (e.g 'avatar_85')
+    - When fetching avatars, you can use _CurrentUserId_ to limit the amount of fetched data.
+1. Display users avatar image, name and email in _profile_ page
+   - You'll need to use existing or add more functions to _ApiHooks.js_ to achieve this
    - You'll also need to add a new state to show the avatar after it's url has been loaded from the API:
    ```jsx
    // Profile.js
