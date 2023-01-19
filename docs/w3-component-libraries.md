@@ -26,7 +26,7 @@ There are many component libraries for React Native: [article 1](https://www.cod
 
 ### Setup
 
-1. Continue last exercise. Create a new branch 'comp-lib' with git.  
+1. Merge it to _main_ branch and create a new development branch _comp-lib_ with git.  
 1. Study [getting started](https://reactnativeelements.com/docs/)
 1. Install React Native Elements
     - `npm install @rneui/themed @rneui/base`
@@ -47,10 +47,10 @@ There are many component libraries for React Native: [article 1](https://www.cod
 
    ```jsx harmony
    ...
-   import {ListItem as NBListItem} from '@rneui/themed';
+   import {ListItem as RNEListItem} from '@rneui/themed';
    ...
    return (
-         <NBListItem thumbnail>
+         <RNEListItem thumbnail>
                <Left>
                  <Thumbnail>
          etc...
