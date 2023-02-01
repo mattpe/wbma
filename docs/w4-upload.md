@@ -51,9 +51,9 @@
     - _Description_ minimun length is ?
     - Hint: Button component has a property `disabled`  
 13. Add reset button for clearing the whole form and image preview
-    - add a new function `reset()` which resets all the things you want to reset
-    - call `reset()` when reset button is pressed
-    - also call `reset()` after file is uploaded or user navigates away from this screen with [useFocusEffect](https://reactnavigation.org/docs/use-focus-effect/)
+    - add a new function `resetForm()` which resets all the things you want to reset
+    - call `resetForm()` when reset button is pressed
+    - also call `resetForm()` after file is uploaded or user navigates away from this screen with [useFocusEffect](https://reactnavigation.org/docs/use-focus-effect/)
     
 ## Task B: List files limiting to those uploaded from your own app
 
