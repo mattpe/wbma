@@ -169,7 +169,7 @@ Study [Environment setup](https://reactnative.dev/docs/environment-setup) and [G
 
 ### c.
 
-1. Study [Handling Touches](https://reactnative.dev/docs/handling-touches and [Using List Views](https://reactnative.dev/docs/using-a-listview)
+1. Study [Handling Touches](https://reactnative.dev/docs/handling-touches) and [Using List Views](https://reactnative.dev/docs/using-a-listview)
 1. Develop your app further. Add this after the import statements:
 
     ```js
