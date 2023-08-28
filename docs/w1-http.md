@@ -1,6 +1,4 @@
-# AJAX + state
-
-W1/2020
+# AJAX and state
 
 ---
 
