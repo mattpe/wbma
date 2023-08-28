@@ -1,7 +1,5 @@
 # Using Postman to explore APIs
 
-## W1/2020
-
 ---
 
 # Task 1: Play with the Postman
