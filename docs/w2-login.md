@@ -3,7 +3,7 @@
 ## Authentication
 
 * Study:
-  * [Conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
+  * [Conditional rendering](https://react.dev/learn/conditional-rendering)
     * especially [Inline If with Logical && Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator) and [Inline If-Else with Conditional Operator](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
   * [React Navigation authentication flows](https://reactnavigation.org/docs/auth-flow/)
   * [Context](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
