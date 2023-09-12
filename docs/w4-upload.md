@@ -61,7 +61,8 @@
 1. When uploading add the identifier as a [tag](http://media.mw.metropolia.fi/wbma/docs/#api-Tag-PostTag) to the uploaded file.
 1. Modify `loadMedia()` in _ApiHooks.js_ to show only the files which have the identifier tag of your app.
 
-## Extra: Additional features
+## Extra
 
-1. Show [spinners](https://docs.nativebase.io/Components.html#Spinner) when loading and uploading data
+1. Show ActivityIndicators always when loading and uploading data
 1. Could the code be cleaner? Maybe put some JSX into separate files (to components folder)
+1. Dispay notifications to users when something goes wrong, upload fails, or similar
